@@ -752,12 +752,21 @@
       
                 {"src": "git:http://git.chromium.org/webm/libwebp.git"},
 
+                {"src": "tarball:http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz",
+		 "name": "enchant",
+		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"}, 
+
 		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.4.6.tar.xz",
-		 "name": "webkitgtk",
+		 "name": "webkitgtk3",
 		 "checksum": "6fef4aa8d4a2668e03ea15472a71396ea7b776bbe56ad9459a4124b823c11457",
 		 "config-opts": ["--enable-introspection",
 				 "--enable-debug-symbols=min",
 				 "--disable-maintainer-mode"]},
+
+		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.6.4.tar.xz",
+		 "name": "webkitgtk4",
+		 "checksum": "beef5e24edd9b9cade22d80bf373c74d236f996fe30f49f8697a70f267772e9b",
+		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
 
 		{"src": "gnome:libgee",
 		 "patches": ["gee-builddir.patch"]},
@@ -1164,10 +1173,6 @@
 
 		{"src": "gnome:gnome-documents",
 		 "config-opts": ["--disable-documentation"]},
-
-                {"src": "tarball:http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz",
-		 "name": "enchant",
-		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"}, 
 
                 {"src": "tarball:http://downloads.sourceforge.net/project/gtkspell/3.0.4/gtkspell3-3.0.4.tar.gz",
 		 "name": "gtkspell3",
