@@ -113,6 +113,8 @@
 		 "config-opts": ["--enable-vapigen"]},
 
    		{"src": "git:git://anongit.freedesktop.org/systemd/systemd",
+		 "tag": "v217-212-g7e27f3121e5a10629302b5221eb21345f832724a",
+		 "tag-reason": "syntax error",
 		 "component": "minimal",
 		 "initramfs-depends": true,
 		 "cflags": {
