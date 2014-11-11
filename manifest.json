@@ -1167,6 +1167,8 @@
 		 "config-opts": ["--enable-introspection"]},
 
 		{"src": "gnome:gnome-documents",
+		 "tag": "44c0b8e53905b5d754a6dba68267f500e041f76e",
+                 "tag-reason": "requires webkit 2.5.1",
 		 "config-opts": ["--disable-documentation"]},
 
                 {"src": "tarball:http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz",
