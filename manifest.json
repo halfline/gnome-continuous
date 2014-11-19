@@ -86,9 +86,8 @@
 				 "--disable-systemd",
 				 "--with-system-pid-file=/run/dbus.pid"]},
 
-		{"src": "git:git://git.libusb.org/libusb.git",
-		 "tag": "1.0.9",
-		 "patches": ["libusb-autogen.patch"]},
+		{"src": "https://github.com/libusb/libusb.git",
+		 "tag": "v1.0.19"},
 
 		{"src": "git:git://github.com/gregkh/usbutils.git",
 		 "tag": "v005",
