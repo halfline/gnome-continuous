@@ -86,13 +86,6 @@
 				 "--disable-systemd",
 				 "--with-system-pid-file=/run/dbus.pid"]},
 
-		{"src": "git:https://github.com/libusb/libusb.git",
-		 "tag": "v1.0.19"},
-
-		{"src": "git:git://github.com/gregkh/usbutils.git",
-		 "tag": "v005",
-		 "patches": ["usbutils-autogen.patch"]},
-
                 {"src": "git:git://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git",
 		 "component": "minimal",
 		 "config-opts": ["--disable-manpages"]},
@@ -125,6 +118,13 @@
 				 "--with-sysvinit-path=",
 				 "--with-sysvrcnd-path="]
 		 },
+
+		{"src": "git:https://github.com/libusb/libusb.git",
+		 "tag": "v1.0.19"},
+
+		{"src": "git:git://github.com/gregkh/usbutils.git",
+		 "tag": "v005",
+		 "patches": ["usbutils-autogen.patch"]},
 
    		{"src": "git:git://git.fedorahosted.org/git/lvm2.git",
 		 "tag": "v2_02_106"},
