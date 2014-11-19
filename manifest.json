@@ -86,7 +86,7 @@
 				 "--disable-systemd",
 				 "--with-system-pid-file=/run/dbus.pid"]},
 
-		{"src": "https://github.com/libusb/libusb.git",
+		{"src": "git:https://github.com/libusb/libusb.git",
 		 "tag": "v1.0.19"},
 
 		{"src": "git:git://github.com/gregkh/usbutils.git",
