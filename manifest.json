@@ -750,24 +750,12 @@
       
                 {"src": "git:http://git.chromium.org/webm/libwebp.git"},
 
-                {"src": "tarball:http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz",
-		 "name": "enchant",
-		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"}, 
-
 		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.4.6.tar.xz",
-		 "name": "webkitgtk3",
+		 "name": "webkitgtk",
 		 "checksum": "6fef4aa8d4a2668e03ea15472a71396ea7b776bbe56ad9459a4124b823c11457",
 		 "config-opts": ["--enable-introspection",
 				 "--enable-debug-symbols=min",
 				 "--disable-maintainer-mode"]},
-
-		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.7.2.tar.xz",
-		 "name": "webkitgtk4",
-		 "checksum": "042964d2bc5e02d48feb80d1021bb24c634e4fdfcb3d1356df0a599c6950c46d",
-		 "patches": ["webkitgtk-cmake-buildapi.patch"],
-		  "config-opts": ["--enable-introspection",
-				"--enable-debug-symbols=min",
-				"--disable-maintainer-mode"]},
 
 		{"src": "gnome:libgee",
 		 "patches": ["gee-builddir.patch"]},
@@ -1123,7 +1111,9 @@
                                  "--disable-offline-appstream-data",
                                  "--enable-installed-tests"]},
 
-		{"src": "gnome:epiphany"},
+		{"src": "gnome:epiphany",
+		 "tag": "9e8e34a398788754ce76119b502eb8e458f1aec8",
+		 "tag-reason": "requires webkitgtk 2.5.1"},
 
 		{"src": "gnome:gnome-calculator",
                  "config-opts": ["--enable-installed-tests"]},
@@ -1177,7 +1167,13 @@
 		 "config-opts": ["--enable-introspection"]},
 
 		{"src": "gnome:gnome-documents",
+		 "tag": "44c0b8e53905b5d754a6dba68267f500e041f76e",
+                 "tag-reason": "requires webkit 2.5.1",
 		 "config-opts": ["--disable-documentation"]},
+
+                {"src": "tarball:http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz",
+		 "name": "enchant",
+		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"}, 
 
                 {"src": "tarball:http://downloads.sourceforge.net/project/gtkspell/3.0.4/gtkspell3-3.0.4.tar.gz",
 		 "name": "gtkspell3",
