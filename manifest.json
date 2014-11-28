@@ -1032,6 +1032,8 @@
 
 		{"src": "gnome:libgtop"},
 
+		{"src": "gnome:gsound"},
+
                 {"src": "tarball:https://fedorahosted.org/releases/l/i/libpwquality/libpwquality-1.2.2.tar.bz2",
 		 "name": "libpwquality",
 		 "checksum": "9689627283b43d20ca74ca822404ee486242e3e528fa95bf7016d37ff46e0696",
@@ -1096,6 +1098,8 @@
 
 		{"src": "gnome:gnome-terminal",
 		 "config-opts": ["--without-nautilus-extension"]},
+
+		{"src": "gnome:gnome-clocks"},
 
 		{"src": "gnome:glade",
 		 "config-opts": ["--disable-man-pages"],
