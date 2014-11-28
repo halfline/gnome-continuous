@@ -764,10 +764,7 @@
 		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.7.2.tar.xz",
 		 "name": "webkitgtk4",
 		 "checksum": "042964d2bc5e02d48feb80d1021bb24c634e4fdfcb3d1356df0a599c6950c46d",
-		 "patches": ["webkitgtk-cmake-buildapi.patch"],
-		  "config-opts": ["--enable-introspection",
-				"--enable-debug-symbols=min",
-				"--disable-maintainer-mode"]},
+		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
 
 		{"src": "gnome:libgee",
 		 "patches": ["gee-builddir.patch"]},
