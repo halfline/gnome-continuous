@@ -1236,7 +1236,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 71,
+	"build-epoch": {"version": 72,
 		        "all": false,
-		        "component-names": ["libusb" ]}
+		        "component-names": ["webkitgtk4" ]}
 }
