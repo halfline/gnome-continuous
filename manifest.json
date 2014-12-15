@@ -644,7 +644,7 @@
 				 "--enable-wayland-compositor",
 				 "--enable-egl-backend",
 				 "--enable-evdev-input"],
-		 "branch": "clutter-1.20"},
+		 "branch": "clutter-1.22"},
 
 		{"src": "gnome:libnotify"},
 
