@@ -1128,7 +1128,9 @@
          "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=741873"},
 
 		{"src": "gnome:gnome-calculator",
-                 "config-opts": ["--enable-installed-tests"]},
+         "tag": "41d04d1c2c9431b83a181806ea2e9428f8e45f84",
+         "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=741880",
+         "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:gnome-weather",
 		 "config-opts": ["--enable-installed-tests"]},
