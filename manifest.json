@@ -132,7 +132,7 @@
 
 		{"src": "gnome:libxml2",
          "tag": "7580ce0a7f53891de520fed2c0e360266c286da6",
-         "tag-reason": "breaks itstool after https://git.gnome.org/browse/libxml2/commit/?id=f54d6a929af2a570396f0595a0e29064c908c12e"
+         "tag-reason": "breaks itstool after https://git.gnome.org/browse/libxml2/commit/?id=f54d6a929af2a570396f0595a0e29064c908c12e",
 		 "component": "minimal"},
 
 		{"src": "gnome:libxslt"},
