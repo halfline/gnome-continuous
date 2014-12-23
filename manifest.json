@@ -131,8 +131,6 @@
 		 "setuid": ["/runtime/usr/bin/linux-user-chroot"]},
 
 		{"src": "gnome:libxml2",
-		 "tag": "7580ce0a7f53891de520fed2c0e360266c286da6",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=741919",
 		 "component": "minimal"},
 
 		{"src": "gnome:libxslt"},
@@ -1252,7 +1250,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 73,
+	"build-epoch": {"version": 74,
 		        "all": false,
 		        "component-names": ["epiphany" ]}
 }
