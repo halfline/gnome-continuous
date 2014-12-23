@@ -1252,7 +1252,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 72,
+	"build-epoch": {"version": 73,
 		        "all": false,
-		        "component-names": ["webkitgtk4" ]}
+		        "component-names": ["epiphany" ]}
 }
