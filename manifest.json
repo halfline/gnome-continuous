@@ -1129,7 +1129,7 @@
 
         {"src": "tarball:https://ftp.gnu.org/gnu/gmp/gmp-6.0.0a.tar.xz",
          "name": "gmp",
-         "checksum": "8890803a2715d592eac37dca630e36b470f047eb5ab1efe38d323b02a99ac232"},
+         "checksum": "9156d32edac6955bc53b0218f5f3763facb890b73a835d5e1b901dcf8eb8b764"},
 
         {"src": "tarball:http://www.mpfr.org/mpfr-current/mpfr-3.1.2.tar.xz",
          "name": "mpfr",
