@@ -384,8 +384,11 @@
 
 		{"src": "anholt:libepoxy"},
 
-		{"src": "fd:xorg/xserver",
-                 "config-opts": ["--enable-xwayland"]},
+        {"src": "fd:xorg/driver/glamor",
+         "name": "glamor"},
+
+        {"src": "fd:xorg/xserver",
+         "config-opts": ["--enable-xwayland"]},
 
 		{"src": "fd:xcb/util"},
 
@@ -414,9 +417,6 @@
 
                 {"src": "fd:xorg/driver/xf86-video-qxl",
 		 "patches": ["xorg-autogen-merged.patch"]},
-
-                {"src": "fd:xorg/driver/glamor",
-                 "name": "glamor"},
 
 		{"src": "fd:xorg/driver/xf86-video-ati"},
 
