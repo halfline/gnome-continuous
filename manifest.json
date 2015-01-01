@@ -384,11 +384,9 @@
 
 		{"src": "anholt:libepoxy"},
 
-        {"src": "fd:xorg/driver/glamor",
-         "name": "glamor"},
-
         {"src": "fd:xorg/xserver",
-         "config-opts": ["--enable-xwayland"]},
+         "config-opts": ["--enable-xwayland",
+                         "--enable-glamor"]},
 
 		{"src": "fd:xcb/util"},
 
