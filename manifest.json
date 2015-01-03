@@ -645,7 +645,7 @@
 				 "--enable-wayland-backend",
 				 "--enable-wayland-compositor",
 				 "--enable-egl-backend",
-				 "--enable-evdev-input"]}
+				 "--enable-evdev-input"]},
 
 		{"src": "gnome:libnotify"},
 
