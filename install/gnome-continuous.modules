@@ -55,10 +55,16 @@
       <dep package="glib-networking"/>
     </suggests>
   </autotools>
-  <autotools id="ostree" autogenargs="--disable-documentation --enable-libarchive --with-soup=yes">
+  <autotools id="libgsystem">
     <branch/>
     <dependencies>
       <dep package="libsoup"/>
+    </dependencies>
+  </autotools>
+  <autotools id="ostree" autogenargs="--disable-documentation --enable-libarchive --with-soup=yes">
+    <branch/>
+    <dependencies>
+      <dep package="libgsystem"/>
     </dependencies>
   </autotools>
   <autotools id="gnome-continuous">
