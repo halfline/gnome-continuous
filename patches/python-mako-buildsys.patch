@@ -1,0 +1,62 @@
+From c146413070825ac70d3bc201ead38a14d6a695a4 Mon Sep 17 00:00:00 2001
+From: Vadim Rutkovsky <vrutkovs@redhat.com>
+Date: Thu, 22 Jan 2015 11:17:54 +0100
+Subject: [PATCH] build-sys: Add configure script and Makefile to implement 
+ GNOME Build API
+
+See http://people.gnome.org/~walters/docs/build-api.txt
+---
+ Makefile  | 7 +++++++
+ configure | 5 +++++
+ setup.py  | 5 +++--
+ 3 files changed, 15 insertions(+), 2 deletions(-)
+ create mode 100644 Makefile
+ create mode 100755 configure
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..cedaf62
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,7 @@
++# python-mako *development* Makefile
++all:
++	python setup.py build
++
++install:
++	python setup.py install --root=$(DESTDIR)
++
+diff --git a/configure b/configure
+new file mode 100755
+index 0000000..d28a27a
+--- /dev/null
++++ b/configure
+@@ -0,0 +1,5 @@
++#!/bin/bash
++# http://people.gnome.org/~walters/docs/build-api.txt
++#buildapi-variable-no-builddir
++exec python setup.py build
++
+diff --git a/setup.py b/setup.py
+index 0094901..3e23de0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,4 +1,5 @@
+-from setuptools import setup, find_packages
++#from setuptools import setup, find_packages
++from distutils.core import setup
+ import os
+ import re
+ import sys
+@@ -46,7 +47,7 @@ setup(name='Mako',
+       author_email='mike@zzzcomputing.com',
+       url='http://www.makotemplates.org/',
+       license='MIT',
+-      packages=find_packages('.', exclude=['examples*', 'test*']),
++      packages=['mako'],
+       tests_require=['nose >= 0.11', 'mock'],
+       test_suite="nose.collector",
+       zip_safe=False,
+-- 
+1.8.3.1
+

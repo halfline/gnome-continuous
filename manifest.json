@@ -344,6 +344,11 @@
 		{"src": "fd-wayland:wayland",
 		 "config-opts": ["--disable-documentation"]},
 
+                {"src": "tarball:https://pypi.python.org/packages/source/M/Mako/Mako-1.0.0.tar.gz",
+                 "name": "python-mako",
+                 "checksum": "a3cd72cfef507204b50f74ffcbfcfde7e856437891d3f6cfe780866986d006fe",
+                 "patches": ["python-mako-buildsys.patch"]},
+
                 {"src": "fd-mesa:mesa",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic -fno-rtti",
