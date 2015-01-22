@@ -389,6 +389,9 @@
 
 		{"src": "anholt:libepoxy"},
 
+		{"src": "fd:xcb/util-keysyms",
+		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
+
         {"src": "fd:xorg/xserver",
          "config-opts": ["--enable-xwayland",
                          "--enable-glamor"]},
