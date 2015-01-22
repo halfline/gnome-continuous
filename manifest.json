@@ -145,8 +145,6 @@
 		 "patches": ["freetype-autogen.patch"]},
 
    		{"src": "fd:fontconfig",
-		 "tag": "af5864419441e12f1951c7cfd0a742b6316934cc",
-		 "tag-reason": "buildroots without fonts conflicts with http://cgit.freedesktop.org/fontconfig/commit/?id=db64c71408636e2d0ac3c39682ac1b6c8f317ac4",
 		 "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache"]},
 
 		{"src": "fd:xorg/util/macros",
