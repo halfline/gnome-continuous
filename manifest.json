@@ -936,9 +936,6 @@
                  "name": "clutter-gst2",
                  "branch": "clutter-gst-2.0"},
 
-		{"src": "gnome:clutter-gst",
-                 "name": "clutter-gst3"},
-
 		{"src": "gnome:clutter-gtk"},
 
 		{"src": "gnome:libpeas"},
@@ -1164,9 +1161,6 @@
 		 "tag": "a740b3f2f1df33a72f1f5473fb1a56c2732d622d",
 		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=741760",
 		 "config-opts": ["--disable-documentation"]},
-
-		{"src": "gnome:totem",
-		 "config-opts": ["--disable-vala"]},
 
 		{"src": "gnome:libgda",
 		 "branch": "LIBGDA_5.2"},
