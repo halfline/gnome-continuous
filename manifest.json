@@ -803,6 +803,7 @@
 		                 "--disable-scrollkeeper"]},
 
 		{"src": "gnome:libmediaart",
+		 "tag": "0.7.0",
 		 "config-opts": ["--enable-vala",
 		                 "--disable-gtk-doc",
                                  "--enable-installed-tests"]},
