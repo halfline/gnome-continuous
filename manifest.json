@@ -1143,8 +1143,6 @@
 		{"src": "gnome:seahorse"},
 
 		{"src": "gnome:geary",
-		 "tag": "a740b3f2f1df33a72f1f5473fb1a56c2732d622d",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=741760",
 		 "config-opts": ["--disable-documentation"]},
 
 		{"src": "gnome:libgda",
