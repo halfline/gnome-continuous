@@ -103,8 +103,6 @@
 		 "config-opts": ["--enable-vapigen"]},
 
    		{"src": "git:git://anongit.freedesktop.org/systemd/systemd",
-		 "tag": "v218-214-g60329a9d9fc58b1a4c8a6244592f731839c2e8d7",
-		 "tag-reason": "dependency on newer kernel headers for renameat2",
 		 "component": "minimal",
 		 "initramfs-depends": true,
 		 "cflags": {
