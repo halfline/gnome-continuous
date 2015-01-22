@@ -676,10 +676,6 @@
 
 		{"src": "gnome:mobile-broadband-provider-info"},
 
-		{"src": "gnome:network-manager-applet",
-		 "config-opts": ["--enable-more-warnings=no",
-		                 "--disable-migration"]},
-
 		{"src": "fd-pulse:pulseaudio",
 		 "tag": "6d88a139fc932474af6c1bb27bcc504f0d737534",
 		 "tag-reason": "requires json-c 0.11",
