@@ -886,7 +886,6 @@
 		{"src": "savannah:grub.git",
                  "component": "hwtest",
                  "cflags": { "x86_64": "" },
-		 "tag": "478b5675209ab0263b8271764ef85d8fc1faec42",
                  "config-opts": ["--with-platform=pc",
                                  "--disable-grub-mkfont",
                                  "--enable-liblzma=no",
