@@ -673,6 +673,10 @@
 
 		{"src": "gnome:mobile-broadband-provider-info"},
 
+		{"src": "gnome:network-manager-applet",
+		 "config-opts": ["--enable-more-warnings=no",
+		                 "--disable-migration"]},
+
 		{"src": "fd-pulse:pulseaudio",
 		 "config-opts": ["--disable-openssl"],
 		 "patches": ["pulseaudio-autogen.patch"]},
