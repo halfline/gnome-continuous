@@ -1227,7 +1227,14 @@
 
 		{"src": "gnome:nautilus-sendto"},
 
-		{"src": "gnome:yelp"}
+		{"src": "gnome:yelp"},
+		
+		{"src": "gnome:folks",
+		 "config-opts": ["--disable-static", 
+		                 "--disable-fatal-warnings",
+		                 "--enable-eds-backend",
+		                 "--enable-bluez-backend",
+		                 "--enable-installed-tests"]}
 
 	],
 
