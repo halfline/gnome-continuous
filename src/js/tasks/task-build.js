@@ -881,10 +881,11 @@ const TaskBuild = new Lang.Class({
                                           OSTree.RepoCheckoutOverwriteMode.UNION_FILES,
                                           composeRootdir, subtree, subtreeInfo, cancellable);
         }));
-	this.ostreeRepo.set_disable_fsync(false);
 
 	if (params.runTriggers)
 	    this._runTriggersInRoot(composeRootdir, cancellable);
+
+	this.ostreeRepo.set_disable_fsync(false);
 
         let contentsPath = composeRootdir.resolve_relative_path('usr/share/contents.json');
 	GSystem.file_ensure_directory(contentsPath.get_parent(), true, cancellable);
@@ -977,13 +978,13 @@ const TaskBuild = new Lang.Class({
 	print("Preparing commit of " + composeRootdir.get_path() + " to " + targetName);
 	let rev;
 	BuildUtil.timeSubtask("compose " + targetName, Lang.bind(this, function() {
-	    this.ostreeRepo.set_disable_fsync(false);
+	    this.ostreeRepo.set_disable_fsync(true);
             this.ostreeRepo.prepare_transaction(cancellable);
             this.ostreeRepo.scan_hardlinks(cancellable);
             let file = this._writeMtreeFromDirectory(composeRootdir, [], cancellable);
             rev = this._commit(treename, "Compose", file, cancellable, { version: this._buildName });
             this.ostreeRepo.commit_transaction(cancellable);
-	    this.ostreeRepo.set_disable_fsync(true);
+	    this.ostreeRepo.set_disable_fsync(false);
 	}));
         print("Compose of " + targetName + " is " + rev);
 
