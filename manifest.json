@@ -44,7 +44,8 @@
 		"alexlarsson": "git:git://github.com/alexlarsson/",
                 "anholt": "git:git://github.com/anholt/",
                 "fujita": "git:git://github.com/fujita/",
-                "mikechristie" : "git:git://github.com/mikechristie/"},
+                "mikechristie" : "git:git://github.com/mikechristie/",
+                "libical": "git:git://github.com/libical/"},
 
   "patches": {"src": "gnome:gnome-continuous",
               "subdir": "patches"},
@@ -961,7 +962,9 @@
 
 		{"src": "gnome:gnome-online-miners"},
 
-		{"src": "cgwalters:libical-tarballs-as-git"},
+		{"src": "libical:libical",
+		 "tag": "v1.0.1",
+		 "patches": ["libical-cmake-buildapi.patch"]},
 
 		{"src": "gnome:evolution-data-server",
 		 "irc_room": "evolution",
