@@ -272,7 +272,9 @@
 
 		{"src": "fd:xorg/lib/libSM"},
 
-		{"src": "fd:xorg/lib/libXt"},
+		{"src": "fd:xorg/lib/libXt",
+		 "tag": "aed2c4d3493cf3a06ad1240f317552fd8bfd687a",
+		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=88800"},
 
 		{"src": "fd:xorg/lib/libXmu"},
 
