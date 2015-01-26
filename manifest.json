@@ -929,6 +929,9 @@
                  "name": "clutter-gst2",
                  "branch": "clutter-gst-2.0"},
 
+		{"src": "gnome:clutter-gst",
+                 "name": "clutter-gst3"},
+
 		{"src": "gnome:clutter-gtk"},
 
 		{"src": "gnome:libpeas"},
@@ -1150,6 +1153,9 @@
 
 		{"src": "gnome:geary",
 		 "config-opts": ["--disable-documentation"]},
+
+		{"src": "gnome:totem",
+		 "config-opts": ["--disable-vala"]},
 
 		{"src": "gnome:libgda",
 		 "branch": "LIBGDA_5.2"},
