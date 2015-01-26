@@ -730,8 +730,6 @@
 		 		"--enable-installed-tests"]},
 
 		{"src": "gnome:gvfs",
-		 "tag": "be1191f1b2f3972441b2e8947d9a2ac71160a375",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=743551",
 		 "config-opts": ["--disable-gphoto2",
 				 "--disable-documentation",
 				 "--enable-installed-tests"]},
