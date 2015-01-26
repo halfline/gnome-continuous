@@ -1176,12 +1176,9 @@
 		{"src": "gnome:babl"},
 
 		{"src": "gnome:gegl",
-		 "name": "gegl2",
-		 "branch": "gegl-0-2"},
+		 "name": "gegl2"},
 
 		{"src": "gnome:gnome-photos",
-		 "tag": "04d201fff34fe37d27c22583be37ff558bb91f2d",
-		 "tag-reason": "needs gegl master, https://bugzilla.gnome.org/show_bug.cgi?id=743409",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:d-feet",
