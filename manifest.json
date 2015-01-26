@@ -809,7 +809,6 @@
 		                 "--disable-scrollkeeper"]},
 
 		{"src": "gnome:libmediaart",
-		 "tag": "0.7.0",
 		 "config-opts": ["--enable-vala",
 		                 "--disable-gtk-doc",
                                  "--enable-installed-tests"]},
@@ -1254,7 +1253,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 74,
+	"build-epoch": {"version": 75,
 		        "all": false,
-		        "component-names": ["epiphany" ]}
+		        "component-names": ["tracker", "grilo", "grilo-plugins"]}
 }
