@@ -45,7 +45,8 @@
                 "anholt": "git:git://github.com/anholt/",
                 "fujita": "git:git://github.com/fujita/",
                 "mikechristie" : "git:git://github.com/mikechristie/",
-                "libical": "git:git://github.com/libical/"},
+                "libical": "git:git://github.com/libical/",
+                "libgit2": "git:git://github.com/libgit2/"},
 
   "patches": {"src": "gnome:gnome-continuous",
               "subdir": "patches"},
@@ -1243,7 +1244,14 @@
 		                 "--disable-fatal-warnings",
 		                 "--enable-eds-backend",
 		                 "--enable-bluez-backend",
-		                 "--enable-installed-tests"]}
+		                 "--enable-installed-tests"]},
+
+		{"src": "libgit2:libgit2",
+		 "patches": ["libssh-cmake-buildapi.patch"]},
+
+		{"src": "gnome:libgit2-glib"},
+
+		{"src": "gnome:gnome-builder"}
 
 	],
 
