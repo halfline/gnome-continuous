@@ -381,6 +381,8 @@
 		{"src": "fd:xorg/app/xhost"},
 
 		{"src": "fd:xkeyboard-config",
+		 "tag": "f102fb0df6211d56ea1951fc1c35fb13cbc3d7d2",
+		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=88854",
 		 "config-opts": ["--with-xkb-rules-symlink=xorg",
 		                 "--with-xkb-base=/usr/share/X11/xkb"],
 		 "patches": ["xkeyboard-config-autogen.patch"]},
