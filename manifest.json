@@ -1246,9 +1246,7 @@
 		                 "--enable-bluez-backend",
 		                 "--enable-installed-tests"]},
 
-                {"src": "gnome:gnome-maps",
-		 "tag": "1933b20b82c10a7e15f6a0bfad7f75847621a1cb",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=743806"},
+                {"src": "gnome:gnome-maps"},
 
 		{"src": "libgit2:libgit2",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
