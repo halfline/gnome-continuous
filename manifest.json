@@ -1146,8 +1146,6 @@
 
 		{"src": "gnome:baobab"},
 
-		{"src": "gnome:gnome-maps"},
-
 		{"src": "gnome:gnome-sound-recorder"},
 
 		{"src": "gnome:gnome-logs"},
@@ -1247,6 +1245,8 @@
 		                 "--enable-eds-backend",
 		                 "--enable-bluez-backend",
 		                 "--enable-installed-tests"]},
+
+                {"src": "gnome:gnome-maps"},
 
 		{"src": "libgit2:libgit2",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
