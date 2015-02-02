@@ -1176,8 +1176,6 @@
 		 "name": "gegl2"},
 
 		{"src": "gnome:gnome-photos",
-		 "tag": "ebd5e706bbd8110a214fa8affc33af46cdc04543",
-		 "tag-reason": "requires gtk 3.15.5",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:d-feet",
