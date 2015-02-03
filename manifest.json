@@ -968,6 +968,8 @@
 		 "patches": ["libical-cmake-buildapi.patch"]},
 
 		{"src": "gnome:evolution-data-server",
+		 "tag": "a83cc09fc20edb2401f1e08d9d7b9f2eca408641",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=743934",
 		 "irc_room": "evolution",
 		 "config-opts": ["--enable-installed-tests",
 				 "--enable-vala-bindings",
