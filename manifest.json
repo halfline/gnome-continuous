@@ -1201,6 +1201,8 @@
 		{"src": "gnome:gtkhtml"},
 
 		{"src": "gnome:evolution",
+		 "tag": "a5fda150c6bccfa626e3adeac3018cd5624c36dc",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=743934",
 		 "irc_room": "evolution",
 		 "config-opts": ["--enable-installed-tests",
 		 		 "--disable-bogofilter",
@@ -1212,6 +1214,8 @@
 
 		{"src": "gnome:evolution-ews",
 		 "irc_room": "evolution",
+		 "tag": "828c4f9960fa03ca749d42b1646accc5e884cfd9",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=743934",
 		 "config-opts": ["--with-internal-lzx"]},
 
 		{"src": "git:git://git.libssh.org/projects/libssh.git",
