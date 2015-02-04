@@ -432,8 +432,7 @@
 
 		{"src": "fd:xorg/driver/xf86-video-vesa"},
 
-		{"src": "fd:startup-notification",
-		 "patches": ["startup-notification-autogen.patch"]},
+		{"src": "fd:startup-notification"},
 
 		{"src": "fd-dbus:dbus-glib",
 		 "config-opts": ["--enable-tests",
