@@ -1127,7 +1127,6 @@
                  "tag": "0243cbd3a7e0b72684b07d9380743d511a2b6a4a",
 		 "tag-reason": "Requires webkit 2.7.4" },
 
-		{"src": "gnome:gnome-calendar" },
 
         {"src": "tarball:https://ftp.gnu.org/gnu/gmp/gmp-6.0.0a.tar.xz",
          "name": "gmp",
