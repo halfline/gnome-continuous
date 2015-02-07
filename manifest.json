@@ -942,7 +942,7 @@
 		 "patches": ["liboauth-tarballs-as-git-autogen.patch"]},
 
 		{"src": "git:https://git.gitorious.org/uhttpmock/uhttpmock.git",
-		 "tag": "a9cea798ed3813fd4d70e6e7c25625101298032e"
+		 "tag": "8683225188e2cee6d23cf2423bf9a92b9cfcafe7",
 		 "tag-reason": "https://github.com/pwithnall/uhttpmock/issues/1"},
 
 		{"src": "gnome:libgdata"},
