@@ -941,7 +941,9 @@
 		 "config-opts": ["--enable-nss"],
 		 "patches": ["liboauth-tarballs-as-git-autogen.patch"]},
 
-		{"src": "git:https://git.gitorious.org/uhttpmock/uhttpmock.git"},
+		{"src": "git:https://git.gitorious.org/uhttpmock/uhttpmock.git",
+		 "tag": "a9cea798ed3813fd4d70e6e7c25625101298032e"
+		 "tag-reason": "https://github.com/pwithnall/uhttpmock/issues/1"},
 
 		{"src": "gnome:libgdata"},
 
