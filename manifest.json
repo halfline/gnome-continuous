@@ -941,6 +941,8 @@
 		 "config-opts": ["--enable-nss"],
 		 "patches": ["liboauth-tarballs-as-git-autogen.patch"]},
 
+		{"src": "git:https://git.gitorious.org/uhttpmock/uhttpmock.git"},
+
 		{"src": "gnome:libgdata"},
 
                 {"src": "gnome:gmime"},
