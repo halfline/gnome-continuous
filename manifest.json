@@ -863,6 +863,11 @@
 		                 "--with-dracut",
 				 "--enable-installed-tests"]},
 
+                {"src": "git:git://github.com/alexlarsson/xdg-app",
+                 "config-opts": ["--disable-documentation",
+                                 "--with-priv-mode=none"],
+                 "setuid": ["/usr/bin/xdg-app"]},
+
 		{"src": "gnome:gnome-hwtest",
                  "component": "minimal",
                  "initramfs-depends": true},
