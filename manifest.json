@@ -123,7 +123,7 @@
 		 "tag": "v1.0.19"},
 
 		{"src": "git:git://github.com/gregkh/usbutils.git",
-		 "tag": "v005",
+		 "tag": "e229882d4c8c81812777ea7c3f33431586679450",
 		 "patches": ["usbutils-autogen.patch"]},
 
    		{"src": "git:git://git.fedorahosted.org/git/lvm2.git",
