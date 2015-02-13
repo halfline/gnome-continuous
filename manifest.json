@@ -551,7 +551,7 @@
 				 "--disable-gtk",
 				 "--disable-gtk3"]},
 
-                {"src": "git:git://github.com/hughsie/gusb.git"},
+                {"src": "git:git://github.com/hughsie/libgusb.git"},
 		
 		{"src": "git:git://github.com/hughsie/colord.git",
 		 "config-opts": ["--disable-print-profiles",
