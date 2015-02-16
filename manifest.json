@@ -1119,7 +1119,9 @@
 		 "config-opts": ["--disable-documentation"],
 		 "component": "devel"},
 
-		{"src": "gnome:nautilus"},
+		{"src": "gnome:nautilus",
+		 "tag": "90ff8901311213563a10e8f411ad356fae7d9545",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=744626"},
 
 		{"src": "gnome:gedit",
 		 "config-opts": ["--enable-python=no",
