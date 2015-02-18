@@ -79,6 +79,8 @@
 
 		{"src": "fd-dbus:dbus",
 		 "name": "dbus-bootstrap",
+		 "tag": "82f9f6423adbcd2e14021e849c7d20e9348390dc",
+		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=75113",
 		 "bootstrap": true,
 		 "config-opts": ["--with-dbus-user=dbus",
 		                 "--enable-inotify",
@@ -309,6 +311,8 @@
 		{"src": "fd:xorg/lib/libxshmfence"},
 
 		{"src": "fd-dbus:dbus",
+		 "tag": "82f9f6423adbcd2e14021e849c7d20e9348390dc",
+		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=75113",
 		 "component": "minimal",
 		 "config-opts": ["--with-dbus-user=dbus",
 		                 "--enable-inotify",
