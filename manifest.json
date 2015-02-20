@@ -77,17 +77,6 @@
 		 "tag": "v3.0.4",
 		 "patches": ["gperf-autotools.patch"]},
 
-		{"src": "fd-dbus:dbus",
-		 "name": "dbus-bootstrap",
-		 "bootstrap": true,
-		 "config-opts": ["--with-dbus-user=dbus",
-		                 "--enable-inotify",
-				 "--disable-xml-docs",
-				 "--disable-doxygen-docs",
-				 "--disable-tests",
-				 "--disable-systemd",
-				 "--with-system-pid-file=/run/dbus.pid"]},
-
                 {"src": "git:git://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git",
 		 "component": "minimal",
 		 "config-opts": ["--disable-manpages"]},
@@ -1275,7 +1264,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 75,
+	"build-epoch": {"version": 76,
 		        "all": false,
-		        "component-names": ["tracker", "grilo", "grilo-plugins"]}
+		        "component-names": ["systemd"]}
 }
