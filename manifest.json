@@ -94,8 +94,6 @@
 		 "config-opts": ["--enable-vapigen"]},
 
    		{"src": "git:git://anongit.freedesktop.org/systemd/systemd",
-		 "tag": "407d02621e34244f693cdb52525415698600b8f2",
-		 "tag-reason": "missing udev_queue_flush symbol with next commit",
 		 "component": "minimal",
 		 "initramfs-depends": true,
 		 "cflags": {
