@@ -620,7 +620,7 @@
 		 "config-opts": ["--disable-gtk-doc"]},
 
 		{"src": "fd-gstreamer:gstreamer",
-		 "config-opts": ["--with_bash_completion_dir=no",
+		 "config-opts": ["--with-bash-completion-dir=no",
 		                 "--disable-tests",
 		                 "--disable-fatal-warnings"]},
 
