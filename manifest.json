@@ -105,7 +105,9 @@
                                  "--disable-timesyncd",
 				 "--enable-compat-libs",
 				 "--with-sysvinit-path=",
-				 "--with-sysvrcnd-path="]
+				 "--with-sysvrcnd-path="],
+		 "tag": "15e80c7b75c3a3188bfaaa0baddccf31ae661a7a",
+		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=89302"
 		 },
 
 		{"src": "git:https://github.com/libusb/libusb.git",
