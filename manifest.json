@@ -491,6 +491,8 @@
 
                 {"src": "git:git://git.kernel.org/pub/scm/bluetooth/bluez.git",
 		 "config-opts": ["--disable-cups", "--disable-obex", "--disable-usb", "--disable-tools"],
+		 "tag": "01264418d0509a0eed8719a33f546cdda934b61d",
+		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/02/24/63/build/log-bluez.txt",
 		 "patches": ["bluez-autogen.patch"]},
 
                 {"src": "git:git://github.com/jpirko/libndp.git"},
