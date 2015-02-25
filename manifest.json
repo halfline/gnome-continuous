@@ -919,7 +919,9 @@
 				 "--enable-introspection",
 				 "--enable-vala",
 				 "--disable-ui",
-				 "--disable-setup"]},
+				 "--disable-setup"],
+		 "tag": "e2cd8f0870d8b15af71e839f9035dce333af3c4e",
+		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/02/25/11/build/log-ibus.txt"},
 
 		{"src": "gnome:libgweather"},
 
