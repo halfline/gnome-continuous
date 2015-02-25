@@ -306,7 +306,9 @@
 				 "--disable-tests",
 				 "--with-systemdsystemunitdir=/usr/lib/systemd/system",
 				 "--with-system-pid-file=/run/dbus.pid"],
-		 "setuid": ["/runtime/usr/libexec/dbus-daemon-launch-helper"]},
+		 "setuid": ["/runtime/usr/libexec/dbus-daemon-launch-helper"],
+		 "tag": "2a6cefbc3bd3ed9392603da6a76b49c0dcba7e0d",
+		 "tag-reason": "breaks ibus - http://build.gnome.org/continuous/buildmaster/builds/2015/02/25/29/build/log-ibus.txt"},
 
 		{"src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng",
 		 "tag": "v1.5.18"},
@@ -919,9 +921,7 @@
 				 "--enable-introspection",
 				 "--enable-vala",
 				 "--disable-ui",
-				 "--disable-setup"],
-		 "tag": "e2cd8f0870d8b15af71e839f9035dce333af3c4e",
-		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/02/25/11/build/log-ibus.txt"},
+				 "--disable-setup"]},
 
 		{"src": "gnome:libgweather"},
 
