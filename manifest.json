@@ -308,9 +308,7 @@
 				 "--disable-tests",
 				 "--with-systemdsystemunitdir=/usr/lib/systemd/system",
 				 "--with-system-pid-file=/run/dbus.pid"],
-		 "setuid": ["/runtime/usr/libexec/dbus-daemon-launch-helper"],
-		 "tag": "2a6cefbc3bd3ed9392603da6a76b49c0dcba7e0d",
-		 "tag-reason": "breaks ibus - http://build.gnome.org/continuous/buildmaster/builds/2015/02/25/29/build/log-ibus.txt"},
+		 "setuid": ["/runtime/usr/libexec/dbus-daemon-launch-helper"]},
 
 		{"src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng",
 		 "tag": "v1.5.18"},
@@ -916,7 +914,8 @@
 		 "config-opts": ["--without-pcre"]},
 
                 {"src": "ibus:ibus.git",
-		 "patches": ["ibus-builddir.patch"],
+		 "patches": ["ibus-builddir.patch",
+			     "ibus-dconf-Work-around-using-dbus-development-builds-and-.patch"],
 		 "config-opts": ["--disable-tests", 
 				 "--disable-gconf",
 				 "--enable-dconf",

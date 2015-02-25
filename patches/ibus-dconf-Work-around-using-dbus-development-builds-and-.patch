@@ -1,0 +1,33 @@
+From d3b9bcb547847f69de5acc186ad1b7693ba9fac2 Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Wed, 25 Feb 2015 08:55:19 -0500
+Subject: [PATCH] dconf: Work around using dbus development builds and
+ /etc/machine-id
+
+Recent DBus changed the way it reads /etc/machine-id to be more
+strict, and it turns out that this breaks the use of dbus-launch here.
+
+The *correct* fix is to use `dbus-run-session`, but not everyone has
+that yet.  This is a quick hack that keeps the build going.
+---
+ data/dconf/make-dconf-override-db.sh | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/data/dconf/make-dconf-override-db.sh b/data/dconf/make-dconf-override-db.sh
+index 49a6df9..9c650e9 100755
+--- a/data/dconf/make-dconf-override-db.sh
++++ b/data/dconf/make-dconf-override-db.sh
+@@ -2,6 +2,10 @@
+ 
+ set -e
+ 
++# gnome-continuous doesn't have a machine-id set, which
++# breaks dbus-launch.  There's dbus-run-session which is
++# better, but not everyone has it yet.
++export DBUS_FATAL_WARNINGS=0
+ export TMPDIR=$(mktemp -d --tmpdir="$PWD")
+ export XDG_CONFIG_HOME="$TMPDIR/config"
+ export XDG_CACHE_HOME="$TMPDIR/cache"
+-- 
+1.8.3.1
+
