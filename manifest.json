@@ -79,7 +79,9 @@
 
                 {"src": "git:git://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git",
 		 "component": "minimal",
-		 "config-opts": ["--disable-manpages"]},
+		 "config-opts": ["--disable-manpages"],
+		 "tag": "10d783c4a74eb1bd4d812b1bbdda083703221f18",
+		 "tag-reason": "breaks dracut: http://build.gnome.org/continuous/buildmaster/builds/2015/02/25/30/build/output.txt"},
 
                 {"src": "gnome:gobject-introspection",
                  "component": "minimal",
