@@ -1267,7 +1267,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 76,
+	"build-epoch": {"version": 77,
 		        "all": false,
-		        "component-names": ["systemd"]}
+		        "component-names": ["adwaita-icon-theme"]}
 }
