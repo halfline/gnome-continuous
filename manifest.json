@@ -501,8 +501,6 @@
                 {"src": "git:git://github.com/jpirko/libndp.git"},
 
 		{"src": "fd-NM:NetworkManager",
-		 "tag": "643291bea5752c75ea396ef66b0cf4ac949922ca",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=745296",
 		 "config-opts": ["--with-dhclient=yes",
 		                 "--with-session-tracking=systemd",
 				 "--with-crypto=nss",
