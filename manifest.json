@@ -1269,7 +1269,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 77,
+	"build-epoch": {"version": 78,
 		        "all": false,
 		        "component-names": ["adwaita-icon-theme"]}
 }
