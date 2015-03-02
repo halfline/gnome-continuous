@@ -1,4 +1,4 @@
-From 3bf2be92f98997a0696e1950e8cf05a33b0dcaee Mon Sep 17 00:00:00 2001
+From 7e93fecb0444041eaa7d6e76798cc1bb14d991b1 Mon Sep 17 00:00:00 2001
 From: "Owen W. Taylor" <otaylor@fishsoup.net>
 Date: Sat, 19 Apr 2014 01:48:33 -0400
 Subject: [PATCH] iscsistart: don't build statically
@@ -9,7 +9,7 @@ On a modern system, we'll have shared libc even in an initrd.
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/usr/Makefile b/usr/Makefile
-index 550fdff..a081be8 100644
+index 9209d5d..7642690 100644
 --- a/usr/Makefile
 +++ b/usr/Makefile
 @@ -61,8 +61,8 @@ iscsiadm: $(ISCSI_LIB_SRCS) $(DISCOVERY_SRCS) iscsiadm.o session_mgmt.o
@@ -17,9 +17,9 @@ index 550fdff..a081be8 100644
  
  iscsistart: $(ISCSI_LIB_SRCS) $(INITIATOR_SRCS) $(FW_BOOT_SRCS) \
 -		iscsistart.o statics.o
--	$(CC) $(CFLAGS) -static $^ -o $@ -lrt
+-	$(CC) $(CFLAGS) $^ -o $@ -lrt -lmount
 +		iscsistart.o
-+	$(CC) $(CFLAGS) $^ -o $@  -lrt
++	$(CC) $(CFLAGS) $^ -o $@  -lrt -lmount
  clean:
  	rm -f *.o $(PROGRAMS) .depend $(LIBSYS)
  
