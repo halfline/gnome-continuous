@@ -861,7 +861,7 @@
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
                  "config-opts": ["--disable-documentation",
                                  "--with-priv-mode=none"],
-                 "setuid": ["/usr/bin/xdg-app-helper"]},
+                 "setuid": ["/runtime/usr/bin/xdg-app-helper"]},
 
 		{"src": "gnome:gnome-hwtest",
                  "component": "minimal",
