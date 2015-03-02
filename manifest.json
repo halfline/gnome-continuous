@@ -861,7 +861,7 @@
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
                  "config-opts": ["--disable-documentation",
                                  "--with-priv-mode=none"],
-                 "setuid": ["/usr/bin/xdg-app", "/usr/bin/xdg-app-helper"]},
+                 "setuid": ["/usr/bin/xdg-app-helper"]},
 
 		{"src": "gnome:gnome-hwtest",
                  "component": "minimal",
@@ -1267,7 +1267,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 78,
+	"build-epoch": {"version": 79,
 		        "all": false,
-		        "component-names": ["adwaita-icon-theme"]}
+		        "component-names": ["xdg-app"]}
 }
