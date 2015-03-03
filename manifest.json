@@ -1126,9 +1126,7 @@
                                  "--disable-offline-appstream-data",
                                  "--enable-installed-tests"]},
 
-		{"src": "gnome:epiphany",
-                 "tag": "0243cbd3a7e0b72684b07d9380743d511a2b6a4a",
-		 "tag-reason": "Requires webkit 2.7.4" },
+		{"src": "gnome:epiphany"},
 
 		{"src": "gnome:gnome-calendar" },
 
