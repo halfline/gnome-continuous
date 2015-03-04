@@ -1,0 +1,24 @@
+From 89f41c86307ea373c4e953f04e7f10f63e7efaae Mon Sep 17 00:00:00 2001
+From: Vadim Rutkovsky <vrutkovs@redhat.com>
+Date: Wed, 4 Mar 2015 14:30:10 +0100
+Subject: [PATCH] build: Note we don't support srcdir != builddir
+
+---
+ configure.ac | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configure.ac b/configure.ac
+index 748e804..8fee7e9 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -56,6 +56,7 @@ AC_CONFIG_FILES([tests/package.m4.tmp:tests/package.m4.in],
+                 [$srcdir/build-aux/move-if-change tests/package.m4.tmp $srcdir/tests/package.m4
+                  cp $srcdir/tests/package.m4 tests/package.m4.tmp])
+ 
++echo \#buildapi-variable-no-builddir >/dev/null
+ 
+ AC_OUTPUT([
+   Makefile
+-- 
+1.8.3.1
+

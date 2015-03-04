@@ -1081,7 +1081,8 @@
 		{"src": "gnome:gnome-shell-extensions",
 		 "config-opts": ["--enable-extensions=classic-mode"]},
 
-		{"src": "gnome:gcab"},
+		{"src": "gnome:gcab",
+		"patches": ["gcab-no-builddir.patch"]},
 
 		{"src": "git:git://github.com/hughsie/appstream-glib.git",
 		 "config-opts": ["--disable-dep11"]},
