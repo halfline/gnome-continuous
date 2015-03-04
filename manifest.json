@@ -1082,6 +1082,7 @@
 		 "config-opts": ["--enable-extensions=classic-mode"]},
 
 		{"src": "gnome:gcab",
+		"config-opts": ["--disable-silent-rules", "--disable-static", "--enable-fast-install"],
 		"patches": ["gcab-no-builddir.patch"]},
 
 		{"src": "git:git://github.com/hughsie/appstream-glib.git",
