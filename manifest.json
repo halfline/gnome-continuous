@@ -1268,7 +1268,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 79,
+	"build-epoch": {"version": 80,
 		        "all": false,
-		        "component-names": ["xdg-app"]}
+		        "component-names": ["seahorse"]}
 }
