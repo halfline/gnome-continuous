@@ -219,7 +219,7 @@ RateLimitInterval=0\n', null, false, Gio.FileCreateFlags.REPLACE_DESTINATION, ca
 }
 
 function injectTestUserCreation(currentDir, currentEtcDir, username, params, cancellable) {
-    params = Params.parse(params, { password: null, session: null, loginType: null });
+    params = Params.parse(params, { password: null, session: null });
     let passwordCommand, setSessionCommand;
     let commandTemplate = '/usr/bin/dbus-send --print-reply --reply-timeout=60000 --system --type=method_call --print-reply' +
         ' --dest=org.freedesktop.Accounts /org/freedesktop/Accounts%s org.freedesktop.Accounts.%s %s'
@@ -258,15 +258,16 @@ function enableAutologin(currentDir, currentEtcDir, username, loginType, cancell
     keyfile.load_from_file(gdmCustomPath.get_path(), GLib.KeyFileFlags.NONE);
     let loginString = null;
     if (loginType === null) {
-        loginString = 'Automatic'
+        loginString = 'Automatic';
     } else {
-        loginString = loginType
+        loginString = loginType;
     }
     keyfile.set_string('daemon', loginString + 'LoginEnable', 'true');
     keyfile.set_string('daemon', loginString + 'Login', username);
-    if (loginType ==  'Timed') {
+    if (loginString == 'Timed') {
         keyfile.set_string('daemon', 'TimedLoginDelay', '10');
     }
+    print("Login type set to '"+loginString+"'");
     keyfile.set_string('debug', 'Enable', 'true');
     gdmCustomPath.replace_contents(keyfile.to_data()[0], null, false, Gio.FileCreateFlags.REPLACE_DESTINATION, cancellable);
 }
