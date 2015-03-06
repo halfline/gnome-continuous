@@ -257,7 +257,7 @@ function enableAutologin(currentDir, currentEtcDir, username, loginType, cancell
     let keyfile = new GLib.KeyFile();
     keyfile.load_from_file(gdmCustomPath.get_path(), GLib.KeyFileFlags.NONE);
     let loginString = null;
-    if (loginType === null) {
+    if (loginType === undefined) {
         loginString = 'Automatic';
     } else {
         loginString = loginType;
