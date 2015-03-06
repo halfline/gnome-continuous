@@ -62,7 +62,7 @@ function getQemuPath() {
 
 function getDefaultQemuOptions(params) {
     params = Params.parse(params, { parallel: false });
-    let args = [getQemuPath(), '-vga', 'qxl', '-usb', '-usbdevice', 'tablet', '-net', 'none'];
+    let args = [getQemuPath(), '-vga', 'std', '-usb', '-usbdevice', 'tablet', '-net', 'none'];
 
     let systemMemoryMb = linuxGetMemTotalMb();
     let minimumGuestMemoryMb = 768;
