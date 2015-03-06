@@ -460,6 +460,8 @@ const TestOneDisk = new Lang.Class({
             LibQA.enableAutologin(currentDir, currentEtcDir, username, this._loginType, cancellable);
 
             this._parentTask._prepareDisk(mntdir, this._diskArch, cancellable);
+        } catch (e) {
+            print("testuser preparations failed: " + e);
         } finally {
             gfmnt.umount(cancellable);
         }
