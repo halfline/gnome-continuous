@@ -1270,7 +1270,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 80,
+	"build-epoch": {"version": 81,
 		        "all": false,
-		        "component-names": ["seahorse"]}
+		        "component-names": ["libinput", "clutter"]}
 }
