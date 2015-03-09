@@ -1254,7 +1254,7 @@
                 {"src": "gnome:gnome-maps"},
 
 		{"src": "libgit2:libgit2",
-		 "tag": "23a17803b6e3a8bf21f740726ec0a038968da9a1",
+		 "tag": "v0.22.0",
 		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=745882",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
 
