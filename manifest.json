@@ -970,6 +970,8 @@
 
 		{"src": "gnome:evolution-data-server",
 		 "irc_room": "evolution",
+		 "tag": "c427633467c73836fbe4e5ffc77bd41592798355",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=745925",
 		 "config-opts": ["--enable-installed-tests",
 				 "--enable-vala-bindings",
 				 "--disable-uoa"]},
