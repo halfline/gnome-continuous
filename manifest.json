@@ -323,7 +323,8 @@
                 {"src": "fd:libevdev",
 		 "config-opts": ["--disable-gcov"]},
 
-		{"src": "fd:wayland/libinput"},
+		{"src": "fd:wayland/libinput",
+		 "name": "libinput"},
 
 		{"src": "fd:xorg/util/makedepend",
 		 "component": "devel"},
