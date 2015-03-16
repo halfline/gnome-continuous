@@ -1293,7 +1293,9 @@
 
 		{"src": "gnome:iagno"},
 
-		{"src": "gnome:lightsoff"}
+		{"src": "gnome:lightsoff"},
+
+		{"src": "gnome:quadrapassel"}
 
 	],
 
