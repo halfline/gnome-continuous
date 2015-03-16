@@ -1271,7 +1271,9 @@
 
 		{"src": "gnome:five-or-more"},
 
-		{"src": "gnome:four-in-a-row"}
+		{"src": "gnome:four-in-a-row"},
+
+		{"src": "gnome:frogr"}
 
 	],
 
