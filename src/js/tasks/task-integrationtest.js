@@ -58,7 +58,7 @@ const TaskIntegrationTest = new Lang.Class({
 
     CompletedTag: 'integrated',
 
-    Timeout: 60 * 60,
+    Timeout: 2 * 60 * 60,
     
     _handleMessage: function(message, cancellable) {
         let gdtrTest = message['GDTR_TEST'];
