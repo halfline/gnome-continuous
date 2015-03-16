@@ -1287,7 +1287,13 @@
 
 		{"src": "gnome:gnome-music"},
 
-		{"src": "gnome:gthumb"}
+		{"src": "gnome:gthumb"},
+
+		{"src": "gnome:hitori"},
+
+		{"src": "gnome:iagno"},
+
+		{"src": "gnome:lightsoff"}
 
 	],
 
