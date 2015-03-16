@@ -1265,7 +1265,9 @@
 
 		{"src": "gnome:gnome-builder"},
 
-		{"src": "gnome:atomix"}
+		{"src": "gnome:atomix"},
+
+		{"src": "gnome:dconf-editor"}
 
 	],
 
