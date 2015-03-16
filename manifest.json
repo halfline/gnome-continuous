@@ -1269,7 +1269,9 @@
 
 		{"src": "gnome:dconf-editor"},
 
-		{"src": "gnome:five-or-more"}
+		{"src": "gnome:five-or-more"},
+
+		{"src": "gnome:four-in-a-row"}
 
 	],
 
