@@ -1279,7 +1279,9 @@
 		 "config-opts": ["--disable-gtk-doc"]
 		},
 
-		{"src": "gnome:gnome-2048"}
+		{"src": "gnome:gnome-2048"},
+
+		{"src": "gnome:gnome-mahjongg"}
 
 	],
 
