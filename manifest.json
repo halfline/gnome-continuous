@@ -1263,7 +1263,9 @@
 
 		{"src": "gnome:libgit2-glib"},
 
-		{"src": "gnome:gnome-builder"}
+		{"src": "gnome:gnome-builder"},
+
+		{"src": "gnome:atomix"}
 
 	],
 
