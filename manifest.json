@@ -1281,7 +1281,9 @@
 
 		{"src": "gnome:gnome-2048"},
 
-		{"src": "gnome:gnome-mahjongg"}
+		{"src": "gnome:gnome-mahjongg"},
+
+		{"src": "gnome:gnome-multi-writer"}
 
 	],
 
