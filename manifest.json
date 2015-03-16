@@ -1283,7 +1283,9 @@
 
 		{"src": "gnome:gnome-mahjongg"},
 
-		{"src": "gnome:gnome-multi-writer"}
+		{"src": "gnome:gnome-multi-writer"},
+
+		{"src": "gnome:gnome-music"}
 
 	],
 
