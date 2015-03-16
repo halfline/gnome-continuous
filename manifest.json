@@ -1273,7 +1273,13 @@
 
 		{"src": "gnome:four-in-a-row"},
 
-		{"src": "gnome:frogr"}
+		{"src": "gnome:frogr"},
+
+		{"src": "gnome:libgames-support",
+		 "config-opts": ["--disable-gtk-doc"]
+		},
+
+		{"src": "gnome:gnome-2048"}
 
 	],
 
