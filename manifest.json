@@ -763,7 +763,7 @@
 		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.7.91.tar.xz",
 		 "name": "webkitgtk4",
 		 "checksum": "9d2b70a0dba6e2b6f74b82b2ceb92605921ecf0a554633ed98bc277c55b091e1",
-		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
+		 "patches": ["webkitgtk-cmake-buildapi.patch", "webkitgtk-2.7.91-webview-webcontext-ref.patch"]},
 
 		{"src": "gnome:libgee",
 		 "patches": ["gee-builddir.patch"]},
