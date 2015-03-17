@@ -348,8 +348,6 @@
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-rtti"
                  },
                  "patches": ["mesa-nv50-fix-build.patch"],
-		 "tag": "10.5-branchpoint-343-gf5ac5e20b16d17b0adda6d856829dd0cf997f7dc",
-		 "tag-reason": "build error in glsl, not reported upstream",
                  "config-opts": [
                      "--enable-pic",
                      "--disable-asm",
@@ -1305,7 +1303,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 81,
+	"build-epoch": {"version": 82,
 		        "all": false,
-		        "component-names": ["libinput", "clutter"]}
+		        "component-names": ["cogl", "clutter"]}
 }
