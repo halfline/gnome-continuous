@@ -639,14 +639,16 @@
 				 "--enable-xlib-egl-platform",
 				 "--enable-cogl-gst",
 				 "--enable-installed-tests"],
-		 "branch": "cogl-1.20"},
+		 "branch": "cogl-1.20",
+		 "tag": "8cecd6899e8ba804829b6ff76e2e7211b4e4a89d"},
 
 		{"src": "gnome:clutter",
 		 "config-opts": ["--enable-installed-tests",
 				 "--enable-wayland-backend",
 				 "--enable-wayland-compositor",
 				 "--enable-egl-backend",
-				 "--enable-evdev-input"]},
+				 "--enable-evdev-input"],
+		 "tag": "79b1253bc821fd950f415710400e88fdd08f83c5"},
 
 		{"src": "gnome:libnotify"},
 
