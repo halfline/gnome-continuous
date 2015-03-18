@@ -584,8 +584,6 @@
 
 		{"src": "gnome:gtk+",
 		 "config-opts": ["--enable-installed-tests", "--enable-wayland-backend", "--enable-x11-backend"],
-		 "tag": "99c4f2dd3947c290e3ea19153202be3e43b22add",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=746407",
 		 "name": "gtk3"},
 
 	        {"src": "fd:plymouth",
