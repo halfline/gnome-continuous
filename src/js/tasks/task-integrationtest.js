@@ -130,8 +130,9 @@ const TaskIntegrationTest = new Lang.Class({
             else
                 print("NOTE: No such xfail test: " + xfail);
         }
-        let testsScript = '#!/bin/bash\n\
-killall gnome-initial-setup\n\
+        let testsScript = '#!/bin/sh\n\
+mkdir ~/.config\n\
+echo "yes" >> ~/.config/gnome-initial-setup-done\n\
 gnome-desktop-testing-runner --parallel 0 --status=yes --report-directory=~/installed-tests-results\n';
         let dest = deployEtcDir.resolve_relative_path('home/testuser/gnome-continuous-installed-tests.sh');
         GSystem.file_ensure_directory(dest.get_parent(), true, cancellable);
