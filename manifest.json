@@ -1160,6 +1160,8 @@
 		{"src": "gnome:seahorse"},
 
 		{"src": "gnome:geary",
+		 "tag": "72b2648248616951822c1734400b0b397ff3da88",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=746504#c7",
 		 "config-opts": ["--disable-documentation"]},
 
 		{"src": "gnome:totem",
