@@ -1202,7 +1202,6 @@
 		{"src": "gnome:gtkhtml"},
 
 		{"src": "gnome:evolution",
-		 "tag": "320d93d245c1c2a3620d493af3ba31d715a805b7",
 		 "irc_room": "evolution",
 		 "config-opts": ["--enable-installed-tests",
 		 		 "--disable-bogofilter",
