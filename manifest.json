@@ -852,8 +852,6 @@
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:ostree",
-		 "tag": "8724adc19362cecd04f6704280d2f96227cc1af1",
-		 "tag-reason": "Need to update gpgme in OE",
                  "component": "minimal",
 		 "initramfs-depends": true,
 		 "config-opts": ["--with-soup-gnome",
