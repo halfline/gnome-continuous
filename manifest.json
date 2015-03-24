@@ -1260,7 +1260,9 @@
 
 		{"src": "gnome:libgit2-glib"},
 
-		{"src": "gnome:gnome-builder"},
+		{"src": "gnome:gnome-builder",
+		 "tag": "c88430ac6e059a606f3a3e84c7fe8b0dbc85d0ed",
+		 "tag-reason": "requires clang"},
 
 		{"src": "gnome:atomix"},
 
