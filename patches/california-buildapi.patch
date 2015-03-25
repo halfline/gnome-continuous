@@ -1,0 +1,25 @@
+From e8a9005567ebc6967406b1598000e5b8cbf965a5 Mon Sep 17 00:00:00 2001
+From: Vadim Rutkovsky <vrutkovs@redhat.com>
+Date: Wed, 25 Mar 2015 13:21:21 +0100
+Subject: [PATCH 2/3] Implement GNOME buildapi
+
+---
+ configure.ac | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/configure.ac b/configure.ac
+index cf72baa..4537b2d 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -112,6 +112,8 @@ AC_CONFIG_FILES([
+ 	data/california.desktop.in
+ ])
+ 
++echo \#buildapi-variable-no-builddir >/dev/null
++
+ AC_OUTPUT
+ 
+ AC_MSG_RESULT([
+-- 
+1.8.3.1
+
