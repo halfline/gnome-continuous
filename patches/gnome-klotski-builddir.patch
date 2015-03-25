@@ -1,0 +1,25 @@
+From b60a4f6bd4af6562a4bd3c653cfa39465fdf82b2 Mon Sep 17 00:00:00 2001
+From: Vadim Rutkovsky <vrutkovs@redhat.com>
+Date: Wed, 25 Mar 2015 15:27:53 +0100
+Subject: [PATCH] Fix builddir!=srcdir issue
+
+---
+ src/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index bc4c005..281c9d5 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -30,7 +30,7 @@ gnome_klotski_LDADD = \
+ 	$(GNOME_KLOTSKI_LIBS)
+ 
+ klotski-resources.c: $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies klotski.gresource.xml)
+-	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source klotski.gresource.xml
++	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(builddir) --sourcedir=$(srcdir) --generate-source $(srcdir)/klotski.gresource.xml
+ 
+ CLEANFILES = \
+ 	$(patsubst %.vala,%.c,$(filter %.vala, $(SOURCES))) \
+-- 
+1.8.3.1
+

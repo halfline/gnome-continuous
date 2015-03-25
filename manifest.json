@@ -1305,8 +1305,22 @@
 		 "patches": ["bijiben-buildsys.patch"]},
 
 		{"src": "gnome:gnome-chess",
-		 "patches": ["gnome-chess-builddir.patch"]}
+		 "patches": ["gnome-chess-builddir.patch"]},
 
+		{"src": "gnome:gnome-klotski",
+		 "patches": ["gnome-klotski-builddir.patch"]},
+
+		{"src": "gnome:gnome-nibbles",
+		 "patches": ["gnome-nibbles-builddir.patch"]},
+
+		{"src": "gnome:gnome-robots",
+		 "patches": ["gnome-robots-builddir.patch"]},
+
+		{"src": "gnome:gnome-tetravex",
+		 "patches": ["gnome-tetravex-builddir.patch"]},
+
+		{"src": "gnome:tali",
+		 "patches": ["tali-builddir.patch"]}
 	],
 
     "installed-tests-components": [],

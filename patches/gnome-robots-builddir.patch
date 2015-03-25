@@ -1,0 +1,25 @@
+From 46f4e8908a6d2b8e500469f5c7e213f4cfa6c502 Mon Sep 17 00:00:00 2001
+From: Vadim Rutkovsky <vrutkovs@redhat.com>
+Date: Wed, 25 Mar 2015 15:26:27 +0100
+Subject: [PATCH] Fix builddir!=srcdir issue
+
+---
+ src/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 16754ed..214053b 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -50,7 +50,7 @@ gnome_robots_SOURCES = \
+ BUILT_SOURCES = robots-resources.c
+ 
+ robots-resources.c: $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies robots.gresource.xml)
+-	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source robots.gresource.xml
++	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(builddir) --sourcedir=$(srcdir) --generate-source $(srcdir)/robots.gresource.xml
+ 
+ gnome_robots_CPPFLAGS = \
+ 	-I$(top_srcdir) \
+-- 
+1.8.3.1
+
