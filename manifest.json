@@ -1133,7 +1133,11 @@
 
 		{"src": "gnome:gnome-calendar" },
 
-		{"src": "gnome:california"},
+		{"src": "gnome:california",
+		 "patches": ["california-buildapi.patch",
+					 "california-don-t-check-for-xdg-email.patch",
+					 "california-new-eds.patch"]},
+
         {"src": "tarball:https://ftp.gnu.org/gnu/gmp/gmp-6.0.0a.tar.xz",
          "name": "gmp",
          "checksum": "9156d32edac6955bc53b0218f5f3763facb890b73a835d5e1b901dcf8eb8b764"},
