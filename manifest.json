@@ -1299,7 +1299,10 @@
 
 		{"src": "gnome:lightsoff"},
 
-		{"src": "gnome:quadrapassel"}
+		{"src": "gnome:quadrapassel"},
+
+		{"src": "gnome:bijiben",
+		 "patches": ["bijiben-buildsys.patch"]}
 
 	],
 
