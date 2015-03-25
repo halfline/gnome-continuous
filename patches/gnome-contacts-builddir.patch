@@ -1,0 +1,24 @@
+From 8707eac5e856572f3684d26edd932d0f246f09b3 Mon Sep 17 00:00:00 2001
+From: Vadim Rutkovsky <vrutkovs@redhat.com>
+Date: Wed, 25 Mar 2015 15:38:46 +0100
+Subject: [PATCH] Fix builddir!=srcdir issue
+
+---
+ configure.ac | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configure.ac b/configure.ac
+index 0de0bc8..6e3feaf 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -112,6 +112,7 @@ AS_IF([test "x$enable_man_pages" != "xno"],
+ 
+ AM_CONDITIONAL([BUILD_MAN_PAGES], [test "x$have_manutils" = "xyes"])
+ 
++echo \#buildapi-variable-no-builddir >/dev/null
+ 
+ dnl libgd
+ LIBGD_INIT([
+-- 
+1.8.3.1
+

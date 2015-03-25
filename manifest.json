@@ -1320,7 +1320,11 @@
 		 "patches": ["gnome-tetravex-builddir.patch"]},
 
 		{"src": "gnome:tali",
-		 "patches": ["tali-builddir.patch"]}
+		 "patches": ["tali-builddir.patch"]},
+
+		{"src": "gnome:gnome-contacts",
+		 "config-opts": ["--disable-man-pages"],
+		 "patches": ["gnome-contacts-builddir.patch"]}
 	],
 
     "installed-tests-components": [],
