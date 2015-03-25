@@ -1302,7 +1302,10 @@
 		{"src": "gnome:quadrapassel"},
 
 		{"src": "gnome:bijiben",
-		 "patches": ["bijiben-buildsys.patch"]}
+		 "patches": ["bijiben-buildsys.patch"]},
+
+		{"src": "gnome:gnome-chess",
+		 "patches": ["gnome-chess-builddir.patch"]}
 
 	],
 
