@@ -131,11 +131,9 @@ const TaskIntegrationTest = new Lang.Class({
                 print("NOTE: No such xfail test: " + xfail);
         }
         let testsScript = '#!/bin/sh\n\
-mkdir ~/.config\n\
-echo "yes" >> ~/.config/gnome-initial-setup-done\n\
-killall gnome-initial-setup || true\n\
+pkill gnome-initial || true\n\
 gnome-desktop-testing-runner --parallel 0 --status=yes --report-directory=~/installed-tests-results\n';
-        let dest = deployDir.resolve_relative_path('home/testuser/gnome-continuous-installed-tests.sh');
+        let dest = deployDir.resolve_relative_path('bin/gnome-continuous-installed-tests.sh');
         GSystem.file_ensure_directory(dest.get_parent(), true, cancellable);
         dest.replace_contents(testsScript, null, false, Gio.FileCreateFlags.REPLACE_DESTINATION,
                               cancellable);
@@ -143,7 +141,7 @@ gnome-desktop-testing-runner --parallel 0 --status=yes --report-directory=~/inst
         let desktopFile = '[Desktop Entry]\n\
 Encoding=UTF-8\n\
 Name=GNOME installed tests runner\n\
-Exec=wq/home/testuser/gnome-continuous-installed-tests.sh\n\
+Exec=sh /bin/gnome-continuous-installed-tests.sh\n\
 Terminal=false\n\
 Type=Application\n';
         let dest = deployEtcDir.resolve_relative_path('xdg/autostart/gnome-desktop-testing.desktop');
