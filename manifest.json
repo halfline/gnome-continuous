@@ -1054,6 +1054,8 @@
 		{"src": "gnome:libwnck"},
 
 		{"src": "gnome:vte",
+		 "tag": "450bf257266c1ec0f380e88a5512743acc6fc863",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=747137",
 		 "config-opts": ["--disable-vala"]},
 
 		{"src": "git:git://git.kernel.org/pub/scm/utils/dash/dash.git"},
