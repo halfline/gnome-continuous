@@ -1133,9 +1133,7 @@
 
 		{"src": "gnome:epiphany"},
 
-		{"src": "gnome:gnome-calendar",
-                 "tag": "85dd9953297be401e02b7e0faa2e2c4452d6b4d3",
-                 "tag-reason": "FTBFS http://build.gnome.org/continuous/buildmaster/builds/2015/04/02/30/build/log-gnome-calendar.txt"},
+		{"src": "gnome:gnome-calendar" },
 
 		{"src": "gnome:california",
 		 "patches": ["california-buildapi.patch",
