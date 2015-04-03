@@ -1233,9 +1233,7 @@
 
 		{"src": "gnome:hotssh"},
 
-		{"src": "gnome:file-roller",
-		 "tag": "62b268a3b5cc875dcfccb49f93d52be549ec5354",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=747304"},
+		{"src": "gnome:file-roller"},
 
 		{"src": "gnome:gnome-desktop-testing",
 		 "component": "testing"},
