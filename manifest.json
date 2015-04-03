@@ -1007,7 +1007,9 @@
 		                 "--without-console-kit",
 		                 "--with-plymouth",
 		                 "--with-systemd",
-				 "--enable-systemd-journal"]},
+				 "--enable-systemd-journal"],
+		 "tag": "ddb1ec870ad7429403371b34f3881da786a331b8",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=747310"},
 
 		{"src": "fd-telepathy:telepathy-logger",
 		 "config-opts": ["--disable-Werror"],
