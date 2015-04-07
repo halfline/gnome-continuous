@@ -96,8 +96,6 @@
 		 "config-opts": ["--enable-vapigen"]},
 
    		{"src": "git:git://anongit.freedesktop.org/systemd/systemd",
-		 "tag": "05d990efd7dda29835cfe9e4c03d5864b055b58b",
-		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=89918",
 		 "component": "minimal",
 		 "initramfs-depends": true,
 		 "patches": ["systemd-Revert-core-mount-add-dependencies-to-dynamically-mo.patch"],
