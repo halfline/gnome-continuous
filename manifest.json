@@ -948,7 +948,7 @@
 
 		{"src": "gnome:libgdata"},
 
-                {"src": "gnome:gmime"
+        {"src": "gnome:gmime",
 		 "tag": "23efd1db17cebd93f357f48aacc35ee932149e0f",
 		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/04/09/50/build/log-gmime.txt"},
 
