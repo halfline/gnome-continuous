@@ -414,10 +414,6 @@
 
                 {"src": "fd-spice:spice-protocol"},
 
-                {"src": "tarball:https://pypi.python.org/packages/source/s/six/six-1.9.0.tar.gz",
-                 "name": "python-six",
-                 "checksum": "e24052411fc4fbd1f672635537c3fc2330d9481b18c0317695b46259512c91d5"},
-
                 {"src": "fd:xorg/driver/xf86-video-qxl",
 		 "patches": ["xorg-autogen-merged.patch"]},
 
