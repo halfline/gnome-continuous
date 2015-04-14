@@ -1245,9 +1245,7 @@
 
 		{"src": "gnome:brasero"},
 
-		{"src": "gnome:devhelp",
-		 "tag": "4f27b19333faa13330dde57d9cb940ef512f157e",
-		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/04/13/46/build/log-devhelp.txt"},
+		{"src": "gnome:devhelp"},
 
 		{"src": "gnome:gnome-dictionary"},
 
