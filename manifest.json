@@ -926,9 +926,7 @@
 				 "--disable-ui",
 				 "--disable-setup"]},
 
-		{"src": "gnome:libgweather",
-		 "tag": "32df6a2579ef5ee48be1603e3b930b6f0bf1fe6a",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=747835"},
+		{"src": "gnome:libgweather"},
 
 		{"src": "gnome:clutter-gst",
                  "name": "clutter-gst2",
