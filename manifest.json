@@ -926,7 +926,9 @@
 				 "--disable-ui",
 				 "--disable-setup"]},
 
-		{"src": "gnome:libgweather"},
+		{"src": "gnome:libgweather",
+		 "tag": "be5fb83a6b98f6a02d5f13bad14ec794d8aa0dad",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=747835"},
 
 		{"src": "gnome:clutter-gst",
                  "name": "clutter-gst2",
@@ -1269,9 +1271,7 @@
 
 		{"src": "gnome:libgit2-glib"},
 
-		{"src": "gnome:gnome-builder",
-		 "tag": "c88430ac6e059a606f3a3e84c7fe8b0dbc85d0ed",
-		 "tag-reason": "requires clang"},
+		{"src": "gnome:gnome-builder"},
 
 		{"src": "gnome:atomix"},
 
