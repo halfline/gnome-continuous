@@ -927,7 +927,7 @@
 				 "--disable-setup"]},
 
 		{"src": "gnome:libgweather",
-		 "tag": "be5fb83a6b98f6a02d5f13bad14ec794d8aa0dad",
+		 "tag": "32df6a2579ef5ee48be1603e3b930b6f0bf1fe6a",
 		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=747835"},
 
 		{"src": "gnome:clutter-gst",
