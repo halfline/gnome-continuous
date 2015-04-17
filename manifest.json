@@ -616,7 +616,9 @@
 
 		{"src": "gnome:libcroco"},
 
-		{"src": "gnome:librsvg"},
+		{"src": "gnome:librsvg",
+		 "tag": "9db05c8e736ade8c2d37249d01e4bdc20650f24c",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=748034"},
 
 		{"src": "fd-gstreamer:orc",
 		 "config-opts": ["--disable-gtk-doc"]},
