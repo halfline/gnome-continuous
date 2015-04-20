@@ -1131,6 +1131,7 @@
 		{"src": "gnome:gnome-software",
 		 "config-opts": ["--disable-man",
                                  "--disable-offline-appstream-data",
+                                 "--disable-firmware",
                                  "--enable-installed-tests"]},
 
 		{"src": "gnome:epiphany"},
