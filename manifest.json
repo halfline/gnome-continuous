@@ -1340,7 +1340,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 82,
+	"build-epoch": {"version": 83,
 		        "all": false,
-		        "component-names": ["cogl", "clutter"]}
+		        "component-names": ["pulseaudio"]}
 }
