@@ -419,7 +419,9 @@
 
 		{"src": "fd:xorg/driver/xf86-video-ati"},
 
-		{"src": "fd:nouveau/xf86-video-nouveau"},
+		{"src": "fd:nouveau/xf86-video-nouveau",
+		 "tag": "7583471e1fe181dc7c26b7d0a0d16f70eb10dd21",
+		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/05/20/51/build/log-nouveau-xf86-video-nouveau.txt"},
 
 		{"src": "fd:xorg/driver/xf86-video-vesa"},
 
