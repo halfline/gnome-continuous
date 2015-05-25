@@ -1130,7 +1130,9 @@
 		 "config-opts": ["--disable-documentation"],
 		 "component": "devel"},
 
-		{"src": "gnome:nautilus"},
+		{"src": "gnome:nautilus",
+		 "tag": "755a7922e431a6535d68e37d63d69d22f46897c0",
+		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/05/25/19/build/log-nautilus.txt"},
 
 		{"src": "gnome:gedit",
 		 "config-opts": ["--enable-python=no",
