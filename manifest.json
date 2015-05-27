@@ -323,6 +323,9 @@
                 {"src": "fd:libevdev",
 		 "config-opts": ["--disable-gcov"]},
 
+		{"src": "linuxwacom:libwacom",
+		 "patches": ["libwacom-autogen.patch"]},
+
 		{"src": "fd:wayland/libinput",
 		 "name": "libinput"},
 
@@ -700,9 +703,6 @@
 		 "config-opts": [
 		 		"--disable-desktop-docs",
 		 		"--enable-installed-tests"]},
-
-		{"src": "linuxwacom:libwacom",
-		 "patches": ["libwacom-autogen.patch"]},
 
 		{"src": "linuxwacom:xf86-input-wacom",
 		 "patches": ["libwacom-autogen.patch"]},
