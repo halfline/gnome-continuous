@@ -73,6 +73,9 @@
 		{"src": "gnome:gnome-common",
 		 "component": "devel"},
 
+        {"src": "git:https://github.com/desrt/m4-common.git",
+         "component": "devel"},
+
 		{"src": "savannah:gperf.git",
 		 "tag": "v3.0.4",
 		 "patches": ["gperf-autotools.patch"]},
