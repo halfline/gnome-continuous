@@ -1018,7 +1018,8 @@
 		                 "--without-console-kit",
 		                 "--with-plymouth",
 		                 "--with-systemd",
-				 "--enable-systemd-journal"]},
+				 "--enable-systemd-journal",
+                                 "--enable-gdm-xsession"]},
 
 		{"src": "fd-telepathy:telepathy-logger",
 		 "config-opts": ["--disable-Werror"],
