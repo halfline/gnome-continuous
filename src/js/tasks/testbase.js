@@ -105,6 +105,7 @@ const TestOneDisk = new Lang.Class({
         }
         this._fail("Timed out");
         this._loop.quit();
+        return GLib.SOURCE_REMOVE;
     },
 
     _onJournalOpen: function(file, result) {
@@ -503,8 +504,8 @@ const TestOneDisk = new Lang.Class({
 
         let commandConnectAttemptTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,
                                                                       Lang.bind(this, this._tryCommandConnection));
-        let timeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, this._timeout,
-                                                 Lang.bind(this, this._onTimeout));
+        GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, this._timeout,
+                                 Lang.bind(this, this._onTimeout));
 
         // Let's only do a screenshot every 3 seconds, I think it's slowing things down...
         let screenshotTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 3,
@@ -520,8 +521,6 @@ const TestOneDisk = new Lang.Class({
 
         if (this._journalTextStream)
             this._journalTextStream.close(null);
-
-        GLib.source_remove(timeoutId);
         
         let [gfmnt, mntdir] = LibQA.newReadWriteMount(diskClone, cancellable);
         try {
