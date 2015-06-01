@@ -98,7 +98,7 @@
 		{"src": "gnome:vala",
 		 "config-opts": ["--enable-vapigen"]},
 
-   		{"src": "git:git://anongit.freedesktop.org/systemd/systemd",
+   		{"src": "git:https://github.com/systemd-devs/systemd",
 		 "component": "minimal",
 		 "initramfs-depends": true,
 		 "patches": ["systemd-Revert-core-mount-add-dependencies-to-dynamically-mo.patch"],
