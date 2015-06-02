@@ -109,13 +109,10 @@
 				 "--disable-networkd",
 				 "--disable-resolved",
                                  "--disable-timesyncd",
-                                 "--disable-gudev",
 				 "--enable-compat-libs",
 				 "--with-sysvinit-path=",
 				 "--with-sysvrcnd-path="]
 		 },
-
-   		{"src": "gnome:libgudev"},
 
 		{"src": "git:https://github.com/libusb/libusb.git",
 		 "tag": "v1.0.19"},
