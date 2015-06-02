@@ -874,8 +874,6 @@
 		                 "--with-dracut",
 				 "--enable-installed-tests"]},
 
-		{"src": "git:git://github.com/seccomp/libseccomp"},
-
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
                  "config-opts": ["--disable-documentation",
                                  "--with-priv-mode=none"],
