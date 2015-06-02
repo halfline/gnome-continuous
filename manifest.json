@@ -352,8 +352,6 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
-		 "tag": "a21d23e191696ca130fd63617b8d177055b73dda",
-		 "tag-reason": "srcdir != builddir issue",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic -fno-rtti",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-rtti"
@@ -433,6 +431,8 @@
 		{"src": "fd:xorg/driver/glamor"},
 
 		{"src": "fd:nouveau/xf86-video-nouveau"},
+
+		{"src": "fd:xorg/driver/xf86-video-intel"},
 
 		{"src": "fd:xorg/driver/xf86-video-vesa"},
 
