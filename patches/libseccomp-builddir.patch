@@ -1,0 +1,39 @@
+From ae10a2c09a27b0fd33ffabbcdcf5bece776aa04a Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Tue, 2 Jun 2015 09:37:06 -0400
+Subject: [PATCH] build: Fix srcdir != builddir from git
+
+See https://github.com/cgwalters/build-api/blob/master/build-api.md
+---
+ src/Makefile.am   | 1 +
+ tools/Makefile.am | 2 ++
+ 2 files changed, 3 insertions(+)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index d8fbd85..a14cefb 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -51,6 +51,7 @@ arch_syscall_dump_SOURCES = arch-syscall-dump.c ${SOURCES_ARCH}
+ arch_syscall_check_SOURCES = arch-syscall-check.c ${SOURCES_ARCH}
+ 
+ libseccomp_la_SOURCES = ${SOURCES_GEN} ${SOURCES_ARCH}
++libseccomp_la_CPPFLAGS = ${AM_CPPFLAGS} -I$(top_builddir)/include
+ libseccomp_la_CFLAGS = ${AM_CFLAGS} ${CFLAGS} -fPIC -DPIC -fvisibility=hidden
+ libseccomp_la_LDFLAGS = ${AM_LDFLAGS} ${LDFLAGS} \
+ 	-version-number ${VERSION_MAJOR}:${VERSION_MINOR}:${VERSION_MICRO}
+diff --git a/tools/Makefile.am b/tools/Makefile.am
+index 422b35d..b18dc9b 100644
+--- a/tools/Makefile.am
++++ b/tools/Makefile.am
+@@ -16,6 +16,8 @@
+ # along with this library; if not, see <http://www.gnu.org/licenses>.
+ #
+ 
++AM_CPPFLAGS = -I$(top_builddir)/include
++
+ noinst_LTLIBRARIES = util.la
+ util_la_SOURCES = util.c util.h bpf.h
+ util_la_LDFLAGS = -module
+-- 
+1.8.3.1
+
