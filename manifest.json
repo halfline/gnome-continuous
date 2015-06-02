@@ -876,7 +876,9 @@
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
                  "config-opts": ["--disable-documentation",
                                  "--with-priv-mode=none"],
-                 "setuid": ["/runtime/usr/bin/xdg-app-helper"]},
+                 "setuid": ["/runtime/usr/bin/xdg-app-helper"],
+                 "tag": "811c512e5694ae583a3fbe483b497155bf766d62",
+                 "tag-reason": "needs libseccomp"},
 
 		{"src": "gnome:gnome-hwtest",
                  "component": "minimal",
