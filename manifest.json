@@ -416,6 +416,11 @@
                  "name": "celt051",
                  "checksum": "fc2e5b68382eb436a38c3104684a6c494df9bde133c139fbba3ddb5d7eaa6a2e"},
 
+                {"src": "tarball:https://pypi.python.org/packages/source/s/six/six-1.9.0.tar.gz",
+                 "name": "python-six",
+                 "checksum": "e24052411fc4fbd1f672635537c3fc2330d9481b18c0317695b46259512c91d5",
+                 "patches": ["python-six-buildsys.patch"]},
+
                 {"src": "fd-spice:spice",
 		 "patches": ["spice-no-builddir.patch",
 		             "spice-stack-protector.patch"],
