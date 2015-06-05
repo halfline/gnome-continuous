@@ -885,6 +885,8 @@
                  "initramfs-depends": true},
 
 		{"src": "mikechristie:open-iscsi",
+		 "tag": "3d044973ab444dd7ca9842c57d2cf9200bb58b94",
+		 "tag-reason": "patches don't apply, too lazy to rebase now",
                  "component": "minimal",
 		 "initramfs-depends": true,
 		 "patches": ["iscsi-no-iscsiuio.patch",
