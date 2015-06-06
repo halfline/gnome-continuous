@@ -1,4 +1,4 @@
-From 01eed3043c0ff4c1c122b849c601fdc65829e3bb Mon Sep 17 00:00:00 2001
+From 793bfb6edd8632bc806251afb7ae5a8aa2ee0cd7 Mon Sep 17 00:00:00 2001
 From: Vadim Rutkovsky <vrutkovs@redhat.com>
 Date: Fri, 11 Apr 2014 11:36:52 +0200
 Subject: [PATCH] build-sys: Add configure script and Makefile to implement
@@ -6,12 +6,11 @@ Subject: [PATCH] build-sys: Add configure script and Makefile to implement
 
 See http://people.gnome.org/~walters/docs/build-api.txt
 ---
- Makefile                |  7 +++++++
- behave/configuration.py |  2 +-
- behave/matchers.py      |  1 -
- configure               |  5 +++++
- setup.py                | 12 ++++--------
- 5 files changed, 17 insertions(+), 10 deletions(-)
+ Makefile           |  7 +++++++
+ behave/matchers.py |  1 -
+ configure          |  5 +++++
+ setup.py           | 12 ++++--------
+ 4 files changed, 16 insertions(+), 9 deletions(-)
  create mode 100644 Makefile
  create mode 100755 configure
 
@@ -28,24 +27,11 @@ index 0000000..b3f4452
 +install:
 +	python setup.py install --root=$(DESTDIR)
 +
-diff --git a/behave/configuration.py b/behave/configuration.py
-index 77bc43f..5ff85a9 100644
---- a/behave/configuration.py
-+++ b/behave/configuration.py
-@@ -6,7 +6,7 @@ import sys
- import argparse
- import logging
- import shlex
--from six.moves import configparser
-+import ConfigParser as configparser
- 
- from behave.model import FileLocation, ScenarioOutline
- from behave.reporter.junit import JUnitReporter
 diff --git a/behave/matchers.py b/behave/matchers.py
-index eedf844..2573eff 100644
+index 22beee8..c14e31c 100644
 --- a/behave/matchers.py
 +++ b/behave/matchers.py
-@@ -2,7 +2,6 @@ from __future__ import with_statement
+@@ -2,7 +2,6 @@ from __future__ import absolute_import, with_statement
  
  import re
  import parse
@@ -65,7 +51,7 @@ index 0000000..d28a27a
 +exec python setup.py build
 +
 diff --git a/setup.py b/setup.py
-index aca25e3..9aedce6 100644
+index f024a42..9799615 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -16,14 +16,13 @@ os.chdir(HERE0)
@@ -106,7 +92,7 @@ index aca25e3..9aedce6 100644
      license="BSD",
      classifiers=[
          "Development Status :: 4 - Beta",
-@@ -95,7 +92,6 @@ setup(
+@@ -97,7 +94,6 @@ setup(
          "Topic :: Software Development :: Testing",
          "License :: OSI Approved :: BSD License",
      ],
@@ -115,5 +101,5 @@ index aca25e3..9aedce6 100644
  
  
 -- 
-1.9.0
+1.8.3.1
 
