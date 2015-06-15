@@ -117,6 +117,8 @@ const TaskBuildDisks = new Lang.Class({
                     params.sizeMB = 4 * 1024;
                 LibQA.createDisk(diskPath, params, cancellable);
             }
+            // Not indented to avoid too much code motion
+            try {
             let tmpdir_path = Gio.File.new_for_path(GLib.dir_make_tmp("continuous-XXXXXX"));
             let mntdir = tmpdir_path.get_child('mnt-' + squashedName);
             GSystem.file_ensure_directory(mntdir, true, cancellable);
@@ -138,6 +140,10 @@ const TaskBuildDisks = new Lang.Class({
 
             this._postDiskCreation(squashedName, diskPath, cancellable);
             print("post-disk creation complete");
+            } catch (e) {
+                GSystem.shutil_rm_rf(diskPath, cancellable);
+                throw e;
+            }
 	      }
 
         if (isLocal) {
