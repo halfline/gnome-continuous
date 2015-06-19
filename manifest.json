@@ -583,7 +583,9 @@
 
 		{"src": "gnome:at-spi2-core"},
 
-		{"src": "gnome:at-spi2-atk"},
+		{"src": "gnome:at-spi2-atk",
+		 "tag": "AT_SPI2_ATK_2_16_0-2-ge3c9e025d332055ebfb1e385936919cf58e8fed8",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=751192"},
 
 		{"src": "gnome:gdk-pixbuf",
 		 "config-opts": ["--enable-installed-tests"]},
