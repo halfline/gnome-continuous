@@ -586,6 +586,8 @@
 		{"src": "gnome:at-spi2-atk"},
 
 		{"src": "gnome:gdk-pixbuf",
+         "tag": "74c418ba2e41ab9e2287420378a6192788b1fab6",
+         "reason": "Needs gettext 0.19",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:gtk+",
