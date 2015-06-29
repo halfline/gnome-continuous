@@ -1305,7 +1305,9 @@
 		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=751624"
 		},
 
-		{"src": "gnome:gnome-2048"},
+		{"src": "gnome:gnome-2048",
+		 "tag": "f5ad807aa9ef799c804628172743a51ac2ca5f7a",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=751624"},
 
 		{"src": "gnome:gnome-mahjongg"},
 
