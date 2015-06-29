@@ -1301,7 +1301,7 @@
 
 		{"src": "gnome:libgames-support",
 		 "config-opts": ["--disable-gtk-doc"],
-		 "tag": "9bb834a9b0aa6dd6c5ad31dc28ab8a7048b1363b",
+		 "tag": "7df405a4190a0a6b7432db2686d963d26c2b1b83",
 		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=751624"
 		},
 
