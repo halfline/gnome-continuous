@@ -1288,7 +1288,9 @@
 		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=745882",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
 
-		{"src": "gnome:libgit2-glib"},
+		{"src": "gnome:libgit2-glib",
+		 "tag": "7b251bfb7f32570d00e2def1039ace5e3b48b777",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=751753"},
 
 		{"src": "gnome:atomix"},
 
