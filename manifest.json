@@ -962,7 +962,7 @@
 		 "config-opts": ["--enable-nss"],
 		 "patches": ["liboauth-tarballs-as-git-autogen.patch"]},
 
-		{"src": "git:git://github.com/pwithnall/uhttpmock.git"},
+		{"src": "git:https://gitlab.com/uhttpmock/uhttpmock.git"},
 
 		{"src": "gnome:libgdata"},
 
