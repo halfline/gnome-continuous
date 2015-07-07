@@ -734,7 +734,9 @@
 		 "component": "minimal",
 		 "config-args": [
 		 		"--disable-tls-check",
-		 		"--enable-installed-tests"]},
+		 		"--enable-installed-tests"],
+		 "tag": "99104e661709ca5714c4dd4ff8f890d510758baa",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=752097"},
 
 		{"src": "gnome:gvfs",
 		 "config-opts": ["--disable-gphoto2",
