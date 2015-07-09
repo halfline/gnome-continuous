@@ -427,7 +427,9 @@
                 {"src": "fd:xorg/driver/xf86-video-qxl",
 		 "patches": ["xorg-autogen-merged.patch"]},
 
-		{"src": "fd:xorg/driver/xf86-video-ati"},
+		{"src": "fd:xorg/driver/xf86-video-ati",
+		 "tag": "a8ed62010d5012dfb27773595c446b217f3c00c5",
+		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=91282"},
 
 		{"src": "fd:xorg/driver/glamor"},
 
