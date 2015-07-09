@@ -82,9 +82,7 @@
 
                 {"src": "git:git://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git",
 		 "component": "minimal",
-		 "config-opts": ["--disable-manpages"],
-		 "tag": "10d783c4a74eb1bd4d812b1bbdda083703221f18",
-		 "tag-reason": "breaks dracut: http://build.gnome.org/continuous/buildmaster/builds/2015/02/25/30/build/output.txt"},
+		 "config-opts": ["--disable-manpages"]},
 
                 {"src": "gnome:gobject-introspection",
                  "component": "minimal",
@@ -121,7 +119,6 @@
 		 "tag": "v1.0.19"},
 
 		{"src": "git:git://github.com/gregkh/usbutils.git",
-		 "tag": "e229882d4c8c81812777ea7c3f33431586679450",
 		 "patches": ["usbutils-autogen.patch"]},
 
    		{"src": "git:git://git.fedorahosted.org/git/lvm2.git",
@@ -505,8 +502,6 @@
 
                 {"src": "git:git://git.kernel.org/pub/scm/bluetooth/bluez.git",
 		 "config-opts": ["--disable-cups", "--disable-obex", "--disable-usb", "--disable-tools"],
-		 "tag": "01264418d0509a0eed8719a33f546cdda934b61d",
-		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/02/24/63/build/log-bluez.txt",
 		 "patches": ["bluez-autogen.patch"]},
 
                 {"src": "git:git://github.com/jpirko/libndp.git"},
@@ -734,9 +729,7 @@
 		 "component": "minimal",
 		 "config-args": [
 		 		"--disable-tls-check",
-		 		"--enable-installed-tests"],
-		 "tag": "99104e661709ca5714c4dd4ff8f890d510758baa",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=752097"},
+		 		"--enable-installed-tests"]},
 
 		{"src": "gnome:gvfs",
 		 "config-opts": ["--disable-gphoto2",
@@ -801,7 +794,6 @@
                                  "--enable-installed-tests"]},
 
                 {"src": "fd:exempi",
-		 "tag": "82aa3670838622e6ee645ebecfe2abd93ec56836",
 		 "patches": ["exempi-autogen.patch"]},
 
 		{"src": "gnome:gnome-packagekit"},
@@ -1082,8 +1074,6 @@
 		{"src": "git:git://git.kernel.org/pub/scm/utils/dash/dash.git"},
 
                 {"src": "git:git://git.kernel.org/pub/scm/boot/dracut/dracut.git",
-         "tag": "9efb74a32d34533f7ccb201160ea0e40adc13987",
-         "tag-reason": "requires gzip with --rsyncable option",
 		 "config-opts": ["--disable-documentation",
 		                 "--systemdsystemunitdir=/usr/lib/systemd/system"],
 		 "initramfs-depends": true},
@@ -1140,9 +1130,7 @@
 		 "config-opts": ["--disable-documentation"],
 		 "component": "devel"},
 
-		{"src": "gnome:nautilus",
-		 "tag": "755a7922e431a6535d68e37d63d69d22f46897c0",
-		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/05/25/19/build/log-nautilus.txt"},
+		{"src": "gnome:nautilus"},
 
 		{"src": "gnome:gedit",
 		 "config-opts": ["--enable-python=no",
