@@ -1155,7 +1155,7 @@
          "name": "gmp",
          "checksum": "9156d32edac6955bc53b0218f5f3763facb890b73a835d5e1b901dcf8eb8b764"},
 
-        {"src": "tarball:http://www.mpfr.org/mpfr-current/mpfr-3.1.2.tar.xz",
+        {"src": "tarball:http://www.mpfr.org/mpfr-3.1.2/mpfr-3.1.2.tar.xz",
          "name": "mpfr",
          "checksum": "399d0f47ef6608cc01d29ed1b99c7faff36d9994c45f36f41ba250147100453b"},
 
