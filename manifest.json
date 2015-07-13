@@ -1335,7 +1335,9 @@
 
 		{"src": "gnome:gnome-contacts",
 		 "config-opts": ["--disable-man-pages"],
-		 "patches": ["gnome-contacts-builddir.patch"]}
+		 "patches": ["gnome-contacts-builddir.patch"]},
+
+		{"src": "gnome:libgrss"}
 	],
 
     "installed-tests-components": [],
