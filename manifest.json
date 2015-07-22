@@ -905,6 +905,8 @@
                              "ipxe-disable-isos.patch"]},
 
 		{"src": "savannah:grub.git",
+		 "tag": "61c778f6402d540a2da7b2d034de7a920ca38c1f",
+		 "tag-reason": "compilation error, not reported upstream yet",
                  "component": "hwtest",
                  "cflags": { "x86_64": "" },
                  "config-opts": ["--with-platform=pc",
