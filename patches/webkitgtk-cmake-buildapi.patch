@@ -1,4 +1,4 @@
-From 5597e7e9f77740ce1f90ce918789251e9187353d Mon Sep 17 00:00:00 2001
+From e70d5c400391d53c039f261d93c7dcdd4773f679 Mon Sep 17 00:00:00 2001
 From: Debarshi Ray <debarshir@gnome.org>
 Date: Fri, 21 Nov 2014 11:12:07 +0100
 Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
@@ -7,15 +7,15 @@ Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
 See https://github.com/cgwalters/build-api
 ---
  Source/cmake/FindGStreamer.cmake |  2 ++
- configure                        | 56 ++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 58 insertions(+)
+ configure                        | 57 ++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 59 insertions(+)
  create mode 100755 configure
 
 diff --git a/Source/cmake/FindGStreamer.cmake b/Source/cmake/FindGStreamer.cmake
-index 7805588..140a087 100644
+index acd1243..6a66a56 100644
 --- a/Source/cmake/FindGStreamer.cmake
 +++ b/Source/cmake/FindGStreamer.cmake
-@@ -123,6 +123,8 @@ foreach (_component ${GStreamer_FIND_COMPONENTS})
+@@ -103,6 +103,8 @@ foreach (_component ${GStreamer_FIND_COMPONENTS})
      list(APPEND _GSTREAMER_REQUIRED_VARS ${_UPPER_NAME}_INCLUDE_DIRS ${_UPPER_NAME}_LIBRARIES)
  endforeach ()
  
@@ -26,10 +26,10 @@ index 7805588..140a087 100644
                                              VERSION_VAR   GSTREAMER_VERSION)
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..6ee9698
+index 0000000..49f7c73
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,56 @@
+@@ -0,0 +1,57 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -88,5 +88,5 @@ index 0000000..6ee9698
 +     -DCMAKE_CXX_FLAGS="-m64 -mtune=generic -Wl,--no-keep-memory" \
 +     ${srcdir}
 -- 
-2.1.0
+2.4.3
 
