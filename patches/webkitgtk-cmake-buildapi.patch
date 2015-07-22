@@ -1,4 +1,4 @@
-From e70d5c400391d53c039f261d93c7dcdd4773f679 Mon Sep 17 00:00:00 2001
+From d979d6bfe8f53bded7fbb65047de8059672c790f Mon Sep 17 00:00:00 2001
 From: Debarshi Ray <debarshir@gnome.org>
 Date: Fri, 21 Nov 2014 11:12:07 +0100
 Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
@@ -7,8 +7,8 @@ Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
 See https://github.com/cgwalters/build-api
 ---
  Source/cmake/FindGStreamer.cmake |  2 ++
- configure                        | 57 ++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 59 insertions(+)
+ configure                        | 58 ++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 60 insertions(+)
  create mode 100755 configure
 
 diff --git a/Source/cmake/FindGStreamer.cmake b/Source/cmake/FindGStreamer.cmake
@@ -26,10 +26,10 @@ index acd1243..6a66a56 100644
                                              VERSION_VAR   GSTREAMER_VERSION)
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..49f7c73
+index 0000000..f53a4f9
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,57 @@
+@@ -0,0 +1,58 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -82,6 +82,7 @@ index 0000000..49f7c73
 +     -DCMAKE_BUILD_TYPE=Release \
 +     -DENABLE_GTKDOC=OFF \
 +     -DUSE_LIBHYPHEN=OFF \
++     -DENABLE_ACCELERATED_2D_CANVAS=OFF \
 +     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
 +     -DLIB_INSTALL_DIR:PATH=${libdir} \
 +     -DCMAKE_C_FLAGS="-m64 -mtune=generic -Wl,--no-keep-memory" \
