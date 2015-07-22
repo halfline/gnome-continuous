@@ -81,6 +81,7 @@ index 0000000..6ee9698
 +     -DPORT=GTK \
 +     -DCMAKE_BUILD_TYPE=Release \
 +     -DENABLE_GTKDOC=OFF \
++     -DUSE_LIBHYPHEN=OFF \
 +     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
 +     -DLIB_INSTALL_DIR:PATH=${libdir} \
 +     -DCMAKE_C_FLAGS="-m64 -mtune=generic -Wl,--no-keep-memory" \
