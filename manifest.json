@@ -86,8 +86,6 @@
 
         {"src": "gnome:gobject-introspection",
          "component": "minimal",
-         "tag": "526b1aa7f1bd3b1bef52d2540cf129d51f806ad1",
-         "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=728313",
 		 "config-opts": ["--disable-tests"]},
 
 		{"src": "gnome:vala-bootstrap",
