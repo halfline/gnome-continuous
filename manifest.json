@@ -1312,6 +1312,8 @@
 
 		{"src": "gnome:quadrapassel"},
 
+		{"src": "gnome:swell-foop"},
+
 		{"src": "gnome:bijiben",
 		 "patches": ["bijiben-buildsys.patch"]},
 
