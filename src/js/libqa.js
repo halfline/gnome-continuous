@@ -163,7 +163,6 @@ function _internalGetCurrentDeploymentDirectory(mntdir, osname) {
     // Try using the new unload API
     if (sysroot.unload)
 	sysroot.unload();
-    sysroot.unload();
     return deployDir;
 }
 
