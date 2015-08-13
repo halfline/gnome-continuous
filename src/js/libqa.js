@@ -365,10 +365,7 @@ function pullDeploy(mntdir, srcrepo, osname, target, revision, originRepoUrl, ca
         ProcUtil.runSync(['ostree', repoArg,
                           'remote', 'add', '--if-not-exists', osname, originRepoUrl, target],
                          cancellable, { logInitiation: true });
-
-    ProcUtil.runSync(['chmod', '0777', repoPath.get_path() + '/objects'], cancellable,
-                     {logInitiation: true, env: adminEnv});
-
+    
     ProcUtil.runSync(['ostree', repoArg,
                       'pull-local', '--disable-fsync', '--remote=' + osname, srcrepo.get_path(), revOrTarget], cancellable,
                      {logInitiation: true, env: adminEnv});
