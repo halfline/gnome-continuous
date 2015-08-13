@@ -150,7 +150,7 @@ function copyDisk(srcpath, destpath, cancellable) {
 		      destpath.get_path()], cancellable);
 }
 
-function getSysrootAndCurrentDeployment(mntdir, osname) {
+function getCurrentDeploymentDirectory(mntdir, osname) {
     let sysroot = OSTree.Sysroot.new(mntdir);
     sysroot.load(null);
     let deployments = sysroot.get_deployments().filter(function (deployment) {
@@ -159,12 +159,15 @@ function getSysrootAndCurrentDeployment(mntdir, osname) {
     if (deployments.length == 0)
 	throw new Error("No deployments for " + osname + " in " + mntdir.get_path());
     let current = deployments[0];
-    return [sysroot, current];
+    let deployDir = sysroot.get_deployment_directory(current);
+    // Clean up the reference to the sysroot object, since it holds a fd open,
+    // and doing so may cause unmounts to fail
+    imports.system.gc();
+    return deployDir;
 }
 
 function getDeployDirs(mntdir, osname) {
-    let [sysroot, current] = getSysrootAndCurrentDeployment(mntdir, osname);
-    let deployDir = sysroot.get_deployment_directory(current);
+    let deployDir = getCurrentDeploymentDirectory(mntdir, osname);
     return [deployDir, deployDir.get_child('etc')];
 }
 
@@ -290,7 +293,7 @@ function _findFirstFileMatching(dir, prefix, cancellable) {
 } 
 
 function _findCurrentKernel(mntdir, osname, cancellable) {
-    let [sysroot, current] = getSysrootAndCurrentDeployment(mntdir, osname);
+    let deployDir = getCurrentDeploymentDirectory(mntdir, osname);
     let deployBootdir = sysroot.get_deployment_directory(current).resolve_relative_path('boot');
     return [_findFirstFileMatching(deployBootdir, 'vmlinuz-', cancellable),
 	    _findFirstFileMatching(deployBootdir, 'initramfs-', cancellable)];
