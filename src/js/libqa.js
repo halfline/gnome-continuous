@@ -294,7 +294,7 @@ function _findFirstFileMatching(dir, prefix, cancellable) {
 
 function _findCurrentKernel(mntdir, osname, cancellable) {
     let deployDir = getCurrentDeploymentDirectory(mntdir, osname);
-    let deployBootdir = sysroot.get_deployment_directory(current).resolve_relative_path('boot');
+    let deployBootdir = deployDir.resolve_relative_path('boot');
     return [_findFirstFileMatching(deployBootdir, 'vmlinuz-', cancellable),
 	    _findFirstFileMatching(deployBootdir, 'initramfs-', cancellable)];
 };
