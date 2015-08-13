@@ -150,7 +150,7 @@ function copyDisk(srcpath, destpath, cancellable) {
 		      destpath.get_path()], cancellable);
 }
 
-function getCurrentDeploymentDirectory(mntdir, osname) {
+function _internalGetCurrentDeploymentDirectory(mntdir, osname) {
     let sysroot = OSTree.Sysroot.new(mntdir);
     sysroot.load(null);
     let deployments = sysroot.get_deployments().filter(function (deployment) {
@@ -160,6 +160,15 @@ function getCurrentDeploymentDirectory(mntdir, osname) {
 	throw new Error("No deployments for " + osname + " in " + mntdir.get_path());
     let current = deployments[0];
     let deployDir = sysroot.get_deployment_directory(current);
+    // Try using the new unload API
+    if (sysroot.unload)
+	sysroot.unload();
+    sysroot.unload();
+    return deployDir;
+}
+
+function getCurrentDeploymentDirectory(mntdir, osname) {
+    let deployDir = _internalGetCurrentDeploymentDirectory(mntdir, osname);
     // Clean up the reference to the sysroot object, since it holds a fd open,
     // and doing so may cause unmounts to fail
     imports.system.gc();
