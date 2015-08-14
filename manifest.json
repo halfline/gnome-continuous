@@ -7,7 +7,9 @@
   "base": {
             "name": "yocto",
 	    "src": "gnome:gnome-continuous-yocto",
-            "branch": "gnomeostree-3.14-dizzy"
+            "branch": "gnomeostree-3.14-dizzy",
+            "tag": "4a52402c99e1f14627a4e43e89f07c4dc5ea63fa",
+            "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/08/14/42/build/"
           },
 
   "config-opts": ["--disable-static", "--disable-silent-rules"],
