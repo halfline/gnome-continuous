@@ -1350,7 +1350,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 87,
+	"build-epoch": {"version": 88,
 		        "all": false,
-		        "component-names": ["xorg-driver-xf86-video-modesetting"]}
+		        "component-names": ["systemd"]}
 }
