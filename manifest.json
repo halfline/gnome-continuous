@@ -419,9 +419,7 @@
                 {"src": "fd-spice:spice",
 		 "patches": ["spice-no-builddir.patch",
 		             "spice-stack-protector.patch"],
-		 "config-opts": ["--disable-smartcard"],
-		 "tag": "94e55bce423a5d3023097552ca50151109e2ddf1",
-		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=91701"},
+		 "config-opts": ["--disable-smartcard"]},
 
                 {"src": "fd:xorg/driver/xf86-video-qxl",
 		 "patches": ["xorg-autogen-merged.patch"]},
