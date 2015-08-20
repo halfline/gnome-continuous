@@ -414,14 +414,14 @@
                  "name": "celt051",
                  "checksum": "fc2e5b68382eb436a38c3104684a6c494df9bde133c139fbba3ddb5d7eaa6a2e"},
 
+                {"src": "fd-spice:spice-protocol"},
+
                 {"src": "fd-spice:spice",
 		 "patches": ["spice-no-builddir.patch",
 		             "spice-stack-protector.patch"],
 		 "config-opts": ["--disable-smartcard"],
 		 "tag": "94e55bce423a5d3023097552ca50151109e2ddf1",
 		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=91701"},
-
-                {"src": "fd-spice:spice-protocol"},
 
                 {"src": "fd:xorg/driver/xf86-video-qxl",
 		 "patches": ["xorg-autogen-merged.patch"]},
@@ -1343,9 +1343,7 @@
 		 "config-opts": ["--disable-man-pages"],
 		 "patches": ["gnome-contacts-builddir.patch"]},
 
-		{"src": "gnome:libgrss"},
-
-		{"src": "gnome:gnome-todo"}
+		{"src": "gnome:libgrss"}
 	],
 
     "installed-tests-components": [],
