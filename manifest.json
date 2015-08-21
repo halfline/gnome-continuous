@@ -650,7 +650,7 @@
 				 "--enable-xlib-egl-platform",
 				 "--enable-cogl-gst",
 				 "--enable-installed-tests"],
-		 "branch": "cogl-1.20"},
+		 "branch": "cogl-1.22"},
 
 		{"src": "gnome:clutter",
 		 "config-opts": ["--enable-installed-tests",
