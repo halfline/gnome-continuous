@@ -96,6 +96,9 @@
 		{"src": "gnome:vala",
 		 "config-opts": ["--enable-vapigen"]},
 
+		{"src": "git:git://github.com/seccomp/libseccomp",
+		 "patches": ["libseccomp-builddir.patch"]},
+
    		{"src": "git:https://github.com/systemd/systemd",
 		 "component": "minimal",
 		 "initramfs-depends": true,
@@ -866,9 +869,6 @@
 		 "config-opts": ["--with-soup-gnome",
 		                 "--with-dracut",
 				 "--enable-installed-tests"]},
-
-		{"src": "git:git://github.com/seccomp/libseccomp",
-		 "patches": ["libseccomp-builddir.patch"]},
 
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
                  "config-opts": ["--disable-documentation",
