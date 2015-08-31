@@ -1193,6 +1193,8 @@
 		{"src": "gnome:gdl"},
 
 		{"src": "gnome:anjuta",
+		 "tag": "e34c400756cc025197fd32521007133622e60b6b",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=747011#c7",
 		 "component": "devel"},
 
 		{"src": "gnome:gnome-font-viewer"},
