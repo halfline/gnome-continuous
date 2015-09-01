@@ -902,6 +902,8 @@
 		 "patches": ["dnsmasq-buildsys.patch"]},
 
                 {"src": "ipxe:ipxe.git",
+		 "tag": "619a377328661ec32cdac429dd7ed4e744015507",
+		 "tag-reason": "patches no longer apply",
                  "component": "hwtest",
 		 "patches": ["ipxe-buildsys.patch",
                              "ipxe-disable-isos.patch"]},
