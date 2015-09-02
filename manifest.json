@@ -1148,9 +1148,7 @@
                                  "--disable-firmware",
                                  "--enable-installed-tests"]},
 
-		{"src": "gnome:epiphany",
-		 "tag": "9f230a24d42220b8343a1d5ff74c9d3bb969dae0",
-		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/09/02/32/build/log-epiphany.txt"},
+		{"src": "gnome:epiphany"},
 
 		{"src": "gnome:gnome-calendar" },
 
