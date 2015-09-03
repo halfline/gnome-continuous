@@ -1356,7 +1356,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 88,
+	"build-epoch": {"version": 89,
 		        "all": false,
-		        "component-names": ["systemd"]}
+		        "component-names": ["clutter", "gnome-shell"]}
 }
