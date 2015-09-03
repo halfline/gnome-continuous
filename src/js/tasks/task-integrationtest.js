@@ -132,6 +132,7 @@ const TaskIntegrationTest = new Lang.Class({
         }
         let testsScript = '#!/bin/sh\n\
 pkill gnome-initial || true\n\
+echo "yes" >> ~/.config/gnome-initial-setup-done\n\
 gsettings set org.gnome.desktop.session idle-delay 0\n\
 gnome-desktop-testing-runner --parallel 0 --status=yes --report-directory=~/installed-tests-results\n';
         let dest = deployDir.resolve_relative_path('bin/gnome-continuous-installed-tests.sh');
