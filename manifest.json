@@ -1326,7 +1326,9 @@
 		 "patches": ["bijiben-buildsys.patch"]},
 
 		{"src": "gnome:gnome-chess",
-		 "patches": ["gnome-chess-builddir.patch"]},
+		 "patches": ["gnome-chess-builddir.patch"],
+		 "tag": "e932ee9ff3995e45865ca1c06960ce90791173f6",
+		 "tag-reason": ""},
 
 		{"src": "gnome:gnome-klotski",
 		 "patches": ["gnome-klotski-builddir.patch"]},
