@@ -748,12 +748,9 @@ const TaskBuild = new Lang.Class({
 	}
 
         childArgs = ['setarch', architecture];
-        childArgs.push.apply(childArgs, BuildUtil.getBaseUserChrootArgs());
+        childArgs.push.apply(childArgs, BuildUtil.getBaseUserChrootArgs({readonlyroot: true}));
         childArgs.push.apply(childArgs, [
-            '--mount-readonly', '/',
             '--mount-bind', '/', '/sysroot',
-            '--mount-proc', '/proc', 
-            '--mount-bind', '/dev', '/dev',
             '--mount-bind', '/tmp', '/tmp',
             '--mount-bind', componentSrc.get_path(), chrootSourcedir.get_path(),
             '--mount-bind', componentResultdir.get_path(), '/ostbuild/results',
@@ -935,8 +932,6 @@ const TaskBuild = new Lang.Class({
 	let childArgs = BuildUtil.getBaseUserChrootArgs();
         childArgs.push.apply(childArgs, [
 	    '--mount-bind', '/', '/sysroot',
-            '--mount-proc', '/proc', 
-            '--mount-bind', '/dev', '/dev',
             '--mount-bind', '/tmp', '/tmp',
             rootdir.get_path(), rootdir.get_relative_path(tmpTriggersScriptPath),
 	    rootdir.get_relative_path(tmpTriggersPath)]);
@@ -1088,8 +1083,6 @@ const TaskBuild = new Lang.Class({
 	    let usrEtcDir = composeRootdir.resolve_relative_path('usr/etc');
 	    GSystem.file_rename(usrEtcDir, etcDir, cancellable);
 	    let args = [this._linuxUserChrootPath.get_path(),
-			'--mount-proc', '/proc',
-			'--mount-bind', '/dev', '/dev',
 			'--mount-bind', '/', '/sysroot',
 			'--mount-bind', tmpDir.get_path(), '/tmp',
 			'--mount-bind', varDir.get_path(), '/var',

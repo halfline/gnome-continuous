@@ -19,6 +19,7 @@ const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Lang = imports.lang;
 const Format = imports.format;
+const Params = imports.params;
 
 const GSystem = imports.gi.GSystem;
 
@@ -69,9 +70,17 @@ function findUserChrootPath() {
     return userChrootPath;
 }
 
-function getBaseUserChrootArgs() {
+function getBaseUserChrootArgs(params) {
+    params = Params.parse(params, { readonlyroot: false });
     let path = findUserChrootPath();
-    return [path.get_path(), '--unshare-pid', '--unshare-ipc', '--unshare-net'];
+    let argv = [path.get_path()];
+    // This has to go first, as later mounts will be on top
+    if (params.readonlyroot)
+        Array.prototype.push.apply(argv, ['--mount-readonly', '/'])
+    // If you bump the seccomp profile version, be sure to test some builds.
+    Array.prototype.push.apply(argv, ['--mount-devapi', '/dev', '--mount-proc', '/proc', '--unshare-pid', '--unshare-ipc', '--unshare-net',
+             '--seccomp-profile-version', '0']);
+    return argv;
 }
 
 function compareVersions(a, b) {
