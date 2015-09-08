@@ -1107,6 +1107,8 @@
 		"patches": ["gcab-no-builddir.patch"]},
 
 		{"src": "git:git://github.com/hughsie/appstream-glib.git",
+		 "tag": "a3d06c5cb6f85e963be74e8866e1c3bc71ee4990",
+		 "tag-reason": "requires newer gdk-pixbuf",
 		 "config-opts": ["--disable-dep11"]},
 
                 {"src": "git:https://github.com/hughsie/appdata-tools.git"},
