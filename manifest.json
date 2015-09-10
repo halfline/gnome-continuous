@@ -1358,7 +1358,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 89,
+	"build-epoch": {"version": 90,
 		        "all": false,
-		        "component-names": ["clutter", "gnome-shell"]}
+		        "component-names": ["gjs"]}
 }
