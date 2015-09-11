@@ -1349,8 +1349,6 @@
 		 "config-opts": ["--disable-man-pages"],
 		 "patches": ["gnome-contacts-builddir.patch"]},
 
-		{"src": "gnome:orca"},
-
 		{"src": "gnome:libgrss"}
 	],
 
