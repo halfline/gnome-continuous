@@ -1202,8 +1202,6 @@
 		{"src": "gnome:babl"},
 
 		{"src": "gnome:gegl",
-		 "tag": "7d774d92b6387087519b5e7d88399965ca16ac4c",
-		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2015/09/01/16/build/log-gegl2.txt",
 		 "name": "gegl2"},
 
 		{"src": "gnome:gnome-photos",
