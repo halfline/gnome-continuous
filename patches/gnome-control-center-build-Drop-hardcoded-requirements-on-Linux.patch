@@ -1,0 +1,48 @@
+From c61cb3872449d003fc313d4e94b5e3ce94de7aef Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Tue, 15 Sep 2015 09:25:51 -0400
+Subject: [PATCH] build: Drop hardcoded requirements on Linux
+
+The goal of the GNOME Continuous build is not to be a full
+distribution with the costs and benefits of that model.  It's intended
+to be a minimal but still useful continually delivered and tested
+system.
+
+At the moment, we don't have Samba in the build, and while we could
+add it, we don't have any testing for printing right now.
+
+The original commit didn't include any rationale for this.
+---
+ configure.ac | 16 ----------------
+ 1 file changed, 16 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index c7adb60..fca1e15 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -427,22 +427,6 @@ else
+         AC_MSG_RESULT(no)
+ fi
+ 
+-case $host_os in
+-  linux*)
+-    if test "$host_cpu" = s390 -o "$host_cpu" = s390x; then
+-      # Nothing
+-      echo "USB-related panels disabled on S390"
+-    else
+-      if test "x$have_networkmanager" != "xyes" -o \
+-              "x$have_bluetooth" != "xyes" -o \
+-              "x$enable_cups" != "xyes" -o \
+-              "x$have_wacom" != "xyes"; then
+-        AC_MSG_ERROR([The Network, Bluetooth, Printers and Wacom panels are not optional on Linux systems])
+-     fi
+-    fi
+-    ;;
+-esac
+-
+ AC_CONFIG_FILES([
+ Makefile
+ panels/Makefile
+-- 
+1.8.3.1
+
