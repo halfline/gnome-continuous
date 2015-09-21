@@ -254,7 +254,9 @@
 
 		{"src": "fd:xcb/libxcb"},
 
-		{"src": "fd:xorg/lib/libX11"},
+		{"src": "fd:xorg/lib/libX11",
+		 "tag": "58af066a764305c506efea7065ef7679369a1a98",
+		 "tag-reason": "xcb version was not bumped"},
 
 		{"src": "fd:xorg/lib/libXrender"},
 
