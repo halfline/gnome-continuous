@@ -989,6 +989,7 @@
 		 "irc_room": "evolution",
 		 "config-opts": ["--enable-installed-tests",
 				 "--enable-vala-bindings",
+				 "--disable-google-auth",
 				 "--disable-uoa"]},
 
 		{"src": "fd-xdg:default-icon-theme",
