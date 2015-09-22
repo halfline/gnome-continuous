@@ -947,7 +947,8 @@
                  "branch": "clutter-gst-2.0"},
 
 		{"src": "gnome:clutter-gst",
-                 "name": "clutter-gst3"},
+                 "name": "clutter-gst3",
+                 "branch": "clutter-gst-3.0"},
 
 		{"src": "gnome:clutter-gtk"},
 
