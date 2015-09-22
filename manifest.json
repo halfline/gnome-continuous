@@ -99,9 +99,6 @@
 		{"src": "git:git://github.com/seccomp/libseccomp",
 		 "patches": ["libseccomp-builddir.patch"]},
 
-		{"src": "git:git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git",
-		 "branch": "v2.27"},
-
    		{"src": "git:https://github.com/systemd/systemd",
 		 "component": "minimal",
 		 "initramfs-depends": true,
