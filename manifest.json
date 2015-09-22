@@ -969,6 +969,8 @@
 		{"src": "gnome:totem-pl-parser"},
 
                 {"src": "gnome:grilo",
+		 "branch": "0.2.x",
+		 "branch-reason": "0.3 is experimental and nothing is ported yet",
 		 "config-opts": ["--disable-vala"]},
 
                 {"src": "gnome:grilo-plugins"},
