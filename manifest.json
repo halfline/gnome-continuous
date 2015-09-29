@@ -385,6 +385,8 @@
 		{"src": "fd:xorg/app/xhost"},
 
 		{"src": "fd:xkeyboard-config",
+		 "tag": "9007a80e958aa76b2d69c674ff48b4c8b210e8ea",
+		 "tag-reason": "broken XML, mailed author",
 		 "config-opts": ["--with-xkb-rules-symlink=xorg",
 		                 "--with-xkb-base=/usr/share/X11/xkb"],
 		 "patches": ["xkeyboard-config-autogen.patch"]},
