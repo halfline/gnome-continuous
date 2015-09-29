@@ -1,0 +1,24 @@
+From 821f68ff1524f7a3cb83169b09dcbf431ca051be Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Tue, 29 Sep 2015 15:01:12 -0400
+Subject: [PATCH] build: Fix srcdir != builddir from git
+
+Was hitting this in gnome-continuous, which does srcdir != builddir by
+default.
+---
+ document-portal/Makefile.am.inc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/document-portal/Makefile.am.inc b/document-portal/Makefile.am.inc
+index dd261e9..13ef3bf 100644
+--- a/document-portal/Makefile.am.inc
++++ b/document-portal/Makefile.am.inc
+@@ -42,4 +42,4 @@ xdg_document_portal_SOURCES = \
+ 	$(NULL)
+ 
+ xdg_document_portal_LDADD = $(BASE_LIBS) $(FUSE_LIBS) libxdgapp.la
+-xdg_document_portal_CFLAGS = $(BASE_CFLAGS) $(OSTREE_CFLAGS) $(SOUP_CFLAGS) $(FUSE_CFLAGS) -I$(src)/document-portal
++xdg_document_portal_CFLAGS = $(BASE_CFLAGS) $(OSTREE_CFLAGS) $(SOUP_CFLAGS) $(FUSE_CFLAGS) -I$(srcdir)/document-portal -I$(builddir)/document-portal
+-- 
+1.8.3.1
+
