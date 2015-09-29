@@ -1083,7 +1083,7 @@
 
 		{"src": "gnome:vte",
 		 "config-opts-comment": "pcre disabled due to too old pcre in current OE",
-		 "config-opts": ["--disable-vala", "--disable-pcre"]},
+		 "config-opts": ["--disable-vala", "--without-pcre"]},
 
 		{"src": "git:git://git.kernel.org/pub/scm/utils/dash/dash.git"},
 
