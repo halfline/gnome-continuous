@@ -692,6 +692,7 @@ const TaskBuild = new Lang.Class({
             } else {
                 print(Format.vprintf("Need rebuild of %s: %s", [archBuildname, rebuildReason]));
 	    }
+            print(Format.vprintf("Will replace previous build at git commit: %s", [previousVcsVersion]));
 	}
 
 	let cwd = Gio.File.new_for_path('.');
