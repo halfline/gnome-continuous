@@ -1127,7 +1127,7 @@
 		"patches": ["behave-buildsys.patch"]},
 
 		{"src": "gnome:gnome-terminal",
-		 "config-opts": ["--without-nautilus-extension"]},
+		 "config-opts": ["--without-nautilus-extension", "--without-pcre2"]},
 
 		{"src": "gnome:gnome-clocks"},
 
