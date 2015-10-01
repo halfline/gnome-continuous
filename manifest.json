@@ -871,7 +871,6 @@
 				 "--enable-installed-tests"]},
 
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
-		 "patches": ["xdg-app-build-Fix-srcdir-builddir-from-git.patch"],
                  "config-opts": ["--disable-documentation",
                                  "--with-priv-mode=none"],
                  "setuid": ["/runtime/usr/bin/xdg-app-helper"]},
