@@ -741,6 +741,8 @@
                  "component": "minimal"},
 
 		{"src": "fd-gstreamer:gst-plugins-good",
+		 "tag": "bf0e4f65b40fb1ee155cf26131c965c40b8bff38",
+		 "tag-reason": "compilation error in next commit",
 		 "config-opts": ["--with-gtk=3.0",
 		                 "--disable-tests",
 				 "--disable-examples",
