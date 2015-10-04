@@ -1126,8 +1126,6 @@
 		"patches": ["behave-buildsys.patch"]},
 
 		{"src": "gnome:gnome-terminal",
-                 "tag": "9ce642509b67d8140641a8e99cde44979d2e676c",
-                 "tag-reason": "Wrong symbol",
 		 "config-opts": ["--without-nautilus-extension", "--without-pcre2"]},
 
 		{"src": "gnome:gnome-clocks"},
