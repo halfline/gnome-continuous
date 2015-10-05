@@ -1,6 +1,10 @@
 Highlevel stuff:
 
-* Application story
+* Move apps into xdg-app, unify buildsystems
+
+* Re-parallelize treecompose
+
+* State change (pass->fail, fail->pass) notification for installed tests
 
 * SELinux tooling (and ideally a really basic policy); this would
   help demo the xattr support
