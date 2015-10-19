@@ -1149,7 +1149,7 @@
 		 "config-opts": ["--enable-python=no",
 				 "--disable-spell"],
                  "tag": "2e799694043c232bafda0fb1e2272458a66e6995",
-                 "tag-reason": "gtksourceview is still tagged"]},
+                 "tag-reason": "gtksourceview is still tagged"},
 
 		{"src": "gnome:gnome-software",
 		 "config-opts": ["--disable-man",
