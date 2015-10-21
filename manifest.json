@@ -614,6 +614,8 @@
 		{"src": "fd-fprint:fprintd"},
 
 		{"src": "fd-p11:p11-kit",
+		 "tag": "98dbc98709bb9a5fe1d6e7beea585c39073e528c",
+		 "tag-reason": "translations are broken",
                  "component": "minimal"},
 
 		{"src": "gnome:gcr",
