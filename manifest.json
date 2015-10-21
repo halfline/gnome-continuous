@@ -1068,8 +1068,6 @@
 		{"src": "git:git://github.com/hughsie/colord-gtk.git"},
 
 		{"src": "gnome:gnome-control-center",
-		 "branch": "gnome-3-18",
-		 "branch-reason": "grilo 3 porting in master",
 		 "patches": ["gnome-control-center-build-Drop-hardcoded-requirements-on-Linux.patch"],
 		 "patches-reasons": ["https://bugzilla.gnome.org/show_bug.cgi?id=755063"],
 		 "config-opts": ["--disable-documentation",
