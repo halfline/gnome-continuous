@@ -1272,7 +1272,9 @@
 
 		{"src": "gnome:nautilus-sendto"},
 
-		{"src": "gnome:yelp"},
+                {"src": "gnome:yelp",
+		 "tag": "44314bc22b7a578691b19e89454f0cb3eb1f3cb4",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=757139"},
 		
 		{"src": "gnome:folks",
 		 "config-opts": ["--disable-static", 
