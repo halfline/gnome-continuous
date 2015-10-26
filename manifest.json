@@ -1335,8 +1335,7 @@
 		{"src": "gnome:gnome-klotski",
 		 "patches": ["gnome-klotski-builddir.patch"]},
 
-		{"src": "gnome:gnome-nibbles",
-		 "patches": ["gnome-nibbles-builddir.patch"]},
+		{"src": "gnome:gnome-nibbles"},
 
 		{"src": "gnome:gnome-robots",
 		 "patches": ["gnome-robots-builddir.patch"]},
