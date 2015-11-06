@@ -643,6 +643,8 @@
 		                 "--disable-fatal-warnings"]},
 
 		{"src": "fd-gstreamer:gst-plugins-base",
+		 "tag": "b8bea9d8be12d2eb8247a67bb67d8f3e8264957f",
+		 "tag-reason": "srcdir != builddir issue, reported to wtay via irc",
 		 "config-opts": ["--with-gtk=3.0",
 		                 "--disable-tests",
 				 "--disable-gnome_vfs",
