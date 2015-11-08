@@ -775,9 +775,9 @@
 				 "--enable-debug-symbols=min",
 				 "--disable-maintainer-mode"]},
 
-		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.11.1.tar.xz",
+		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.9.5.tar.xz",
 		 "name": "webkitgtk4",
-		 "checksum": "2e13ca3ab384887cd687bc96aed857ba0191567e3fd579974f17b537e9cb2138",
+		 "checksum": "ed0e17b234e1b6f7d6d3485bf7acbb22ffab4886b278c2c97356d002b441c0ff",
 		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
 
 		{"src": "gnome:libgee",
