@@ -1156,7 +1156,9 @@
                                  "--disable-firmware",
                                  "--enable-installed-tests"]},
 
-		{"src": "gnome:epiphany"},
+		{"src": "gnome:epiphany",
+		 "tag": "c411aaccf3ff55de2d6c9850a4550f343f4a2538",
+		 "tag-reason": "Requires WebKitGTK+ 2.11.1 which requires Ruby 1.9"},
 
 		{"src": "gnome:gnome-calendar" },
 
