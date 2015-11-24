@@ -1144,9 +1144,7 @@
 
 		{"src": "gnome:gedit",
 		 "config-opts": ["--enable-python=no",
-				 "--disable-spell"],
-                 "tag": "2e799694043c232bafda0fb1e2272458a66e6995",
-                 "tag-reason": "gtksourceview is still tagged"},
+				 "--disable-spell"]},
 
 		{"src": "gnome:gnome-software",
 		 "config-opts": ["--disable-man",
