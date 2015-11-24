@@ -797,9 +797,7 @@
                 {"src": "gnome:gtksourceview",
                  "config-opts": ["--enable-compile-warnings=maximum",
                                  "--disable-maintainer-mode",
-                                 "--enable-installed-tests"],
-                 "tag": "47de3238b4c6bd84e9ab9ab5d3ccfdd30331a8e2",
-                 "tag-reason": "requires newer autoconf-archive"},
+                                 "--enable-installed-tests"]},
 
                 {"src": "fd:exempi",
 		 "patches": ["exempi-autogen.patch"]},
