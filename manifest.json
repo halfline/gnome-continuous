@@ -347,6 +347,9 @@
 		{"src": "fd-wayland:wayland",
 		 "config-opts": ["--disable-documentation"]},
 
+		{"src": "fd:wayland/wayland-protocols",
+		 "name": "wayland-protocols"},
+
                 {"src": "tarball:https://pypi.python.org/packages/source/M/Mako/Mako-1.0.0.tar.gz",
                  "name": "python-mako",
                  "checksum": "a3cd72cfef507204b50f74ffcbfcfde7e856437891d3f6cfe780866986d006fe",
