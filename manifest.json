@@ -95,7 +95,7 @@
 
 		{"src": "gnome:vala",
 		 "config-opts": ["--enable-vapigen"],
-                 "tag": "https://git.gnome.org/browse/vala/commit/?id=acbb43e9743057aa2ac31e3c97764dd10a524cd2",
+                 "tag": "acbb43e9743057aa2ac31e3c97764dd10a524cd2",
                  "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=758741"},
 
 		{"src": "git:git://github.com/seccomp/libseccomp",
