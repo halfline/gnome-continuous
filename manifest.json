@@ -789,6 +789,8 @@
 		 "patches": ["gee-builddir.patch"]},
 
 		{"src": "git:git://github.com/hughsie/PackageKit.git",
+                 "tag": "7ab01fdf384a4ce820ceb4ba8fc918e9712a34bc",
+                 "tag-reason": "Missing m4 macros",
 		 "config-opts": ["--disable-strict",
 				 "--enable-NetworkManager",
 				 "--enable-systemd",
