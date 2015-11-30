@@ -790,7 +790,7 @@
 
 		{"src": "git:git://github.com/hughsie/PackageKit.git",
                  "tag": "7ab01fdf384a4ce820ceb4ba8fc918e9712a34bc",
-                 "tag-reason": "Missing m4 macros",
+                 "tag-reason": "Missing m4 macros; See https://bugs.freedesktop.org/show_bug.cgi?id=93179", 
 		 "config-opts": ["--disable-strict",
 				 "--enable-NetworkManager",
 				 "--enable-systemd",
