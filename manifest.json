@@ -836,7 +836,8 @@
 				 "--disable-tracker-preferences",
 				 "--disable-tracker-search-bar",
 				 "--disable-tracker-explorer",
-				 "--with-unicode-support=libicu"]},
+				 "--with-unicode-support=libicu",
+                                 "--disable-selinux"]},
 
 		{"src": "gnome:dconf",
 		 "config-opts": ["--disable-man", "--disable-editor"]},
