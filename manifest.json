@@ -836,8 +836,7 @@
 				 "--disable-tracker-preferences",
 				 "--disable-tracker-search-bar",
 				 "--disable-tracker-explorer",
-				 "--with-unicode-support=libicu",
-                                 "--disable-selinux"]},
+				 "--with-unicode-support=libicu"]},
 
 		{"src": "gnome:dconf",
 		 "config-opts": ["--disable-man", "--disable-editor"]},
@@ -1146,7 +1145,8 @@
 		 "config-opts": ["--disable-documentation"],
 		 "component": "devel"},
 
-		{"src": "gnome:nautilus"},
+		{"src": "gnome:nautilus",
+                 "config-opts": ["--disable-selinux"]},
 
 		{"src": "gnome:gedit",
 		 "config-opts": ["--enable-python=no",
