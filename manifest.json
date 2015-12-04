@@ -881,9 +881,7 @@
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
                  "config-opts": ["--disable-documentation",
                                  "--with-priv-mode=none"],
-                 "setuid": ["/runtime/usr/bin/xdg-app-helper"],
-                 "tag": "f2c9663169c4bb05c7670c816af160e4622a90f5",
-                 "tag-reason": "builddir != srcdir; see: https://github.com/alexlarsson/xdg-app/pull/89"},
+                 "setuid": ["/runtime/usr/bin/xdg-app-helper"]},
 
 		{"src": "gnome:gnome-hwtest",
                  "component": "minimal",
