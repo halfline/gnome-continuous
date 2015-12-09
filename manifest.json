@@ -262,7 +262,9 @@
 
 		{"src": "fd:xorg/lib/libXext"},
 
-		{"src": "fd:xorg/lib/libXfont"},
+                {"src": "fd:xorg/lib/libXfont",
+		 "tag": "eb67d10ae82b364a4324e96ce53baaa4e5e75f97",
+		 "tag-reason": "xserver not ported to xfont2 from 135fb032e940ce226c9feb13e6e903f3ecbc5eb0"},
 
 		{"src": "fd:xorg/lib/libXft"},
 
