@@ -362,8 +362,6 @@
                      "x86_64": "-g -m64 -mtune=generic -fno-rtti",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-rtti"
                  },
-		 "tag": "698cdbf49207c30bc2ac38e2f16e531dd3a54db3",
-		 "tag-reason": "include path issue, mailed Rob",
                  "patches": ["mesa-nv50-fix-build.patch"],
                  "config-opts": [
                      "--enable-pic",
