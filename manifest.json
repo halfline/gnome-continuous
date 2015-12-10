@@ -165,8 +165,6 @@
 		 "component": "devel"},
 
 		{"src": "fd:xorg/proto/dri2proto",
-		 "branch": "refs/heads/master",
-		 "branch-comment": "dri2proto has a refs/master which is ambiguous; discussed on #xorg-devel irc with ajax, no fix yet",
 		 "component": "devel"},
 
 		{"src": "fd:xorg/proto/dri3proto",
