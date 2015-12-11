@@ -1080,9 +1080,7 @@
 
 		{"src": "gnome:vte",
 		 "config-opts-comment": "pcre disabled due to too old pcre in current OE",
-		 "config-opts": ["--disable-vala", "--without-pcre2"],
-                 "tag": "f85d4fcf75539bbf34d40f90f877e90206d41a1e",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=759314"},
+		 "config-opts": ["--disable-vala", "--without-pcre2"]},
 
 		{"src": "git:git://git.kernel.org/pub/scm/utils/dash/dash.git"},
 
