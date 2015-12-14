@@ -872,9 +872,7 @@
 		 "initramfs-depends": true,
 		 "config-opts": ["--with-soup-gnome",
 		                 "--with-dracut",
-				 "--enable-installed-tests"],
-                 "tag": "96eed957205c5a318c2849100778d48aad748469",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=759467"},
+				 "--enable-installed-tests"]},
 
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
                  "config-opts": ["--disable-documentation",
