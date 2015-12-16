@@ -976,7 +976,7 @@
                 {"src": "gnome:grilo",
 		 "config-opts": ["--disable-vala"],
                  "tag": "6d68858dad2afbc0662021f9ca4d7167d79fb48a",
-                 "tag-reason": "API break"]},
+                 "tag-reason": "API break"},
 
                 {"src": "gnome:grilo-plugins",
                  "tag": "c74848fbd102175c845c4958fdb18f6cb17e62c4",
