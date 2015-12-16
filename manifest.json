@@ -974,13 +974,9 @@
 		{"src": "gnome:totem-pl-parser"},
 
                 {"src": "gnome:grilo",
-		 "config-opts": ["--disable-vala"],
-                 "tag": "6d68858dad2afbc0662021f9ca4d7167d79fb48a",
-                 "tag-reason": "API break"},
+		 "config-opts": ["--disable-vala"]},
 
-                {"src": "gnome:grilo-plugins",
-                 "tag": "c74848fbd102175c845c4958fdb18f6cb17e62c4",
-                 "tag-reason": "API break in Grilo"},
+                {"src": "gnome:grilo-plugins"},
 
 		{"src": "gnome:libzapojit"},
 
