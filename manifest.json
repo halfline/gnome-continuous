@@ -901,7 +901,10 @@
 
                 {"src": "dnsmasq:dnsmasq.git",
                  "component": "hwtest",
-		 "patches": ["dnsmasq-buildsys.patch"]},
+		 "patches": ["dnsmasq-buildsys.patch"],
+                 "tag": "14a4ae883d51130d33da7133287e8867c64bab65",
+                 "tag-reason": "Build failure introduced in fa14bec83b2db010fd076910fddab56957b9375d"},
+
 
                 {"src": "ipxe:ipxe.git",
 		 "tag": "619a377328661ec32cdac429dd7ed4e744015507",
