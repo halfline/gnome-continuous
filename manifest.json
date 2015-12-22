@@ -73,7 +73,7 @@
 		{"src": "gnome:gnome-common",
 		 "component": "devel"},
 
-        {"src": "git:https://github.com/desrt/m4-common.git",
+        {"src": "gnome:m4-common.git",
          "component": "devel"},
 
 		{"src": "savannah:gperf.git",
