@@ -788,6 +788,7 @@
 		 "config-opts": ["--disable-strict",
 				 "--enable-NetworkManager",
 				 "--enable-systemd",
+				 "--enable-dummy",
 				 "--disable-man-pages",
 				 "--disable-bash-completion",
 				 "--disable-tests",
