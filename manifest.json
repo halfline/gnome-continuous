@@ -981,6 +981,8 @@
 		{"src": "gnome:libzapojit"},
 
                 {"src": "gnome:libgfbgraph"},
+                 "tag": "97eaa56fa52f8975a0a957d7c435599f5bdcf1cb",
+                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=760108"},
 
                 {"src": "gnome:libchamplain"},
 
