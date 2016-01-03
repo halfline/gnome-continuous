@@ -1359,7 +1359,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 92,
+	"build-epoch": {"version": 93,
 		        "all": false,
-		        "component-names": ["gsettings-desktop-schemas", "gnome-settings-daemon", "mutter"]}
+		        "component-names": ["webkitgtk3", "webkitgtk4"]}
 }
