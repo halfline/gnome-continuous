@@ -399,6 +399,8 @@
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
 
         {"src": "fd:xorg/xserver",
+	 "tag": "f3593918a0507cc080875788b2776ebe4f57c694",
+	 "tag-reason": "coredump, testing whether reverting fixes it",
          "config-opts": ["--enable-xwayland",
                          "--enable-glamor"]},
 
