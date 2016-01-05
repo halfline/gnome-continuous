@@ -68,7 +68,8 @@
 		 "component": "minimal",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
                  "config-opts": ["--disable-modular-tests",
-				 "--enable-installed-tests"]},
+				 "--enable-installed-tests",
+				 "--with-pcre=internal"]},
 
 		{"src": "gnome:gnome-common",
 		 "component": "devel"},
