@@ -312,6 +312,7 @@
 		 "config-opts": ["--with-dbus-user=dbus",
 		                 "--enable-inotify",
 				 "--enable-verbose-mode",
+				 "--enable-user-session",
 				 "--disable-xml-docs",
 				 "--disable-doxygen-docs",
 				 "--disable-tests",
