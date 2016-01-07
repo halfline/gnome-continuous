@@ -321,7 +321,7 @@
 		 "setuid": ["/runtime/usr/libexec/dbus-daemon-launch-helper"]},
 
 		{"src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng",
-		 "tag": "v1.5.18"},
+		 "tag": "v1.6.20"},
 
 		{"src": "fd:cairo",
 		 "config-opts": ["--disable-interpreter"]},
