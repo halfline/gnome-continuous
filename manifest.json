@@ -321,7 +321,8 @@
 		 "setuid": ["/runtime/usr/libexec/dbus-daemon-launch-helper"]},
 
 		{"src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng",
-		 "tag": "v1.6.20"},
+		 "tag": "047737496a77eeb97f9991919dac08ca3c149711",
+                 "tag-reason": "The version tags are completely borked and point to weird commits"},
 
 		{"src": "fd:cairo",
 		 "config-opts": ["--disable-interpreter"]},
