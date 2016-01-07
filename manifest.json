@@ -1362,7 +1362,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 93,
+	"build-epoch": {"version": 94,
 		        "all": false,
-		        "component-names": ["webkitgtk3", "webkitgtk4"]}
+		        "component-names": ["gdk-pixbuf", "cairo", "webkitgtk3", "webkitgtk4", "plymouth", "librsvg", "poppler", "libgxps"]}
 }
