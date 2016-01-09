@@ -836,9 +836,7 @@
 		{"src": "gnome:dconf",
 		 "config-opts": ["--disable-man", "--disable-editor"]},
 
-		{"src": "gnome:zenity",
-		 "tag": "8e2ee458e2738052011391c3e38cc2bbfa25ac4b",
-		 "tag-reason": "requires gettext 0.19.4"},
+		{"src": "gnome:zenity"},
 
 		{"src": "gnome:mutter",
                  "irc_room": "gnome-shell",
