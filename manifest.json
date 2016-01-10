@@ -65,8 +65,6 @@
 		 "noarch": true},
 
 		{"src": "gnome:glib",
-		 "tag": "c1e2a8d72766323181c804b47547242bd70460e9",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=622991",
 		 "component": "minimal",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
                  "config-opts": ["--disable-modular-tests",
