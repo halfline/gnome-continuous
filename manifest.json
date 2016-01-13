@@ -992,6 +992,8 @@
 
 		{"src": "gnome:evolution-data-server",
 		 "irc_room": "evolution",
+                 "tag": "c50135844c8010c96059a9c9fa6edeff8b64dda4",
+                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=759714",
 		 "config-opts": ["--enable-installed-tests",
 				 "--enable-vala-bindings",
 				 "--disable-google-auth",
