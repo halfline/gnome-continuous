@@ -1082,6 +1082,8 @@
 		{"src": "gnome:libwnck"},
 
 		{"src": "gnome:vte",
+		 "tag": "b4f8cdcdfbbe4e1b4afe57721911c0bdc7a44f0d",
+		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=760635",
 		 "config-opts-comment": "pcre disabled due to too old pcre in current OE",
 		 "config-opts": ["--disable-vala", "--without-pcre2"]},
 
