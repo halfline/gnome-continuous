@@ -1209,8 +1209,7 @@
 
 		{"src": "gnome:babl"},
 
-		{"src": "gnome:gegl",
-		 "name": "gegl2"},
+		{"src": "gnome:gegl"},
 
 		{"src": "gnome:gnome-photos",
 		 "config-opts": ["--enable-installed-tests"]},
