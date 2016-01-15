@@ -1178,7 +1178,7 @@
 
 		{"src": "gnome:gnome-calculator",
                  "tag": "e7a82529d5829ffb86e29e4a2e87cb31cd8a1774",
-                 "tag-reason": "builddir != srcdir failure; bug to follow.",
+                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=760679",
                  "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:gnome-weather",
