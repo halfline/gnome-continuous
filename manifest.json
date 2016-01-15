@@ -1177,7 +1177,9 @@
          "checksum": "399d0f47ef6608cc01d29ed1b99c7faff36d9994c45f36f41ba250147100453b"},
 
 		{"src": "gnome:gnome-calculator",
-         "config-opts": ["--enable-installed-tests"]},
+                 "tag": "e7a82529d5829ffb86e29e4a2e87cb31cd8a1774",
+                 "tag-reason": "builddir != srcdir failure; bug to follow.",
+                 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:gnome-weather",
 		 "config-opts": ["--enable-installed-tests"]},
