@@ -640,8 +640,6 @@
 		 "config-opts": ["--disable-gtk-doc"]},
 
 		{"src": "fd-gstreamer:gstreamer",
-		 "tag": "e5ca47236e4df4683707f0bcf99181a937d358d5",
-		 "tag-reason": "Installed headers need gsttracerutils.h, breaks tracker compilation",
 		 "config-opts": ["--with-bash-completion-dir=no",
 		                 "--disable-tests",
 		                 "--disable-fatal-warnings"]},
