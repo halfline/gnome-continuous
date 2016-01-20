@@ -1,0 +1,13 @@
+diff -Nuarp exiv2-0.25.old/configure exiv2-0.25/configure
+--- exiv2-0.25.old/configure	2015-06-21 15:53:19.000000000 +0100
++++ exiv2-0.25/configure	2016-01-20 16:39:03.699702013 +0000
+@@ -19914,6 +19914,9 @@ fi
+ # Configuration summary.
+ # ---------------------------------------------------------------------------
+ 
++# We do not support builddir != srcdir
++echo \#buildapi-variable-no-builddir >/dev/null
++
+ echo ""
+ echo "------------------------------------------------------------------"
+ echo "-- Exiv2 $VERSION feature configuration summary"

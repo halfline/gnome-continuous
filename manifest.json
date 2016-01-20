@@ -1213,7 +1213,9 @@
 
                 {"src": "tarball:http://www.exiv2.org/exiv2-0.25.tar.gz",
                  "name": "exiv2",
-                 "checksum": "c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4"},
+                 "checksum": "c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4",
+                 "patches": ["exiv2-no-builddir.patch"]},
+
 
 		{"src": "gnome:gexiv2"},
 
