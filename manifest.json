@@ -1214,8 +1214,6 @@
 		{"src": "gnome:gexiv2"},
 
 		{"src": "gnome:gnome-photos",
-		 "tag": "f27a556d694721ea9fe5428718e7b9c1f829dc70",
-		 "tag-reason": "Deal with new gexiv2/exiv2 requirement",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:d-feet",
