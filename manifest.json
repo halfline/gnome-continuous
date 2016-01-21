@@ -145,6 +145,12 @@
 		 "tag": "VER-2-4-8",
 		 "patches": ["freetype-autogen.patch"]},
 
+		{"src": "cgwalters:ragel-tarballs-as-git",
+		 "patches": ["ragel-gcc-4.7.patch"],
+		 "tag": "0b17ee79bf5237ffdc3a2a7480023a7d61063788"},
+
+		{"src": "git:git://anongit.freedesktop.org/harfbuzz"},
+
    		{"src": "fd:fontconfig",
 		 "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache"],
 		 "tag": "97cf7ec4d740c9b3ac7c29388224f5e0c226a120",
@@ -574,12 +580,6 @@
 		 "config-opts": ["--disable-orbit",
 		                 "--disable-gtk",
 				 "--disable-documentation"]},
-
-                {"src": "cgwalters:ragel-tarballs-as-git",
-		 "patches": ["ragel-gcc-4.7.patch"],
-		 "tag": "0b17ee79bf5237ffdc3a2a7480023a7d61063788"},
-
-                {"src": "git:git://anongit.freedesktop.org/harfbuzz"},
 
 		{"src": "gnome:pango",
 		 "config-opts": ["--enable-installed-tests"]},
