@@ -142,6 +142,8 @@
    		{"src": "fd:pixman"},
 
    		{"src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
+		 "bootstrap": true,
+		 "name": "freetype2-bootstrap",
 		 "patches": ["freetype-autogen.patch"]},
 
 		{"src": "cgwalters:ragel-tarballs-as-git",
@@ -151,7 +153,6 @@
 		{"src": "git:git://anongit.freedesktop.org/harfbuzz"},
 
 		{"src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
-		 "name": "freetype2-harfbuzz",
 		 "patches": ["freetype-autogen.patch"]},
 
    		{"src": "fd:fontconfig",
