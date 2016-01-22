@@ -1072,6 +1072,8 @@
 
 		{"src": "git:git://github.com/hughsie/colord-gtk.git"},
 
+		{"src": "gnome:cheese"},
+
 		{"src": "gnome:gnome-control-center",
 		 "patches": ["gnome-control-center-build-Drop-hardcoded-requirements-on-Linux.patch"],
 		 "patches-reasons": ["https://bugzilla.gnome.org/show_bug.cgi?id=755063"],
