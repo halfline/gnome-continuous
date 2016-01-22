@@ -1104,6 +1104,8 @@
 
 		{"src": "gnome:pyatspi2"},
 
+		{"src": "gnome:orca"},
+
 		{"src": "gnome:caribou"},
 
 		{"src": "gnome:gnome-shell",
