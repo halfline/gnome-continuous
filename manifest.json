@@ -1115,7 +1115,7 @@
 		 "patches": ["py2cairo-autogen.patch"]},
 
                 {"src": "fd:pycairo",
-                 "patches": "pycairo-buildsys.patch"},
+                 "patches": ["pycairo-buildsys.patch"]},
 
 		{"src": "gnome:pygobject",
 		 "config-opts": ["--with-python=python2"]},
