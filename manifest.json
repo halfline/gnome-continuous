@@ -918,6 +918,8 @@
 		{"src": "savannah:grub.git",
                  "component": "hwtest",
                  "cflags": { "x86_64": "" },
+                 "tag": "dab148891ee64ba5420a11bdddad9983fc387954",
+                 "tag-reason": "Broken build; bug to follow",
                  "config-opts": ["--with-platform=pc",
                                  "--disable-grub-mkfont",
                                  "--enable-liblzma=no",
