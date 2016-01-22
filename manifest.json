@@ -1114,6 +1114,9 @@
 		{"src": "git:git://git.cairographics.org/git/py2cairo",
 		 "patches": ["py2cairo-autogen.patch"]},
 
+                {"src": "fd:pycairo",
+                 "patches": "pycairo-buildsys.patch"},
+
 		{"src": "gnome:pygobject",
 		 "config-opts": ["--with-python=python2"]},
 
