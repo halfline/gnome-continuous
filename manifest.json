@@ -1117,6 +1117,10 @@
 		{"src": "gnome:pygobject",
 		 "config-opts": ["--with-python=python2"]},
 
+		{"src": "gnome:pygobject",
+		 "name": "pygobject3",
+		 "config-opts": ["--with-python=python3"]},
+
 		{"src": "gnome:pyatspi2"},
 
 		{"src": "gnome:orca"},
