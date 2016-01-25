@@ -29,7 +29,7 @@ new file mode 100755
 index 0000000..f53a4f9
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,59 @@
+@@ -0,0 +1,58 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -83,7 +83,6 @@ index 0000000..f53a4f9
 +     -DENABLE_GTKDOC=OFF \
 +     -DUSE_LIBHYPHEN=OFF \
 +     -DENABLE_FTL_JIT=OFF \
-+     -DENABLE_ACCELERATED_2D_CANVAS=OFF \
 +     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
 +     -DLIB_INSTALL_DIR:PATH=${libdir} \
 +     -DCMAKE_C_FLAGS="-m64 -mtune=generic -Wl,--no-keep-memory" \
