@@ -29,7 +29,7 @@ new file mode 100755
 index 0000000..f53a4f9
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,62 @@
+@@ -0,0 +1,63 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -78,10 +78,11 @@ index 0000000..f53a4f9
 +unset CXXFLAGS
 +
 +# Debugging. Why is no srcdir being passed to cmake?
++pwd
 +echo srcdir=${srcdir}
 +set +x
 +
-+exec cmake \
++cmake \
 +     -DPORT=GTK \
 +     -DCMAKE_BUILD_TYPE=Release \
 +     -DENABLE_GTKDOC=OFF \
