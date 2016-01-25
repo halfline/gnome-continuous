@@ -93,7 +93,7 @@ index 0000000..f53a4f9
 +     -DLIB_INSTALL_DIR:PATH=${libdir} \
 +     -DCMAKE_C_FLAGS="-m64 -mtune=generic -Wl,--no-keep-memory" \
 +     -DCMAKE_CXX_FLAGS="-m64 -mtune=generic -Wl,--no-keep-memory" \
-+     ${srcdir}
++     ..
 -- 
 2.4.3
 
