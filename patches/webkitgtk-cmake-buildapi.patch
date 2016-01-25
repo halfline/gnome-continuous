@@ -29,7 +29,7 @@ new file mode 100755
 index 0000000..f53a4f9
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,58 @@
+@@ -0,0 +1,59 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
