@@ -777,10 +777,9 @@
 		 "name": "enchant",
 		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"}, 
 
-		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.4.6.tar.xz",
+		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.4.9.tar.xz",
 		 "name": "webkitgtk3",
-		 "checksum": "6fef4aa8d4a2668e03ea15472a71396ea7b776bbe56ad9459a4124b823c11457",
-		 "patches": ["webkitgtk-2.4.8-gmutexlocker.patch"],
+		 "checksum": "afdf29e7828816cad0be2604cf19421e96d96bf493987328ffc8813bb20ac564",
 		 "config-opts": ["--enable-introspection",
 				 "--enable-debug-symbols=min",
 				 "--disable-maintainer-mode"]},
