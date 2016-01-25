@@ -1177,9 +1177,7 @@
                                  "--disable-firmware",
                                  "--enable-installed-tests"]},
 
-		{"src": "gnome:epiphany",
-                 "tag": "08eb12b3bb538f96b23bc2ac7bf21e360b085b4d",
-                 "tag-reason": "Needs WebKitGtk bump to 2.11.4, which requires Clang 3.7"},
+		{"src": "gnome:epiphany"},
 
 		{"src": "gnome:gnome-calendar" },
 
