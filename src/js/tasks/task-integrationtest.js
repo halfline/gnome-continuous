@@ -131,19 +131,19 @@ const TaskIntegrationTest = new Lang.Class({
                 print("NOTE: No such xfail test: " + xfail);
         }
         let testsScript = '#!/bin/sh\n\
+set -xeuo pipefail\n\
 pkill gnome-initial || true\n\
 echo "yes" >> ~/.config/gnome-initial-setup-done\n\
 gsettings set org.gnome.desktop.session idle-delay 0\n\
-gnome-desktop-testing-runner --parallel 0 --status=yes --report-directory=~/installed-tests-results\n';
-        let dest = deployDir.resolve_relative_path('bin/gnome-continuous-installed-tests.sh');
+gnome-desktop-testing-runner --parallel 0 --status=yes --report-directory=$HOME/installed-tests-results\n';
+        let dest = deployDir.resolve_relative_path('usr/bin/gnome-continuous-installed-tests.sh');
         GSystem.file_ensure_directory(dest.get_parent(), true, cancellable);
-        dest.replace_contents(testsScript, null, false, Gio.FileCreateFlags.REPLACE_DESTINATION,
-                              cancellable);
+        dest.replace_contents(testsScript, null, false, Gio.FileCreateFlags.REPLACE_DESTINATION, cancellable);
 
         let desktopFile = '[Desktop Entry]\n\
 Encoding=UTF-8\n\
 Name=GNOME installed tests runner\n\
-Exec=sh /bin/gnome-continuous-installed-tests.sh\n\
+Exec=/usr/bin/gnome-continuous-installed-tests.sh\n\
 Terminal=false\n\
 Type=Application\n';
         let dest = deployEtcDir.resolve_relative_path('xdg/autostart/gnome-desktop-testing.desktop');
