@@ -1388,7 +1388,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 94,
+	"build-epoch": {"version": 95,
 		        "all": false,
-		        "component-names": ["gdk-pixbuf", "cairo", "webkitgtk3", "webkitgtk4", "plymouth", "librsvg", "poppler", "libgxps"]}
+		        "component-names": ["evolution-data-server", "folks", "evolution", "gnome-contacts", "gnome-calendar", "gnome-shell", "bijiben"]}
 }
