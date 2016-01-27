@@ -13,7 +13,7 @@
     <branch/>
   </autotools>
   <autotools id="glib">
-    <branch revision="glib-2-42"/>
+    <branch revision="glib-2-46"/>
     <dependencies>
       <dep package="gtk-doc-stub"/>
     </dependencies>
@@ -56,8 +56,8 @@
   <autotools id="libxml2">
     <branch revision="v2.8.0"/>
   </autotools>
-  <autotools id="libsoup" autogenargs="--disable-tls-check">
-    <branch revision="LIBSOUP_2_42_0"/>
+  <autotools id="libsoup" autogenargs="--disable-tls-check --disable-vala">
+    <branch revision="2.52.0"/>
     <dependencies>
       <dep package="gobject-introspection"/>
       <dep package="libxml2"/>
