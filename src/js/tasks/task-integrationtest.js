@@ -139,6 +139,7 @@ gnome-desktop-testing-runner --parallel 0 --status=yes --report-directory=$HOME/
         let dest = deployDir.resolve_relative_path('usr/bin/gnome-continuous-installed-tests.sh');
         GSystem.file_ensure_directory(dest.get_parent(), true, cancellable);
         dest.replace_contents(testsScript, null, false, Gio.FileCreateFlags.REPLACE_DESTINATION, cancellable);
+        GSystem.file_chmod(dest, 493, cancellable);
 
         let desktopFile = '[Desktop Entry]\n\
 Encoding=UTF-8\n\
