@@ -879,6 +879,7 @@
 		 "initramfs-depends": true,
 		 "config-opts": ["--with-soup-gnome",
 		                 "--with-dracut",
+		                 "--disable-man",
 				 "--enable-installed-tests"]},
 
                 {"src": "git:git://github.com/alexlarsson/xdg-app",
