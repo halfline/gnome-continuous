@@ -998,7 +998,6 @@
 		{"src": "gnome:gnome-online-miners"},
 
 		{"src": "libical:libical",
-		 "tag": "v1.0.1",
 		 "patches": ["libical-cmake-buildapi.patch"]},
 
 		{"src": "gnome:evolution-data-server",
