@@ -462,7 +462,7 @@
 		                 "--disable-gtk-doc"]},
 
 		{"src": "git:git://git.infradead.org/users/tgr/libnl.git",
-		 "tag": "libnl3_2_21",
+		 "tag": "libnl3_2_27",
 		 "name": "libnl3"},
 
 		{"src": "cgwalters:nss-tarballs-as-git",
