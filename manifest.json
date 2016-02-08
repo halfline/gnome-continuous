@@ -113,7 +113,6 @@
 				 "--disable-networkd",
 				 "--disable-resolved",
                                  "--disable-timesyncd",
-                                 "--disable-gudev",
 				 "--enable-compat-libs",
 				 "--with-sysvinit-path=",
 				 "--with-sysvrcnd-path="]
