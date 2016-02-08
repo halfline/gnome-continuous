@@ -626,6 +626,10 @@
 		{"src": "fd-p11:p11-kit",
                  "component": "minimal"},
 
+                {"src": "git:https://gitlab.com/gnutls/gnutls.git",
+                 "component": "minimal",
+                 "config-ops": ["--without-tpm", "--disable-guile"]},
+
 		{"src": "gnome:gcr",
 		 "config-opts": ["--disable-valgrind"]},
 
