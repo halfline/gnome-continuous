@@ -87,7 +87,8 @@
 
         {"src": "gnome:gobject-introspection",
          "component": "minimal",
-		 "config-opts": ["--disable-tests"]},
+		 "config-opts": ["--disable-tests",
+				 "--with-python=python3"]},
 
 		{"src": "gnome:vala-bootstrap",
 		 "bootstrap": true,
