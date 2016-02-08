@@ -628,7 +628,12 @@
 
                 {"src": "git:https://gitlab.com/gnutls/gnutls.git",
                  "component": "minimal",
-                 "config-ops": ["--without-tpm", "--disable-guile"]},
+                 "config-ops": ["--without-tpm",
+                                "--disable-guile",
+                                "--enable-local-libopts",
+                                "--disable-non-suiteb-curves",
+                                "--disable-doc"],
+                 "patches": ["gnutls-autogen.patch"]},
 
 		{"src": "gnome:gcr",
 		 "config-opts": ["--disable-valgrind"]},
