@@ -1394,7 +1394,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 96,
+	"build-epoch": {"version": 97,
 		        "all": false,
-		        "component-names": ["evolution-data-server", "folks", "evolution", "gnome-contacts", "gnome-calendar", "gnome-shell", "bijiben"]}
+		        "component-names": ["evolution-ews"]}
 }
