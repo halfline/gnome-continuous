@@ -628,7 +628,8 @@
 
                 {"name": "nettle",
                  "src": "tarball:https://ftp.gnu.org/gnu/nettle/nettle-3.2.tar.gz",
-                 "checksum": "ea4283def236413edab5a4cf9cf32adf540c8df1b9b67641cfc2302fca849d97"},
+                 "checksum": "ea4283def236413edab5a4cf9cf32adf540c8df1b9b67641cfc2302fca849d97",
+                 "config-ops": ["--disable-documentation"]},
 
                 {"src": "git:https://gitlab.com/gnutls/gnutls.git",
                  "component": "minimal",
