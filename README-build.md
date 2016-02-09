@@ -55,16 +55,15 @@ The simple goal of ostbuild is that it only takes as input a
 "manifest" which is basically just a list of components to build.  You
 can see an example of this here:
 
-http://git.gnome.org/gnome-ostree/gnomeos-3.6.json
+https://git.gnome.org/gnome-continuous/tree/manifest.json
 
 A component is a pure metadata file which includes the git repository
 URL and branch name, as well as ./configure flags (--enable-foo).
 
-There is no support for building from "tarballs" - I want the ability
-to review all of the code that goes in, and to efficiently store
-source code updates.  It's also just significantly easier from an
-implementation perspective, versus having to maintain a version
-control abstraction layer.
+While the goal is to always build from Git, it's also possible to use a
+tarball as a starting point, especially for low level components, or for
+components that are not hosted in Git; ostbuild will take the tarball,
+explode it, and put its contents into a Git repository.
 
 The result of a build of a component is an OSTree branch like
 "artifacts/gnomeos-3.6-i686-devel/libxslt/master".  Then, a "compose"
@@ -75,7 +74,7 @@ Doing local builds
 ------------------
 
 This is where you want to modify one (or a few) components on top of
-what comes from the ostree.gnome.org server, and test the result
+what comes from the build.gnome.org server, and test the result
 locally.  I'm working on this.
 
 Doing a full build on your system
