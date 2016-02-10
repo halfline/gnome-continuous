@@ -55,6 +55,7 @@ const TaskSmoketest = new Lang.Class({
         TaskAfter: ['builddisks'],
     },
 
+    GdmSession: 'gnome-xorg',
     CompletedTag: 'smoketested'
 });
 
@@ -78,8 +79,6 @@ const TaskSmoketestWayland = new Lang.Class({
         TaskName: "smoketest-wayland",
         TaskAfter: ['builddisks'],
     },
-
-    GdmSession: 'gnome-wayland',
 });
 
 const TaskSmoketestTimed = new Lang.Class({
