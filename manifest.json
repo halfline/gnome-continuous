@@ -391,7 +391,7 @@
                      "--enable-gallium-gbm",
                      "--enable-gallium-egl",
                      "--enable-xa",
-                     "--with-gallium-drivers=svga,r300,r600,nouveau,swrast",
+                     "--with-gallium-drivers=svga,r300,r600,nouveau,swrast,virgl",
                      "--enable-gallium-llvm",
                      "--with-dri-drivers=nouveau,radeon,r200,i915,i965,swrast"
                      ]},
