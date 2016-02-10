@@ -764,7 +764,7 @@
 				 "--disable-examples",
 				 "--disable-fatal-warnings"]},
 
-		{"src": "git:git://github.com/FFmpeg/FFmpeg.git"}
+		{"src": "git:git://github.com/FFmpeg/FFmpeg.git"},
 
 		{"src": "fd-gstreamer:gst-libav",
 		 "config-opts": ["--disable-tests",
