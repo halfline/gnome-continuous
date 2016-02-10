@@ -756,8 +756,6 @@
 				 "--disable-fatal-warnings"]},
 
 		{"src": "fd-gstreamer:gst-plugins-bad",
-		 "tag": "ae96e6bd5121583cfb8ed668ecb77fb2237277a7",
-		 "tag-reason": "compilation error, not sure what's going on yet",
 		 "config-opts": ["--with-gtk=3.0",
 				 "--disable-tests",
 				 "--disable-examples",
