@@ -764,6 +764,13 @@
 				 "--disable-examples",
 				 "--disable-fatal-warnings"]},
 
+		{"src": "git:git://github.com/FFmpeg/FFmpeg.git"}
+
+		{"src": "fd-gstreamer:gst-libav",
+		 "config-opts": ["--disable-tests",
+				 "--disable-examples",
+				 "--disable-fatal-warnings"]},
+
 		{"src": "tarball:https://github.com/maxmind/geoip-api-c/releases/download/v1.6.2/GeoIP-1.6.2.tar.gz",
 		 "rm-configure": true,
 		 "name": "geoip",
