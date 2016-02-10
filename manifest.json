@@ -872,7 +872,10 @@
 		{"src": "gnome:gjs",
                  "name": "gjs-minimal",
                  "component": "hwtest",
-		 "config-opts": ["--without-cairo", "--without-gtk"]},
+		 "config-opts": ["--without-cairo",
+                                 "--without-gtk",
+                                 "--without-dbus-tests",
+                                 "--without-xvfb-tests"]},
 
 		{"src": "gnome:gjs",
 		 "config-opts": ["--enable-installed-tests"]},
