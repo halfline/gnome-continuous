@@ -878,7 +878,7 @@
                                  "--without-xvfb-tests"]},
 
 		{"src": "gnome:gjs",
-		 "config-opts": ["--enable-installed-tests", "--without-dbus-tests"]},
+		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:ostree",
                  "component": "minimal",
