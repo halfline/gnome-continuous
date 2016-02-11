@@ -796,18 +796,6 @@
 		{"src": "gnome:libgee",
 		 "patches": ["gee-builddir.patch"]},
 
-		{"src": "git:git://github.com/hughsie/PackageKit.git",
-		 "config-opts": ["--disable-strict",
-				 "--enable-NetworkManager",
-				 "--enable-systemd",
-				 "--enable-dummy",
-				 "--disable-man-pages",
-				 "--disable-bash-completion",
-				 "--disable-tests",
-				 "--disable-browser-plugin",
-				 "--disable-cron",
-				 "--disable-systemd-updates"]},
-
                 {"src": "gnome:gtksourceview",
                  "config-opts": ["--enable-compile-warnings=maximum",
                                  "--disable-maintainer-mode",
@@ -1187,6 +1175,7 @@
 		 "config-opts": ["--disable-man",
                                  "--disable-offline-appstream-data",
                                  "--disable-firmware",
+                                 "--disable-packagekit",
                                  "--enable-installed-tests"]},
 
 		{"src": "gnome:epiphany"},
