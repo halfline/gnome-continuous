@@ -761,6 +761,10 @@
 				 "--disable-examples",
 				 "--disable-fatal-warnings"]},
 
+		{"src": "fd:libva"},
+
+		{"src": "fd-gstreamer:gstreamer-vaapi"},
+
 		{"src": "tarball:https://github.com/maxmind/geoip-api-c/releases/download/v1.6.2/GeoIP-1.6.2.tar.gz",
 		 "rm-configure": true,
 		 "name": "geoip",
