@@ -120,7 +120,7 @@ const Snapshot = new Lang.Class({
 	let origSrc = componentMeta['src'];
 	let name = componentMeta['name'];
 
-	if (origSrc.indexOf('tarball:') == 0) {
+	if (origSrc.indexOf('tarball:') == 0 || origSrc.indexOf('zipfile:') == 0) {
 	    if (!name)
 		throw new Error("Component src " + origSrc + " has no name attribute");
 	    if (!componentMeta['checksum'])

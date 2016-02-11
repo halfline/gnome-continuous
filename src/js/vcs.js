@@ -228,13 +228,13 @@ function ensureVcsMirror(mirrordir, component, cancellable,
     if (keytype == 'git' || keytype == 'local') {
 	let branch = component['branch'] || component['tag'];
 	return _ensureVcsMirrorGit(mirrordir, uri, branch, cancellable, params);
-    } else if (keytype == 'tarball') {
+    } else if (keytype == 'tarball' || keytype == 'zipfile') {
 	let name = component['name'];
 	let checksum = component['checksum'];
 	if (!checksum) {
 	    throw new Error("Component " + name + " missing checksum attribute");
 	}
-	return _ensureVcsMirrorTarball(mirrordir, name, uri, checksum, cancellable, params);
+	return _ensureVcsMirrorArchive(mirrordir, keytype, name, uri, checksum, cancellable, params);
     } else {
 	throw new Error("Unhandled keytype=" + keytype);
     }
@@ -320,9 +320,33 @@ function _ensureVcsMirrorGit(mirrordir, uri, branch, cancellable, params) {
     return mirror;
 }
 
-function _ensureVcsMirrorTarball(mirrordir, name, uri, checksum, cancellable, params) {
+function _extractZipfile(uri, archivePath, checkoutPath, cancellable) {
+    // Extract the zip archive to our checkout
+    let args = ['unzip', archivePath, '-d', checkoutPath];
+    ProcUtil.runSync(args, cancellable, { logInitiation: true });
+}
+
+function _extractTarball(uri, archivePath, checkoutPath, cancellable) {
+    let decompOpt = null;
+    if (JSUtil.stringEndswith(uri, '.xz'))
+	decompOpt = '--xz';
+    else if (JSUtil.stringEndswith(uri, '.bz2'))
+	decompOpt = '--bzip2';
+    else if (JSUtil.stringEndswith(uri, '.gz'))
+	decompOpt = '--gzip';
+
+    // Extract the tarball to our checkout
+    let args = ['tar', '-C', checkoutPath, '-x'];
+    if (decompOpt !== null)
+	args.push(decompOpt);
+    args.push('-f');
+    args.push(archivePath);
+    ProcUtil.runSync(args, cancellable, { logInitiation: true });
+}
+
+function _ensureVcsMirrorArchive(mirrordir, archiveType, name, uri, checksum, cancellable, params) {
     let fetch = params.fetch;
-    let mirror = getMirrordir(mirrordir, 'tarball', name);
+    let mirror = getMirrordir(mirrordir, archiveType, name);
     let tmpMirror = mirror.get_parent().get_child(mirror.get_basename() + '.tmp');
     
     if (!mirror.query_exists(cancellable)) {
@@ -335,14 +359,14 @@ function _ensureVcsMirrorTarball(mirrordir, name, uri, checksum, cancellable, pa
 	GSystem.file_rename(tmpMirror, mirror, cancellable);
     }
     
-    let importTag = 'tarball-import-' + checksum;
+    let importTag = archiveType + '-import-' + checksum;
     let gitRevision = revParse(mirror, importTag, cancellable, { allowNone: true });
     if (gitRevision != null) {
 	return mirror;
     }	
 
     // First, we get a clone of the tarball git repo
-    let tmpCheckoutPath = mirrordir.get_child('tarball-cwd-' + name);
+    let tmpCheckoutPath = mirrordir.get_child(archiveType + '-cwd-' + name);
     GSystem.shutil_rm_rf(tmpCheckoutPath, cancellable);
     ProcUtil.runSync(['git', 'clone', mirror.get_path(), tmpCheckoutPath.get_path()], cancellable,
 		     { logInitiation: true });
@@ -351,43 +375,37 @@ function _ensureVcsMirrorTarball(mirrordir, name, uri, checksum, cancellable, pa
 		     { cwd: tmpCheckoutPath,
 		       logInitiation: true });
 
-    // Download the tarball
-    let tmpPath = mirrordir.get_child('tarball-' + name);
+    // Download the archive
+    let tmpPath = mirrordir.get_child(archiveType '-' + name);
     GSystem.shutil_rm_rf(tmpPath, cancellable);
     GSystem.file_ensure_directory(tmpPath.get_parent(), true, cancellable);
     ProcUtil.runSync(['curl', '-L', '-v', '-o', tmpPath.get_path(), uri], cancellable,
 		     { logInitiation: true });
 
     // And verify the checksum
-    let tarballData = GSystem.file_map_readonly(tmpPath, cancellable);
-    let actualChecksum = GLib.compute_checksum_for_bytes(GLib.ChecksumType.SHA256, tarballData);
+    let archiveData = GSystem.file_map_readonly(tmpPath, cancellable);
+    let actualChecksum = GLib.compute_checksum_for_bytes(GLib.ChecksumType.SHA256, archiveData);
     if (actualChecksum != checksum) {
 	throw new Error("Downloaded " + uri + " expected checksum=" + checksum + " actual=" + actualChecksum);
     }
     print("Verified checksum: " + checksum);
 
-    let decompOpt = null;
-    if (JSUtil.stringEndswith(uri, '.xz'))
-	decompOpt = '--xz';
-    else if (JSUtil.stringEndswith(uri, '.bz2'))
-	decompOpt = '--bzip2';
-    else if (JSUtil.stringEndswith(uri, '.gz'))
-	decompOpt = '--gzip';
-    
-    // Extract the tarball to our checkout
-    let args = ['tar', '-C', tmpCheckoutPath.get_path(), '-x'];
-    if (decompOpt !== null)
-	args.push(decompOpt);
-    args.push('-f');
-    args.push(tmpPath.get_path());
-    ProcUtil.runSync(args, cancellable, { logInitiation: true });
+    if (archiveType == 'zipfile') {
+        _extractZipfile(uri, tmpPath.get_path(), tmpCheckoutPath.get_path(), cancellable);
+    }
+    else if (archiveType == 'tarball') {
+        _extractTarball(uri, tmpPath.get_path(), tmpCheckoutPath.get_path(), cancellable);
+    }
+    else {
+        throw new Error("Unsupported archive type " + archiveType + " expected tarball, zipfile");
+    }
 
-    tarballData = null; // Clear this out in the hope the GC eliminates it
+    archiveData = null; // Clear this out in the hope the GC eliminates it
     GSystem.file_unlink(tmpPath, cancellable);
 
     // Automatically strip the first element if there's exactly one directory
     let e = tmpCheckoutPath.enumerate_children('standard::*', Gio.FileQueryInfoFlags.NOFOLLOW_SYMLINKS,
-					   cancellable);
+                                               cancellable);
     let info;
     let nFiles = 0;
     let lastFileType = null;
