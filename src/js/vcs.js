@@ -83,7 +83,7 @@ function getVcsCheckout(mirrordir, component, dest, cancellable, params) {
 	addUpstream = true;
     } else if (keytype == 'tarball' || keytype == 'zipfile') {
 	revision = keytype + '-import-' + component['checksum'];
-	moduleMirror = getMirrordir(mirrordir, 'tarball', component['name']);
+	moduleMirror = getMirrordir(mirrordir, keytype, component['name']);
 	addUpstream = false;
     } else {
 	throw new Error("Unsupported src uri");
