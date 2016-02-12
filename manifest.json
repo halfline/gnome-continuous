@@ -804,8 +804,6 @@
                 {"src": "fd:exempi",
 		 "patches": ["exempi-autogen.patch"]},
 
-		{"src": "gnome:gnome-packagekit"},
-
 		{"src": "gnome:librest"},
 
 		{"src": "fd-telepathy:telepathy-glib",
