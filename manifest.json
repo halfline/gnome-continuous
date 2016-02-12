@@ -1222,6 +1222,10 @@
 
 		{"src": "gnome:babl"},
 
+		{"src": "zipfile:https://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip",
+		 "name": "jasper",
+		 "checksum": "6b905a9c2aca2e275544212666eefc4eb44d95d0a57e4305457b407fe63f9494"},
+
 		{"src": "gnome:gegl"},
 
                 {"src": "tarball:http://www.exiv2.org/exiv2-0.25.tar.gz",
