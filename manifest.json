@@ -438,7 +438,8 @@
                 {"src": "fd-spice:spice",
 		 "patches": ["spice-no-builddir.patch",
 		             "spice-stack-protector.patch"],
-		 "config-opts": ["--disable-smartcard"]},
+		 "config-opts": ["--disable-smartcard",
+				 "--disable-werror"]},
 
                 {"src": "fd:xorg/driver/xf86-video-qxl",
 		 "patches": ["xorg-autogen-merged.patch"]},
