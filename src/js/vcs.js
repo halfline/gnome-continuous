@@ -81,8 +81,8 @@ function getVcsCheckout(mirrordir, component, dest, cancellable, params) {
 	revision = component['revision'];
 	moduleMirror = getMirrordir(mirrordir, keytype, uri);
 	addUpstream = true;
-    } else if (keytype == 'tarball') {
-	revision = 'tarball-import-' + component['checksum'];
+    } else if (keytype == 'tarball' || keytype == 'zipfile') {
+	revision = keytype + '-import-' + component['checksum'];
 	moduleMirror = getMirrordir(mirrordir, 'tarball', component['name']);
 	addUpstream = false;
     } else {
@@ -130,7 +130,7 @@ function parseSrcKey(srckey) {
         throw new Error("Invalid SRC uri=" + srckey);
     }
     let keytype = srckey.substr(0, idx);
-    if (!(keytype == 'git' || keytype == 'local' || keytype == 'tarball')) {
+    if (!(keytype == 'git' || keytype == 'local' || keytype == 'tarball' || keytype == 'zipfile')) {
         throw new Error("Unsupported SRC uri=" + srckey);
     }
     let uri = srckey.substr(idx+1);
