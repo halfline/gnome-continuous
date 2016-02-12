@@ -1226,7 +1226,8 @@
                  "config-opts": ["--enable-shared", "--disable-static"],
                  "patches": ["jasper-pkgconfig.patch"]},
 
-		{"src": "gnome:gegl"},
+		{"src": "gnome:gegl",
+                 "config-opts": ["--with-jasper"]},
 
                 {"src": "tarball:http://www.exiv2.org/exiv2-0.25.tar.gz",
                  "name": "exiv2",
