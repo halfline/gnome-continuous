@@ -376,7 +376,7 @@ function _ensureVcsMirrorArchive(mirrordir, archiveType, name, uri, checksum, ca
 		       logInitiation: true });
 
     // Download the archive
-    let tmpPath = mirrordir.get_child(archiveType '-' + name);
+    let tmpPath = mirrordir.get_child(archiveType + '-' + name);
     GSystem.shutil_rm_rf(tmpPath, cancellable);
     GSystem.file_ensure_directory(tmpPath.get_parent(), true, cancellable);
     ProcUtil.runSync(['curl', '-L', '-v', '-o', tmpPath.get_path(), uri], cancellable,
