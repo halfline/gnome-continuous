@@ -355,8 +355,6 @@
 		{"src": "fd:xorg/lib/libpciaccess"},
 
 		{"src": "fd-mesa:drm",
-		 "tag": "11.1-branchpoint-1703-g4e59362d1b8846371f12252c49b87f6f7080967b",
-		 "tag-reason": "intel driver compilation error, not reported yet AFAIK",
 		 "config-opts": ["--disable-valgrind"]},
 
 		{"src": "fd-wayland:wayland",
@@ -371,6 +369,8 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
+		 "tag": "11.1-branchpoint-1703-g4e59362d1b8846371f12252c49b87f6f7080967b",
+		 "tag-reason": "intel driver compilation error, not reported yet AFAIK",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic -fno-rtti",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-rtti"
