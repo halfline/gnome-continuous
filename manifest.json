@@ -1226,9 +1226,9 @@
                  "config-opts": ["--enable-shared", "--disable-static"],
                  "patches": ["jasper-pkgconfig.patch"]},
 
-		{"src": "tarball:http://www.libraw.org/data/LibRaw-0.17.1.tar.gz",
-		 "name": "libraw",
-		 "checksum": "e599651a4cc37e00cfc2d2b56be87c3a4e4dae2c360b680fe9ab3f93d07cdea1"},
+   		{"src": "git:https://github.com/LibRaw/LibRaw.git",
+                 "config-opts": ["--disable-examples", "--enable-jasper", "--enable-lcms"],
+                 "patches": ["libraw-autogen.patch", "libraw-pkgconfig.patch"]},
 
 		{"src": "gnome:gegl",
                  "config-opts": ["--with-jasper"]},

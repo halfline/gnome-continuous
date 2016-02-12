@@ -1,0 +1,31 @@
+From d5a5d0696a011e97616b68e364360d326cd68e5c Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Fri, 12 Feb 2016 18:33:46 +0000
+Subject: [PATCH] Add autogen.sh
+
+Based off of mkdist.sh, but without the deleting of files.
+---
+ autogen.sh | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100755 autogen.sh
+
+diff --git a/autogen.sh b/autogen.sh
+new file mode 100755
+index 0000000..63d7b5e
+--- /dev/null
++++ b/autogen.sh
+@@ -0,0 +1,11 @@
++#!/bin/sh
++
++make -f Makefile.devel regenerate  
++autoreconf --install
++
++rm -fr dcraw/*
++rm -f dcraw/.gdbinit
++
++cd dcraw
++wget http://www.cybercom.net/~dcoffin/dcraw/dcraw.c
++cd ..
+-- 
+2.5.0
+
