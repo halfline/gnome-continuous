@@ -411,9 +411,9 @@
 		{"src": "fd:xcb/util-keysyms",
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
 
-        {"src": "fd:xorg/xserver",
-         "config-opts": ["--enable-xwayland",
-                         "--enable-glamor"]},
+		{"src": "fd:xorg/xserver",
+		 "config-opts": ["--enable-xwayland",
+				 "--disable-dri3"]},
 
 		{"src": "fd:xcb/util"},
 
@@ -445,8 +445,6 @@
 		 "patches": ["xorg-autogen-merged.patch"]},
 
 		{"src": "fd:xorg/driver/xf86-video-ati"},
-
-		{"src": "fd:xorg/driver/glamor"},
 
 		{"src": "fd:nouveau/xf86-video-nouveau"},
 
