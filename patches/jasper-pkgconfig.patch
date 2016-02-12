@@ -1,0 +1,72 @@
+From 391ccfdf6fc49cde6cf286e9c9a748509ea61588 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Fri, 12 Feb 2016 17:52:40 +0000
+Subject: [PATCH] Add pkg-config file
+
+Fedora patches libasper to add a pkg-config file.
+---
+ Makefile.am            |  2 +-
+ configure.ac           |  2 ++
+ pkgconfig/Makefile.am  |  5 +++++
+ pkgconfig/jasper.pc.in | 11 +++++++++++
+ 4 files changed, 19 insertions(+), 1 deletion(-)
+ create mode 100644 pkgconfig/Makefile.am
+ create mode 100644 pkgconfig/jasper.pc.in
+
+diff --git a/Makefile.am b/Makefile.am
+index 344987b..fbd6111 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -64,7 +64,7 @@ EXTRA_DIST = README INSTALL COPYRIGHT LICENSE NEWS ChangeLog data doc \
+ # Note: We need to put the derived file "jasper.spec" in the distribution
+ # in order to facilitate RPM building.
+ 
+-SUBDIRS = src
++SUBDIRS = src pkgconfig
+ 
+ rpm: dist
+ 	for i in BUILD RPMS SRPMS SOURCES SPECS; do \
+diff --git a/configure.ac b/configure.ac
+index 9b53e0a..ab8e313 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -399,6 +399,8 @@ src/libjasper/pgx/Makefile
+ src/libjasper/pnm/Makefile
+ src/libjasper/ras/Makefile
+ src/msvc/Makefile
++pkgconfig/Makefile
++pkgconfig/jasper.pc
+ jasper.spec
+ ])
+ AC_OUTPUT
+diff --git a/pkgconfig/Makefile.am b/pkgconfig/Makefile.am
+new file mode 100644
+index 0000000..a05f439
+--- /dev/null
++++ b/pkgconfig/Makefile.am
+@@ -0,0 +1,5 @@
++pkgconfigdir = $(libdir)/pkgconfig
++pkgconfig_DATA = jasper.pc
++
++EXTRA_DIST = \
++        jasper.pc.in
+diff --git a/pkgconfig/jasper.pc.in b/pkgconfig/jasper.pc.in
+new file mode 100644
+index 0000000..5e8ba92
+--- /dev/null
++++ b/pkgconfig/jasper.pc.in
+@@ -0,0 +1,11 @@
++prefix=@prefix@
++exec_prefix=@exec_prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name: Jasper
++Description: JPEG 2000 encoding and decoding library
++Version: @VERSION@
++
++Libs: -L${libdir} -ljasper
++Cflags: -I${includedir}/jasper
+-- 
+2.5.0
+
