@@ -145,7 +145,7 @@
 		 "bootstrap": true,
 		 "name": "freetype2-bootstrap",
 		 "tag": "4b3ea5ca8f2ae7223bb1ad24bea07e659eec5f92",
-		 "tag-reason": "next commit is missing cff_decoder_parse_charstrings"
+		 "tag-reason": "next commit is missing cff_decoder_parse_charstrings",
 		 "patches": ["freetype-autogen.patch"]},
 
 		{"src": "cgwalters:ragel-tarballs-as-git",
@@ -156,7 +156,7 @@
 
 		{"src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
 		 "tag": "4b3ea5ca8f2ae7223bb1ad24bea07e659eec5f92",
-		 "tag-reason": "next commit is missing cff_decoder_parse_charstrings"
+		 "tag-reason": "next commit is missing cff_decoder_parse_charstrings",
 		 "patches": ["freetype-autogen.patch"]},
 
    		{"src": "fd:fontconfig",
