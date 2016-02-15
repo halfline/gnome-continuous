@@ -57,7 +57,7 @@
                  "child-components": [
                      {"src": "kernel:stable/linux-stable",
                       "name": "linux",
-                      "branch": "linux-3.18.y"}
+                      "branch": "linux-4.4.y"}
                  ]},
 
    		{"src": "gnome:gtk-doc-stub",
