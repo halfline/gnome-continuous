@@ -748,11 +748,6 @@
 		 		"--disable-tls-check",
 		 		"--enable-installed-tests"]},
 
-		{"src": "gnome:gvfs",
-		 "config-opts": ["--disable-gphoto2",
-				 "--disable-documentation",
-				 "--enable-installed-tests"]},
-
 		{"src": "gnome:gnome-ostree-integration",
                  "component": "minimal"},
 
@@ -819,6 +814,11 @@
 
 		{"src": "gnome:gnome-online-accounts",
 		 "config-opts": ["--disable-documentation"]},
+
+		{"src": "gnome:gvfs",
+		 "config-opts": ["--disable-gphoto2",
+				 "--disable-documentation",
+				 "--enable-installed-tests"]},
 
 		{"src": "gnome:gnome-bluetooth",
 		 "config-opts": ["--disable-documentation",
