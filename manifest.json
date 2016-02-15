@@ -368,6 +368,10 @@
                  "checksum": "a3cd72cfef507204b50f74ffcbfcfde7e856437891d3f6cfe780866986d006fe",
                  "patches": ["python-mako-buildsys.patch"]},
 
+                {"src": "tarball:http://llvm.org/releases/3.7.1/llvm-3.7.1.src.tar.xz",
+                 "name": "llvm",
+                 "checksum": "be7794ed0cec42d6c682ca8e3517535b54555a3defabec83554dbc74db545ad5"},
+
                 {"src": "fd-mesa:mesa",
 		 "tag": "11.1-branchpoint-1703-g4e59362d1b8846371f12252c49b87f6f7080967b",
 		 "tag-reason": "intel driver compilation error, not reported yet AFAIK",
