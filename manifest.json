@@ -103,6 +103,8 @@
 		 "component": "minimal",
 		 "initramfs-depends": true,
                  "patches": ["systemd-Revert-core-mount-add-dependencies-to-dynamically-mo.patch"],
+		 "tag": "c5962fcff05a1e46138f9f8116513947398cb725",
+		 "tag-reason": "timeout on boot, suspect next commit",
 		 "cflags": {
 		     "x86_64": "-O0 -g -m64 -mtune=generic",
 		     "i686": "-O0 -g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"},
