@@ -417,7 +417,7 @@
 
 		{"src": "fd:xorg/xserver",
 		 "config-opts": ["--enable-xwayland",
-				 "--disable-dri3"]},
+				 "--enable-glamor"]},
 
 		{"src": "fd:xcb/util"},
 
