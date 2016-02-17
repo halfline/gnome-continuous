@@ -448,8 +448,7 @@
                 {"src": "fd:xorg/driver/xf86-video-qxl",
 		 "patches": ["xorg-autogen-merged.patch"]},
 
-		{"src": "fd:xorg/driver/xf86-video-ati",
-                 "config-opts": ["--disable-glamor"]},
+		{"src": "fd:xorg/driver/xf86-video-ati"},
 
 		{"src": "fd:nouveau/xf86-video-nouveau"},
 
