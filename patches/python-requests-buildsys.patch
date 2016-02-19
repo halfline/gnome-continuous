@@ -1,0 +1,40 @@
+From a5556fc1e10503bcf74779b340b659594197d9ef Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Fri, 19 Feb 2016 11:11:04 +0000
+Subject: [PATCH] build-sys: Add configure and Makefile
+
+Implement the GNOME Build API for Continuous.
+
+See: http://people.gnome.org/~walters/docs/build-api.txt
+---
+ Makefile  | 6 ++++++
+ configure | 4 ++++
+ 2 files changed, 10 insertions(+)
+ create mode 100644 Makefile
+ create mode 100755 configure
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..721635d
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,6 @@
++# python-requests *development* Makefile
++all:
++	python setup.py build
++
++install:
++	python setup.py install --root=$(DESTDIR)
+diff --git a/configure b/configure
+new file mode 100755
+index 0000000..fb22862
+--- /dev/null
++++ b/configure
+@@ -0,0 +1,4 @@
++#!/bin/bash
++# http://people.gnome.org/~walters/docs/build-api.txt
++#buildapi-variable-no-builddir
++exec python setup.py build
+-- 
+2.5.0
+
