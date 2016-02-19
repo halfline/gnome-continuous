@@ -1387,9 +1387,10 @@
 
 		{"src": "gnome:gnome-characters"},
 
-                {"src": "tarball:http://dbus.freedesktop.org/releases/dbus-python/dbus-python-0.83.1.tar.gz",
+                {"src": "tarball:https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz",
                  "name": "dbus-python",
-                 "checksum": "ce283806f1af4f2322e183a276528a880b503c74972932bd09f06bdb7fcc1b99"},
+                 "checksum": "e12c6c8b2bf3a9302f75166952cbe41d6b38c3441bbc6767dbd498942316c6df",
+                 "config-opts": ["--disable-html-docs", "--disable-api-docs"]},
 
                 {"src": "tarball:https://pypi.python.org/packages/source/r/requests/requests-2.9.1.tar.gz",
                  "name": "python-requests",
