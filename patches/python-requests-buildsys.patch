@@ -1,4 +1,4 @@
-From 69f1bb37fde9894a6debe11cacc18932c1dd4a5a Mon Sep 17 00:00:00 2001
+From 84acd8bd8330bc987f9f963359467f432d65261e Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Fri, 19 Feb 2016 11:11:04 +0000
 Subject: [PATCH] build-sys: Add configure and Makefile
@@ -15,16 +15,16 @@ See: http://people.gnome.org/~walters/docs/build-api.txt
 
 diff --git a/Makefile b/Makefile
 new file mode 100644
-index 0000000..721635d
+index 0000000..b9bec02
 --- /dev/null
 +++ b/Makefile
 @@ -0,0 +1,6 @@
 +# python-requests *development* Makefile
 +all:
-+	python setup.py build
++	python3 setup.py build
 +
 +install:
-+	python setup.py install --root=$(DESTDIR)
++	python3 setup.py install --root=$(DESTDIR)
 diff --git a/configure b/configure
 new file mode 100755
 index 0000000..1c8e45f
