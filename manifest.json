@@ -1385,7 +1385,13 @@
 
 		{"src": "gnome:libgrss"},
 
-		{"src": "gnome:gnome-characters"}
+		{"src": "gnome:gnome-characters"},
+
+                {"src": "tarball:http://dbus.freedesktop.org/releases/dbus-python/dbus-python-0.83.1.tar.gz",
+                 "name": "dbus-python",
+                 "checksum": "ce283806f1af4f2322e183a276528a880b503c74972932bd09f06bdb7fcc1b99"},
+
+                {"src": "gnome:gnome-music"}
 	],
 
     "installed-tests-components": [],
