@@ -1391,6 +1391,10 @@
                  "name": "dbus-python",
                  "checksum": "ce283806f1af4f2322e183a276528a880b503c74972932bd09f06bdb7fcc1b99"},
 
+                {"src": "tarball:"https://pypi.python.org/packages/source/r/requests/requests-2.9.1.tar.gz",
+                 "name": "python-requests",
+                 "checksum": "c577815dd00f1394203fc44eb979724b098f88264a9ef898ee45b8e5e9cf587f"},
+
                 {"src": "gnome:gnome-music"}
 	],
 
