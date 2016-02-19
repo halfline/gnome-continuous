@@ -1,4 +1,4 @@
-From a5556fc1e10503bcf74779b340b659594197d9ef Mon Sep 17 00:00:00 2001
+From 69f1bb37fde9894a6debe11cacc18932c1dd4a5a Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Fri, 19 Feb 2016 11:11:04 +0000
 Subject: [PATCH] build-sys: Add configure and Makefile
@@ -27,14 +27,14 @@ index 0000000..721635d
 +	python setup.py install --root=$(DESTDIR)
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..fb22862
+index 0000000..1c8e45f
 --- /dev/null
 +++ b/configure
 @@ -0,0 +1,4 @@
 +#!/bin/bash
 +# http://people.gnome.org/~walters/docs/build-api.txt
 +#buildapi-variable-no-builddir
-+exec python setup.py build
++exec python3 setup.py build
 -- 
 2.5.0
 
