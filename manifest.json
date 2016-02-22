@@ -1406,7 +1406,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 97,
+	"build-epoch": {"version": 98,
 		        "all": false,
-		        "component-names": ["evolution-ews"]}
+		        "component-names": ["gnome-contacts", "gnome-calendar"]}
 }
