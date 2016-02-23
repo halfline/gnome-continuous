@@ -870,6 +870,9 @@
 		{"src": "gnome:gjs",
 		 "config-opts": ["--enable-installed-tests"]},
 
+                {"src": "git:git://git.gnupg.org/gnupg.git",
+                 "config-opts": ["--without-gpgsm"]},
+
 		{"src": "gnome:ostree",
                  "component": "minimal",
 		 "initramfs-depends": true,
