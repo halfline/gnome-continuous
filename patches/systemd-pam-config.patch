@@ -1,0 +1,34 @@
+From 4784c4243be8eb33ad890f789ea42770e0314069 Mon Sep 17 00:00:00 2001
+From: Ray Strode <rstrode@redhat.com>
+Date: Wed, 24 Feb 2016 14:06:01 -0500
+Subject: [PATCH] systemd-user: fix to match openembedded pam config
+
+systemd-user doesn't currently integrate with the
+pam configuration used by openembedded.
+
+this patch fixes that.
+---
+ src/login/systemd-user.m4 | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/login/systemd-user.m4 b/src/login/systemd-user.m4
+index 7933508..16b73d2 100644
+--- a/src/login/systemd-user.m4
++++ b/src/login/systemd-user.m4
+@@ -1,11 +1,11 @@
+ # This file is part of systemd.
+ #
+ # Used by systemd --user instances.
+ 
+-account  include system-auth
++account  include common-account
+ 
+ m4_ifdef(`HAVE_SELINUX',
+ session  required pam_selinux.so close
+ session  required pam_selinux.so nottys open
+ )m4_dnl
+-session  include system-auth
++session  include common-session
+-- 
+2.7.0
+
