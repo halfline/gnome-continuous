@@ -1143,7 +1143,9 @@
 		"patches": ["behave-buildsys.patch"]},
 
 		{"src": "gnome:gnome-terminal",
-		 "config-opts": ["--without-nautilus-extension", "--without-pcre2"]},
+		 "config-opts": ["--enable-debug",
+				 "--without-nautilus-extension",
+				 "--without-pcre2"]},
 
 		{"src": "gnome:gnome-clocks"},
 
