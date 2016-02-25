@@ -501,8 +501,6 @@
 		 "patches": ["libarchive-autogen.patch"]},
 
                 {"src": "fd-poppler:poppler",
-                 "tag": "91c0be60f3e7a53373ba660702358cf52f74d1b2",
-                 "tag-reason": "Build failure",
                  "config-opts": ["--disable-poppler-cpp",
                                  "--disable-utils"]},
 
