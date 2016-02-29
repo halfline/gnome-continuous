@@ -1174,9 +1174,7 @@
 
 		{"src": "gnome:gspell"},
 
-		{"src": "gnome:gedit",
-		 "config-opts": ["--enable-python=no",
-				 "--disable-spell"]},
+		{"src": "gnome:gedit"},
 
 		{"src": "gnome:gnome-software",
 		 "config-opts": ["--disable-man",
