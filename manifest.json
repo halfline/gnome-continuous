@@ -1211,8 +1211,6 @@
 
 		{"src": "gnome:gnome-logs"},
 
-		{"src": "gnome:gucharmap"},
-
 		{"src": "gnome:seahorse"},
 
 		{"src": "gnome:totem",
