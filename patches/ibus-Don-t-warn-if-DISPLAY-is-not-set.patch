@@ -1,0 +1,31 @@
+From 1856f5c9bacf1cd1a3aa88b70c02223665cd31b8 Mon Sep 17 00:00:00 2001
+From: Matthias Clasen <mclasen@redhat.com>
+Date: Sat, 5 Mar 2016 16:06:03 -0500
+Subject: [PATCH] Don't warn if DISPLAY is not set
+
+This is normal under Wayland, and not worth warning about.
+The warnings disrupt unit tests in GNOME continuous, which
+treat warnings as fatal.
+---
+ src/ibusshare.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/src/ibusshare.c b/src/ibusshare.c
+index 63800a6..b793a96 100644
+--- a/src/ibusshare.c
++++ b/src/ibusshare.c
+@@ -113,10 +113,7 @@ ibus_get_socket_path (void)
+             display = g_strdup (_display);
+         }
+ 
+-        if (display == NULL) {
+-            g_warning ("DISPLAY is empty! We use default DISPLAY (:0.0)");
+-        }
+-        else {
++        if (display) {
+             p = display;
+             hostname = display;
+             for (; *p != ':' && *p != '\0'; p++);
+-- 
+2.7.2
+
