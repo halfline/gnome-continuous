@@ -945,8 +945,7 @@
 
                 {"src": "ibus:ibus.git",
 		 "patches": ["ibus-builddir.patch",
-			     "ibus-dconf-Work-around-using-dbus-development-builds-and-.patch",
-                             "ibus-Don-t-warn-if-DISPLAY-is-not-set.patch"],
+			     "ibus-dconf-Work-around-using-dbus-development-builds-and-.patch"],
 		 "config-opts": ["--disable-tests", 
 				 "--disable-gconf",
 				 "--enable-dconf",
