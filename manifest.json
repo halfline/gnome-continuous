@@ -529,9 +529,7 @@
 		 "config-opts": ["--disable-cups", "--disable-obex", "--disable-usb", "--disable-tools"],
 		 "patches": ["bluez-autogen.patch"]},
 
-                {"src": "git:git://github.com/jpirko/libndp.git",
-		 "tag": "93d9252427e459d0a4b9434c3ef62685ee5d2d45",
-		 "tag-reason": "next commit changes API, breaks NM"},
+                {"src": "git:git://github.com/jpirko/libndp.git"},
 
 		{"src": "fd:libqmi"},
 
