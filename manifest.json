@@ -1174,8 +1174,7 @@
 		 "patches": ["gtkspell-autogen.patch"],
 		 "config-opts": ["--disable-maintainer-mode"]},
 
-		{"src": "gnome:gspell",
-		 "config-opts": ["--enable-installed-tests"]},
+		{"src": "gnome:gspell"},
 
 		{"src": "gnome:gedit"},
 
