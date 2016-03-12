@@ -1264,6 +1264,8 @@
 
 		{"src": "gnome:evolution",
 		 "irc_room": "evolution",
+		 "tag": "f434554a6e15df687b424d798d8a911ff369083f",
+		 "tag-reason": ".fr translation broken",
 		 "config-opts": ["--enable-installed-tests",
 		 		 "--disable-bogofilter",
 				 "--disable-spamassassin",
