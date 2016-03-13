@@ -999,8 +999,6 @@
 
 		{"src": "gnome:evolution-data-server",
 		 "irc_room": "evolution",
-		 "tag": "f434554a6e15df687b424d798d8a911ff369083f",
-		 "tag-reason": "broken translations or itstool",
 		 "config-opts": ["--enable-installed-tests",
 				 "--enable-vala-bindings",
 				 "--disable-google-auth",
@@ -1268,6 +1266,8 @@
 
 		{"src": "gnome:evolution",
 		 "irc_room": "evolution",
+		 "tag": "f434554a6e15df687b424d798d8a911ff369083f",
+		 "tag-reason": "broken translations or itstool",
 		 "config-opts": ["--enable-installed-tests",
 		 		 "--disable-bogofilter",
 				 "--disable-spamassassin",
