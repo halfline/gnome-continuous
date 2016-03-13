@@ -1174,7 +1174,9 @@
 		 "patches": ["gtkspell-autogen.patch"],
 		 "config-opts": ["--disable-maintainer-mode"]},
 
-		{"src": "gnome:gspell"},
+                {"src": "gnome:gspell",
+		 "tag": "b3a8603e70244deadff01f46fb28e96890cbb76a",
+		 "tag-reason": "gettext build issues"},
 
 		{"src": "gnome:gedit"},
 
