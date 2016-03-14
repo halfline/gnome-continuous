@@ -1414,5 +1414,5 @@
     
 	"build-epoch": {"version": 99,
 		        "all": false,
-		        "component-names": ["evolution-data-server", "evolution", "evolution-aws"]}
+		        "component-names": ["evolution-data-server", "evolution", "evolution-ews"]}
 }
