@@ -1412,7 +1412,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 99,
+	"build-epoch": {"version": 100,
 		        "all": false,
-		        "component-names": ["evolution-data-server", "evolution", "evolution-ews"]}
+		        "component-names": ["evolution"]}
 }
