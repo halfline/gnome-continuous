@@ -1315,8 +1315,8 @@
                 {"src": "gnome:gnome-maps"},
 
 		{"src": "libgit2:libgit2",
-		 "branch": "maint/v0.23",
-		 "branch-reason": "master has API incompatible changes with libgit2-glib",
+		 "branch": "maint/v0.24",
+		 "branch-reason": "libgit2-glib does not track master",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
 
 		{"src": "gnome:libgit2-glib"},
