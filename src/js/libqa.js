@@ -396,7 +396,7 @@ function pullDeploy(mntdir, srcrepo, osname, target, revision, originRepoUrl, ca
                      {logInitiation: true, env: adminEnv});
 
     let defaultFstab = 'LABEL=gnostree-root / ext4 defaults 1 1\n\
-LABEL=gnostree-boot /boot ext4 defaults 1 2\n\
+LABEL=gnostree-boot /boot ext4 ro 1 2\n\
 LABEL=gnostree-swap swap swap defaults 0 0\n';
     let [currentDir, currentEtcDir] = getDeployDirs(mntdir, osname);
     let fstabPath = currentEtcDir.resolve_relative_path('fstab');
