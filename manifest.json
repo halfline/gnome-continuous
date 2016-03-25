@@ -1239,7 +1239,7 @@
                  "patches": ["libraw-autogen.patch", "libraw-pkgconfig.patch"]},
 
 		{"src": "gnome:gegl",
-                 "config-opts": ["--with-jasper", "--with-libraw"]},
+                 "config-opts": ["--with-jasper", "--with-libraw", "--without-lua"]},
 
                 {"src": "tarball:http://www.exiv2.org/exiv2-0.25.tar.gz",
                  "name": "exiv2",
