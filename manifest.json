@@ -453,9 +453,7 @@
 
 		{"src": "fd:nouveau/xf86-video-nouveau"},
 
-		{"src": "fd:xorg/driver/xf86-video-intel",
-                 "tag": "02f535e8f3659f1147c6f2e698bd5d8730dec19b",
-                 "tag-reason": "Build failure, unreported"},
+		{"src": "fd:xorg/driver/xf86-video-intel"},
 
 		{"src": "fd:xorg/driver/xf86-video-vesa"},
 
