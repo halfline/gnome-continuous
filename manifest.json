@@ -1105,6 +1105,8 @@
 		{"src": "git:git://git.kernel.org/pub/scm/utils/dash/dash.git"},
 
                 {"src": "git:git://git.kernel.org/pub/scm/boot/dracut/dracut.git",
+		 "tag": "794b2d2c753489635b922457a5ccb06669f37268",
+		 "tag-reason": "Something after this breaks initramfs in iSCSI",
 		 "config-opts": ["--disable-documentation",
 		                 "--systemdsystemunitdir=/usr/lib/systemd/system"],
 		 "initramfs-depends": true},
