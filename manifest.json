@@ -588,6 +588,8 @@
 				 "--disable-argyllcms-sensor",
 				 "--disable-installed-tests"]},
 
+                {"src": "git:https://github.com/ebassi/graphene.git"},
+
 		{"src": "gnome:gconf",
 		 "config-opts": ["--disable-orbit",
 		                 "--disable-gtk",
