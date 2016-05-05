@@ -851,8 +851,6 @@
 		{"src": "gnome:zenity"},
 
 		{"src": "gnome:mutter",
-		 "tag": "a4ba72b0bfb1f00f812252b0bc636094139d16cf",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=763379",
                  "irc_room": "gnome-shell",
 		 "config-opts": ["--enable-compile-warnings=maximum",
 				 "--enable-installed-tests"]},
