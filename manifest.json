@@ -66,8 +66,6 @@
 
 		{"src": "gnome:glib",
 		 "component": "minimal",
-		 "tag": "d95030a2fd1f4abb8dad623bdf7962fa902df8d6",
-		 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=763379",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
                  "config-opts": ["--disable-modular-tests",
 				 "--enable-installed-tests",
