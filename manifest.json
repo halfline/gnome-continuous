@@ -524,6 +524,8 @@
 				 "--enable-libsystemd-login",
 		                 "--with-os-type=suse",
 				 "--with-mozjs=mozjs-17.0"],
+		 "tag": "421fa2424933574568489689a7f284e936ca1dbe",
+		 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=95065#c5",
 		 "setuid": ["/runtime/usr/bin/pkexec",
                             "/runtime/usr/lib/polkit-1/polkit-agent-helper-1"]},
 
