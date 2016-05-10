@@ -1,4 +1,4 @@
-From fe8cad69c38582f4292ed8d80b5288eca4f45430 Mon Sep 17 00:00:00 2001
+From 4347e3cd40a4f44611aee5f5131fa86f19a9b948 Mon Sep 17 00:00:00 2001
 From: "Owen W. Taylor" <otaylor@fishsoup.net>
 Date: Mon, 14 Apr 2014 08:21:30 -0700
 Subject: [PATCH] Improve handling of CFLAGS
@@ -17,7 +17,7 @@ user-specified values, then include directories and defines are added on.
  1 file changed, 15 insertions(+), 13 deletions(-)
 
 diff --git a/usr/Makefile b/usr/Makefile
-index 6234f3f..9418be2 100644
+index d4e3eaf..c866d99 100644
 --- a/usr/Makefile
 +++ b/usr/Makefile
 @@ -1,12 +1,19 @@
@@ -36,13 +36,13 @@ index 6234f3f..9418be2 100644
 +override CFLAGS += -DUSE_SIGNALFD
  endif
  
- ifneq ($(shell test -e /usr/include/sys/timerfd.h && echo 1),)
+ ifneq ($(shell test -n $(shell find /usr/include -name "timerfd.h" | head -n1) && echo 1),)
 -CFLAGS += -DUSE_TIMERFD
 +override CFLAGS += -DUSE_TIMERFD
  endif
  
  TGTD_OBJS += $(addprefix iscsi/, conn.o param.o session.o \
-@@ -22,7 +29,7 @@ MODULES += bs_glfs.so
+@@ -26,7 +33,7 @@ CFLAGS += -DUSE_SYSTEMD
  endif
  
  ifneq ($(shell test -e /usr/include/sys/eventfd.h && test -e /usr/include/libaio.h && echo 1),)
@@ -51,7 +51,7 @@ index 6234f3f..9418be2 100644
  TGTD_OBJS += bs_aio.o
  LIBS += -laio
  endif
-@@ -34,16 +41,11 @@ endif
+@@ -38,16 +45,11 @@ endif
  
  INCLUDES += -I.
  
@@ -74,5 +74,5 @@ index 6234f3f..9418be2 100644
  LIBS += -lpthread -ldl
  
 -- 
-1.9.0
+2.7.4
 
