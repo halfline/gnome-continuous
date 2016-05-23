@@ -657,6 +657,8 @@
 		 "config-opts": ["--disable-gtk-doc"]},
 
 		{"src": "fd-gstreamer:gstreamer",
+		 "tag": "603b8188bb32fc7ef296615f2322467bca382a9a"
+		 "tag-reason": "g-i distutils issues with header arrangement again",
 		 "config-opts": ["--with-bash-completion-dir=no",
 		                 "--disable-tests",
 		                 "--disable-fatal-warnings"]},
