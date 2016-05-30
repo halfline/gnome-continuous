@@ -828,6 +828,8 @@
 		 "config-opts": ["--disable-documentation"]},
 
 		{"src": "gnome:gvfs",
+                 "tag": "0e78e53866eb88897436e47412c06b67041ef6dd",
+                 "tag-reason": "builddir != srcdir breakage; https://bugzilla.gnome.org/show_bug.cgi?id=734370",
 		 "config-opts": ["--disable-gphoto2",
 				 "--disable-documentation",
 				 "--enable-installed-tests"]},
