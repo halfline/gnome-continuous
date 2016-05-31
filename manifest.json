@@ -1308,8 +1308,6 @@
 		{"src": "gnome:eog",
 		 "config-opts": ["--enable-installed-tests"]},
 
-		{"src": "gnome:brasero"},
-
 		{"src": "gnome:devhelp"},
 
 		{"src": "gnome:gnome-dictionary"},
