@@ -1423,7 +1423,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 101,
+	"build-epoch": {"version": 102,
 		        "all": false,
-		        "component-names": ["xdg-app"]}
+		        "component-names": ["librsvg"]}
 }
