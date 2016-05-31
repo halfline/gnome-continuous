@@ -265,8 +265,7 @@
 
 		{"src": "fd:xorg/lib/libfontenc"},
 
-		{"src": "fd:xcb/pthread-stubs",
-		 "component": "devel"},
+		{"src": "fd:xcb/pthread-stubs"},
 
 		{"src": "fd:xcb/libxcb"},
 
