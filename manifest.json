@@ -583,9 +583,7 @@
 				 "--disable-gtk",
 				 "--disable-gtk3"]},
 
-                {"src": "git:git://github.com/hughsie/libgusb.git",
-		 "tag": "9fa39d23759974891f1977b6ce14d4c0006624c5",
-		 "tag-reason": "broken symbol version commit"},
+                {"src": "git:git://github.com/hughsie/libgusb.git"},
 		
 		{"src": "git:git://github.com/hughsie/colord.git",
 		 "config-opts": ["--disable-print-profiles",
