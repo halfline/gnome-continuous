@@ -1378,8 +1378,7 @@
 		{"src": "gnome:bijiben",
 		 "patches": ["bijiben-buildsys.patch"]},
 
-		{"src": "gnome:gnome-chess",
-		 "patches": ["gnome-chess-builddir.patch"]},
+		{"src": "gnome:gnome-chess"},
 
 		{"src": "gnome:gnome-klotski"},
 
