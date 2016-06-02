@@ -1387,8 +1387,7 @@
 		{"src": "gnome:gnome-robots",
 		 "patches": ["gnome-robots-builddir.patch"]},
 
-		{"src": "gnome:gnome-tetravex",
-		 "patches": ["gnome-tetravex-builddir.patch"]},
+		{"src": "gnome:gnome-tetravex"},
 
 		{"src": "gnome:tali",
 		 "patches": ["tali-builddir.patch"]},
