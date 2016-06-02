@@ -1389,8 +1389,7 @@
 
 		{"src": "gnome:gnome-tetravex"},
 
-		{"src": "gnome:tali",
-		 "patches": ["tali-builddir.patch"]},
+		{"src": "gnome:tali"},
 
 		{"src": "gnome:gnome-contacts",
 		 "config-opts": ["--disable-man-pages"],
