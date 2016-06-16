@@ -536,9 +536,7 @@
 		{"src": "fd:libqmi"},
 
 		{"src": "fd:libmbim/libmbim",
-		 "name": "libmbim",
-                 "tag": "f1c3a97ab9e6577ec2bfd0aa4572800589b747fb",
-                 "tag-reason": "Build failure due to lack of compiler flags"},
+		 "name": "libmbim"},
 
 		{"src": "fd-MM:ModemManager.git",
 		 "config-opts": ["--with-udev-base-dir=/usr/lib/udev",
