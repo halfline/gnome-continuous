@@ -888,6 +888,8 @@
 				 "--enable-installed-tests"]},
 
                 {"src": "git:git://github.com/flatpak/flatpak.git",
+                 "tag": "e86ae478f766a92165ed1d66b30951471a8feea5",
+                 "tag-reason": "PR 119 broke the build; already noted upstream",
                  "config-opts": ["--disable-documentation"]},
 
 		{"src": "gnome:gnome-hwtest",
