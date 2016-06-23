@@ -1267,6 +1267,8 @@
 		{"src": "gnome:evince",
 		 "config-opts": ["--enable-introspection"]},
 
+                {"src": "git:https://github.com/danigm/libgepub.git"},
+
 		{"src": "gnome:gnome-documents",
 		 "config-opts": ["--disable-documentation"]},
 
