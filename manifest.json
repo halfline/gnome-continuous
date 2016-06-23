@@ -948,8 +948,6 @@
 		 "config-opts": ["--without-pcre"]},
 
                 {"src": "ibus:ibus.git",
-                 "tag": "a598ae29223d1ca25e76bf7d7de9703f63ea337e",
-                 "tag-reason": "Build failure, missing file from repo",
 		 "patches": ["ibus-builddir.patch",
 			     "ibus-dconf-Work-around-using-dbus-development-builds-and-.patch"],
 		 "config-opts": ["--disable-tests", 
