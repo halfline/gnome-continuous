@@ -1416,7 +1416,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 102,
+	"build-epoch": {"version": 103,
 		        "all": false,
-		        "component-names": ["librsvg"]}
+		        "component-names": ["gstreamer"]}
 }
