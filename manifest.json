@@ -1414,7 +1414,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 103,
+	"build-epoch": {"version": 104,
 		        "all": false,
-		        "component-names": ["gstreamer"]}
+		        "component-names": ["ostree"]}
 }
