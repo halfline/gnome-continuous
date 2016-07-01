@@ -877,7 +877,7 @@
 		{"src": "gnome:gjs",
 		 "config-opts": ["--enable-installed-tests"]},
 
-		{"src": "gnome:ostree",
+		{"src": "git:git://github.com/ostreedev/ostree",
                  "component": "minimal",
 		 "initramfs-depends": true,
 		 "config-opts": ["--with-soup-gnome",
@@ -1414,7 +1414,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 104,
+	"build-epoch": {"version": 105,
 		        "all": false,
 		        "component-names": ["ostree"]}
 }
