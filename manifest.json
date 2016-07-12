@@ -1349,7 +1349,9 @@
 		 "name": "qqwing",
 		 "checksum": "1753736c31feea0085f5cfac33143743204f8a7e66b81ccd17e249ecafba802f"},
 
-		{"src": "gnome:gnome-sudoku"},
+		{"src": "gnome:gnome-sudoku",
+                 "tag": "283f24cd2f4fa754d7b7ab7baf533ad7e4281462",
+                 "tag-reason": "Missing m4 macro for C++11"},
 
 		{"src": "gnome:gnome-taquin"},
 
