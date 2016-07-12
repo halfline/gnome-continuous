@@ -1414,7 +1414,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 106,
+	"build-epoch": {"version": 107,
 		        "all": false,
-		        "component-names": ["m4-common"]}
+		        "component-names": ["m4-common", "gnome-sudoku"]}
 }
