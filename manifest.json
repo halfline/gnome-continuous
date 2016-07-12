@@ -1414,7 +1414,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 105,
+	"build-epoch": {"version": 106,
 		        "all": false,
-		        "component-names": ["ostree"]}
+		        "component-names": ["m4-common"]}
 }
