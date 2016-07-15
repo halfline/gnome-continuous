@@ -809,7 +809,8 @@
                 {"src": "fd:exempi",
 		 "patches": ["exempi-autogen.patch"]},
 
-		{"src": "gnome:librest"},
+		{"src": "gnome:librest",
+                 "branch": "librest-0-7"},
 
 		{"src": "fd-telepathy:telepathy-glib",
 		 "config-opts": ["--enable-vala-bindings",
