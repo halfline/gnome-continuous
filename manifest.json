@@ -453,6 +453,8 @@
 
 		{"src": "fd:nouveau/xf86-video-nouveau"},
 
+		{"src": "fd:xorg/driver/xf86-video-intel"},
+
 		{"src": "fd:xorg/driver/xf86-video-vesa"},
 
 		{"src": "fd:startup-notification"},
