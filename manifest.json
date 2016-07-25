@@ -701,7 +701,8 @@
 
 		{"src": "gnome:network-manager-applet",
 		 "config-opts": ["--enable-more-warnings=no",
-		                 "--disable-migration"]},
+		                 "--disable-migration",
+                                 "--without-team"]},
 
 		{"src": "fd-pulse:pulseaudio",
 		 "config-opts": ["--disable-openssl"],
