@@ -886,7 +886,7 @@
 				 "--enable-installed-tests"]},
 
                 {"src": "git:git://github.com/flatpak/flatpak.git",
-                 "config-opts": ["--disable-documentation"]},
+                 "config-opts": ["--disable-documentation --enable-installed-tests"]},
 
 		{"src": "gnome:gnome-hwtest",
                  "component": "minimal",
