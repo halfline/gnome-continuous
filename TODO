@@ -1,6 +1,6 @@
 Highlevel stuff:
 
-* Move apps into xdg-app, unify buildsystems
+* Move apps into flatpak, unify buildsystems
 
 * Re-parallelize treecompose
 
