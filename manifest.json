@@ -1041,7 +1041,8 @@
                 {"src": "tarball:https://downloads.sourceforge.net/project/pcre/pcre2/10.22/pcre2-10.22.tar.gz",
 		 "name": "pcre2",
 		 "rm-configure": true,
-		 "checksum": "7627f93f2763ee6e11ac58558d8cfbf29e1070757b45571c0ba30ce9e096505c"
+		 "checksum": "7627f93f2763ee6e11ac58558d8cfbf29e1070757b45571c0ba30ce9e096505c",
+		 "patches": ["pcre2-buildapi.patch"]
 		},
 
 		{"src": "gnome:vte",
