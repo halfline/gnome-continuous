@@ -1038,9 +1038,13 @@
 
 		{"src": "gnome:libwnck"},
 
+                {"src": "tarball:https://downloads.sourceforge.net/project/pcre/pcre2/10.22/pcre2-10.22.tar.gz",
+		 "name": "pcre2",
+		 "checksum": "7627f93f2763ee6e11ac58558d8cfbf29e1070757b45571c0ba30ce9e096505c"
+		},
+
 		{"src": "gnome:vte",
-		 "config-opts-comment": "pcre disabled due to too old pcre in current OE",
-		 "config-opts": ["--disable-vala", "--without-pcre2"]},
+		 "config-opts": ["--disable-vala"]},
 
 		{"src": "git:git://git.kernel.org/pub/scm/utils/dash/dash.git"},
 
