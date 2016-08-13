@@ -1281,7 +1281,7 @@
 
 		{"src": "gnome:frogr"},
 
-		{"src": "gnome:libgames-support",
+		{"src": "gnome:libgnome-games-support",
 		 "config-opts": ["--disable-gtk-doc"]
 		},
 
