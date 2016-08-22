@@ -805,8 +805,7 @@
                                  "--disable-maintainer-mode",
                                  "--enable-installed-tests"]},
 
-                {"src": "fd:exempi",
-		 "patches": ["exempi-autogen.patch"]},
+                {"src": "fd:exempi"},
 
 		{"src": "gnome:librest",
                  "branch": "librest-0-7"},
