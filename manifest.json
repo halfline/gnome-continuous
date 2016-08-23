@@ -1113,6 +1113,8 @@
 		 "config-opts": ["--disable-documentation"],
 		 "component": "devel"},
 
+                {"src": "gnome:gnome-autoar"},
+
 		{"src": "gnome:nautilus",
                  "config-opts": ["--disable-selinux"]},
 
