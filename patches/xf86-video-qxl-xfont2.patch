@@ -1,0 +1,65 @@
+From 7a61a85f58b3aae442c3e6ac5010ce637d6f9b81 Mon Sep 17 00:00:00 2001
+From: "Owen W. Taylor" <otaylor@fishsoup.net>
+Date: Fri, 26 Aug 2016 11:44:55 -0400
+Subject: [PATCH] Check for either xfont.pc or xfont2.pc
+
+The API change that caused xfont to be renamed to xfont2 doesn't affect
+the usage of libXfont here, so accept either .pc file, preferring xfont2.
+---
+ configure.ac         |  8 +++++++-
+ src/uxa/uxa-damage.c | 10 +++++++++-
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 7e95b01..facc100 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -60,8 +60,14 @@ XORG_DRIVER_CHECK_EXT(RENDER, renderproto)
+ XORG_DRIVER_CHECK_EXT(XV, videoproto)
+ XORG_DRIVER_CHECK_EXT(XFreeXDGA, xf86dgaproto)
+ 
++# We can use either version 1 or version to of libXfont
++PKG_CHECK_EXISTS(xfont2,
++                 [xfont_pc=xfont2
++                  AC_DEFINE(HAVE_XFONT2,1,[Version 2 of the libXfont library])],
++                 [xfont_pc=xfont])
++
+ # Obtain compiler/linker options for the driver dependencies
+-PKG_CHECK_MODULES(XORG, [xorg-server >= 1.0.99.901] xproto fontsproto xfont $REQUIRED_MODULES)
++PKG_CHECK_MODULES(XORG, [xorg-server >= 1.0.99.901] xproto fontsproto $xfont_pc $REQUIRED_MODULES)
+ 
+ 
+ save_CFLAGS="$CFLAGS"
+diff --git a/src/uxa/uxa-damage.c b/src/uxa/uxa-damage.c
+index a6d1ee3..6afb346 100644
+--- a/src/uxa/uxa-damage.c
++++ b/src/uxa/uxa-damage.c
+@@ -35,7 +35,11 @@
+ #include    <X11/X.h>
+ #include    <X11/fonts/font.h>
+ #include    <X11/fonts/fontstruct.h>
++#ifdef HAVE_XFONT2
++#include    <X11/fonts/libxfont2.h>
++#else
+ #include    <X11/fonts/fontutil.h>
++#endif
+ 
+ #include    "uxa-damage.h"
+ 
+@@ -947,8 +951,12 @@ uxa_damage_chars (RegionPtr	region,
+ {
+     ExtentInfoRec   extents;
+     BoxRec	    box;
+-    
++
++#ifdef HAVE_XFONT2
++    xfont2_query_glyph_extents(font, charinfo, n, &extents);
++#else
+     QueryGlyphExtents(font, charinfo, n, &extents);
++#endif
+     if (imageblt)
+     {
+ 	if (extents.overallWidth > extents.overallRight)
+-- 
+2.7.4
+
