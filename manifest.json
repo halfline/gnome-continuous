@@ -938,8 +938,6 @@
 
 		{"src": "gnome:evolution-data-server",
 		 "irc_room": "evolution",
-                 "tag": "2ce43518f1be763f3842f226c2e8a3d4174a9323",
-                 "tag-reason": "Build failure caused by missing WebKit symbols",
 		 "config-opts": ["--enable-installed-tests",
 				 "--enable-vala-bindings",
 				 "--disable-google-auth",
@@ -1216,6 +1214,8 @@
 
 		{"src": "gnome:evolution",
 		 "irc_room": "evolution",
+                 "tag": "2ce43518f1be763f3842f226c2e8a3d4174a9323",
+                 "tag-reason": "Build failure caused by missing WebKit symbols",
 		 "config-opts": ["--enable-installed-tests",
 		 		 "--disable-bogofilter",
 				 "--disable-spamassassin",
