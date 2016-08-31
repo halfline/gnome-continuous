@@ -445,8 +445,7 @@
 				 "--disable-werror"]},
 
                 {"src": "fd:xorg/driver/xf86-video-qxl",
-		 "patches": ["xorg-autogen-merged.patch",
-                             "xf86-video-qxl-xfont2.patch"]},
+		 "patches": ["xorg-autogen-merged.patch"]},
 
 		{"src": "fd:xorg/driver/xf86-video-ati"},
 
