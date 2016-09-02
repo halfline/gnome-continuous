@@ -1,0 +1,26 @@
+From 35e3717b75357cb63639dac774692606fea7f6e8 Mon Sep 17 00:00:00 2001
+From: Carlos Soriano <csoriano@gnome.org>
+Date: Fri, 2 Sep 2016 11:14:20 +0200
+Subject: [PATCH] autogen.sh: New file to implement GNOME Build API
+
+See http://people.gnome.org/~walters/docs/build-api.txt
+---
+ autogen.sh | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/autogen.sh b/autogen.sh
+index f0195ec..e1d0a56 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -14,6 +14,8 @@
+ 
+ set -e -x
+ 
++exec autoreconf --force --install --verbose
++
+ ${AUTOPOINT:-autopoint} -f
+ ${LIBTOOLIZE:-libtoolize} -c -f || glibtoolize -c -f
+ ${ACLOCAL:-aclocal} -I m4
+-- 
+2.7.4
+
