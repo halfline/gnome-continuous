@@ -492,10 +492,14 @@
                  "name": "ghostscript",
                  "checksum": "913fc974433238ffd4e0549ce11ba2a3360d1d159cf5c3b988d72a77acb74d04"},
 
+                {"src": "tarball:http://tukaani.org/xz/xz-5.2.2.tar.gz",
+                 "name": "xz-utils",
+                 "checksum": "73df4d5d34f0468bd57d09f2d8af363e95ed6cc3a4a86129d2f2c366259902a2"},
+
                 {"src": "git:https://github.com/libarchive/libarchive.git",
 		 "component": "minimal",
 		 "config-opts": ["--without-lzo2"],
-		 "tag": "v3.1.2",
+		 "tag": "v3.2.0",
 		 "patches": ["libarchive-autogen.patch"]},
 
                 {"src": "fd-poppler:poppler",
