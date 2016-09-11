@@ -759,8 +759,6 @@
 				 "--disable-fatal-warnings"]},
 
 		{"src": "fd-gstreamer:gst-plugins-bad",
-                 "tag": "41f4fc9c0f733a796941b93cd6b228b015e80c11",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=770627#c34",
 		 "config-opts": ["--with-gtk=3.0",
 				 "--disable-tests",
 				 "--disable-examples",
