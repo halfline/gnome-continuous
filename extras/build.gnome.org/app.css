@@ -56,3 +56,49 @@ body {
 .app.bad .emblem {
     background-image: url(images/app-bad.png);
 }
+
+@font-face{
+    font-family: 'DepGraphSubsetFont';
+    src: url('DejaVuSansMono-graph-subset.woff');
+}
+
+.task-dep-graph {
+    white-space: pre;
+    font-family: DejaVu Sans Mono, DepGraphSubsetFont, monospace;
+    font-size: 10px;
+    line-height: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.graph-task, .graph-hidden {
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 10px;
+    padding: 4px;
+    padding-bottom: 2px;
+    vertical-align: middle;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.graph-hidden {
+    visibility: hidden;
+}
+
+.graph-inter-row {
+    line-height: 10px;
+}
+
+.graph-pad {
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+.graph-connector {
+    vertical-align: middle;
+}
+
+.graph-success { background: #dff0d8; }
+.graph-failed  { background: #f2dede; }
+.graph-running { background: #c0d0f2; }

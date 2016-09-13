@@ -4,6 +4,7 @@
     var bgo = angular.module('build.gnome.org', [
         'ngRoute',
         'bgoControllers',
+        'bgoDepGraph',
     ]);
 
     bgo.config(['$routeProvider', function($routeProvider) {

@@ -3,7 +3,7 @@
 
     var bgoControllers = angular.module('bgoControllers', []);
 
-    var taskNames = ['resolve', 'bdiff', 'build', 'builddisks', 'smoketest', 'smoketest-classic', 'smoketest-wayland', 'smoketest-timed', 'integrationtest','applicationstest', ];
+    var taskNames = ['resolve', 'bdiff', 'build', 'builddisks', 'zdisks', 'smoketest', 'smoketest-classic', 'smoketest-wayland', 'smoketest-timed', 'integrationtest','applicationstest', ];
 
     var ROOT = '/continuous/buildmaster/';
 
@@ -84,6 +84,7 @@
 
         var stages = [];
         var tasks = [];
+        var taskStates = {};
         taskNames.forEach(function(taskName) {
 
             $http.get(buildRoot + taskName + '/meta.json').success(function(data) {
@@ -155,6 +156,15 @@
                     });
                 }
                 tasks.push(data);
+
+                if (data['complete']) {
+                    if (data['success'])
+                        taskStates[taskName] = 'success';
+                    else
+                        taskStates[taskName] = 'failed';
+                } else {
+                    taskStates[taskName] = 'running';
+                }
             }).error(function(data, status, headers, config) {
                 data = {};
                 data['name'] = taskName;
@@ -167,6 +177,7 @@
             return tasks.filter(function(item){ return item.name == name })
         };
         $scope.tasks = tasks;
+        $scope.taskStates = taskStates;
     });
 
     function reversedOrder(a, b) {return parseInt(b)-parseInt(a)}
