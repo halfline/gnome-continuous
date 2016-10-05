@@ -535,6 +535,10 @@
 		{"src": "fd:libmbim/libmbim",
 		 "name": "libmbim"},
 
+                {"src": "git:git://github.com/akheron/jansson",
+                 "config-opts": ["--disable-documentation", "--enable-shared"],
+                 "patches": ["jansson-cmake-buildapi.patch"]},
+
 		{"src": "fd-MM:ModemManager.git",
 		 "config-opts": ["--with-udev-base-dir=/usr/lib/udev",
 				 "--disable-more-warnings"]},
