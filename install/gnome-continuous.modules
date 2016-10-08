@@ -2,8 +2,8 @@
 <moduleset>
   <repository type="git" name="git.gnome.org" default="yes"
       href="git://git.gnome.org/"/>
-  <repository type="git" name="cgwalters"
-      href="git://github.com/cgwalters"/>
+  <repository type="git" name="github.com"
+    href="git://github.com/"/>
   <repository type="tarball" name="ftp.mozilla.org"
       href="http://ftp.mozilla.org/"/>
   <autotools id="gtk-doc-stub">
@@ -31,7 +31,8 @@
     </dependencies>
   </autotools>
   <autotools id="js24" check-target="false"
-      autogenargs="--enable-threadsafe --with-system-nspr --enable-debug --disable-tests --disable-strip --enable-ctypes --enable-system-ffi --disable-intl-api">
+      autogenargs="--enable-threadsafe --with-system-nspr --enable-debug --disable-tests --disable-strip --enable-ctypes --enable-system-ffi --disable-intl-api"
+      supports-non-srcdir-builds="no">
     <pkg-config>mozjs-24.pc</pkg-config>
     <branch repo="ftp.mozilla.org"
             module="pub/mozilla.org/js/mozjs-24.2.0.tar.bz2"
@@ -72,15 +73,16 @@
       <dep package="libsoup"/>
     </dependencies>
   </autotools>
-  <autotools id="ostree" autogenargs="--disable-documentation --enable-libarchive --with-soup=yes">
-    <branch/>
+  <autotools id="ostree" supports-non-srcdir-builds="no">
+    <branch repo="github.com" module="ostreedev/ostree" checkoutdir="ostree"/>
     <dependencies>
-      <dep package="libgsystem"/>
+      <dep package="libsoup"/>
     </dependencies>
   </autotools>
   <autotools id="gnome-continuous">
     <branch/>
     <dependencies>
+      <dep package="libgsystem"/>
       <dep package="ostree"/>
       <dep package="gjs"/>
     </dependencies>
