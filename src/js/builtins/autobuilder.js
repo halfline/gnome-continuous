@@ -71,13 +71,13 @@ const Autobuilder = new Lang.Class({
 	if (args._autoupdate_rebuild)
 		this._autoupdate_rebuild = Gio.File.new_for_path(args._autoupdate_rebuild);
 
-        let bus = None;
+        let bus = null;
         if (args.bus_type == 'session' || args.bus_type == null) {
             bus = Gio.DBus.session;
         } else if (args.bus_type == 'system') {
             bus = Gio.DBus.system;
         } else if (args.bus_type != 'none') {
-            throw new Error("Bus type " args.bus_type + " must be one of system, session, or none");
+            throw new Error("Bus type " + args.bus_type + " must be one of system, session, or none");
         }
 
         if (bus) {
