@@ -48,6 +48,7 @@ const Autobuilder = new Lang.Class({
 
         this.parser.addArgument('--autoupdate-self', { action: 'store' });
         this.parser.addArgument('--autoupdate-rebuild', { action: 'store' });
+        this.parser.addArgument('--bus-type', { action: 'store' });
 
 	this._buildNeeded = true;
 	this._initialResolveNeeded = true;
@@ -70,12 +71,25 @@ const Autobuilder = new Lang.Class({
 	if (args._autoupdate_rebuild)
 		this._autoupdate_rebuild = Gio.File.new_for_path(args._autoupdate_rebuild);
 
-	this._ownId = Gio.DBus.session.own_name('org.gnome.OSTreeBuild', Gio.BusNameOwnerFlags.NONE,
-						function(name) {},
-						function(name) { loop.quit(); });
+        let bus = None;
+        if (args.bus_type == 'session' || args.bus_type == null) {
+            bus = Gio.DBus.session;
+        } else if (args.bus_type == 'system') {
+            bus = Gio.DBus.system;
+        } else if (args.bus_type != 'none') {
+            throw new Error("Bus type " args.bus_type + " must be one of system, session, or none");
+        }
 
-	this._impl = Gio.DBusExportedObject.wrapJSObject(AutoBuilderIface, this);
-	this._impl.export(Gio.DBus.session, '/org/gnome/OSTreeBuild/AutoBuilder');
+        if (bus) {
+	    this._ownId = bus.own_name('org.gnome.OSTreeBuild', Gio.BusNameOwnerFlags.NONE,
+					           function(name) {},
+					           function(name) { loop.quit(); });
+
+	    this._impl = Gio.DBusExportedObject.wrapJSObject(AutoBuilderIface, this);
+	    this._impl.export(bus, '/org/gnome/OSTreeBuild/AutoBuilder');
+        } else {
+            this._impl = null;
+        }
 
 	this._taskmaster = new Task.TaskMaster(this.workdir);
 	this._taskmaster.connect('task-executing', Lang.bind(this, this._onTaskExecuting));
@@ -164,7 +178,8 @@ const Autobuilder = new Lang.Class({
 	    JsonUtil.writeJsonFileAtomic(statusPath, {'running': runningTasks,
 						      'queued': queuedTasks,
 						      'systemLoad': loadAvg}, null);
-	    this._impl.emit_property_changed('Status', new GLib.Variant("s", this._status));
+	    if (this._impl)
+                this._impl.emit_property_changed('Status', new GLib.Variant("s", this._status));
 	}
     },
 
