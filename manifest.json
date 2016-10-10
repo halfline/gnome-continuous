@@ -950,6 +950,8 @@
 		 "patches": ["libical-cmake-buildapi.patch"]},
 
 		{"src": "gnome:evolution-data-server",
+		 "tag": "57ad04c29303723dd8fa4082aeb6380c0873265f",
+		 "tag-reason": "this module uses cmake now, tag until patch is made to make it compatible with continuous",
 		 "irc_room": "evolution",
 		 "config-opts": ["--enable-installed-tests",
 				 "--enable-vala-bindings",
@@ -1228,6 +1230,8 @@
 		{"src": "gnome:gtkhtml"},
 
 		{"src": "gnome:evolution",
+		 "tag": "dad728dfd69aaba8edfe84a8f922a012dbad32ac",
+		 "tag-reason": "this module uses cmake now, tag until patch is made to make it compatible with continuous",
 		 "irc_room": "evolution",
 		 "config-opts": ["--enable-installed-tests",
 		 		 "--disable-bogofilter",
@@ -1238,6 +1242,8 @@
 				 "--disable-autoar"]},
 
 		{"src": "gnome:evolution-ews",
+		 "tag": "a41cfe62750bcfb82fe964408c55746fb4e14cc9",
+		 "tag-reason": "this module uses cmake now, tag until patch is made to make it compatible with continuous",
 		 "irc_room": "evolution",
 		 "config-opts": ["--with-internal-lzx"]},
 
