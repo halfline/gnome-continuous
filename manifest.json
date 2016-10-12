@@ -540,6 +540,8 @@
                  "patches": ["jansson-cmake-buildapi.patch"]},
 
 		{"src": "fd-MM:ModemManager.git",
+                 "tag": "6f11ff10cd8da2d431eb9596185ccb577356c6ab",
+                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=98216",
 		 "config-opts": ["--with-udev-base-dir=/usr/lib/udev",
 				 "--disable-more-warnings"]},
 
