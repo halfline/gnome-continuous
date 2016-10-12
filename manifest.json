@@ -7,7 +7,7 @@
   "base": {
             "name": "yocto",
 	    "src": "gnome:gnome-continuous-yocto",
-            "branch": "gnomeostree-3.14-dizzy"
+            "branch": "gnomeostree-3.22-krogoth"
           },
 
   "config-opts": ["--disable-static", "--disable-silent-rules"],
@@ -1376,7 +1376,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 108,
-		        "all": false,
-		        "component-names": ["gstreamer"]}
+	"build-epoch": {"version": 109,
+		        "all": true,
+		        "component-names": []}
 }
