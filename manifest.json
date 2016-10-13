@@ -941,8 +941,6 @@
 		{"src": "gnome:gnome-online-miners"},
 
 		{"src": "libical:libical",
-                 "tag": "1e994a081be9ec3facb3844213d4d89bfe8aab05",
-                 "tag-reason": "Missing include",
 		 "patches": ["libical-cmake-buildapi.patch"]},
 
 		{"src": "gnome:evolution-data-server",
