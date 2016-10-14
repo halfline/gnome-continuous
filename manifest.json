@@ -383,6 +383,8 @@
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-rtti"
                  },
                  "patches": ["mesa-nv50-fix-build.patch", "mesa-llvm-config-dir.patch"],
+                 "tag": "284795616a76787447ebf7db8b93d4b90073ccf5",
+                 "tag-reason": "Build failure in the intel driver",
                  "config-opts": [
                      "--host=x86_64-gnomeostree-linux",
                      "--enable-pic",
