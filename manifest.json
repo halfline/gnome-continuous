@@ -621,6 +621,13 @@
                                  "--enable-wayland-backend",
                                  "--enable-x11-backend"]},
 
+
+                {"src": "gnome:gtk+",
+                 "name": "gtk4",
+                 "config-opts": ["--enable-installed-tests",
+                                 "--enable-wayland-backend",
+                                 "--enable-x11-backend"]},
+
 	        {"src": "fd:plymouth",
 		 "initramfs-depends": true,
 		 "config-opts": ["--enable-pango",
