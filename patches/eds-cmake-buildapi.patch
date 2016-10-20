@@ -1,4 +1,4 @@
-From fd3adf8385f181255f0d1f40f844370a50656ed8 Mon Sep 17 00:00:00 2001
+From d026aade4ae5a7743ad8537e7ee4208d6b9053e9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
 Date: Fri, 21 Oct 2016 04:13:24 +0530
 Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
@@ -9,16 +9,16 @@ See http://people.gnome.org/~walters/docs/build-api.txt
 Hopefully this will turn into a generic copy/paste-able adapter for
 cmake.
 ---
- configure | 52 ++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 52 insertions(+)
+ configure | 53 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 53 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..359f811
+index 0000000..2e19f39
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,52 @@
+@@ -0,0 +1,53 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -68,6 +68,7 @@ index 0000000..359f811
 +     -DENABLE_UOA=OFF \
 +     -DENABLE_GOOGLE_AUTH=OFF \
 +     -DENABLE_INSTALLED_TESTS=ON \
++     -DWITH_OPENLDAP=OFF \
 +     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
 +     -DCMAKE_INSTALL_LIBDIR:PATH=${libdir} \
 +     ${srcdir}
