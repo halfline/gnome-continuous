@@ -378,6 +378,8 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
+                 "tag": "4a2dbfff05f7be271c2aa72e783e24b31906db51",
+                 "tag-reason": "Build failure caused by missing header",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic -fno-rtti",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-rtti"
