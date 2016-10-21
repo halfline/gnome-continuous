@@ -958,7 +958,7 @@
 
 		{"src": "gnome:evolution-data-server",
                  "tag": "57ad04c29303723dd8fa4082aeb6380c0873265f",
-                 "tag-reason": "this module uses cmake now, tag until patch is made to make it compatible with continuous",
+                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=773309"
                  "irc_room": "evolution",
                  "config-opts": ["--enable-installed-tests",
                                  "--enable-vala-bindings",
