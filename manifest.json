@@ -1383,6 +1383,6 @@
     "initramfs-build-epoch": {"version": 0},
     
 	"build-epoch": {"version": 109,
-		        "all": true,
-		        "component-names": []}
+		        "all": false,
+		        "component-names": [ "libqmi" ]}
 }
