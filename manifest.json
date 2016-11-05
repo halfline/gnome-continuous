@@ -817,6 +817,8 @@
 		 "patches": ["gee-builddir.patch"]},
 
                 {"src": "gnome:gtksourceview",
+                 "name": "gtksourceview3",
+                 "branch": "gnome-3-24",
                  "config-opts": ["--enable-compile-warnings=maximum",
                                  "--disable-maintainer-mode",
                                  "--enable-installed-tests"]},
