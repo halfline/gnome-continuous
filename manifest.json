@@ -823,6 +823,12 @@
                                  "--disable-maintainer-mode",
                                  "--enable-installed-tests"]},
 
+                {"src": "gnome:gtksourceview",
+                 "name": "gtksourceview4",
+                 "config-opts": ["--enable-compile-warnings=maximum",
+                                 "--disable-maintainer-mode",
+                                 "--enable-installed-tests"]},
+
                 {"src": "fd:exempi"},
 
 		{"src": "gnome:librest",
