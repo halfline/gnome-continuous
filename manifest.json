@@ -534,9 +534,7 @@
 
                 {"src": "git:git://github.com/jpirko/libndp.git"},
 
-		{"src": "fd:libqmi",
-                 "tag": "fa39dc14a6b8bdea736239da9fee59a65e289b1d",
-                 "tag-reason": "Subsequent commits break ModemManager"},
+		{"src": "fd:libqmi"},
 
 		{"src": "fd:libmbim/libmbim",
 		 "name": "libmbim"},
