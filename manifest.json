@@ -423,7 +423,7 @@
 		 "patches": ["xkeyboard-config-autogen.patch"]},
 
 		{"src": "anholt:libepoxy",
-                 "patches": ["libepoxy-force-rebuild.patch"]},
+                 "patches": ["libepoxy-clean-build.patch"]},
 
 		{"src": "fd:xcb/util-keysyms",
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
