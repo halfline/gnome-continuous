@@ -125,7 +125,10 @@
 				 "--with-sysvrcnd-path="]
 		 },
 
-   		{"src": "gnome:libgudev"},
+   		{"src": "gnome:libgudev",
+                 "config-opts": ["--disable-umockdev"]},
+
+                {"src": "git:https://github.com/martinpitt/umockdev.git"},
 
 		{"src": "git:https://github.com/libusb/libusb.git",
 		 "tag": "v1.0.19"},
