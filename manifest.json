@@ -422,7 +422,8 @@
 		                 "--with-xkb-base=/usr/share/X11/xkb"],
 		 "patches": ["xkeyboard-config-autogen.patch"]},
 
-		{"src": "anholt:libepoxy"},
+		{"src": "anholt:libepoxy",
+                 "patches": ["libepoxy-force-rebuild.patch"]},
 
 		{"src": "fd:xcb/util-keysyms",
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},

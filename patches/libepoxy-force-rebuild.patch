@@ -1,0 +1,29 @@
+From 04387bc188a6b0c2d7bc4a032bb46fb41ae59079 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Mon, 7 Nov 2016 19:34:01 +0000
+Subject: [PATCH] build: Force replacing autotools generated files
+
+If the '--force' switch is not passed to autoreconf, the autotools will
+try to reuse the generated files committed in the Git repo, which hard
+code the names and versions of the tools originally used to generate
+them.
+---
+ autogen.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index fc34bd5..34a9bb2 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -6,7 +6,7 @@ test -z "$srcdir" && srcdir=.
+ ORIGDIR=`pwd`
+ cd $srcdir
+ 
+-autoreconf -v --install || exit 1
++autoreconf -v -f --install || exit 1
+ cd $ORIGDIR || exit $?
+ 
+ if test -z "$NOCONFIGURE"; then
+-- 
+2.9.3
+
