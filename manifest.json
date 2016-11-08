@@ -594,7 +594,9 @@
 				 "--disable-argyllcms-sensor",
 				 "--disable-installed-tests"]},
 
-                {"src": "git:https://github.com/ebassi/graphene.git"},
+                {"src": "git:https://github.com/ebassi/graphene.git",
+                 "tag": "60853ec8772c2b39aabb2538f497f3d0c976dac0",
+                 "tag-reason": "Switched to meson, but Continuous cannot find its own installed meson"},
 
 		{"src": "gnome:gconf",
 		 "config-opts": ["--disable-orbit",
