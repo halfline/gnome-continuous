@@ -1,31 +1,33 @@
-From 0c2a4c9bd845777acd4793fb1c4b87d5c85ae350 Mon Sep 17 00:00:00 2001
+From e679599bcfa446132737651e48b7c133b3997697 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
-Date: Fri, 14 Oct 2016 13:01:56 +0100
+Date: Tue, 8 Nov 2016 11:58:40 +0000
 Subject: [PATCH] build: Implement build-api
 
 Implement the Build API for GNOME Continuous.
 
 See: https://github.com/cgwalters/build-api
+
+v2:
+    Hard-code /usr as the prefix
 ---
- Makefile  | 7 +++++++
+ Makefile  | 6 ++++++
  configure | 4 ++++
- 2 files changed, 11 insertions(+)
+ 2 files changed, 10 insertions(+)
  create mode 100644 Makefile
  create mode 100755 configure
 
 diff --git a/Makefile b/Makefile
 new file mode 100644
-index 0000000..7dae43b
+index 0000000..63966ee
 --- /dev/null
 +++ b/Makefile
-@@ -0,0 +1,7 @@
+@@ -0,0 +1,6 @@
 +# meson *development* Makefile
 +all:
 +	python3 setup.py build
 +
 +install:
-+	python3 setup.py install --root=$(DESTDIR)
-+
++	python3 setup.py install --root=$(DESTDIR) --prefix /usr
 diff --git a/configure b/configure
 new file mode 100755
 index 0000000..1c8e45f
