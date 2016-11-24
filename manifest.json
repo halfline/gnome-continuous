@@ -1045,8 +1045,7 @@
 		{"src": "git:git://github.com/hughsie/colord-gtk.git"},
 
 		{"src": "gnome:gcab",
-		 "config-opts": ["--disable-silent-rules", "--disable-static", "--enable-fast-install"],
-		 "patches": ["gcab-no-builddir.patch"]},
+		 "config-opts": ["--disable-silent-rules", "--disable-static", "--enable-fast-install"]},
 
 		{"src": "git:git://github.com/hughsie/appstream-glib.git",
 		 "config-opts": ["--disable-dep11", "--disable-stemmer"]},
