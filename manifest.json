@@ -1285,7 +1285,8 @@
 		{"src": "gnome:eog",
 		 "config-opts": ["--enable-installed-tests"]},
 
-		{"src": "gnome:devhelp"},
+		{"src": "gnome:devhelp",
+                 "config-opts": ["--disable-Werror"]},
 
 		{"src": "gnome:gnome-dictionary"},
 
