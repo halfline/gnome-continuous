@@ -554,7 +554,9 @@
 				 "--with-crypto=nss",
 				 "--disable-doc",
 				 "--enable-more-warnings=yes",
-				 "--enable-modify-system"]},
+				 "--enable-modify-system"],
+                 "tag": "6143e71464254f6b866440744b45d985df36c472",
+                 "tag-reason": "NM now forces the documentation to be built: https://bugzilla.gnome.org/show_bug.cgi?id=775003"},
 
 		{"src": "0pointer:libatasmart.git"},
 
