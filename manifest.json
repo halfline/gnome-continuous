@@ -22,7 +22,7 @@
                 "fd-spice": "git:git://anongit.freedesktop.org/spice/",
                 "fd-xdg": "git:git://anongit.freedesktop.org/git/xdg/",
                 "fd-fprint": "git:git://anongit.freedesktop.org/git/libfprint/",
-                "fd-p11": "git:git://anongit.freedesktop.org/git/p11-glue/",
+                "p11-glue": "git:git://github.com/p11-glue/",
                 "fd-poppler": "git:git://anongit.freedesktop.org/poppler/",
                 "fd-gstreamer": "git:git://anongit.freedesktop.org/gstreamer/",
                 "fd-wayland": "git:git://anongit.freedesktop.org/wayland/",
@@ -651,7 +651,7 @@
 
 		{"src": "fd-fprint:fprintd"},
 
-		{"src": "fd-p11:p11-kit",
+		{"src": "p11-glue:p11-kit",
                  "component": "minimal"},
 
 		{"src": "gnome:gcr",
