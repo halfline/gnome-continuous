@@ -42,7 +42,7 @@
                 "socat": "git:git://repo.or.cz/",
 		"cgwalters": "git:git://github.com/cgwalters/",
 		"alexlarsson": "git:git://github.com/alexlarsson/",
-                "anholt": "git:git://github.com/anholt/",
+                "ebassi": "git:git://github.com/ebassi/",
                 "fujita": "git:git://github.com/fujita/",
                 "mikechristie" : "git:git://github.com/mikechristie/",
                 "libical": "git:git://github.com/libical/",
@@ -422,8 +422,7 @@
 		                 "--with-xkb-base=/usr/share/X11/xkb"],
 		 "patches": ["xkeyboard-config-autogen.patch"]},
 
-		{"src": "anholt:libepoxy",
-                 "patches": ["libepoxy-clean-build.patch"]},
+		{"src": "ebassi:libepoxy"},
 
 		{"src": "fd:xcb/util-keysyms",
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
@@ -597,7 +596,7 @@
 				 "--disable-argyllcms-sensor",
 				 "--disable-installed-tests"]},
 
-                {"src": "git:https://github.com/ebassi/graphene.git"},
+                {"src": "ebassi:graphene"},
 
 		{"src": "gnome:gconf",
 		 "config-opts": ["--disable-orbit",
