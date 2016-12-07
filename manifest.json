@@ -507,7 +507,6 @@
                 {"src": "git:https://github.com/libarchive/libarchive.git",
 		 "component": "minimal",
 		 "config-opts": ["--without-lzo2"],
-		 "tag": "v3.2.2",
 		 "patches": ["libarchive-autogen.patch"]},
 
                 {"src": "fd-poppler:poppler",
