@@ -814,9 +814,9 @@
 				 "--enable-debug-symbols=min",
 				 "--disable-maintainer-mode"]},
 
-		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.15.2.tar.xz",
+		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.15.3.tar.xz",
 		 "name": "webkitgtk4",
-		 "checksum": "756f14ad2ca84e25dc245f2b736ab31de58d1eb66fef76e75a1985179072471f",
+		 "checksum": "2f93245918d92e4010ea6cb72096b5a1357fb3f8d1dfdbf4873b7174cd2ac8ec",
 		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
 
 		{"src": "gnome:libgee",
