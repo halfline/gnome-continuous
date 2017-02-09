@@ -678,7 +678,9 @@
 
 		{"src": "gnome:libcroco"},
 
-		{"src": "gnome:librsvg"},
+		{"src": "gnome:librsvg",
+                "tag": "2.40.16",
+                "tag-reason": "We need to add meta-rust to our yocto image"},
 
 		{"src": "fd-gstreamer:orc",
 		 "config-opts": ["--disable-gtk-doc"]},
