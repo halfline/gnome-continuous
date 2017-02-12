@@ -1399,7 +1399,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 110,
+	"build-epoch": {"version": 111,
 		        "all": false,
-		        "component-names": [ "libqmi" ]}
+		        "component-names": [ "libseccomp" ]}
 }
