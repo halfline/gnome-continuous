@@ -898,6 +898,8 @@
 				 "--enable-installed-tests"]},
 
 		{"src": "gnome:gjs",
+		 "tag": "46e22cfc4521bdf27e180ded781f00411b5fe378",
+		 "tag-reason": "Newer versions depend on mozjs-31",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "git:git://github.com/ostreedev/ostree",
