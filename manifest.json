@@ -104,7 +104,8 @@
 		{"src": "gnome:vala",
 		 "config-opts": ["--enable-vapigen"]},
 
-		{"src": "git:git://github.com/seccomp/libseccomp"},
+		{"src": "git:git://github.com/seccomp/libseccomp",
+		 "branch": "release-2.3"},
 
    		{"src": "git:https://github.com/systemd/systemd",
 		 "component": "minimal",
