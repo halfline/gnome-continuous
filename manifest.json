@@ -559,6 +559,9 @@
 		 "config-opts": ["--with-udev-base-dir=/usr/lib/udev",
 				 "--disable-more-warnings"]},
 
+		{"src": "fd:pycairo",
+		 "patches": ["pycairo-buildsys.patch"]},
+
 		{"src": "gnome:pygobject",
 		 "config-opts": ["--with-python=python3"]},
 
@@ -1091,12 +1094,6 @@
 		 "config-opts": ["--disable-documentation",
 		                 "--systemdsystemunitdir=/usr/lib/systemd/system"],
 		 "initramfs-depends": true},
-
-		{"src": "git:git://git.cairographics.org/git/py2cairo",
-		 "patches": ["py2cairo-autogen.patch"]},
-
-                {"src": "fd:pycairo",
-                 "patches": ["pycairo-buildsys.patch"]},
 
 		{"src": "gnome:pyatspi2",
 		 "config-opts": ["--with-python=python3"]},
