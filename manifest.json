@@ -544,9 +544,7 @@
 
                 {"src": "git:git://github.com/jpirko/libndp.git"},
 
-		{"src": "fd:libqmi",
-                 "tag": "56d8b97684ca40a1d44d97a1be0a067adaca8480",
-                 "tag-reason": "Build breakage with -Werror"},
+		{"src": "fd:libqmi"},
 
 		{"src": "fd:libmbim/libmbim",
 		 "name": "libmbim"},
