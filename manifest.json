@@ -560,10 +560,11 @@
 				 "--disable-more-warnings"]},
 
 		{"src": "gnome:pygobject",
-		 "config-opts": ["--with-python=python2"]},
+		 "config-opts": ["--with-python=python3"]},
 
 		{"src": "fd-NM:NetworkManager",
-		 "config-opts": ["--with-dhclient=yes",
+		 "config-opts": ["PYTHON=python3",
+		                 "--with-dhclient=yes",
 		                 "--with-session-tracking=systemd",
 				 "--with-crypto=nss",
 				 "--disable-doc",
@@ -1096,10 +1097,6 @@
 
                 {"src": "fd:pycairo",
                  "patches": ["pycairo-buildsys.patch"]},
-
-		{"src": "gnome:pygobject",
-		 "name": "pygobject3",
-		 "config-opts": ["--with-python=python3"]},
 
 		{"src": "gnome:pyatspi2",
 		 "config-opts": ["--with-python=python3"]},
