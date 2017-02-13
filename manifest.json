@@ -828,6 +828,7 @@
 		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"}, 
 
 		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.15.4.tar.xz",
+		 "name": "webkitgtk",
 		 "checksum": "b5548a8a0a9e3133bd5a27f4fd0307f58871409134c308a9f09db8baa83a8bf4",
 		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
 
