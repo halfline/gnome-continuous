@@ -572,7 +572,7 @@
 				 "--enable-more-warnings=yes",
 				 "--enable-modify-system"],
                  "tag": "a791a9aa4b2b71436c4c31341689fec510c4ea8e",
-                 "tag-reason": "NM now forces the documentation to be built: https://bugzilla.gnome.org/show_bug.cgi?id=775003"},
+                 "tag-reason": "NM now forces the man pages to be built: https://bugzilla.gnome.org/show_bug.cgi?id=778551"},
 
 		{"src": "0pointer:libatasmart.git"},
 
