@@ -1,6 +1,6 @@
-From 9eed2c3153d8f0e8b01b55b9c6c10030434a588e Mon Sep 17 00:00:00 2001
-From: Owen W. Taylor <otaylor@fishsoup.net>
-Date: Tue, 11 Oct 2016 18:53:14 +0000
+From 49893becc0f82bdb4b5e3bd825bc2a027c7a7eec Mon Sep 17 00:00:00 2001
+From: "Owen W. Taylor" <otaylor@fishsoup.net>
+Date: Mon, 13 Feb 2017 01:20:43 +0000
 Subject: [PATCH] Add a --llvm-config-dir option
 
 The --llvm-prefix option doesn't quite work when building against
@@ -8,14 +8,14 @@ a yocto base, because the llvm-config-binary is in
 $bindir/llvm3.3/<targetname>-llvm-config, which is not $prefix/bin
 for any prefix.
 ---
- configure.ac |   12 ++++++++++--
- 1 files changed, 10 insertions(+), 2 deletions(-)
+ configure.ac | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
-index b414edd..f02ff89 100644
+index 121457bdfd..753fe98f6f 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -2162,6 +2162,11 @@ AC_ARG_WITH([llvm-prefix],
+@@ -843,6 +843,12 @@ AC_ARG_WITH([llvm-prefix],
      [llvm_prefix="$withval"],
      [llvm_prefix=''])
  
@@ -24,13 +24,14 @@ index b414edd..f02ff89 100644
 +        [Directory where llvm-config binary lives])],
 +    [llvm_config_dir="$withval"],
 +    [llvm_config_dir=''])
- 
- # Call this inside ` ` to get the return value.
- # $1 is the llvm-config command with arguments.
-@@ -2207,8 +2212,11 @@ if test "x$enable_gallium_llvm" = xauto; then
-     esac
++
+ PKG_CHECK_MODULES([LIBELF], [libelf], [have_libelf=yes], [have_libelf=no])
+ if test "x$have_libelf" = xno; then
+    LIBELF_LIBS=''
+@@ -853,8 +859,11 @@ if test "x$have_libelf" = xno; then
  fi
- if test "x$enable_gallium_llvm" = xyes || test "x$HAVE_RADEON_VULKAN" = xyes; then
+ 
+ if test -z "$LLVM_CONFIG"; then
 -    if test -n "$llvm_prefix"; then
 -        AC_PATH_TOOL([LLVM_CONFIG], [llvm-config], [no], ["$llvm_prefix/bin"])
 +    if test -n "$llvm_prefix" -a -z "$llvm_config_dir" ; then
@@ -42,5 +43,5 @@ index b414edd..f02ff89 100644
          AC_PATH_TOOL([LLVM_CONFIG], [llvm-config], [no])
      fi
 -- 
-1.7.1
+2.11.1
 
