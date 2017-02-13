@@ -1402,7 +1402,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 111,
+	"build-epoch": {"version": 112,
 		        "all": false,
-		        "component-names": [ "libseccomp" ]}
+		        "component-names": [ "pulseaudio" ]}
 }
