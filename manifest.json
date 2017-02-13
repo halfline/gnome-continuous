@@ -561,6 +561,9 @@
 		 "config-opts": ["--with-udev-base-dir=/usr/lib/udev",
 				 "--disable-more-warnings"]},
 
+		{"src": "gnome:pygobject",
+		 "config-opts": ["--with-python=python2"]},
+
 		{"src": "fd-NM:NetworkManager",
 		 "config-opts": ["--with-dhclient=yes",
 		                 "--with-session-tracking=systemd",
@@ -1093,9 +1096,6 @@
 
                 {"src": "fd:pycairo",
                  "patches": ["pycairo-buildsys.patch"]},
-
-		{"src": "gnome:pygobject",
-		 "config-opts": ["--with-python=python2"]},
 
 		{"src": "gnome:pygobject",
 		 "name": "pygobject3",
