@@ -912,6 +912,7 @@
                 {"src": "ibus:ibus.git",
                  "patches": ["ibus-builddir.patch"],
 		 "config-opts": ["--disable-tests", 
+				 "--disable-emoji-dict",
 				 "--disable-gconf",
 				 "--enable-dconf",
 				 "--enable-introspection",
