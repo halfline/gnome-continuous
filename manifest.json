@@ -136,8 +136,6 @@
 		 "tag": "v1.0.19"},
 
 		{"src": "git:git://github.com/gregkh/usbutils.git",
-                 "tag": "26b642cd4bde060c1e5da00671cbe836a0809f6e",
-                 "tag-reason": "https://github.com/gregkh/usbutils/issues/40",
 		 "patches": ["usbutils-autogen.patch"]},
 
    		{"src": "git:git://git.fedorahosted.org/git/lvm2.git",
