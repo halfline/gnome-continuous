@@ -40,6 +40,7 @@
                 "dnsmasq": "git:git://thekelleys.org.uk/",
                 "ipxe": "git:git://git.ipxe.org/",
                 "socat": "git:git://repo.or.cz/",
+                "anholt": "git:git://github.com/anholt/",
 		"cgwalters": "git:git://github.com/cgwalters/",
 		"alexlarsson": "git:git://github.com/alexlarsson/",
                 "ebassi": "git:git://github.com/ebassi/",
@@ -421,7 +422,7 @@
 		                 "--with-xkb-base=/usr/share/X11/xkb"],
 		 "patches": ["xkeyboard-config-autogen.patch"]},
 
-		{"src": "ebassi:libepoxy"},
+		{"src": "anholt:libepoxy"},
 
 		{"src": "fd:xcb/util-keysyms",
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
