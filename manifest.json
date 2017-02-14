@@ -910,8 +910,7 @@
                 {"src": "flatpak:xdg-desktop-portal-gtk"},
 
                 {"src": "ibus:ibus.git",
-		 "patches": ["ibus-builddir.patch",
-			     "ibus-dconf-Work-around-using-dbus-development-builds-and-.patch"],
+                 "patches": ["ibus-builddir.patch"],
 		 "config-opts": ["--disable-tests", 
 				 "--disable-gconf",
 				 "--enable-dconf",
