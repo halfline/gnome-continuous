@@ -733,9 +733,6 @@
 
                 {"src": "gnome:libgnomekbd"}, 
 
-		{"src": "git:git://github.com/json-c/json-c.git",
-		 "patches": ["json-c-autogen.patch"]},
-
 		{"src": "gnome:mobile-broadband-provider-info"},
 
 		{"src": "gnome:network-manager-applet",
