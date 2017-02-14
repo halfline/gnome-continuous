@@ -734,8 +734,6 @@
                 {"src": "gnome:libgnomekbd"}, 
 
 		{"src": "git:git://github.com/json-c/json-c.git",
-                 "tag": "d4899bd4d58eff3b2e05dfe59c0604e46a6fb546",
-                 "tag-reason": "Build broken because builddir != srcdir",
 		 "patches": ["json-c-autogen.patch"]},
 
 		{"src": "gnome:mobile-broadband-provider-info"},
