@@ -27,11 +27,12 @@ new file mode 100755
 index 0000000..93ef339
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,4 @@
-+#!/bin/sh
+@@ -0,0 +1,5 @@
++#!/bin/sh -x
++srcdir=$(readlink -f $(dirname $0))
 +mkdir -p js/src
 +cd js/src
-+exec $(readlink -f $(dirname $0))/js/src/configure "$@"
++exec $srcdir/js/src/configure "$@"
 -- 
 1.7.1
 
