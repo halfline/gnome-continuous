@@ -900,7 +900,6 @@
          "config-opts": ["--enable-posix-nspr-emulation",
                          "--disable-tests",
                          "--disable-strip",
-                         "--enable-ctypes",
                          "--enable-system-ffi",
                          "--with-system-icu",
                          "--with-system-zlib",
