@@ -31,7 +31,7 @@ index 0000000..93ef339
 +#!/bin/sh
 +mkdir -p js/src
 +cd js/src
-+exec `dirname $0`/js/src/configure "$@"
++exec $(readlink -f $(dirname $0))/js/src/configure "$@"
 -- 
 1.7.1
 
