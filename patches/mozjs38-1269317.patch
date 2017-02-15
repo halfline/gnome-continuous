@@ -1,5 +1,16 @@
---- a/js/src/jit/RegisterSets.h	2017-02-10 17:33:06.210702431 -0800
-+++ b/js/src/jit/RegisterSets.h	2017-02-10 17:43:52.877514146 -0800
+From 077a238b003963f1b7ab0e393be9b58af44a469e Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
+Date: Wed, 15 Feb 2017 20:48:32 +0000
+Subject: [PATCH 1/5] mozjs38-1269317
+
+---
+ js/src/jit/RegisterSets.h | 53 ++++++++++++++---------------------------------
+ 1 file changed, 16 insertions(+), 37 deletions(-)
+
+diff --git a/js/src/jit/RegisterSets.h b/js/src/jit/RegisterSets.h
+index 70c57cd9..fc5d5130 100644
+--- a/js/src/jit/RegisterSets.h
++++ b/js/src/jit/RegisterSets.h
 @@ -7,7 +7,6 @@
  #ifndef jit_RegisterSets_h
  #define jit_RegisterSets_h
@@ -8,7 +19,7 @@
  #include "mozilla/MathAlgorithms.h"
  
  #include "jit/JitAllocPolicy.h"
-@@ -26,8 +25,8 @@
+@@ -26,8 +25,8 @@ struct AnyRegister {
      Code code_;
  
    public:
@@ -19,7 +30,7 @@
      explicit AnyRegister(Register gpr) {
          code_ = gpr.code();
      }
-@@ -156,7 +155,7 @@
+@@ -156,7 +155,7 @@ class ValueOperand
      }
  #endif
  
@@ -28,7 +39,7 @@
  };
  
  // Registers to hold either either a typed or untyped value.
-@@ -165,46 +164,25 @@
+@@ -165,46 +164,25 @@ class TypedOrValueRegister
      // Type of value being stored.
      MIRType type_;
  
@@ -80,7 +91,7 @@
      }
  
      MIRType type() const {
-@@ -220,11 +198,13 @@
+@@ -220,11 +198,13 @@ class TypedOrValueRegister
      }
  
      AnyRegister typedReg() const {
@@ -96,7 +107,7 @@
      }
  
      AnyRegister scratchReg() {
-@@ -240,19 +220,18 @@
+@@ -240,19 +220,18 @@ class ConstantOrRegister
      // Whether a constant value is being stored.
      bool constant_;
  
@@ -120,3 +131,6 @@
      }
  
    public:
+-- 
+2.11.1
+

@@ -1,15 +1,23 @@
+From c2dd89db98773fa12f1071216f5ca5390701ff00 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
+Date: Wed, 15 Feb 2017 20:56:24 +0000
+Subject: [PATCH 5/5] mozjs38-pkg-config-version
+
 Add major version to pkg-config filename.
 Author: Rico Tzschichholz <ricotz@ubuntu.com>
 Forwarded: no
 Last-Update: 2015-05-04
+---
+ js/src/Makefile.in | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
-Index: b/js/src/Makefile.in
-===================================================================
+diff --git a/js/src/Makefile.in b/js/src/Makefile.in
+index fad5f0fc..60fb2c3c 100644
 --- a/js/src/Makefile.in
 +++ b/js/src/Makefile.in
-@@ -214,10 +214,10 @@
+@@ -211,10 +211,10 @@ SDK_BINARY = $(JS_CONFIG_NAME)
  $(JS_CONFIG_NAME): js-config
-    cp $^ $@
+ 	cp $^ $@
  
 -$(LIBRARY_NAME).pc: js.pc
 +$(JS_LIBRARY_NAME).pc: js.pc
@@ -20,3 +28,6 @@ Index: b/js/src/Makefile.in
  	$(SYSINSTALL) $^ $(DESTDIR)$(libdir)/pkgconfig
  
  install:: js-config.h
+-- 
+2.11.1
+

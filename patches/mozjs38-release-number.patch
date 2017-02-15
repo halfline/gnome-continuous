@@ -1,6 +1,18 @@
+From 1f069d17b7ab72738580d3f43cb5e979a5ef250c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
+Date: Wed, 15 Feb 2017 20:54:19 +0000
+Subject: [PATCH 3/5] mozjs38-release-number
+
+---
+ js/src/configure    | 6 +++---
+ js/src/configure.in | 6 +++---
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/js/src/configure b/js/src/configure
+index cce5430c..b266bc16 100755
 --- a/js/src/configure
 +++ b/js/src/configure
-@@ -1662,9 +1662,9 @@
+@@ -1662,9 +1662,9 @@ esac
  
  fi
  
@@ -13,9 +25,11 @@
  
  cat >> confdefs.pytmp <<EOF
      (''' MOZILLA_VERSION ''', r''' "$MOZILLA_VERSION" ''')
+diff --git a/js/src/configure.in b/js/src/configure.in
+index 82ef78a6..534d2cea 100644
 --- a/js/src/configure.in
 +++ b/js/src/configure.in
-@@ -236,9 +236,9 @@
+@@ -236,9 +236,9 @@ fi
  dnl ==============================================================
  dnl Get mozilla version from central milestone file
  dnl ==============================================================
@@ -28,3 +42,6 @@
  
  AC_DEFINE_UNQUOTED(MOZILLA_VERSION,"$MOZILLA_VERSION")
  AC_DEFINE_UNQUOTED(MOZILLA_VERSION_U,$MOZILLA_VERSION)
+-- 
+2.11.1
+

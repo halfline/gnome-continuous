@@ -1,15 +1,37 @@
-# HG changeset patch
-# Parent 4732a0e5d22bc7e5c1f1ace7a182d537d9cc2c6a
+From fe06b3cb62788eb0a0607276c54444f49b346d76 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
+Date: Wed, 15 Feb 2017 20:55:37 +0000
+Subject: [PATCH 4/5] mozjs38-shell-version
+
 Add major version to shell and js-config filenames.
 Author: Rico Tzschichholz <ricotz@ubuntu.com>
 Forwarded: no
 Last-Update: 2014-10-29
-
 ---
+ js/src/Makefile.in  |  3 +++
+ js/src/configure    |  5 +++++
+ js/src/configure.in | 13 +++++--------
+ 3 files changed, 13 insertions(+), 8 deletions(-)
+
+diff --git a/js/src/Makefile.in b/js/src/Makefile.in
+index 92469a67..fad5f0fc 100644
+--- a/js/src/Makefile.in
++++ b/js/src/Makefile.in
+@@ -208,6 +208,9 @@ endif
+ SCRIPTS = $(JS_CONFIG_NAME)
+ SDK_BINARY = $(JS_CONFIG_NAME)
+ 
++$(JS_CONFIG_NAME): js-config
++	cp $^ $@
++
+ $(LIBRARY_NAME).pc: js.pc
+ 	cp $^ $@
+ 
 diff --git a/js/src/configure b/js/src/configure
+index b266bc16..685bcdc1 100755
 --- a/js/src/configure
 +++ b/js/src/configure
-@@ -1696,8 +1696,13 @@
+@@ -1696,8 +1696,13 @@ MOZJS_MINOR_VERSION=`echo $MOZILLA_VERSION | sed "s|^[0-9]*\.\([0-9]*\).*|\1|"`
  MOZJS_PATCH_VERSION=`echo $MOZILLA_VERSION | sed "s|^[0-9]*\.[0-9]*[^0-9]*||"`
  IS_ALPHA=`echo $MOZILLA_VERSION | grep '[ab]'`
  
@@ -23,11 +45,11 @@ diff --git a/js/src/configure b/js/src/configure
  
  
  if test -n "$IS_ALPHA"; then
-
 diff --git a/js/src/configure.in b/js/src/configure.in
+index 534d2cea..a10bc77d 100644
 --- a/js/src/configure.in
 +++ b/js/src/configure.in
-@@ -234,16 +234,13 @@ MOZJS_MINOR_VERSION=`echo $MOZILLA_VERSI
+@@ -252,16 +252,13 @@ MOZJS_MINOR_VERSION=`echo $MOZILLA_VERSION | sed "s|^[0-9]*\.\([0-9]*\).*|\1|"`
  MOZJS_PATCH_VERSION=`echo $MOZILLA_VERSION | sed "s|^[0-9]*\.[0-9]*[^0-9]*||"`
  IS_ALPHA=`echo $MOZILLA_VERSION | grep '[ab]'`
  
@@ -49,17 +71,6 @@ diff --git a/js/src/configure.in b/js/src/configure.in
  
  changequote([,])
  if test -n "$IS_ALPHA"; then
+-- 
+2.11.1
 
-diff -r 80a9e64d75f5 js/src/Makefile.in
---- a/js/src/Makefile.in        Wed Jun 25 15:11:42 2014 +0200
-+++ b/js/src/Makefile.in        Sat Jul 05 14:08:38 2014 +0200
-@@ -273,6 +273,9 @@
- SCRIPTS = $(JS_CONFIG_NAME)
- SDK_BINARY = $(JS_CONFIG_NAME)
- 
-+$(JS_CONFIG_NAME): js-config
-+	cp $^ $@
-+
- $(LIBRARY_NAME).pc: js.pc
- 	cp $^ $@
- 

@@ -1,68 +1,56 @@
-# === Fix the SM38 tracelogger ===
-# This patch is a squashed version of several patches that were adapted
-# to fix failing hunks.
-#
-# Applied in the following order, they are:
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1223767
-#    Assertion failure: i < size_, at js/src/vm/TraceLoggingTypes.h:210 
-#    Also fix stop-information to make reduce.py work correctly.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1227914
-#    Limit the memory tracelogger can take.
-#    This causes tracelogger to flush data to the disk regularly and prevents out of 
-#    memory issues if a lot of data gets logged.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1155618
-#    Fix tracelogger destructor that touches possibly uninitialised hash table.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1223636
-#    Don't treat extraTextId as containing only extra ids.
-#    This fixes an assertion failure: id == nextTextId at js/src/vm/TraceLoggingGraph.cpp
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1227028
-#    Fix when to keep the payload of a TraceLogger event.
-#    This fixes an assertion failure: textId < uint32_t(1 << 31) at js/src/vm/TraceLoggingGraph.h
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1266649
-#    Handle failing to add to pointermap gracefully.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1280648
-#    Don't cache based on pointers to movable GC things.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1224123
-#    Fix the use of LastEntryId in tracelogger.h.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1231170
-#    Use size in debugger instead of the current id to track last logged item.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1221844
-#    Move TraceLogger_Invalidation to LOG_ITEM.
-#    Add some debug checks to logTimestamp.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1255766
-#    Also mark resizing of memory.
-# * https://bugzilla.mozilla.org/show_bug.cgi?id=1259403
-#    Only increase capacity by multiples of 2.
-#    Always make sure there are 3 free slots for events.
-# ===
+From 65eac5441770ac1f0ac143e39aea5c7db0c46f1f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
+Date: Wed, 15 Feb 2017 20:49:01 +0000
+Subject: [PATCH 2/5] mozjs38-fix-tracelogger
 
-diff --git a/js/src/jit-test/tests/tracelogger/bug1231170.js b/js/src/jit-test/tests/tracelogger/bug1231170.js
-new file mode 100644
-index 0000000..023e93e
---- /dev/null
-+++ b/js/src/jit-test/tests/tracelogger/bug1231170.js
-@@ -0,0 +1,3 @@
-+var du = new Debugger();
-+if (typeof du.drainTraceLogger === "function")
-+    du.drainTraceLogger();
-diff --git a/js/src/jit-test/tests/tracelogger/bug1266649.js b/js/src/jit-test/tests/tracelogger/bug1266649.js
-new file mode 100644
-index 0000000..81ae7ad
---- /dev/null
-+++ b/js/src/jit-test/tests/tracelogger/bug1266649.js
-@@ -0,0 +1,10 @@
-+
-+var du = new Debugger();
-+if (typeof du.setupTraceLogger === "function" &&
-+    typeof oomTest === 'function')
-+{
-+    du.setupTraceLogger({
-+        Scripts: true
-+    })
-+    oomTest(() => function(){});
-+}
+=== Fix the SM38 tracelogger ===
+This patch is a squashed version of several patches that were adapted
+to fix failing hunks.
+
+Applied in the following order, they are:
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1223767
+   Assertion failure: i < size_, at js/src/vm/TraceLoggingTypes.h:210
+   Also fix stop-information to make reduce.py work correctly.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1227914
+   Limit the memory tracelogger can take.
+   This causes tracelogger to flush data to the disk regularly and prevents out of
+   memory issues if a lot of data gets logged.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1155618
+   Fix tracelogger destructor that touches possibly uninitialised hash table.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1223636
+   Don't treat extraTextId as containing only extra ids.
+   This fixes an assertion failure: id == nextTextId at js/src/vm/TraceLoggingGraph.cpp
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1227028
+   Fix when to keep the payload of a TraceLogger event.
+   This fixes an assertion failure: textId < uint32_t(1 << 31) at js/src/vm/TraceLoggingGraph.h
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1266649
+   Handle failing to add to pointermap gracefully.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1280648
+   Don't cache based on pointers to movable GC things.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1224123
+   Fix the use of LastEntryId in tracelogger.h.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1231170
+   Use size in debugger instead of the current id to track last logged item.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1221844
+   Move TraceLogger_Invalidation to LOG_ITEM.
+   Add some debug checks to logTimestamp.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1255766
+   Also mark resizing of memory.
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1259403
+   Only increase capacity by multiples of 2.
+   Always make sure there are 3 free slots for events.
+---
+ js/src/jit/Ion.cpp              |   2 +
+ js/src/vm/Debugger.cpp          |  12 ++--
+ js/src/vm/Debugger.h            |   4 +-
+ js/src/vm/TraceLogging.cpp      | 135 ++++++++++++++++++++++++++++------------
+ js/src/vm/TraceLogging.h        |  38 ++++++-----
+ js/src/vm/TraceLoggingGraph.cpp |   4 +-
+ js/src/vm/TraceLoggingTypes.h   |  18 ++++--
+ 7 files changed, 145 insertions(+), 68 deletions(-)
+
 diff --git a/js/src/jit/Ion.cpp b/js/src/jit/Ion.cpp
-index 93e2fda..09049d6 100644
+index 93e2fda3..09049d68 100644
 --- a/js/src/jit/Ion.cpp
 +++ b/js/src/jit/Ion.cpp
 @@ -1055,6 +1055,8 @@ IonScript::Destroy(FreeOp* fop, IonScript* script)
@@ -75,7 +63,7 @@ index 93e2fda..09049d6 100644
  }
  
 diff --git a/js/src/vm/Debugger.cpp b/js/src/vm/Debugger.cpp
-index 26262fd..af7f313 100644
+index 26262fd4..af7f313c 100644
 --- a/js/src/vm/Debugger.cpp
 +++ b/js/src/vm/Debugger.cpp
 @@ -369,10 +369,10 @@ Debugger::Debugger(JSContext* cx, NativeObject* dbg)
@@ -117,7 +105,7 @@ index 26262fd..af7f313 100644
  
      RootedObject array(cx, NewDenseEmptyArray(cx));
 diff --git a/js/src/vm/Debugger.h b/js/src/vm/Debugger.h
-index 8cac36a..c92d685 100644
+index 8cac36ae..c92d6854 100644
 --- a/js/src/vm/Debugger.h
 +++ b/js/src/vm/Debugger.h
 @@ -314,10 +314,10 @@ class Debugger : private mozilla::LinkedListElement<Debugger>
@@ -134,7 +122,7 @@ index 8cac36a..c92d685 100644
  
      class FrameRange;
 diff --git a/js/src/vm/TraceLogging.cpp b/js/src/vm/TraceLogging.cpp
-index 6715b36..9766a6f 100644
+index 6715b369..9766a6fa 100644
 --- a/js/src/vm/TraceLogging.cpp
 +++ b/js/src/vm/TraceLogging.cpp
 @@ -131,7 +131,7 @@ TraceLoggerThread::init()
@@ -417,7 +405,7 @@ index 6715b36..9766a6f 100644
 +    return *this;
 +}
 diff --git a/js/src/vm/TraceLogging.h b/js/src/vm/TraceLogging.h
-index a124dcb..91a1eb0 100644
+index a124dcb2..91a1eb0f 100644
 --- a/js/src/vm/TraceLogging.h
 +++ b/js/src/vm/TraceLogging.h
 @@ -110,6 +110,9 @@ class TraceLoggerEvent {
@@ -521,7 +509,7 @@ index a124dcb..91a1eb0 100644
    public:
      static unsigned offsetOfEnabled() {
 diff --git a/js/src/vm/TraceLoggingGraph.cpp b/js/src/vm/TraceLoggingGraph.cpp
-index d1b7f2e..a4eb273 100644
+index d1b7f2e5..a4eb273b 100644
 --- a/js/src/vm/TraceLoggingGraph.cpp
 +++ b/js/src/vm/TraceLoggingGraph.cpp
 @@ -276,7 +276,7 @@ TraceLoggerGraph::flush()
@@ -543,7 +531,7 @@ index d1b7f2e..a4eb273 100644
          if (!updateHasChildren(parent.treeId()))
              return false;
 diff --git a/js/src/vm/TraceLoggingTypes.h b/js/src/vm/TraceLoggingTypes.h
-index f1c9d0c..10b76d6 100644
+index f1c9d0cc..10b76d6f 100644
 --- a/js/src/vm/TraceLoggingTypes.h
 +++ b/js/src/vm/TraceLoggingTypes.h
 @@ -21,7 +21,6 @@
@@ -601,3 +589,6 @@ index f1c9d0c..10b76d6 100644
          if (!entries)
              return false;
  
+-- 
+2.11.1
+
