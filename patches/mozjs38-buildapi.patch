@@ -18,10 +18,10 @@ index 0000000..93ef339
 +#!/bin/sh -x
 +cat >Makefile <<ENDMAKEFILE
 +all:
-+	cd js/src && $(MAKE)
++	cd js/src && \$(MAKE)
 +
 +install:
-+	cd js/src && $(MAKE) install DESTDIR=$(DESTDIR)
++	cd js/src && \$(MAKE) install DESTDIR=\$(DESTDIR)
 +ENDMAKEFILE
 +srcdir=$(readlink -f $(dirname $0))
 +mkdir -p js/src
