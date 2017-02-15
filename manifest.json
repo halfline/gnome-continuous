@@ -1389,7 +1389,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 120,
+	"build-epoch": {"version": 121,
 		        "all": false,
 		        "component-names": [ "mozjs38" ]}
 }

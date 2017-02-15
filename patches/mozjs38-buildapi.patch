@@ -5,8 +5,8 @@ Subject: [PATCH] build: Add toplevel trampoline configure/Makefile
 
 These just invoke the ones in js/src.
 ---
- configure |    12 ++++++++++++
- 1 file changed, 12 insertions(+), 0 deletions(-)
+ configure |    13 +++++++++++++
+ 1 file changed, 13 insertions(+), 0 deletions(-)
  create mode 100755 configure
 
 diff --git a/configure b/configure
@@ -14,7 +14,7 @@ new file mode 100755
 index 0000000..93ef339
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,12 @@
+@@ -0,0 +1,13 @@
 +#!/bin/sh -x
 +cat >Makefile <<ENDMAKEFILE
 +all:
@@ -26,6 +26,7 @@ index 0000000..93ef339
 +srcdir=$(readlink -f $(dirname $0))
 +mkdir -p js/src
 +cd js/src
++touch $srcdir/js/src/configure  # timestamp wrong, because patched
 +exec $srcdir/js/src/configure "$@"
 -- 
 1.7.1
