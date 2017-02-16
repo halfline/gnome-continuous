@@ -430,11 +430,7 @@
 
 		{"src": "fd:xcb/util"},
 
-		{"src": "fd:xorg/driver/xf86-input-keyboard"},
-
-		{"src": "fd:xorg/driver/xf86-input-mouse"},
-
-		{"src": "fd:xorg/driver/xf86-input-evdev"},
+		{"src": "fd:xorg/driver/xf86-input-libinput"},
 
                 {"src": "git:git://github.com/xkbcommon/libxkbcommon"},
 
