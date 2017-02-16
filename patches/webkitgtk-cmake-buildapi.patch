@@ -1,4 +1,4 @@
-From ee4248dcfbd1bda8e920cc7708b1350a13890ba4 Mon Sep 17 00:00:00 2001
+From 7589d8dda37cb4f9cbfcb25cf4c010770a863cb2 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Fri, 21 Nov 2014 11:12:07 +0100
 Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
@@ -15,16 +15,16 @@ v3:
 
 See https://github.com/cgwalters/build-api
 ---
- configure | 69 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 69 insertions(+)
+ configure | 93 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 93 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..c831269
+index 0000000..13ceb9a
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,69 @@
+@@ -0,0 +1,93 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -51,6 +51,30 @@ index 0000000..c831269
 +        return 1
 +    fi
 +}
++
++sanitycheck() {
++    # $1 = arg name
++    # $1 = arg command
++    # $2 = arg alternates
++    local cmd=$( which $2 2>/dev/null )
++    if [ -x "$cmd" ]; then
++        read "$1" <<< "$cmd"
++        return 0
++    fi
++    test -z $3 || {
++        for alt in $3; do
++            cmd=$( which $alt 2>/dev/null )
++            if [ -x "$cmd" ]; then
++                read "$1" <<< "$cmd"
++                return 0
++            fi
++        done
++    }
++    echo -e "\e[1;31mERROR\e[0m: Command '$2' not found"
++    exit 1
++}
++
++sanitycheck NINJA 'ninja' 'ninja-build'
 +
 +while (($# > 0)); do
 +    case "${1%%=*}" in
