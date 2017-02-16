@@ -574,7 +574,7 @@
 
 		{"src": "0pointer:libatasmart.git"},
 
-		{"src": "https://github.com/storaged-project/udisks.git",
+		{"src": "git:https://github.com/storaged-project/udisks.git",
 		 "config-opts": ["--disable-man"]},
 
                 {"src": "fd:pm-utils"},
