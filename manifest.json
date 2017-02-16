@@ -103,8 +103,6 @@
 		                 "--disable-vapigen"]},
 
 		{"src": "gnome:vala",
-                 "tag": "73105043ef3b12cdac538d4a9b8059ad7e02f8d5",
-                 "tag-reason": "Fails to build from master with a gobject vapi error",
 		 "config-opts": ["--enable-vapigen"]},
 
 		{"src": "git:git://github.com/seccomp/libseccomp",
