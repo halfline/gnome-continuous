@@ -1,25 +1,32 @@
-From d979d6bfe8f53bded7fbb65047de8059672c790f Mon Sep 17 00:00:00 2001
-From: Debarshi Ray <debarshir@gnome.org>
+From fde3782821f1f1378be8606877bc8ccbc1f63652 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Fri, 21 Nov 2014 11:12:07 +0100
 Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
  API
 
+Original patch from: Debarshi Ray <debarshir@gnome.org>
+
+v2:
+  - Fix whitespace issues
+  - Add -GNinja switch
+
 See https://github.com/cgwalters/build-api
 ---
- configure                        | 58 ++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 58 insertions(+)
+ configure | 59 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 59 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..f53a4f9
+index 0000000..ca5ed44
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,57 @@
+@@ -0,0 +1,59 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
 +# Copyright 2014 Debarshi Ray <debarshir@gnome.org>
++# Copyright 2017 Emmanuele Bassi <ebassi@gnome.org>
 +# Licensed under the new-BSD license (http://www.opensource.org/licenses/bsd-license.php)
 +
 +prefix=/usr
@@ -44,16 +51,16 @@ index 0000000..f53a4f9
 +
 +while (($# > 0)); do
 +    case "${1%%=*}" in
-+      	--prefix) read_arg prefix "$@" || shift;;
-+      	--bindir) read_arg bindir "$@" || shift;;
-+      	--sbindir) read_arg sbindir "$@" || shift;;
-+      	--libexecdir) read_arg libexecdir "$@" || shift;;
-+      	--datarootdir) read_arg datarootdir "$@" || shift;;
-+      	--datadir) read_arg datadir "$@" || shift;;
-+      	--sysconfdir) read_arg sysconfdir "$@" || shift;;
-+      	--libdir) read_arg libdir "$@" || shift;;
-+      	--mandir) read_arg mandir "$@" || shift;;
-+	*) echo "Ignoring unknown option '$1'";;
++        --prefix) read_arg prefix "$@" || shift;;
++        --bindir) read_arg bindir "$@" || shift;;
++        --sbindir) read_arg sbindir "$@" || shift;;
++        --libexecdir) read_arg libexecdir "$@" || shift;;
++        --datarootdir) read_arg datarootdir "$@" || shift;;
++        --datadir) read_arg datadir "$@" || shift;;
++        --sysconfdir) read_arg sysconfdir "$@" || shift;;
++        --libdir) read_arg libdir "$@" || shift;;
++        --mandir) read_arg mandir "$@" || shift;;
++        *) echo "Ignoring unknown option '$1'";;
 +    esac
 +    shift
 +done
@@ -72,7 +79,8 @@ index 0000000..f53a4f9
 +     -DLIB_INSTALL_DIR:PATH=${libdir} \
 +     -DCMAKE_C_FLAGS="-m64 -mtune=generic -Wl,--no-keep-memory" \
 +     -DCMAKE_CXX_FLAGS="-m64 -mtune=generic -Wl,--no-keep-memory" \
++     -GNinja \
 +     ${srcdir}
 -- 
-2.4.3
+2.9.3
 
