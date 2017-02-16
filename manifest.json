@@ -1384,7 +1384,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 123,
+	"build-epoch": {"version": 124,
 		        "all": false,
-		        "component-names": [ "libwebp", "webkitgtk" ]}
+		        "component-names": [ "mozjs38" ]}
 }
