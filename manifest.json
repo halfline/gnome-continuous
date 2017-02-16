@@ -952,7 +952,9 @@
 
 		{"src": "gnome:libgdata"},
 
-		{"src": "gnome:gmime"},
+		{"src": "gnome:gmime",
+                 "tag": "cf0ec8b67396fa0edd21b859757333c6f0d5ba63",
+                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=778795"},
 
 		{"src": "gnome:totem-pl-parser"},
 
