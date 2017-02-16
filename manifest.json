@@ -893,6 +893,7 @@
                      "mozjs38-1269317.patch",
                      "mozjs38-release-number.patch",
                      "mozjs38-shell-version.patch",
+                     "mozjs38-copy-headers.patch",
                      "mozjs38-pkg-config-version.patch"],
          "config-opts": ["--enable-posix-nspr-emulation",
                          "--disable-tests",

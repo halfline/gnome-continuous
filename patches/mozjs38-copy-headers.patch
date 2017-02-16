@@ -1,0 +1,29 @@
+From 130ad767ef8753959e30b73610b53e4be9b12ab7 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
+Date: Thu, 16 Feb 2017 21:32:30 +0000
+Subject: [PATCH] copy-headers
+
+Description: Copy headers on install instead of symlinking
+Author: Rico Tzschichholz <ricotz@ubuntu.com>
+Forwarded: no
+Last-Update: 2014-10-29
+---
+ python/mozbuild/mozbuild/backend/recursivemake.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/python/mozbuild/mozbuild/backend/recursivemake.py b/python/mozbuild/mozbuild/backend/recursivemake.py
+index 0c4eb38d..f10d2cd9 100644
+--- a/python/mozbuild/mozbuild/backend/recursivemake.py
++++ b/python/mozbuild/mozbuild/backend/recursivemake.py
+@@ -796,7 +796,7 @@ class RecursiveMakeBackend(CommonBackend):
+             return
+ 
+         for source, dest, _ in self._walk_hierarchy(obj, exports):
+-            self._install_manifests['dist_include'].add_symlink(source, dest)
++            self._install_manifests['dist_include'].add_copy(source, dest)
+ 
+             if not os.path.exists(source):
+                 raise Exception('File listed in EXPORTS does not exist: %s' % source)
+-- 
+2.11.1
+
