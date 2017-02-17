@@ -1093,6 +1093,13 @@
 
 		{"src": "gnome:orca"},
 
+		{"src": "fd:py2cairo",
+		 "patches": ["pycairo-buildsys.patch"]},
+
+		{"src": "gnome:pygobject",
+		 "name": "pygobject-python2",
+		 "config-opts": ["--with-python=python2"]},
+
 		{"src": "gnome:caribou"},
 
 		{"src": "gnome:gnome-shell",
