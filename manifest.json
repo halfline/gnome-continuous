@@ -1300,7 +1300,7 @@
                 {"src": "gnome:gnome-maps"},
 
 		{"src": "libgit2:libgit2",
-		 "branch": "maint/v0.24",
+		 "branch": "maint/v0.25",
 		 "branch-reason": "libgit2-glib does not track master",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
 
