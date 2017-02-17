@@ -1385,7 +1385,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 124,
+	"build-epoch": {"version": 125,
 		        "all": false,
-		        "component-names": [ "mozjs38" ]}
+		        "component-names": [ "pygobject" ]}
 }
