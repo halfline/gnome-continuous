@@ -1060,10 +1060,9 @@
 		{"src": "gnome:cheese"},
 
 		{"src": "gnome:gnome-control-center",
-		 "patches": ["gnome-control-center-build-Drop-hardcoded-requirements-on-Linux.patch"],
+		 "patches": ["gnome-control-center-remove-panels.patch"],
 		 "patches-reasons": ["https://bugzilla.gnome.org/show_bug.cgi?id=755063"],
-		 "config-opts": ["--disable-documentation",
-				 "--disable-cups"]},
+		 "config-opts": ["--disable-documentation"]},
 
 		{"src": "gnome:gnome-initial-setup",
 		 "config-opts": ["--disable-welcome-tour"]},
