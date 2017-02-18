@@ -1260,10 +1260,8 @@
 				 "--disable-autoar"]},
 
 		{"src": "gnome:evolution-ews",
-		 "tag": "a41cfe62750bcfb82fe964408c55746fb4e14cc9",
-		 "tag-reason": "this module uses cmake now, tag until patch is made to make it compatible with continuous",
 		 "irc_room": "evolution",
-		 "config-opts": ["--with-internal-lzx"]},
+		 "patches": ["patches/evolution-ews-buildapi.patch"]},
 
 		{"src": "git:git://git.libssh.org/projects/libssh.git",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
