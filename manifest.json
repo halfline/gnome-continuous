@@ -1248,16 +1248,8 @@
 		{"src": "gnome:gtkhtml"},
 
 		{"src": "gnome:evolution",
-		 "tag": "dad728dfd69aaba8edfe84a8f922a012dbad32ac",
-		 "tag-reason": "this module uses cmake now, tag until patch is made to make it compatible with continuous",
 		 "irc_room": "evolution",
-		 "config-opts": ["--enable-installed-tests",
-		 		 "--disable-bogofilter",
-				 "--disable-spamassassin",
-				 "--disable-text-highlight",
-				 "--disable-pst-import",
-				 "--disable-libcryptui",
-				 "--disable-autoar"]},
+		"patches": ["patches/evolution-buildapi.patch"]},
 
 		{"src": "gnome:evolution-ews",
 		 "irc_room": "evolution",
