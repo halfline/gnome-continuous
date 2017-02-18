@@ -1249,11 +1249,11 @@
 
 		{"src": "gnome:evolution",
 		 "irc_room": "evolution",
-		"patches": ["patches/evolution-buildapi.patch"]},
+		"patches": ["evolution-buildapi.patch"]},
 
 		{"src": "gnome:evolution-ews",
 		 "irc_room": "evolution",
-		 "patches": ["patches/evolution-ews-buildapi.patch"]},
+		 "patches": ["evolution-ews-buildapi.patch"]},
 
 		{"src": "git:git://git.libssh.org/projects/libssh.git",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
