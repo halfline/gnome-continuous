@@ -812,9 +812,7 @@
       
                 {"src": "git:https://chromium.googlesource.com/webm/libwebp"},
 
-                {"src": "tarball:http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz",
-		 "name": "enchant",
-		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"}, 
+		{"src": "git:https://github.com/AbiWord/enchant.git"},
 
 		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.15.4.tar.xz",
 		 "name": "webkitgtk",
