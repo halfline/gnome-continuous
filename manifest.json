@@ -813,7 +813,7 @@
                 {"src": "git:https://chromium.googlesource.com/webm/libwebp"},
 
 		{"src": "git:https://github.com/hunspell/hunspell.git",
-		 "patches:" ["hunspell-autogen.patch"]},
+		 "patches": ["hunspell-autogen.patch"]},
 
 		{"src": "tarball:https://github.com/AbiWord/enchant/archive/enchant-1-6-1.tar.gz",
 		 "name": "enchant",
