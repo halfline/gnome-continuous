@@ -812,6 +812,8 @@
       
                 {"src": "git:https://chromium.googlesource.com/webm/libwebp"},
 
+		{"src": "git:https://github.com/hunspell/hunspell.git"},
+
 		{"src": "tarball:https://github.com/AbiWord/enchant/archive/enchant-1-6-1.tar.gz",
 		 "name": "enchant",
 		 "checksum": "ed2b11211a571ab5f963debf4c3bf3fc46541bb9cbb441b2997bd871ba8618d4"},
