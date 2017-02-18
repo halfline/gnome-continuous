@@ -796,7 +796,7 @@
 				 "--disable-examples",
 				 "--disable-fatal-warnings"]},
 
-		{"src": "fd:libva"},
+		{"src": "git:https://github.com/01org/libva.git"},
 
 		{"src": "fd-gstreamer:gstreamer-vaapi"},
 
