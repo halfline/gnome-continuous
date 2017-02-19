@@ -76,7 +76,8 @@
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
                  "config-opts": ["--disable-modular-tests",
 				 "--enable-installed-tests",
-				 "--with-pcre=internal"]},
+				 "--with-pcre=internal"],
+                 "irc_room": "gtk+"},
 
 		{"src": "gnome:gnome-common",
 		 "component": "devel"},
@@ -629,7 +630,8 @@
 
 		{"src": "gnome:gtk+",
 		 "name": "gtk2",
-		 "branch": "gtk-2-24"},
+		 "branch": "gtk-2-24",
+                 "irc_room": "gtk+"},
 
 		{"src": "gnome:gtk-engines",
 		 "branch": "gtk-engines-2-22"},
@@ -639,14 +641,16 @@
 		 "branch": "gtk-3-22",
 		 "config-opts": ["--enable-installed-tests",
                                  "--enable-wayland-backend",
-                                 "--enable-x11-backend"]},
+                                 "--enable-x11-backend"],
+                 "irc_room": "gtk+"},
 
 
                 {"src": "gnome:gtk+",
                  "name": "gtk4",
                  "config-opts": ["--enable-installed-tests",
                                  "--enable-wayland-backend",
-                                 "--enable-x11-backend"]},
+                                 "--enable-x11-backend"],
+                 "irc_room": "gtk+"},
 
 	        {"src": "fd:plymouth",
 		 "initramfs-depends": true,
