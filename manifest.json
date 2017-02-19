@@ -1382,7 +1382,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 125,
+	"build-epoch": {"version": 126,
 		        "all": false,
-		        "component-names": [ "pygobject" ]}
+		        "component-names": [ "jhbuild" ]}
 }
