@@ -1,4 +1,4 @@
-From 10f317c113591dd887a2beba3a7a24d5323fd334 Mon Sep 17 00:00:00 2001
+From 74cfa1c78d05303c01c011d30f1feeb830c2ec54 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Fri, 21 Oct 2016 04:13:24 +0530
 Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
@@ -10,16 +10,16 @@ v2:
   - Use the Ninja generator for CMake
   - Perform various sanity checks
 ---
- configure | 100 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 100 insertions(+)
+ configure | 101 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 101 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000000..a8c9499d86
+index 0000000000..f9efc09ecd
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,100 @@
+@@ -0,0 +1,101 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -115,6 +115,7 @@ index 0000000000..a8c9499d86
 +     -DENABLE_AUTOAR=OFF \
 +     -DENABLE_LIBCRYPTUI=OFF \
 +     -DENABLE_PST_IMPORT=OFF \
++     -DENABLE_TEXT_HIGHLIGHT=OFF \
 +     -DENABLE_YTNEF=OFF \
 +     -DWITH_OPENLDAP=OFF \
 +     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
