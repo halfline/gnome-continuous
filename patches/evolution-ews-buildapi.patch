@@ -1,4 +1,4 @@
-From 53458f7017027bccec9264b412d9b70316fe5035 Mon Sep 17 00:00:00 2001
+From b06079905a058552d26a0874d2995a97842d24bd Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Fri, 21 Oct 2016 04:13:24 +0530
 Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
@@ -6,20 +6,23 @@ Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
 
 See http://people.gnome.org/~walters/docs/build-api.txt
 
+v3:
+  - Override sysconfdir to avoid collisions
+
 v2:
   - Use the Ninja generator for CMake
   - Perform various sanity checks
 ---
- configure | 96 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 96 insertions(+)
+ configure | 97 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 97 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..8c47685
+index 0000000..6dfa16d
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,96 @@
+@@ -0,0 +1,97 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -114,8 +117,9 @@ index 0000000..8c47685
 +exec ${CMAKE} \
 +     -DWITH_MSPACK=OFF \
 +     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
++     -DSYSCONF_INSTALL_DIR:PATH=${sysconfdir} \
 +     -GNinja \
 +     ${srcdir}
 -- 
-2.11.1
+2.9.3
 
