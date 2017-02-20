@@ -1108,8 +1108,6 @@
 		 "config-opts": ["--with-python=python2"]},
 
 		{"src": "gnome:caribou",
-                 "tag": "f540a9e4b52478588618ec60813f0b95e82bc0fc",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=778947",
 		 "config-opts": ["PYTHON=python3"]},
 
 		{"src": "gnome:gnome-shell",
