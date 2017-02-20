@@ -1107,7 +1107,8 @@
 		 "name": "pygobject-python2",
 		 "config-opts": ["--with-python=python2"]},
 
-		{"src": "gnome:caribou"},
+		{"src": "gnome:caribou",
+		 "config-opts": ["PYTHON=python3"]},
 
 		{"src": "gnome:gnome-shell",
                  "irc_room": "gnome-shell",
