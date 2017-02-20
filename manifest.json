@@ -690,7 +690,9 @@
 		 "config-opts": ["--disable-gtk-doc"]},
 
 		{"src": "fd-gstreamer:gstreamer",
-		 "patches": ["gstreamer-build-api.patch"]},
+		 "config-opts": ["--with-bash-completion-dir=no",
+		                 "--disable-tests",
+		                 "--disable-fatal-warnings"]},
 
 		{"src": "fd-gstreamer:gst-plugins-base",
 		 "config-opts": ["--with-gtk=3.0",
