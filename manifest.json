@@ -400,7 +400,7 @@
                      "--enable-gbm",
                      "--enable-xa",
                      "--with-llvm-config-dir=/usr/bin/llvm3.3",
-                     "--with-gallium-drivers=svga,r300,r600,nouveau,swrast,virgl",
+                     "--with-gallium-drivers=svga,r300,nouveau,swrast,virgl",
                      "--enable-llvm",
                      "--with-dri-drivers=nouveau,radeon,r200,i915,i965,swrast"
                      ]},
