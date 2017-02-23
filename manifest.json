@@ -383,8 +383,8 @@
 
                 {"src": "fd-mesa:mesa",
                  "cflags": {
-                     "x86_64": "-g -m64 -mtune=generic -fno-rtti",
-                     "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-rtti"
+                     "x86_64": "-g -m64 -mtune=generic",
+                     "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
                  },
                  "patches": ["mesa-nv50-fix-build.patch", "mesa-llvm-config-dir.patch"],
                  "config-opts": [
