@@ -1158,6 +1158,10 @@
 
 		{"src": "gnome:gedit"},
 
+		{"src": "git:git://github.com/hughsie/fwupd.git",
+		 "config-opts": ["--disable-colorhug",
+		                 "--disable-uefi"]},
+
 		{"src": "gnome:gnome-software",
 		 "tag": "00b48f6e88e6b303e0d7c211f9717335870f0482",
 		 "tag-reason": "It hard depends on valgrind",
