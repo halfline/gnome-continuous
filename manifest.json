@@ -960,9 +960,11 @@
 		{"src": "gnome:totem-pl-parser"},
 
                 {"src": "gnome:grilo",
-		 "config-opts": ["--disable-vala"]},
+		 "config-opts": ["--disable-vala"]
+		 "patches": ["grilo-build-api.patch"]},
 
-                {"src": "gnome:grilo-plugins"},
+		{"src": "gnome:grilo-plugins",
+		 "patches": ["grilo-plugins-build-api.patch"]},
 
 		{"src": "gnome:libzapojit"},
 
