@@ -416,7 +416,8 @@
 		 "config-opts": ["--with-xkb-rules-symlink=xorg",
 		                 "--with-xkb-base=/usr/share/X11/xkb"]},
 
-		{"src": "anholt:libepoxy"},
+		{"src": "anholt:libepoxy",
+		 "patches": ["libepoxy-meson-buildapi.patch"]},
 
 		{"src": "fd:xcb/util-keysyms",
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
