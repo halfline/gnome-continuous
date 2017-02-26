@@ -1,4 +1,4 @@
-From 1d2b3950f63259399a220f5db2882bd4bd4bc008 Mon Sep 17 00:00:00 2001
+From 0469669f80eb90fdf6ca0978b555a383b3e4cf80 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Mon, 20 Feb 2017 11:33:49 +0000
 Subject: [PATCH] Add build-api wrapper for Meson/Ninja
@@ -14,7 +14,7 @@ v2:
 
 diff --git a/configure b/configure
 new file mode 100755
-index 000000000..eed78b1ee
+index 000000000..1ca778861
 --- /dev/null
 +++ b/configure
 @@ -0,0 +1,129 @@
@@ -133,7 +133,7 @@ index 000000000..eed78b1ee
 +echo "  mandir:...... ${mandir}"
 +echo "  includedir:.. ${includedir}"
 +
-+exec CC=gcc CXX=g++ ${MESON} \
++exec "CC=gcc CXX=g++ ${MESON}" \
 +	--prefix=${prefix} \
 +	--libdir=${libdir} \
 +	--libexecdir=${libexecdir} \
