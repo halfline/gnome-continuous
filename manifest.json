@@ -605,7 +605,7 @@
 				 "--disable-argyllcms-sensor",
 				 "--disable-installed-tests"]},
 
-		{"src": "ebassi:graphene"
+		{"src": "ebassi:graphene",
 		 "patches": ["graphene-build-api.patch"]},
 
 		{"src": "gnome:gconf",
@@ -961,7 +961,7 @@
 		{"src": "gnome:totem-pl-parser"},
 
                 {"src": "gnome:grilo",
-		 "config-opts": ["--disable-vala"]
+		 "config-opts": ["--disable-vala"],
 		 "patches": ["grilo-build-api.patch"]},
 
 		{"src": "gnome:grilo-plugins",
@@ -1147,7 +1147,7 @@
                 {"src": "gnome:gnome-autoar"},
 
 		{"src": "gnome:nautilus",
-		 "config-opts": ["--disable-selinux"]
+		 "config-opts": ["--disable-selinux"],
 		 "patches": ["nautilus-build-api.patch"]},
 
                 {"src": "tarball:http://downloads.sourceforge.net/project/gtkspell/3.0.9/gtkspell3-3.0.9.tar.xz",
