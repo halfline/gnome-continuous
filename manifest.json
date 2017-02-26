@@ -1147,7 +1147,7 @@
                 {"src": "gnome:gnome-autoar"},
 
 		{"src": "gnome:nautilus",
-		 "patches": ["nautilus-build-api.patch"]},
+		 "config-opts": ["--disable-selinux"]},
 
                 {"src": "tarball:http://downloads.sourceforge.net/project/gtkspell/3.0.9/gtkspell3-3.0.9.tar.xz",
 		 "name": "gtkspell3",
