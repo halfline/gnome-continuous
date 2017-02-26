@@ -1,10 +1,13 @@
-From e11ef177c61ba0150c47c0ab8dff46569fc7ea59 Mon Sep 17 00:00:00 2001
+From f722b0df5aaa4b32fb1c34f8838294e174d2843f Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Mon, 20 Feb 2017 11:33:49 +0000
 Subject: [PATCH] Add build-api wrapper for Meson/Ninja
 
 Use Meson and Ninja, instead of autotools.
 
+v3:
+  - Enable CCache
+  - Pass CC and CXX flags to meson and ninja
 v2:
   - Disable CCache
 ---

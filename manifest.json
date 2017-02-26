@@ -607,7 +607,7 @@
 				 "--disable-installed-tests"]},
 
 		{"src": "ebassi:graphene",
-		 "patches": ["graphene-build-api.patch"]},
+		 "patches": ["graphene-meson-buildapi.patch"]},
 
 		{"src": "gnome:gconf",
 		 "config-opts": ["--disable-orbit",
@@ -688,7 +688,7 @@
 		 "config-opts": ["--disable-gtk-doc"]},
 
 		{"src": "fd-gstreamer:gstreamer",
-		 "patches": ["gstreamer-build-api.patch"]},
+		 "patches": ["gstreamer-meson-buildapi.patch"]},
 
 		{"src": "fd-gstreamer:gst-plugins-base",
 		 "config-opts": ["--with-gtk=3.0",
@@ -962,10 +962,10 @@
 		{"src": "gnome:totem-pl-parser"},
 
                 {"src": "gnome:grilo",
-		 "patches": ["grilo-build-api.patch"]},
+		 "patches": ["grilo-meson-buildapi.patch"]},
 
 		{"src": "gnome:grilo-plugins",
-		 "patches": ["grilo-plugins-build-api.patch"]},
+		 "patches": ["grilo-plugins-meson-buildapi.patch"]},
 
 		{"src": "gnome:libzapojit"},
 
