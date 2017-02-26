@@ -1,4 +1,4 @@
-From 0469669f80eb90fdf6ca0978b555a383b3e4cf80 Mon Sep 17 00:00:00 2001
+From e11ef177c61ba0150c47c0ab8dff46569fc7ea59 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Mon, 20 Feb 2017 11:33:49 +0000
 Subject: [PATCH] Add build-api wrapper for Meson/Ninja
@@ -8,16 +8,16 @@ Use Meson and Ninja, instead of autotools.
 v2:
   - Disable CCache
 ---
- configure | 129 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 129 insertions(+)
+ configure | 130 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 130 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 000000000..1ca778861
+index 000000000..33bca5167
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,129 @@
+@@ -0,0 +1,130 @@
 +#!/bin/bash
 +# configure script adapter for Meson
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -133,7 +133,8 @@ index 000000000..1ca778861
 +echo "  mandir:...... ${mandir}"
 +echo "  includedir:.. ${includedir}"
 +
-+exec "CC=gcc CXX=g++ ${MESON}" \
++export CC=gcc CXX=g++
++exec ${MESON} \
 +	--prefix=${prefix} \
 +	--libdir=${libdir} \
 +	--libexecdir=${libexecdir} \
