@@ -1386,7 +1386,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 128,
+	"build-epoch": {"version": 129,
 		        "all": false,
-		        "component-names": [ "gdk-pixbuf" ]}
+		        "component-names": [ "nautilus" ]}
 }
