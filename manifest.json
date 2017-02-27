@@ -1249,8 +1249,6 @@
 		{"src": "gnome:gnome-documents",
 		 "config-opts": ["--disable-documentation"]},
 
-		{"src": "gnome:gtkhtml"},
-
 		{"src": "gnome:evolution",
 		 "irc_room": "evolution",
 		"patches": ["evolution-buildapi.patch"]},
