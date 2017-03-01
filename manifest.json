@@ -390,7 +390,7 @@
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
                  },
-                 "patches": ["mesa-nv50-fix-build.patch"],
+                 "patches": ["mesa-nv50-fix-build.patch", "mesa-llvm-config-dir.patch"],
                  "config-opts": [
                      "--host=x86_64-gnomeostree-linux",
                      "--disable-asm",
@@ -403,6 +403,7 @@
                      "--enable-shared-glapi",
                      "--enable-gbm",
                      "--enable-xa",
+                     "--with-llvm-config-dir=/usr/bin/llvm3.3",
                      "--with-gallium-drivers=svga,r300,nouveau,swrast,virgl",
                      "--enable-llvm",
 					 "--with-vulkan-drivers=intel",
