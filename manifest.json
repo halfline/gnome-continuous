@@ -1390,7 +1390,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 129,
+	"build-epoch": {"version": 130,
 		        "all": false,
-		        "component-names": [ "nautilus" ]}
+		        "component-names": [ "libxcb" ]}
 }
