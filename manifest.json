@@ -403,7 +403,6 @@
                      "--enable-shared-glapi",
                      "--enable-gbm",
                      "--enable-xa",
-                     "--with-llvm-config-dir=/usr/bin/llvm3.3",
                      "--with-gallium-drivers=svga,r300,nouveau,swrast,virgl",
                      "--enable-llvm",
 					 "--with-vulkan-drivers=intel",
