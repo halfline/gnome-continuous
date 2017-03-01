@@ -26,7 +26,7 @@ const GSystem = imports.gi.GSystem;
 const BUILD_ENV = {
     'HOME' : '/', 
     'HOSTNAME' : 'ostbuild',
-    'LC_ALL': 'C.UTF-8',
+    'LANG': 'C',
     'PATH' : '/usr/bin:/bin:/usr/sbin:/sbin',
     'SHELL' : '/bin/bash',
     'TERM' : 'vt100',
