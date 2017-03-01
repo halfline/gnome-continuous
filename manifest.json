@@ -1390,7 +1390,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 131,
+	"build-epoch": {"version": 132,
 		        "all": false,
-		        "component-names": [ "fd:xcb/libxcb" ]}
+		        "component-names": [ "xcb-libxcb" ]}
 }
