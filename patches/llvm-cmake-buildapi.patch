@@ -1,4 +1,4 @@
-From 555a1a6937fdbb894ccd938bc79030b743be639f Mon Sep 17 00:00:00 2001
+From c165e7db796a1df227b88967f7811c5698e5ddfd Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Wed, 1 Mar 2017 14:47:45 +0000
 Subject: [PATCH] Implement build-api for LLVM
@@ -8,18 +8,15 @@ See:
   https://github.com/cgwalters/build-api
 
 This `configure` script calls CMake and generates a dummy Makefile.
-
-v2:
-  - Replace overrides with the ones Fedora uses
 ---
- configure | 120 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
- 1 file changed, 110 insertions(+), 10 deletions(-)
+ configure | 108 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 98 insertions(+), 10 deletions(-)
 
 diff --git a/configure b/configure
-index bab3a0d..bde1317 100755
+index bab3a0d..6555f90 100755
 --- a/configure
 +++ b/configure
-@@ -1,10 +1,110 @@
+@@ -1,10 +1,98 @@
 -#! /bin/sh
 -echo "################################################################################"
 -echo "################################################################################"
@@ -123,21 +120,9 @@ index bab3a0d..bde1317 100755
 +
 +exec ${CMAKE} \
 +     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
-+     -DBUILD_SHARED_LIBS:BOOL=OFF \
-+     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-+     -DCMAKE_SHARED_LINKER_FLAGS="-Wl,-Bsymbolic -static-libstdc++" \
-+     -DLLVM_LIBDIR_SUFFIX= \
-+     -DLLVM_ENABLE_LIBCXX:BOOL=OFF \
-+     -DLLVM_ENABLE_ZLIB:BOOL=ON \
-+     -DLLVM_BUILD_RUNTIME:BOOL=ON \
-+     -DLLVM_INCLUDE_TOOLS:BOOL=ON \
-+     -DLLVM_BUILD_TOOLS:BOOL=ON \
-+     -DLLVM_BUILD_EXAMPLES:BOOL=OFF \
-+     -DLLVM_ENABLE_DOXYGEN:BOOL=OFF \
-+     -DLLVM_BUILD_LLVM_DYLIB:BOOL=ON \
-+     -DLLVM_DYLIB_EXPORT_ALL:BOOL=ON \
-+     -DLLVM_LINK_LLVM_DYLIB:BOOL=ON \
-+     -DLLVM_INSTALL_TOOLCHAIN_ONLY:BOOL=OFF \
++     -DLLVM_TOOLS_BINARY_DIR:PATH=${bindir} \
++     -DLLVM_MAIN_INCLUDE_DIR:PATH=${includedir} \
++     -DLLVM_LIBRARY_DIR:PATH=${libdir} \
 +     -GNinja \
 +     ${srcdir}
 -- 
