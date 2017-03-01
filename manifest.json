@@ -1392,5 +1392,5 @@
     
 	"build-epoch": {"version": 131,
 		        "all": false,
-		        "component-names": [ "xcb/libxcb" ]}
+		        "component-names": [ "fd:xcb/libxcb" ]}
 }
