@@ -1119,7 +1119,7 @@
 		{"src": "gnome:gnome-shell-extensions",
 		 "config-opts": ["--enable-extensions=classic-mode"]},
 
-                {"src": "git:git://git.fedorahosted.org/git/dogtail.git",
+                {"src": "git:https://github.com/vhumpa/dogtail.git",
                  "tag": "754ceff6e1a310622871478ba4cfd6508e65dbbf",
                  "tag-reason": "python3 mess"},
 
