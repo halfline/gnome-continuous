@@ -1119,7 +1119,8 @@
 		{"src": "gnome:gnome-shell-extensions",
 		 "config-opts": ["--enable-extensions=classic-mode"]},
 
-                {"src": "git:https://gitlab.com/dogtail/dogtail.git"},
+                {"src": "git:https://gitlab.com/dogtail/dogtail.git",
+                 "patches": ["python-dogtail-buildsys.patch"]},
 
 		{"src": "git:git://github.com/r1chardj0n3s/parse.git",
 		"patches": ["parse-buildsys.patch"]},
