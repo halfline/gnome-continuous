@@ -1238,7 +1238,9 @@
                  "checksum": "c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4",
                  "patches": ["exiv2-no-builddir.patch"]},
 
-		{"src": "gnome:gexiv2"},
+		{"src": "gnome:gexiv2",
+                 "tag": "6810c92d7b2978f97ac9750ddf8a6a62b44be4cc",
+                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=779551"},
 
 		{"src": "gnome:gnome-photos",
 		 "config-opts": ["--enable-installed-tests"]},
