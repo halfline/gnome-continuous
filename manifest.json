@@ -386,8 +386,8 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
-		 "tag": "342e5fdb6432e79e5ada2675c3eccf352b167474",
-		 "tag-reason": "Build failure",
+		 "tag": "b3135c3cf36226e391227be4c546a6a0abae6d9d",
+		 "tag-reason": "Build failure with commit e135ce6f08841aaa26685964e5ba3cfb19fd3d36",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
