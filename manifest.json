@@ -386,13 +386,13 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
-		 "tag": "b3135c3cf36226e391227be4c546a6a0abae6d9d",
-		 "tag-reason": "Build failure with commit e135ce6f08841aaa26685964e5ba3cfb19fd3d36",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
                  },
-                 "patches": ["mesa-nv50-fix-build.patch", "mesa-llvm-config-dir.patch"],
+                 "patches": ["mesa-nv50-fix-build.patch",
+			     "mesa-wayland-drm.patch",
+			     "mesa-llvm-config-dir.patch"],
                  "config-opts": [
                      "--host=x86_64-gnomeostree-linux",
                      "--disable-asm",

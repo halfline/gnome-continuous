@@ -1,0 +1,60 @@
+From patchwork Sat Mar  4 21:42:18 2017
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: [Mesa-dev] automake: move wayland-drm prior to Vulkan
+From: Emil Velikov <emil.l.velikov@gmail.com>
+X-Patchwork-Id: 142180
+Message-Id: <20170304214218.23847-1-emil.l.velikov@gmail.com>
+To: mesa-dev@lists.freedesktop.org
+Cc: =?UTF-8?q?Vedran=20Mileti=C4=87?= <vedran@miletic.net>,
+ emil.l.velikov@gmail.com
+Date: Sat,  4 Mar 2017 21:42:18 +0000
+
+From: Emil Velikov <emil.velikov@collabora.com>
+
+Earlier commit was picked from a larger series, but did not consider
+that it removed the vulkan <> wayland-drm interdependency.
+
+Rather than reverting everything, temporarily move wayland-drm further
+up to resolve the issue. Since it [wayland-drm] does not have any
+in-mesa dependencies that's perfectly safe.
+
+Cc: Vedran Miletić <vedran@miletic.net>
+Bugzilla: https://bugs.freedesktop.org/show_bug.cgi?id=100060
+Fixes: e135ce6f088 ("vulkan: Build common Vulkan code earlier")
+Signed-off-by: Emil Velikov <emil.l.velikov@gmail.com>
+---
+Vedran, can you please give this a test ?
+---
+ src/Makefile.am | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index cab68b72d6..25b9253fc3 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -75,6 +75,11 @@ endif
+ # include only conditionally ?
+ SUBDIRS += compiler
+ 
++## Optionally required by GBM, EGL and Vulkan
++if HAVE_PLATFORM_WAYLAND
++SUBDIRS += egl/wayland/wayland-drm
++endif
++
+ if HAVE_VULKAN_COMMON
+ SUBDIRS += vulkan
+ endif
+@@ -98,11 +103,6 @@ if HAVE_DRI_GLX
+ SUBDIRS += glx
+ endif
+ 
+-## Optionally required by GBM and EGL
+-if HAVE_PLATFORM_WAYLAND
+-SUBDIRS += egl/wayland/wayland-drm
+-endif
+-
+ ## Optionally required by EGL (aka PLATFORM_GBM)
+ if HAVE_GBM
+ SUBDIRS += gbm
