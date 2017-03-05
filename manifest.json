@@ -407,7 +407,7 @@
                      "--with-llvm-config-dir=/usr/bin/llvm3.3",
                      "--with-gallium-drivers=svga,r300,nouveau,swrast,virgl",
                      "--enable-llvm",
-					 "--with-vulkan-drivers=intel",
+                     "--with-vulkan-drivers=intel",
                      "--with-dri-drivers=nouveau,radeon,r200,i915,i965,swrast"
                      ]},
 
