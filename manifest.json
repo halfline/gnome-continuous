@@ -932,8 +932,6 @@
                 {"src": "flatpak:xdg-desktop-portal-gtk"},
 
                 {"src": "ibus:ibus.git",
-                 "tag": "0a244817338c943ffe03cd5b6ecf094ffd156f80",
-                 "tag-reason": "Build failure",
                  "patches": ["ibus-builddir.patch"],
 		 "config-opts": ["--disable-tests", 
 				 "--disable-emoji-dict",
