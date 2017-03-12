@@ -1202,14 +1202,9 @@
 
 		{"src": "gnome:gnome-logs"},
 
-<<<<<<< Updated upstream
 		{"src": "gnome:seahorse"},
 
-		{"src": "gnome:totem",
-		 "config-opts": ["--disable-vala"]},
-=======
 		{"src": "gnome:totem"},
->>>>>>> Stashed changes
 
 		{"src": "gnome:libgda",
 		 "branch": "LIBGDA_5.2"},
