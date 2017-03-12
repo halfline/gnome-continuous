@@ -1008,8 +1008,7 @@
 		{"src": "gnome:gnome-backgrounds"},
 
 		{"src": "fd:accountsservice",
-		 "config-opts": ["--enable-admin-group=wheel",
-				 "--disable-vala"]},
+		 "config-opts": ["--enable-admin-group=wheel"]},
 
 		{"src": "gnome:gdm",
 		 "config-opts": ["--disable-documentation",
@@ -1085,8 +1084,7 @@
 		 "patches": ["pcre2-buildapi.patch"]
 		},
 
-		{"src": "gnome:vte",
-		 "config-opts": ["--disable-vala"]},
+		{"src": "gnome:vte"},
 
 		{"src": "git:git://git.kernel.org/pub/scm/utils/dash/dash.git"},
 
@@ -1204,10 +1202,14 @@
 
 		{"src": "gnome:gnome-logs"},
 
+<<<<<<< Updated upstream
 		{"src": "gnome:seahorse"},
 
 		{"src": "gnome:totem",
 		 "config-opts": ["--disable-vala"]},
+=======
+		{"src": "gnome:totem"},
+>>>>>>> Stashed changes
 
 		{"src": "gnome:libgda",
 		 "branch": "LIBGDA_5.2"},
