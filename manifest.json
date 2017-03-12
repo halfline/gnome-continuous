@@ -1084,7 +1084,8 @@
 		 "patches": ["pcre2-buildapi.patch"]
 		},
 
-		{"src": "gnome:vte"},
+		{"src": "gnome:vte",
+		 "config-opts": ["--disable-vala"]},
 
 		{"src": "git:git://git.kernel.org/pub/scm/utils/dash/dash.git"},
 
