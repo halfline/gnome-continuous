@@ -681,7 +681,7 @@
 		 "config-opts": ["--disable-doc"]},
 
 		{"src": "gnome:json-glib",
-                 "config-opts": ["--enable-installed-tests"]},
+                 "patches": ["json-glib-meson-buildapi.patch"]},
 
 		{"src": "gnome:libcroco"},
 
