@@ -386,8 +386,6 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
-                 "tag": "920ab07566da8bbc95e12ed36da0c76f342066d9",
-                 "tag-reason": "Build failure with a broken static assertion",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
