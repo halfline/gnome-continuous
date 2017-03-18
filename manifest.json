@@ -680,7 +680,8 @@
 		{"src": "gnome:gnome-keyring",
 		 "config-opts": ["--disable-doc"]},
 
-		{"src": "gnome:json-glib"},
+		{"src": "gnome:json-glib",
+                 "patches": ["json-glib-compiler.patch"]},
 
 		{"src": "gnome:libcroco"},
 
