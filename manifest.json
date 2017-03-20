@@ -569,9 +569,7 @@
 				 "--with-crypto=nss",
 				 "--disable-doc",
 				 "--enable-more-warnings=yes",
-				 "--enable-modify-system"],
-                 "tag": "a791a9aa4b2b71436c4c31341689fec510c4ea8e",
-                 "tag-reason": "NM now forces the man pages to be built: https://bugzilla.gnome.org/show_bug.cgi?id=778551"},
+				 "--enable-modify-system"]},
 
 		{"src": "0pointer:libatasmart.git"},
 
