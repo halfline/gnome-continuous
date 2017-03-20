@@ -568,6 +568,7 @@
 		                 "--with-session-tracking=systemd",
 				 "--with-crypto=nss",
 				 "--disable-doc",
+				 "--disable-gtk-doc",
 				 "--enable-more-warnings=yes",
 				 "--enable-modify-system"]},
 
