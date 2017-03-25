@@ -138,7 +138,7 @@
 		{"src": "git:git://github.com/gregkh/usbutils.git",
 		 "patches": ["usbutils-autogen.patch"]},
 
-   		{"src": "git:git://git.fedorahosted.org/git/lvm2.git",
+   		{"src": "git:http://sourceware.org/git/lvm2.git",
 		 "tag": "v2_02_141"},
 
    		{"src": "gnome:linux-user-chroot",
