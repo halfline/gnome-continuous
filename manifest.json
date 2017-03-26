@@ -1215,9 +1215,6 @@
 
 		{"src": "gnome:gdl"},
 
-		{"src": "gnome:anjuta",
-		 "component": "devel"},
-
 		{"src": "gnome:gnome-font-viewer"},
 
 		{"src": "gnome:babl"},
