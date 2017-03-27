@@ -1,0 +1,26 @@
+From 38013dfdabcf4d294e1c5155021adee173397060 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
+Date: Mon, 27 Mar 2017 14:31:55 +0100
+Subject: [PATCH] configure: Do not error if the configure option is not
+ recognized
+
+---
+ configure | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index 505767c..c298211 100755
+--- a/configure
++++ b/configure
+@@ -174,7 +174,7 @@ validate_opt () {
+         else
+             if test $isArgValid -eq 0
+             then
+-                err "Option '$arg' is not recognized"
++                echo "Option '$arg' is not recognized"
+             fi
+         fi
+     done
+-- 
+2.12.1
+
