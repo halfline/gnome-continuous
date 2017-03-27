@@ -1,15 +1,17 @@
-From 38013dfdabcf4d294e1c5155021adee173397060 Mon Sep 17 00:00:00 2001
+From 3e16e7c05cdd5c5e5ad38505fa41b890ba432fe9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
 Date: Mon, 27 Mar 2017 14:31:55 +0100
 Subject: [PATCH] configure: Do not error if the configure option is not
  recognized
 
+Also hardcode CFG_TARGET and CFG_HOST; they are not picked up correctly:
+"configure: error: unsupported target triples "x86_64-linux" found"
 ---
- configure | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ configure | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/configure b/configure
-index 505767c..c298211 100755
+index 505767ce..01808e22 100755
 --- a/configure
 +++ b/configure
 @@ -174,7 +174,7 @@ validate_opt () {
@@ -17,10 +19,20 @@ index 505767c..c298211 100755
              if test $isArgValid -eq 0
              then
 -                err "Option '$arg' is not recognized"
-+                echo "Option '$arg' is not recognized"
++                warn "Option '$arg' is not recognized"
              fi
          fi
      done
+@@ -1200,7 +1200,9 @@ putvar CFG_STDCPP_NAME
+ CFG_PREFIX=${CFG_PREFIX%/}
+ CFG_MANDIR=${CFG_MANDIR%/}
+ CFG_DOCDIR=${CFG_DOCDIR%/}
++CFG_HOST=x86_64-unknown-linux-gnu
+ CFG_HOST="$(echo $CFG_HOST | tr ',' ' ')"
++CFG_TARGET=x86_64-unknown-linux-gnu
+ CFG_TARGET="$(echo $CFG_TARGET | tr ',' ' ')"
+ CFG_SUPPORTED_TARGET=""
+ for target_file in ${CFG_SRC_DIR}mk/cfg/*.mk; do
 -- 
 2.12.1
 
