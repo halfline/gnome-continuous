@@ -1,46 +1,40 @@
-From 6601379a071ee2c5e7ce4868514d29f97599501b Mon Sep 17 00:00:00 2001
+From eb6719b1722f1c07c70f173b9d4131d13b6759d0 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
-Date: Mon, 27 Mar 2017 14:31:55 +0100
-Subject: [PATCH] configure: Do not error if the configure option is not
- recognized
+Date: Mon, 27 Mar 2017 16:38:50 +0100
+Subject: [PATCH] build-sys: Add configure and Makefile
 
-Also hardcode CFG_TARGET and CFG_HOST; they are not picked up correctly:
-"configure: error: unsupported target triples "x86_64-linux" found"
+Implement the GNOME Build API for Continuous.
+
+See: http://people.gnome.org/~walters/docs/build-api.txt
 ---
- configure | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+ Makefile  | 6 ++++++
+ configure | 4 ++++
+ 2 files changed, 10 insertions(+)
+ create mode 100644 Makefile
+ create mode 100755 configure
 
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..92ec3cd
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,6 @@
++# rust *development* Makefile
++all:
++	./install.sh --prefix=$(PREFIX) --destdir=$(DESTDIR)
++
++install:
++	./install.sh --prefix=$(PREFIX) --destdir=$(DESTDIR)
 diff --git a/configure b/configure
-index 505767ce..fe0f9592 100755
---- a/configure
+new file mode 100755
+index 0000000..29eccbc
+--- /dev/null
 +++ b/configure
-@@ -174,7 +174,7 @@ validate_opt () {
-         else
-             if test $isArgValid -eq 0
-             then
--                err "Option '$arg' is not recognized"
-+                warn "Option '$arg' is not recognized"
-             fi
-         fi
-     done
-@@ -1200,7 +1200,9 @@ putvar CFG_STDCPP_NAME
- CFG_PREFIX=${CFG_PREFIX%/}
- CFG_MANDIR=${CFG_MANDIR%/}
- CFG_DOCDIR=${CFG_DOCDIR%/}
-+CFG_HOST=x86_64-unknown-linux-gnu
- CFG_HOST="$(echo $CFG_HOST | tr ',' ' ')"
-+CFG_TARGET=x86_64-unknown-linux-gnu
- CFG_TARGET="$(echo $CFG_TARGET | tr ',' ' ')"
- CFG_SUPPORTED_TARGET=""
- for target_file in ${CFG_SRC_DIR}mk/cfg/*.mk; do
-@@ -1224,6 +1226,7 @@ done
- CFG_TARGET=$V_TEMP
- 
- # check target-specific tool-chains
-+CFG_TARGET=x86_64-unknown-linux-gnu
- for i in $CFG_TARGET
- do
-     L_CHECK=false
+@@ -0,0 +1,4 @@
++#!/bin/bash
++# http://people.gnome.org/~walters/docs/build-api.txt
++#buildapi-variable-no-builddir
++exit 0
 -- 
 2.12.1
 

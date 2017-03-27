@@ -686,9 +686,9 @@
 
 		{"src": "gnome:libcroco"},
 
-		{"src": "tarball:https://static.rust-lang.org/dist/rustc-1.16.0-src.tar.gz",
+		{"src": "tarball:https://static.rust-lang.org/dist/rust-1.16.0-x86_64-unknown-linux-gnu.tar.gz",
 		 "name": "rust",
-		 "checksum": "f966b31eb1cd9bd2df817c391a338eeb5b9253ae0a19bf8a11960c560f96e8b4",
+		 "checksum": "48621912c242753ba37cad5145df375eeba41c81079df46f93ffb4896542e8fd",
 		 "patches": ["rust-buildapi.patch"]},
 
 		{"src": "gnome:librsvg",
