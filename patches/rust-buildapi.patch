@@ -1,4 +1,4 @@
-From 3e16e7c05cdd5c5e5ad38505fa41b890ba432fe9 Mon Sep 17 00:00:00 2001
+From 6601379a071ee2c5e7ce4868514d29f97599501b Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Javier=20Jard=C3=B3n?= <jjardon@gnome.org>
 Date: Mon, 27 Mar 2017 14:31:55 +0100
 Subject: [PATCH] configure: Do not error if the configure option is not
@@ -7,11 +7,11 @@ Subject: [PATCH] configure: Do not error if the configure option is not
 Also hardcode CFG_TARGET and CFG_HOST; they are not picked up correctly:
 "configure: error: unsupported target triples "x86_64-linux" found"
 ---
- configure | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
+ configure | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 diff --git a/configure b/configure
-index 505767ce..01808e22 100755
+index 505767ce..fe0f9592 100755
 --- a/configure
 +++ b/configure
 @@ -174,7 +174,7 @@ validate_opt () {
@@ -33,6 +33,14 @@ index 505767ce..01808e22 100755
  CFG_TARGET="$(echo $CFG_TARGET | tr ',' ' ')"
  CFG_SUPPORTED_TARGET=""
  for target_file in ${CFG_SRC_DIR}mk/cfg/*.mk; do
+@@ -1224,6 +1226,7 @@ done
+ CFG_TARGET=$V_TEMP
+ 
+ # check target-specific tool-chains
++CFG_TARGET=x86_64-unknown-linux-gnu
+ for i in $CFG_TARGET
+ do
+     L_CHECK=false
 -- 
 2.12.1
 
