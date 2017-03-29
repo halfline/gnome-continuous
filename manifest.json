@@ -925,6 +925,8 @@
 				 "--enable-installed-tests"]},
 
                 {"src": "flatpak:flatpak",
+                 "tag": "d272a4d4cce4ea6293593e603dcc2855100a34b2",
+                 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2017/03/29/49/build/log-flatpak.txt",
                  "config-opts": ["--disable-documentation",
                                  "--enable-installed-tests"]},
 
