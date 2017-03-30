@@ -1392,7 +1392,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 134,
-		        "all": true,
-		        "component-names": []}
+	"build-epoch": {"version": 135,
+		        "all": false,
+		        "component-names": ["ostree"]}
 }
