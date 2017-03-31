@@ -386,6 +386,8 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
+                 "tag": "0f3de89a56ac326a16eebb8701a1c8218c1f65dd",
+                 "tag-reason": "Non-srcdir build failure",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
