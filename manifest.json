@@ -1015,8 +1015,6 @@
 		 "config-opts": ["--enable-admin-group=wheel"]},
 
 		{"src": "gnome:gdm",
-                 "tag": "a1277882f1ee62318715cf7a9a93a7669aaad218",
-                 "tag-reason": "Build failure",
 		 "config-opts": ["--disable-documentation",
 		                 "--disable-split-authentication",
 		                 "--with-default-pam-config=openembedded",
