@@ -1069,6 +1069,8 @@
 
                 {"src": "git:https://github.com/hughsie/appdata-tools.git"},
 
+		{"src": "gnome:gnome-color-manager"},
+
 		{"src": "gnome:cheese"},
 
 		{"src": "gnome:gnome-control-center",
