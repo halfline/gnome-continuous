@@ -1115,6 +1115,8 @@
 		{"src": "gnome:caribou",
 		 "config-opts": ["PYTHON=python3"]},
 
+		{"src": "gnome:gnome-power-manager"},
+
 		{"src": "gnome:gnome-shell",
                  "irc_room": "gnome-shell",
 		 "config-opts": ["--enable-compile-warnings=maximum",
