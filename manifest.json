@@ -1113,8 +1113,7 @@
 		{"src": "gnome:caribou",
 		 "config-opts": ["PYTHON=python3"]},
 
-		{"src": "gnome:gnome-power-manager",
-		 "patches": ["gnome-power-manager-compiler.patch"]},
+		{"src": "gnome:gnome-power-manager"},
 
 		{"src": "gnome:gnome-shell",
                  "irc_room": "gnome-shell",
