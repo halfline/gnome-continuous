@@ -165,7 +165,7 @@
 		 "tag": "0b17ee79bf5237ffdc3a2a7480023a7d61063788"},
 
 		{"src": "git:git://anongit.freedesktop.org/harfbuzz",
-                 "tag": "7d64c0ef37dd930e9807bd80d398491aa9c4428c",
+                 "tag": "740fdbcd0e6d25c1d6f12537ca2aa559650b9d52",
                  "tag-reason": "Build failure"},
 
 		{"src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
