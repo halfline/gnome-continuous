@@ -24,6 +24,7 @@ const Params = imports.params;
 const GSystem = imports.gi.GSystem;
 
 const BUILD_ENV = {
+    'CCACHE_DISABLE' : '1',
     'HOME' : '/', 
     'HOSTNAME' : 'ostbuild',
     'LANG': 'C',
