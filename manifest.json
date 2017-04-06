@@ -612,8 +612,7 @@
 				 "--disable-argyllcms-sensor",
 				 "--disable-installed-tests"]},
 
-		{"src": "ebassi:graphene",
-		 "patches": ["graphene-meson-buildapi.patch"]},
+		{"src": "ebassi:graphene"},
 
 		{"src": "gnome:gconf",
 		 "config-opts": ["--disable-orbit",
