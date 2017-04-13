@@ -962,9 +962,7 @@
 
 		{"src": "gnome:libgdata"},
 
-		{"src": "gnome:gmime",
-		 "tag": "2.6.23",
-		 "tag-reason": "Error creating GMime-3.0.gir"},
+		{"src": "gnome:gmime"},
 
 		{"src": "gnome:totem-pl-parser"},
 
