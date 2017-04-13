@@ -1268,8 +1268,6 @@
 		 "patches": ["evolution-ews-buildapi.patch"]},
 
 		{"src": "git:git://git.libssh.org/projects/libssh.git",
-                 "tag": "5f202d7ffa48f2ee989e0e6c1e761963c68ab08f",
-                 "tag-reason": "Build failure introduced in following commit",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
 
 		{"src": "gnome:libgssh"},
