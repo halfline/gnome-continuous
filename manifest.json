@@ -1396,5 +1396,5 @@
     
 	"build-epoch": {"version": 136,
 		        "all": false,
-		        "component-names": ["flatpak"]}
+		        "component-names": ["totem-pl-parser"]}
 }
