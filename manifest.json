@@ -559,7 +559,7 @@
 		 "config-opts": ["--with-udev-base-dir=/usr/lib/udev",
 				 "--disable-more-warnings"]},
 
-		{"src": "fd:pycairo",
+		{"src": "git:https://github.com/pygobject/pycairo.git",
 		 "patches": ["pycairo-buildsys.patch"]},
 
 		{"src": "gnome:pygobject",
