@@ -361,7 +361,9 @@
 		 "patches": ["libwacom-autogen.patch"]},
 
 		{"src": "fd:wayland/libinput",
-		 "name": "libinput"},
+		 "name": "libinput",
+                 "config-opts": ["--disable-documentation",
+                                 "--disable-tests"]},
 
 		{"src": "fd:xorg/util/makedepend",
 		 "component": "devel"},
