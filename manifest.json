@@ -363,7 +363,8 @@
 		{"src": "fd:wayland/libinput",
 		 "name": "libinput",
                  "config-opts": ["--disable-documentation",
-                                 "--disable-tests"]},
+                                 "--disable-tests",
+                                 "--disable-event-gui"]},
 
 		{"src": "fd:xorg/util/makedepend",
 		 "component": "devel"},
