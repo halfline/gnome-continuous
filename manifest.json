@@ -1012,6 +1012,8 @@
 		 "config-opts": ["--enable-admin-group=wheel"]},
 
 		{"src": "gnome:gdm",
+		 "tag": "0ab4f635630cfd90b73cd138144999834d4d2c39",
+		 "tag-reason": "http://build.gnome.org/continuous/buildmaster/builds/2017/04/19/21/build/log-gdm.txt",
 		 "config-opts": ["--disable-documentation",
 		                 "--disable-split-authentication",
 		                 "--with-default-pam-config=openembedded",
