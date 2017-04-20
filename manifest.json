@@ -1104,8 +1104,9 @@
 
 		{"src": "gnome:orca"},
 
-		{"src": "fd:py2cairo",
-		 "patches": ["py2cairo-autogen.patch"]},
+		{"src": "git:https://github.com/pygobject/pycairo.git",
+                 "name": "pycairo-python2",
+		 "patches": ["py2cairo-buildsys.patch"]},
 
 		{"src": "gnome:pygobject",
 		 "name": "pygobject-python2",
