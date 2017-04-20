@@ -47,6 +47,14 @@ def mirc_color(code, S):
 GREEN = 3
 RED = 4
 
+def human_time(secs):
+    if secs < 60:
+        return '{}s'.format(secs)
+    elif secs < 3600:
+        return '{}m:{}s'.format(int(secs / 60), secs % 60)
+    else:
+        return '{}h:{}m:{}s'.format(int(secs / 3600), int(secs / 60) % 60, secs % 60)
+
 class BuildGnomeOrg(irc.IRCClient):
     nickname = 'buildgnomeorg'
     username = nickname
@@ -142,8 +150,8 @@ class BuildGnomeOrg(irc.IRCClient):
         success = metadata['success']
         success_str = success and mirc_color(GREEN, 'SUCCESS') or mirc_color(RED, 'FAILED')
 
-        msg = u"continuous:%s[%s]: %s: (%.1f seconds): %s " \
-              % (taskname, build_name, success_str, millis / 1000.0, status_msg)
+        msg = u"continuous:%s[%s]: %s: (%s): %s " \
+              % (taskname, build_name, success_str, human_time(millis / 1000.0), status_msg)
 
         msg += "%s/%s/" % (self._workurl, metadata['path'])
 
