@@ -1104,14 +1104,6 @@
 
 		{"src": "gnome:orca"},
 
-		{"src": "git:https://github.com/pygobject/pycairo.git",
-                 "name": "pycairo-python2",
-		 "patches": ["py2cairo-buildsys.patch"]},
-
-		{"src": "gnome:pygobject",
-		 "name": "pygobject-python2",
-		 "config-opts": ["--with-python=python2"]},
-
 		{"src": "gnome:caribou",
 		 "config-opts": ["PYTHON=python3"]},
 
@@ -1398,7 +1390,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 137,
-		        "all": false,
-		        "component-names": ["totem-pl-parser"]}
+	"build-epoch": {"version": 138,
+		        "all": true,
+		        "component-names": []}
 }
