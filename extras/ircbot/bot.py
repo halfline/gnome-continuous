@@ -51,9 +51,9 @@ def human_time(secs):
     if secs < 60:
         return '{}s'.format(secs)
     elif secs < 3600:
-        return '{}m:{}s'.format(int(secs / 60), secs % 60)
+        return '{}m:{:.1f}s'.format(int(secs / 60), secs % 60)
     else:
-        return '{}h:{}m:{}s'.format(int(secs / 3600), int(secs / 60) % 60, secs % 60)
+        return '{}h:{}m:{:.1f}s'.format(int(secs / 3600), int(secs / 60) % 60, secs % 60)
 
 class BuildGnomeOrg(irc.IRCClient):
     nickname = 'buildgnomeorg'
