@@ -119,7 +119,7 @@ const TaskBuildDisks = new Lang.Class({
             }
             // Not indented to avoid too much code motion
             try {
-            let tmpdir_path = Gio.File.new_for_path(GLib.dir_make_tmp("continuous-XXXXXX"));
+            let tmpdir_path = this.workdir.get_child('tmp');
             let mntdir = tmpdir_path.get_child('mnt-' + squashedName);
             GSystem.file_ensure_directory(mntdir, true, cancellable);
             let gfmnt = new GuestFish.GuestMount(diskPath, { partitionOpts: LibQA.DEFAULT_GF_PARTITION_OPTS,
@@ -130,7 +130,7 @@ const TaskBuildDisks = new Lang.Class({
                                  cancellable);
             } finally {
                 gfmnt.umount(cancellable);
-                GSystem.shutil_rm_rf(tmpdir_path, cancellable);
+                GSystem.shutil_rm_rf(mntdir, cancellable);
             }
             // Assume previous disks have successfully installed a bootloader
             if (!doCloneDisk) {
