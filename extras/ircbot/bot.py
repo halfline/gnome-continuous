@@ -157,7 +157,7 @@ class BuildGnomeOrg(irc.IRCClient):
 
         return msg
 
-    def _get_channels_for_changed_components(self, taskname):
+    def _get_channels_for_changed_components(self, taskname, success):
         current_task_path = os.path.join(self._workdir, 'results/tasks/%s/%s/' % (taskname, taskname))
         build_path = os.path.join(current_task_path, 'build.json')
         if not os.path.exists(build_path):
@@ -170,7 +170,10 @@ class BuildGnomeOrg(irc.IRCClient):
         if 'built' not in build.keys():
             return []
 
-        component_names = [x['name'] for x in build['built'] if 'name' in x.keys()]
+        if success:
+            component_names = [x['name'] for x in build['built'] if 'name' in x.keys()]
+        else:
+            component_names = [x['name'] for x in build['failed'] if 'name' in x.keys()]
 
         snapshot_path = os.path.join(current_task_path, 'snapshot.json')
         if not os.path.exists(snapshot_path):
@@ -203,7 +206,7 @@ class BuildGnomeOrg(irc.IRCClient):
 
         msg = self._status_line_for_task(taskname)
 
-        affected_channels = self._get_channels_for_changed_components(taskname)
+        affected_channels = self._get_channels_for_changed_components(taskname, success)
 
         if announce_always or success_changed:
             self._sendTo(self._flood_channels, msg)
