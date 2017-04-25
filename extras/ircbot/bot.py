@@ -49,7 +49,7 @@ RED = 4
 
 def human_time(secs):
     if secs < 60:
-        return '{}s'.format(secs)
+        return '{:.1f}s'.format(secs)
     elif secs < 3600:
         return '{}m:{:.1f}s'.format(int(secs / 60), secs % 60)
     else:
