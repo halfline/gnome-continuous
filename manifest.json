@@ -1195,8 +1195,7 @@
 		{"src": "gnome:gnome-weather",
 		 "config-opts": ["--enable-installed-tests"]},
 
-		{"src": "gnome:polari",
-		 "patches": ["nautilus-meson-buildapi.patch"]},
+		{"src": "gnome:polari"},
 
 		{"src": "gnome:baobab"},
 
