@@ -1134,8 +1134,7 @@
 				 "--without-nautilus-extension",
 				 "--without-pcre2"]},
 
-		{"src": "gnome:gnome-clocks",
-                 "patches": ["gnome-clocks-meson-build.patch"]},
+		{"src": "gnome:gnome-clocks"},
 
 		{"src": "gnome:glade",
 		 "config-opts": ["--disable-man-pages"],
