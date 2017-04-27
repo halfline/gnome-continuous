@@ -157,20 +157,39 @@ class BuildGnomeOrg(irc.IRCClient):
 
         return msg
 
-    def _get_channels_for_changed_components(self, taskname):
+    def _get_channels_for_changed_components(self, taskname, success):
         current_task_path = os.path.join(self._workdir, 'results/tasks/%s/%s/' % (taskname, taskname))
         build_path = os.path.join(current_task_path, 'build.json')
         if not os.path.exists(build_path):
             return []
 
+        # The current format for the build.json file is
+        #  - built: an array of objects
+        #  - failed: a single object
+        #
+        # The built elements are objects with these members:
+        #  - name: the name of the component
+        #  - deprecation: the number of deprecation warnings
+        #  - warnings: the number of warnings
+        #
+        # The failed object has the following members:
+        #  - name: the name of the component
         f = open(build_path)
         build = json.load(f)
         f.close()
 
-        if 'built' not in build.keys():
-            return []
+        if success:
+            key = 'built'
+        else:
+            key = 'failed'
 
-        component_names = [x['name'] for x in build['built'] if 'name' in x.keys()]
+        if key not in build.keys():
+                return []
+
+        if success:
+            component_names = [x['name'] for x in build['built'] if 'name' in x.keys()]
+        else:
+            component_names = [build['failed'].get('name', '')]
 
         snapshot_path = os.path.join(current_task_path, 'snapshot.json')
         if not os.path.exists(snapshot_path):
@@ -203,7 +222,7 @@ class BuildGnomeOrg(irc.IRCClient):
 
         msg = self._status_line_for_task(taskname)
 
-        affected_channels = self._get_channels_for_changed_components(taskname)
+        affected_channels = self._get_channels_for_changed_components(taskname, success)
 
         if announce_always or success_changed:
             self._sendTo(self._flood_channels, msg)
