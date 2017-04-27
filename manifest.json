@@ -1383,7 +1383,9 @@
                  "checksum": "c577815dd00f1394203fc44eb979724b098f88264a9ef898ee45b8e5e9cf587f",
                  "patches": ["python-requests-buildsys.patch"]},
 
-                {"src": "gnome:gnome-music"}
+                {"src": "gnome:gnome-music"},
+
+                {"src": "gnome:gnome-todo"}
 	],
 
     "installed-tests-components": [],
