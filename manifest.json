@@ -1173,7 +1173,7 @@
                                  "--enable-installed-tests"]},
 
 		{"src": "gnome:epiphany",
-                 "config-opts": ["--disable-Werror"]},
+                 "patches": ["epiphany-meson-build-api.patch"]},
 
 		{"src": "gnome:gnome-calendar" },
 
