@@ -1242,7 +1242,8 @@
                  "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=779551"},
 
 		{"src": "gnome:gnome-photos",
-		 "config-opts": ["--enable-installed-tests"]},
+		 "config-opts": ["--enable-installed-tests"],
+                 "patches": ["gnome-photos-gauto-gegl.patch"]},
 
 		{"src": "gnome:d-feet",
 		 "config-opts": ["--disable-tests"]},
