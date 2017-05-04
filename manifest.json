@@ -375,6 +375,8 @@
                  "patches": ["llvm-cmake-buildapi.patch"]},
 
 		{"src": "fd-mesa:drm",
+                 "tag": "00aa2c18810efb896afd9ff0acbadd4aa9540fe6",
+                 "tag-reason": "Build failure",
 		 "config-opts": ["--disable-valgrind"]},
 
 		{"src": "fd-wayland:wayland",
