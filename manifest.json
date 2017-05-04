@@ -1230,8 +1230,6 @@
                  "patches": ["libraw-autogen.patch", "libraw-pkgconfig.patch"]},
 
 		{"src": "gnome:gegl",
-                 "tag": "739c8f89a1f10b52c6fc7c06c628f1244e4d8179",
-                 "tag-reason": "Missing file breaks the build",
                  "config-opts": ["--disable-docs", "--with-jasper", "--with-libraw", "--without-lua"]},
 
                 {"src": "tarball:http://www.exiv2.org/exiv2-0.25.tar.gz",
