@@ -695,10 +695,12 @@
 		 "config-opts": ["--disable-gtk-doc"]},
 
 		{"src": "fd-gstreamer:gstreamer",
+                 "config-opts": ["--disable-gtk-doc"],
 		 "patches": ["gstreamer-meson-buildapi.patch"]},
 
 		{"src": "fd-gstreamer:gst-plugins-base",
 		 "config-opts": ["--with-gtk=3.0",
+                                 "--disable-gtk-doc",
 		                 "--disable-tests",
 				 "--disable-gnome_vfs",
 				 "--disable-fatal-warnings"]},

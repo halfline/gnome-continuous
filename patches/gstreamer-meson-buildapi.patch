@@ -1,9 +1,12 @@
-From f722b0df5aaa4b32fb1c34f8838294e174d2843f Mon Sep 17 00:00:00 2001
+From a1d23a4c69068acd3040369f77fcf8a2181817ef Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Mon, 20 Feb 2017 11:33:49 +0000
 Subject: [PATCH] Add build-api wrapper for Meson/Ninja
 
 Use Meson and Ninja, instead of autotools.
+
+v4:
+  - Update Meson flag to disable GTK-Doc build
 
 v3:
   - Enable CCache
@@ -17,7 +20,7 @@ v2:
 
 diff --git a/configure b/configure
 new file mode 100755
-index 000000000..33bca5167
+index 000000000..d48724f49
 --- /dev/null
 +++ b/configure
 @@ -0,0 +1,130 @@
@@ -89,8 +92,8 @@ index 000000000..33bca5167
 +	--libdir) read_arg libdir "$@" || shift;;
 +	--mandir) read_arg mandir "$@" || shift;;
 +	--includedir) read_arg includedir "$@" || shift;;
-+	--enable-gtk-doc) enable_docs='-Denable-gtk-doc=true';;
-+	--disable-gtk-doc) enable_docs='-Denable-gtk-doc=false';;
++	--enable-gtk-doc) enable_docs='-Ddisable_gtkdoc=false';;
++	--disable-gtk-doc) enable_docs='-Ddisable_gtkdoc=true';;
 +	*) echo "Ignoring unknown option '$1'";;
 +    esac
 +    shift
@@ -152,5 +155,5 @@ index 000000000..33bca5167
 +
 +# vim: ai ts=8 noet sts=2 ft=sh
 -- 
-2.11.1
+2.12.2
 
