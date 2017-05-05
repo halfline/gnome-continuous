@@ -1081,9 +1081,7 @@
 		{"src": "gnome:gnome-initial-setup",
 		 "config-opts": ["--disable-welcome-tour"]},
 
-		{"src": "gnome:libwnck",
-                 "tag": "590b11f147fd31ef8e63187559e92358c8b28fc6",
-                 "tag-reason": "Started building with -Werror by default; maintainer is aware and fixing errors"},
+		{"src": "gnome:libwnck"},
 
                 {"src": "tarball:https://downloads.sourceforge.net/project/pcre/pcre2/10.22/pcre2-10.22.tar.gz",
 		 "name": "pcre2",
