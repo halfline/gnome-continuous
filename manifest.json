@@ -68,6 +68,8 @@
 
                 {"src": "git:git://github.com/mesonbuild/meson.git",
                  "component": "devel",
+                 "tag": "1aa68cf6e3b05b63bf858aa005c34aeea362e3f9",
+                 "tag-reason": "https://github.com/mesonbuild/meson/pull/1786",
                  "patches": ["python-meson-buildsys.patch"]},
 
 		{"src": "gnome:glib",
