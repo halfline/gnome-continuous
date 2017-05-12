@@ -1241,9 +1241,7 @@
 
 		{"src": "gnome:gnome-color-manager"},
 
-		{"src": "gnome:gexiv2",
-                 "tag": "6810c92d7b2978f97ac9750ddf8a6a62b44be4cc",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=779551"},
+		{"src": "gnome:gexiv2"},
 
 		{"src": "gnome:gnome-photos",
 		 "config-opts": ["--enable-installed-tests"]},
