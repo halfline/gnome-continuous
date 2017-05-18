@@ -991,8 +991,6 @@
 
 		{"src": "gnome:evolution-data-server",
                  "irc_room": "evolution",
-                 "tag": "75804db35d46b2242a56a462cef24e89c380ca72",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=782745",
                  "patches": ["eds-cmake-buildapi.patch"]},
 
 		{"src": "fd-xdg:default-icon-theme",
