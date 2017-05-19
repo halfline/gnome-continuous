@@ -392,7 +392,7 @@
 
                 {"src": "fd-mesa:mesa",
                  "tag": "de6f3cce8cdc5472d6a894fb2ed3840a76d1159e",
-                 "tag-reason": "Build failure; bug will follow",
+                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=101110",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
