@@ -383,7 +383,9 @@
 		 "config-opts": ["--disable-documentation"]},
 
 		{"src": "fd:wayland/wayland-protocols",
-		 "name": "wayland-protocols"},
+		 "name": "wayland-protocols",
+                 "tag": "a840b3634ad637b237f238d2efb9ab8f4712d5f4",
+                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=101114"},
 
                 {"src": "tarball:https://pypi.python.org/packages/source/M/Mako/Mako-1.0.0.tar.gz",
                  "name": "python-mako",
