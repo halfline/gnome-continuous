@@ -391,8 +391,6 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
-                 "tag": "de6f3cce8cdc5472d6a894fb2ed3840a76d1159e",
-                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=101110",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
@@ -415,7 +413,8 @@
                      "--with-gallium-drivers=svga,r300,nouveau,swrast,virgl",
                      "--enable-llvm",
                      "--with-vulkan-drivers=intel",
-                     "--with-dri-drivers=nouveau,radeon,r200,i915,i965,swrast"]},
+                     "--with-dri-drivers=nouveau,radeon,r200,i915,i965,swrast"
+                     ]},
 
 		{"src": "fd:xorg/app/xkbcomp"},
 
