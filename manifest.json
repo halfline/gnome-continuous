@@ -919,6 +919,8 @@
                          "--with-intl-api"]},
 
 		{"src": "gnome:gjs",
+                 "tag": "6d63d560fe5692b50815fa7b7ff00a7f9ce45219",
+                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=783031",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "git:git://github.com/ostreedev/ostree",
