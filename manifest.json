@@ -580,6 +580,8 @@
 		{"src": "0pointer:libatasmart.git"},
 
 		{"src": "git:https://github.com/storaged-project/udisks.git",
+                 "tag": "2bdfcfb72e83cfb9444417c2d5fcfb4e6b97b041",
+                 "tag-reason": "New dependency that fails to build",
 		 "config-opts": ["--disable-man"]},
 
                 {"src": "fd:pm-utils"},
