@@ -988,8 +988,7 @@
 		{"src": "gnome:gnome-online-miners"},
 
 		{"src": "libical:libical",
-		 "patches": ["libical-cmake-buildapi.patch",
-                             "libical-build-introspection.patch"]},
+		 "patches": ["libical-cmake-buildapi.patch"]},
 
 		{"src": "gnome:evolution-data-server",
                  "irc_room": "evolution",
