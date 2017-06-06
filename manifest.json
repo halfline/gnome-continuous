@@ -1280,7 +1280,8 @@
 		{"src": "gnome:gnome-desktop-testing",
 		 "component": "testing"},
 
-		{"src": "gnome:gnome-tweak-tool"},
+		{"src": "gnome:gnome-tweak-tool",
+                 "patches": ["gnome-tweak-tool-build-api.patch"]},
 
 		{"src": "gnome:eog",
 		 "config-opts": ["--enable-installed-tests"]},
