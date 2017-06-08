@@ -1399,7 +1399,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 138,
-		        "all": true,
-		        "component-names": []}
+	"build-epoch": {"version": 139,
+		        "all": false,
+		        "component-names": ["grilo", "grilo-plugins"]}
 }
