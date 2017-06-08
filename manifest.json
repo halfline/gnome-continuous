@@ -971,7 +971,8 @@
 
 		{"src": "gnome:gmime"},
 
-		{"src": "gnome:totem-pl-parser"},
+		{"src": "gnome:totem-pl-parser",
+		 "patches": ["totem-pl-parser-meson-build-api.patch"]},
 
                 {"src": "gnome:grilo",
 		 "patches": ["grilo-meson-buildapi.patch"]},
