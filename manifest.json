@@ -391,8 +391,6 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
-                 "tag": "d364ab4a615b762b3684fa292590ef4cfaba9ea8",
-                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=101418",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
@@ -1402,7 +1400,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 139,
+	"build-epoch": {"version": 140,
 		        "all": false,
-		        "component-names": ["grilo", "grilo-plugins"]}
+		        "component-names": ["mesa"]}
 }
