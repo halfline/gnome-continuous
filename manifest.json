@@ -1033,9 +1033,6 @@
 
 		{"src": "fd-nice:libnice"},
 
-		{"src": "fd-telepathy:telepathy-gabble",
-		 "config-opts": ["--disable-Werror"]},
-
 		{"src": "fd-telepathy:telepathy-idle"},
 
 		{"src": "fd-telepathy:telepathy-mission-control",
