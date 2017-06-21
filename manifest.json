@@ -700,7 +700,9 @@
 
 		{"src": "fd-gstreamer:gstreamer",
                  "config-opts": ["--disable-gtk-doc"],
-		 "patches": ["gstreamer-meson-buildapi.patch"]},
+		 "patches": ["gstreamer-meson-buildapi.patch"],
+                 "tag": "c30c39b5ad82e6661c52ad228f8915188072b912",
+                 "tag-reason": "Following commits cause build failure in libnice; see: https://phabricator.freedesktop.org/T7770"},
 
 		{"src": "fd-gstreamer:gst-plugins-base",
 		 "config-opts": ["--with-gtk=3.0",
