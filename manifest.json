@@ -1292,7 +1292,8 @@
 
 		{"src": "gnome:gnome-screenshot"},
 
-		{"src": "gnome:nautilus-sendto"},
+		{"src": "gnome:nautilus-sendto",
+                 "patches": ["nautilus-sendto-build-api.patch"]},
 
 		{"src": "gnome:yelp"},
 		
