@@ -1210,8 +1210,8 @@
 		{"src": "gnome:seahorse"},
 
 		{"src": "gnome:totem",
-                 "tag": "a1da1b32da5f4c1aa307a170cff80154f210c172",
-                 "tag-reason": "Meson build is failing"},
+                 "config-opts": ["--disable-vala"],
+		 "patches": ["totem-meson-build-api.patch"]},
 
 		{"src": "gnome:libgda",
 		 "branch": "LIBGDA_5.2"},
