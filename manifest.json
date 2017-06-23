@@ -1209,7 +1209,8 @@
 
 		{"src": "gnome:seahorse"},
 
-		{"src": "gnome:totem"},
+		{"src": "gnome:totem",
+		 "patches": ["totem-meson-build-api.patch"]},
 
 		{"src": "gnome:libgda",
 		 "branch": "LIBGDA_5.2"},
