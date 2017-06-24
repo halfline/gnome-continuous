@@ -1,25 +1,27 @@
-From fc6ffc1143dbee30a17d0c31835a44469f13e9ff Mon Sep 17 00:00:00 2001
-From: Vadim Rutkovsky <vrutkovs@redhat.com>
-Date: Wed, 25 Mar 2015 15:38:46 +0100
-Subject: [PATCH] Fix builddir!=srcdir issue
+From 0f8ff06296594c311e3c1b40279e51910359b5b4 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Sat, 24 Jun 2017 18:45:19 +0100
+Subject: [PATCH] Disable non-srcdir builds
 
+Contacts uses Vala and autotools, and the interaction has known issues
+when it comes to non-srcdir builds.
 ---
  configure.ac | 2 ++
  1 file changed, 2 insertions(+)
 
 diff --git a/configure.ac b/configure.ac
-index 6f2c039..d5ad737 100644
+index ca85748..c4cefd2 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -108,6 +108,8 @@ AC_CONFIG_FILES([Makefile
- 		po/Makefile.in
- 		])
+@@ -5,6 +5,8 @@ AC_CONFIG_HEADERS([config.h])
+ AC_CONFIG_MACRO_DIR([m4])
+ AM_INIT_AUTOMAKE([tar-ustar dist-xz no-dist-gzip -Wno-portability])
  
 +echo \#buildapi-variable-no-builddir >/dev/null
 +
- dnl libgd
- LIBGD_INIT([
-   gtk-hacks
+ # Enable silent rules is available
+ AM_SILENT_RULES([yes])
+ 
 -- 
-2.7.4
+2.13.0
 
