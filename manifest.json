@@ -520,7 +520,8 @@
 		{"src": "git:git://github.com/mm2/Little-CMS.git",
 		 "tag": "lcms2.6"},
 
-		{"src": "gnome:libgxps"},
+		{"src": "gnome:libgxps",
+                 "patches": ["libgxps-build-api.patch"]},
 
         {"src": "tarball:https://ftp.mozilla.org/pub/mozilla.org/js/mozjs-24.2.0.tar.bz2",
                 "name": "js24",
