@@ -1,20 +1,23 @@
-From 35c07b74ff9c272fd99cc80d4cf4ae9e9259067e Mon Sep 17 00:00:00 2001
+From 7f556f5a620e8ae265495271ae971850beac0272 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Sat, 24 Jun 2017 12:25:42 +0100
 Subject: [PATCH] Add build api wrapper
 
 See: https://github.com/cgwalters/build-api
+
+v2:
+  - Add --disable-test, to avoid the dependency on gtk+-3.0
 ---
- configure | 144 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 144 insertions(+)
+ configure | 148 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 148 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..58b44a5
+index 0000000..d4e30a9
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,144 @@
+@@ -0,0 +1,148 @@
 +#!/bin/bash
 +# configure script adapter for Meson
 +# Based on build-api: https://github.com/cgwalters/build-api
@@ -72,6 +75,8 @@ index 0000000..58b44a5
 +sanitycheck MESONTEST 'mesontest'
 +sanitycheck NINJA 'ninja' 'ninja-build'
 +
++enable_test="-Denable-test=true"
++
 +while (($# > 0)); do
 +    case "${1%%=*}" in
 +	--prefix) read_arg prefix "$@" || shift;;
@@ -84,6 +89,7 @@ index 0000000..58b44a5
 +	--libdir) read_arg libdir "$@" || shift;;
 +	--mandir) read_arg mandir "$@" || shift;;
 +	--includedir) read_arg includedir "$@" || shift;;
++	--disable-test) enable_test="-Denable-test=false";;
 +	*) echo -e "\e[1;33mINFO\e[0m: Ignoring unknown option '$1'";;
 +    esac
 +    shift
@@ -155,6 +161,7 @@ index 0000000..58b44a5
 +	--includedir=${includedir} \
 +	--mandir=${mandir} \
 +	--default-library shared \
++	${enable_test} \
 +	${builddir} \
 +	${srcdir}
 +
