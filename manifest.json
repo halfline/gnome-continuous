@@ -13,6 +13,7 @@
   "config-opts": ["--disable-static", "--disable-silent-rules"],
 
   "vcsconfig": {"gnome": "git:git://git.gnome.org/",
+                "gnome-gitlab": "https://gitlab.gnome.org/",
                 "fd": "git:git://anongit.freedesktop.org/git/",
                 "fd-dbus": "git:git://anongit.freedesktop.org/git/dbus/",
                 "fd-NM": "git:git://anongit.freedesktop.org/git/NetworkManager/",
