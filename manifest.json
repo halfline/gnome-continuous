@@ -690,7 +690,7 @@
 		{"src": "gnome:gnome-keyring",
 		 "config-opts": ["--disable-doc"]},
 
-		{"src": "gnome:json-glib"},
+		{"src": "gnome:ebassi/json-glib"},
 
 		{"src": "gnome:libcroco"},
 
