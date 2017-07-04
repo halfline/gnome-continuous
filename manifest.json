@@ -367,7 +367,8 @@
 		 "name": "libinput",
                  "config-opts": ["--disable-documentation",
                                  "--disable-tests",
-                                 "--disable-debug-gui"]},
+                                 "--disable-debug-gui"],
+                 "patches": ["libinput-build-api.patch"]},
 
 		{"src": "fd:xorg/util/makedepend",
 		 "component": "devel"},
