@@ -27,7 +27,7 @@ const BUILD_ENV = {
     'CCACHE_DISABLE' : '1',
     'HOME' : '/', 
     'HOSTNAME' : 'ostbuild',
-    'LANG': 'C',
+    'LANG': 'en_US.UTF-8',
     'PATH' : '/usr/bin:/bin:/usr/sbin:/sbin',
     'SHELL' : '/bin/bash',
     'TERM' : 'vt100',
