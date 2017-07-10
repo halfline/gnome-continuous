@@ -661,6 +661,7 @@
 
                 {"src": "gnome:gtk+",
                  "name": "gtk4",
+                 "patches": ["gtk-build-api.patch"],
                  "config-opts": ["--enable-installed-tests",
                                  "--enable-wayland-backend",
                                  "--enable-x11-backend"],
