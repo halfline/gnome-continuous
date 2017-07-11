@@ -79,8 +79,6 @@
                  "config-opts": ["--disable-modular-tests",
 				 "--enable-installed-tests",
 				 "--with-pcre=internal"],
-                 "tag": "2502bfd8b0e9a8136aae833dc674a28a884f1de1",
-                 "tag-reason": "Force rebuild of evince",
                  "irc_room": "gtk+"},
 
 		{"src": "gnome:gnome-common",
@@ -1410,7 +1408,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 143,
+	"build-epoch": {"version": 142,
 		        "all": false,
-		        "component-names": ["glib"]}
+		        "component-names": ["libnice"]}
 }
