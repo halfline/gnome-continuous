@@ -1241,6 +1241,8 @@
                  "config-opts": ["--disable-examples", "--enable-jasper", "--enable-lcms"],
                  "patches": ["libraw-autogen.patch", "libraw-pkgconfig.patch"]},
 
+		{"src": "gnome:gexiv2"},
+
 		{"src": "gnome:gegl",
                  "config-opts": ["--disable-docs", "--with-jasper", "--with-libraw", "--without-lua"]},
 
@@ -1250,8 +1252,6 @@
                  "patches": ["exiv2-no-builddir.patch"]},
 
 		{"src": "gnome:gnome-color-manager"},
-
-		{"src": "gnome:gexiv2"},
 
 		{"src": "gnome:gnome-photos",
 		 "config-opts": ["--enable-installed-tests"]},
