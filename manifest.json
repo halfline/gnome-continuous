@@ -930,6 +930,19 @@
                          "--with-system-zlib",
                          "--with-intl-api"]},
 
+        {"src": "git:git:https://github.com/ptomato/mozjs.git",
+         "branch": "mozjs52",
+         "name": "mozjs52",
+         "component": "minimal",
+         "patches": ["mozjs38-buildapi.patch"],
+         "config-opts": ["--enable-posix-nspr-emulation",
+                         "--disable-tests",
+                         "--disable-strip",
+                         "--with-system-icu",
+                         "--with-system-zlib",
+                         "--with-intl-api",
+                         "AUTOCONF=autoconf"]},
+
 		{"src": "gnome:gjs",
 		 "config-opts": ["--enable-installed-tests"]},
 
