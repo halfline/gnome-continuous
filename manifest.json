@@ -1409,7 +1409,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 142,
-		        "all": false,
-		        "component-names": ["libnice"]}
+	"build-epoch": {"version": 143,
+		        "all": true,
+		        "component-names": []}
 }
