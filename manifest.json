@@ -78,9 +78,8 @@
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
                  "config-opts": ["--disable-modular-tests",
 				 "--enable-installed-tests",
-				 "--with-pcre=internal"],
-                 "tag": "9aa98db40450bc539a5cf59640c9f9cf28da93e8",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=779332",
+				 "--with-pcre=internal",
+                                 "--with-python=python3"],
                  "irc_room": "gtk+"},
 
 		{"src": "gnome:gnome-common",
