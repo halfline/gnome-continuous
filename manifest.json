@@ -938,7 +938,6 @@
          "config-opts": ["--enable-posix-nspr-emulation",
                          "--disable-tests",
                          "--disable-strip",
-                         "--with-system-icu",
                          "--with-system-zlib",
                          "--with-intl-api",
                          "AUTOCONF=autoconf"]},
