@@ -14,7 +14,7 @@ new file mode 100755
 index 0000000..93ef339
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,13 @@
+@@ -0,0 +1,14 @@
 +#!/bin/sh -x
 +cat >Makefile <<ENDMAKEFILE
 +all:
@@ -27,6 +27,7 @@ index 0000000..93ef339
 +mkdir -p js/src
 +cd js/src
 +touch $srcdir/js/src/configure  # timestamp wrong, because patched
++touch $srcdir/js/src/old-configure  # ditto
 +exec $srcdir/js/src/configure "$@"
 -- 
 1.7.1
