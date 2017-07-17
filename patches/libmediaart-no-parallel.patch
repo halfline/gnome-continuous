@@ -1,0 +1,25 @@
+From 1227531c3a3c8b7ef7bf1263248f913f8503fcbd Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Mon, 17 Jul 2017 13:33:19 +0100
+Subject: [PATCH] Disable parallel builds
+
+The massive parallelism on Continuous exposes the inability of Automake
+to handle dependencies.
+---
+ Makefile.am | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/Makefile.am b/Makefile.am
+index ba48084..00080d0 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -28,3 +28,6 @@ DISTCHECK_CONFIGURE_FLAGS =                            \
+ 	--enable-introspection                         \
+ 	--enable-gtk-doc
+ 
++# Disable parallelism because Automake can't get the dependencies
++# right between libmediaart.so and marshal.[ch]
++.NOTPARALLEL:
+-- 
+2.13.0
+

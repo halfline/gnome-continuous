@@ -885,6 +885,7 @@
 		                 "--disable-scrollkeeper"]},
 
 		{"src": "gnome:libmediaart",
+                 "patches": ["libmediaart-no-parallel.patch"],
 		 "config-opts": ["--enable-vala",
 		                 "--disable-gtk-doc",
                                  "--enable-installed-tests"]},
