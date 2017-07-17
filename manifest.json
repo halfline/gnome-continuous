@@ -930,7 +930,7 @@
                          "--with-system-zlib",
                          "--with-intl-api"]},
 
-        {"src": "git:git:https://github.com/ptomato/mozjs.git",
+        {"src": "git:https://github.com/ptomato/mozjs.git",
          "branch": "mozjs52",
          "name": "mozjs52",
          "component": "minimal",
