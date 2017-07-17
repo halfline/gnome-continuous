@@ -1072,6 +1072,7 @@
 		{"src": "git:git://github.com/hughsie/colord-gtk.git"},
 
 		{"src": "gnome:gcab",
+                 "patches": ["gcab-no-parallel.patch"],
 		 "config-opts": ["--disable-silent-rules", "--disable-static", "--enable-fast-install"]},
 
 		{"src": "git:git://github.com/hughsie/appstream-glib.git",
