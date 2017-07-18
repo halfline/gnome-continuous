@@ -1217,9 +1217,6 @@
                  "config-opts": ["--disable-vala"],
 		 "patches": ["totem-meson-build-api.patch"]},
 
-		{"src": "gnome:libgda",
-		 "branch": "LIBGDA_5.2"},
-
 		{"src": "gnome:gdl"},
 
 		{"src": "gnome:gnome-font-viewer",
