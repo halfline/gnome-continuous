@@ -634,6 +634,7 @@
 				 "--disable-documentation"]},
 
 		{"src": "gnome:pango",
+                 "patches": ["pango-build-api.patch"],
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:atk"},
