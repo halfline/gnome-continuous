@@ -832,8 +832,7 @@
 		 "config-opts": ["--enable-static"],
 		 "checksum": "8ef059ee3680b39db967248331ec41188f4b45f86a4a77e39247ff41b61efd7c"},
 
-		{"src": "gnome:geocode-glib",
-                 "patches": ["geocode-glib-build-api.patch"]},
+		{"src": "gnome:geocode-glib"},
 
 		{"src": "fd:geoclue"},
       
