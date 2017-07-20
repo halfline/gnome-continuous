@@ -1,0 +1,30 @@
+From 5209c3aa56d75a0c619a2d1ddfb259c4524bdce7 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Thu, 20 Jul 2017 11:45:56 +0100
+Subject: [PATCH] Prevent parallel builds
+
+The enumeration header and source files do not get generated before the
+files including them are compiled, even if they are listed in
+BUILT_SOURCES.
+---
+ Makefile.am | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/Makefile.am b/Makefile.am
+index 8df6b88..b98894c 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -4,6 +4,10 @@ CLEANFILES =
+ DISTCLEANFILES =
+ ACLOCAL_AMFLAGS = -I m4
+ 
++# Enumerations don't get built before the sources using them,
++# regardless of BUILT_SOURCES
++.NOTPARALLEL:
++
+ makeflags_ = $(makeflags_$(AM_DEFAULT_VERBOSITY))
+ makeflags_0 = --no-print-directory -s
+ makeflags_1 =
+-- 
+2.13.0
+
