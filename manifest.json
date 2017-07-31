@@ -447,9 +447,7 @@
 
 		{"src": "fd:xorg/driver/xf86-input-libinput"},
 
-                {"src": "git:git://github.com/xkbcommon/libxkbcommon",
-                 "tag": "1b6fa0298ac691640a793e64ab2853ecfd5bba1a",
-                 "tag-reason": "https://github.com/xkbcommon/libxkbcommon/issues/50"},
+                {"src": "git:git://github.com/xkbcommon/libxkbcommon"},
 
                 {"src": "git:git://git.xiph.org/celt.git"},
 
