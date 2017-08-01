@@ -643,6 +643,9 @@
 
 		{"src": "gnome:at-spi2-atk"},
 
+		{"src": "fd-xdg:shared-mime-info",
+		 "config-opts": ["--disable-default-make-check"]},
+
 		{"src": "gnome:gdk-pixbuf",
 		 "config-opts": ["--enable-installed-tests"]},
 
@@ -1011,9 +1014,6 @@
 		{"src": "fd-xdg:xdg-user-dirs",
 		 "config-opts": ["--disable-documentation"],
 		 "patches": ["xdg-user-dirs-autostart.patch"]},
-
-		{"src": "fd-xdg:shared-mime-info",
-		 "config-opts": ["--disable-default-make-check"]},
 
 		{"src": "gnome:cantarell-fonts",
 		 "config-opts": ["--disable-source-rebuild"]},
