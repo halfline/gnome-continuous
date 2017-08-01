@@ -619,12 +619,12 @@
                 {"src": "git:git://github.com/hughsie/libgusb.git"},
 		
 		{"src": "git:git://github.com/hughsie/colord.git",
-                 "patches": ["colord-disable-man.patch"],
+                 "tag": "9235b120fc0ec33ef13a04d54c403285dae49cb3",
+                 "tag-reason": "parallelism issues",
 		 "config-opts": ["--disable-print-profiles",
 				 "--disable-bash-completion",
 				 "--disable-argyllcms-sensor",
-				 "--disable-installed-tests",
-                                 "--disable-man"]},
+				 "--disable-installed-tests"]},
 
 		{"src": "ebassi:graphene"},
 
