@@ -1402,7 +1402,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 143,
-		        "all": true,
-		        "component-names": []}
+	"build-epoch": {"version": 144,
+		        "all": false,
+		        "component-names": ["gtk2", "gtk3", "gtk4", "clutter", "mutter"]}
 }
