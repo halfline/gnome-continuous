@@ -1,4 +1,4 @@
-From d2e2f4bcee7cc26d3dd2abc531d164dc9d62ccdc Mon Sep 17 00:00:00 2001
+From ebb42d90b410231ba582d0b20ab2e6ada01b6e72 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Mon, 20 Feb 2017 11:33:49 +0000
 Subject: [PATCH] Add build-api wrapper for Meson/Ninja
@@ -17,7 +17,7 @@ v2:
 
 diff --git a/configure b/configure
 new file mode 100755
-index 000000000..33bca5167
+index 000000000..731bc39e8
 --- /dev/null
 +++ b/configure
 @@ -0,0 +1,130 @@
@@ -89,8 +89,8 @@ index 000000000..33bca5167
 +	--libdir) read_arg libdir "$@" || shift;;
 +	--mandir) read_arg mandir "$@" || shift;;
 +	--includedir) read_arg includedir "$@" || shift;;
-+	--enable-gtk-doc) enable_docs='-Denable-gtk-doc=true';;
-+	--disable-gtk-doc) enable_docs='-Denable-gtk-doc=false';;
++	--enable-gtk-doc) enable_docs='-Dwith_docs=true';;
++	--disable-gtk-doc) enable_docs='-Dwith_docs=false';;
 +	*) echo "Ignoring unknown option '$1'";;
 +    esac
 +    shift
