@@ -89,8 +89,8 @@ index 0000000..33bca51
 +	--libdir) read_arg libdir "$@" || shift;;
 +	--mandir) read_arg mandir "$@" || shift;;
 +	--includedir) read_arg includedir "$@" || shift;;
-+	--enable-gtk-doc) enable_docs='-Denable-gtk-doc=true';;
-+	--disable-gtk-doc) enable_docs='-Denable-gtk-doc=false';;
++	--enable-docs) enable_docs='-Denable-docs=true';;
++	--disable-docs) enable_docs='-Denable-docs=false';;
 +	*) echo "Ignoring unknown option '$1'";;
 +    esac
 +    shift
