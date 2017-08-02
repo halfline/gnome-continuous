@@ -649,6 +649,7 @@
 		 "config-opts": ["--disable-default-make-check"]},
 
 		{"src": "gnome:gdk-pixbuf",
+		 "config-opts": ["--disable-docs"],
 		 "patches": ["gdk-pixbuf-meson-buildapi.patch"]},
 
 		{"src": "gnome:gtk+",
