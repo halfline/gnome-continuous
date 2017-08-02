@@ -447,7 +447,8 @@
 
 		{"src": "fd:xorg/driver/xf86-input-libinput"},
 
-                {"src": "git:git://github.com/xkbcommon/libxkbcommon"},
+                {"src": "git:git://github.com/xkbcommon/libxkbcommon",
+                 "patches": ["libxkbcommon-meson-buildapi.patch"]},
 
                 {"src": "git:git://git.xiph.org/celt.git"},
 
