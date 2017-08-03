@@ -900,15 +900,9 @@
                                  "--enable-installed-tests"]},
 
 		{"src": "gnome:tracker",
-		 "config-opts": ["--enable-miner-firefox=no",
-				 "--enable-miner-thunderbird=no",
-				 "--enable-miner-evolution=no",
-				 "--disable-nautilus-extension",
-				 "--disable-tracker-needle",
-				 "--disable-tracker-preferences",
-				 "--disable-tracker-search-bar",
-				 "--disable-tracker-explorer",
-				 "--with-unicode-support=libicu"]},
+		 "config-opts": ["--with-unicode-support=libicu"]},
+
+		{"src": "gnome:tracker-miners"},
 
 		{"src": "gnome:dconf",
 		 "config-opts": ["--disable-man", "--disable-editor"]},
