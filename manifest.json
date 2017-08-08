@@ -621,12 +621,14 @@
                 {"src": "git:git://github.com/hughsie/libgusb.git"},
 		
 		{"src": "git:git://github.com/hughsie/colord.git",
-                 "patches": ["colord-disable-man.patch"],
+                 "patches": ["colord-disable-man.patch",
+                             "colord-disable-docs.patch"],
 		 "config-opts": ["--disable-print-profiles",
 				 "--disable-bash-completion",
 				 "--disable-argyllcms-sensor",
 				 "--disable-installed-tests",
-                                 "--disable-man"]},
+                                 "--disable-man",
+                                 "--disable-gtk-doc"]},
 
 		{"src": "ebassi:graphene"},
 
