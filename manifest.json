@@ -105,9 +105,8 @@
 		                 "--disable-vapigen"]},
 
 		{"src": "gnome:vala",
-                 "tag": "497f370a8c39f16eece6f97d379f24f66b56e1d4",
-                 "tag-reason": "Vala now hard-depends on graphviz",
-		 "config-opts": ["--enable-vapigen"]},
+                 "patches": ["vala-disable-valadoc.patch"],
+		 "config-opts": ["--disable-valadoc"]},
 
 		{"src": "git:git://github.com/seccomp/libseccomp",
 		 "branch": "release-2.3"},
