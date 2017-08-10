@@ -1389,7 +1389,8 @@
 
                 {"src": "gnome:gnome-music"},
 
-                {"src": "gnome:gnome-todo"}
+                {"src": "gnome:gnome-todo",
+                 "patches": ["gnome-todo-build-api.patch"]}
 	],
 
     "installed-tests-components": [],
