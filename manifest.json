@@ -1398,7 +1398,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 144,
+	"build-epoch": {"version": 145,
 		        "all": false,
-		        "component-names": ["gtk2", "gtk3", "gtk4", "clutter", "mutter"]}
+		        "component-names": ["grilo", "grilo-plugins", "totem"]}
 }
