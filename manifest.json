@@ -910,6 +910,8 @@
 
 		{"src": "gnome:mutter",
                  "irc_room": "gnome-shell",
+                 "tag": "f96b0d43facd10e041fa8d4f0fb629a02bcccc1a",
+                 "tag-reason": "Build failure with Meson; currently investigating",
 		 "config-opts": ["--enable-compile-warnings=maximum",
 				 "--enable-installed-tests"]},
 
