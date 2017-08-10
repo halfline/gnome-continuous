@@ -1182,8 +1182,7 @@
 		{"src": "gnome:epiphany",
                  "patches": ["epiphany-meson-build-api.patch"]},
 
-		{"src": "gnome:gnome-calendar",
-                 "patches": ["gnome-calendar-build-api.patch"]},
+		{"src": "gnome:gnome-calendar"},
 
         {"src": "tarball:https://ftp.gnu.org/gnu/gmp/gmp-6.0.0a.tar.xz",
          "name": "gmp",
@@ -1390,8 +1389,7 @@
 
                 {"src": "gnome:gnome-music"},
 
-                {"src": "gnome:gnome-todo",
-                 "patches": ["gnome-todo-build-api.patch"]}
+                {"src": "gnome:gnome-todo"}
 	],
 
     "installed-tests-components": [],
