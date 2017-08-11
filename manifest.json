@@ -889,8 +889,8 @@
 				 "--enable-installed-tests"]},
 
 		{"src": "gnome:gnome-bluetooth",
-		 "config-opts": ["--disable-documentation",
-		                 "--disable-scrollkeeper"]},
+                 "patches": ["gnome-bluetooth-build-api.patch"],
+		 "config-opts": ["--disable-gtk-doc"]},
 
 		{"src": "gnome:libmediaart",
                  "patches": ["libmediaart-no-parallel.patch"],
