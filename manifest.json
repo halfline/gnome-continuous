@@ -1254,9 +1254,7 @@
 		{"src": "gnome:evince",
 		 "config-opts": ["--enable-introspection"]},
 
-                {"src": "git:https://github.com/danigm/libgepub.git",
-                 "tag": "0.4",
-                 "tag-reason": "0.5 hard depends on rust"},
+                {"src": "gnome:libgepub"},
 
 		{"src": "gnome:gnome-documents",
 		 "config-opts": ["--disable-documentation"]},
