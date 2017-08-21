@@ -620,8 +620,6 @@
                 {"src": "git:git://github.com/hughsie/libgusb.git"},
 		
 		{"src": "git:git://github.com/hughsie/colord.git",
-                 "tag": "ef452526f9fdf5d3722ecbfec89fa4bf7bb53834",
-                 "tag-reason": "https://github.com/hughsie/colord/pull/53",
 		 "config-opts": ["--disable-print-profiles",
 				 "--disable-bash-completion",
 				 "--disable-argyllcms-sensor",
