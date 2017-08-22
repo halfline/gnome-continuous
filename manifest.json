@@ -822,6 +822,8 @@
 				 "--disable-fatal-warnings"]},
 
 		{"src": "fd-gstreamer:gst-plugins-bad",
+                 "tag": "f02993921c55da50042183ee495e3d2c4956fa6b",
+                 "tag-reason": "Build failure; upstream has been notified",
 		 "config-opts": ["--with-gtk=3.0",
 				 "--disable-tests",
 				 "--disable-examples",
