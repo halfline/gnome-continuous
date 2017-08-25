@@ -1372,9 +1372,7 @@
 
 		{"src": "gnome:libgrss"},
 
-		{"src": "gnome:gnome-characters",
-                 "tag": "9f31867afc02c53431616974637270c4747fb0e7",
-                 "tag-reason": "Build failure"},
+		{"src": "gnome:gnome-characters"},
 
                 {"src": "tarball:https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz",
                  "name": "dbus-python",
