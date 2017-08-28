@@ -393,8 +393,6 @@
                  "patches": ["python-mako-buildsys.patch"]},
 
                 {"src": "fd-mesa:mesa",
-                 "tag": "9d8ebf1c77efb042e23125654b0800dcfc480235",
-                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=101831",
                  "cflags": {
                      "x86_64": "-g -m64 -mtune=generic",
                      "i686": "-g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables"
