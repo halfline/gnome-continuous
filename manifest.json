@@ -681,9 +681,7 @@
 		                 "--disable-libdrm_nouveau",
 		                 "--disable-documentation",
 				 "--enable-systemd-integration",
-				 "--with-system-root-install=yes"],
-                 "tag": "63148b20a1f64864b988d9de78b819e4d3232076",
-                 "tag-reason": "Build failure"},
+				 "--with-system-root-install=yes"]},
 
 		{"src": "fd-fprint:libfprint"},
 
