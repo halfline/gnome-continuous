@@ -1170,13 +1170,10 @@
 		{"src": "gnome:gedit"},
 
 		{"src": "gnome:gnome-software",
-		 "tag": "00b48f6e88e6b303e0d7c211f9717335870f0482",
-		 "tag-reason": "It hard depends on valgrind",
 		 "config-opts": ["--disable-man",
-                                 "--disable-offline-appstream-data",
-                                 "--disable-firmware",
+                                 "--disable-fwupd",
                                  "--disable-packagekit",
-                                 "--enable-installed-tests"]},
+                                 "--disable-valgrind"]},
 
 		{"src": "gnome:epiphany",
                  "patches": ["epiphany-meson-build-api.patch"]},
