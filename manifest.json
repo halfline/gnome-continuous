@@ -1173,6 +1173,7 @@
 		 "config-opts": ["--disable-man",
                                  "--disable-fwupd",
                                  "--disable-packagekit",
+                                 "--disable-rpm",
                                  "--disable-valgrind"]},
 
 		{"src": "gnome:epiphany",
