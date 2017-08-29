@@ -840,6 +840,8 @@
                 {"src": "git:https://chromium.googlesource.com/webm/libwebp"},
 
 		{"src": "git:https://github.com/hunspell/hunspell.git",
+                 "tag": "b506e3a5c70bc77f764734d7391ac8382a3f2747",
+                 "tag-reason": "https://github.com/hunspell/hunspell/issues/524",
 		 "patches": ["hunspell-autogen.patch"]},
 
 		{"src": "tarball:http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz",
