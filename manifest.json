@@ -131,6 +131,8 @@
 		 },
 
    		{"src": "gnome:libgudev",
+                 "tag": "56a58f4e9b4703df48107513fc2a97a7b1693c57",
+                 "tag-reason": "g_auto* macros break Mutter; see: https://bugzilla.gnome.org/show_bug.cgi?id=760670",
                  "config-opts": ["--disable-umockdev"]},
 
                 {"src": "git:https://github.com/martinpitt/umockdev.git"},
