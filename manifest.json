@@ -708,7 +708,7 @@
 
 		{"src": "tarball:https://download.gnome.org/sources/librsvg/2.41/librsvg-2.41.1.tar.xz",
 		 "name": "librsvg",
-		 "checksum": "c1c3e76de68f8b7da3d88992cebab252a7e872818e892d7a56a9e89e44b298a0"}
+		 "checksum": "c1c3e76de68f8b7da3d88992cebab252a7e872818e892d7a56a9e89e44b298a0"},
 
 		{"src": "fd-gstreamer:orc",
 		 "config-opts": ["--disable-gtk-doc"]},
