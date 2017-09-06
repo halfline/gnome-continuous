@@ -1,19 +1,21 @@
-From 92b756286ec0a0b8bdcd9c08303a1c1e9d7d2971 Mon Sep 17 00:00:00 2001
+From 3122bbfc3127233987a30cd0614d8c52fe9cabe2 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Wed, 3 May 2017 16:41:49 +0100
 Subject: [PATCH] Add build-api wrapper for Meson
 
+v2:
+ - Update the configure wrapper options
 ---
- configure | 159 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 159 insertions(+)
+ configure | 162 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 162 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000000..f1b8550926
+index 0000000000..f656a1f6fe
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,159 @@
+@@ -0,0 +1,162 @@
 +#!/bin/bash
 +# configure script adapter for Meson
 +# Based on build-api: https://github.com/cgwalters/build-api
@@ -71,9 +73,10 @@ index 0000000000..f1b8550926
 +sanitycheck MESONTEST 'mesontest'
 +sanitycheck NINJA 'ninja' 'ninja-build'
 +
-+enable_docs='-Denable-documentation=false'
-+enable_man=''
-+enable_introspection=''
++# Defaults
++enable_docs='-Ddocumentation=false'
++enable_man='-Dman-pages=false'
++enable_introspection='-Dintrospection=true'
 +
 +while (($# > 0)); do
 +    case "${1%%=*}" in
@@ -87,12 +90,12 @@ index 0000000000..f1b8550926
 +	--libdir) read_arg libdir "$@" || shift;;
 +	--mandir) read_arg mandir "$@" || shift;;
 +	--includedir) read_arg includedir "$@" || shift;;
-+	--enable-gtk-doc) enable_docs='-Denable-documentation=true';;
-+	--disable-gtk-doc) enable_docs='-Denable-documentation=false';;
-+	--enable-man) enable_man='';;
-+	--disable-man) enable_man='';;
-+	--enable-introspection) enable_introspection='';;
-+	--disable-introspection) enable_introspection='';;
++	--enable-gtk-doc) enable_docs='-Ddocumentation=true';;
++	--disable-gtk-doc) enable_docs='-Ddocumentation=false';;
++	--enable-man) enable_man='-Dman-pages=true';;
++	--disable-man) enable_man='-Dman-pages=false';;
++	--enable-introspection) enable_introspection='-Dintrospection=true';;
++	--disable-introspection) enable_introspection='-Dintrospection=false';;
 +	*) echo -e "\e[1;33mINFO\e[0m: Ignoring unknown option '$1'";;
 +    esac
 +    shift
@@ -154,7 +157,9 @@ index 0000000000..f1b8550926
 +echo "  mandir:...... ${mandir}"
 +echo "  includedir:.. ${includedir}"
 +echo "  additional:.."
-+echo "    - ${enable_docs} ${enable_man} ${enable_introspection}"
++echo "    - documentation: ${enable_docs}"
++echo "    - man-pages: ${enable_man}"
++echo "    - introspection: ${enable_introspection}"
 +
 +exec ${MESON} \
 +	--prefix=${prefix} \
@@ -174,5 +179,5 @@ index 0000000000..f1b8550926
 +
 +# vim: ai ts=8 noet sts=2 ft=sh
 -- 
-2.12.2
+2.13.5
 
