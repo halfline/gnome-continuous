@@ -944,6 +944,8 @@
                 {"src": "flatpak:xdg-desktop-portal-gtk"},
 
                 {"src": "ibus:ibus.git",
+                 "tag": "9937a0e4501ccf0cfd238ce7c97733c3099db3f7",
+                 "tag-reason": "https://github.com/ibus/ibus/issues/1942",
                  "patches": ["ibus-builddir.patch"],
 		 "config-opts": ["--disable-tests", 
 				 "--disable-emoji-dict",
