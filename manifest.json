@@ -1354,7 +1354,8 @@
 
 		{"src": "gnome:swell-foop"},
 
-		{"src": "gnome:gnome-chess"},
+		{"src": "gnome:gnome-chess",
+                 "patches": ["gnome-chess-build-api.patch"]},
 
 		{"src": "gnome:gnome-klotski"},
 
