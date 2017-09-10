@@ -1178,6 +1178,9 @@
                                  "--disable-rpm",
                                  "--disable-valgrind"]},
 
+		{"src": "gnome:libdazzle",
+		 "patches": ["libdazzle-meson-build-api.patch"]},
+
 		{"src": "gnome:epiphany",
                  "patches": ["epiphany-meson-build-api.patch"]},
 
