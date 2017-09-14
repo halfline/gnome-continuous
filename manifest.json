@@ -558,7 +558,9 @@
 
                 {"src": "git:git://github.com/jpirko/libndp.git"},
 
-		{"src": "fd:libqmi"},
+		{"src": "fd:libqmi",
+                 "tag": "88ca109f9ca29fcff9651e2ac8930e6c3600ac64",
+                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=102726"},
 
 		{"src": "fd:libmbim/libmbim",
 		 "name": "libmbim"},
