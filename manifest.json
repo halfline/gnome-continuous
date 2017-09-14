@@ -563,7 +563,9 @@
                  "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=102726"},
 
 		{"src": "fd:libmbim/libmbim",
-		 "name": "libmbim"},
+		 "name": "libmbim",
+                 "tag": "7626a0784b602ea01192a068c745a21bd9095781",
+                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=102727"},
 
                 {"src": "git:git://github.com/akheron/jansson",
                  "config-opts": ["--disable-documentation", "--enable-shared"],
