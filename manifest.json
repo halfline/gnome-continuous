@@ -1214,7 +1214,8 @@
 
 		{"src": "gnome:polari"},
 
-		{"src": "gnome:baobab"},
+		{"src": "gnome:baobab",
+                 "patches": ["baobab-build-api.patch"]},
 
 		{"src": "gnome:gnome-sound-recorder"},
 
