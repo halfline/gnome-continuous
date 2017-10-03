@@ -1125,9 +1125,9 @@
 		{"src": "gnome:gnome-power-manager"},
 
 		{"src": "gnome:gnome-shell",
-                 "tag": "c9d5677c2f05adc63cfb7f5aebe78072681ff52a",
                  "irc_room": "gnome-shell",
-		 "config-opts": ["--disable-man"]},
+		 "config-opts": ["--enable-compile-warnings=maximum",
+                                 "--disable-man"]},
 
 		{"src": "gnome:gnome-shell-extensions",
 		 "config-opts": ["--enable-extensions=classic-mode"]},
