@@ -1125,6 +1125,7 @@
 		{"src": "gnome:gnome-power-manager"},
 
 		{"src": "gnome:gnome-shell",
+                 "patches": ["gnome-shell-gir-hack.patch"],
                  "irc_room": "gnome-shell",
 		 "config-opts": ["--enable-compile-warnings=maximum",
                                  "--disable-man"]},
