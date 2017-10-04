@@ -915,7 +915,6 @@
 		{"src": "gnome:zenity"},
 
 		{"src": "gnome:mutter",
-                 "tag": "b6110ba8dc91a2c07c599342172eb1dc6f92e06f",
                  "irc_room": "gnome-shell",
 		 "config-opts": ["--enable-compile-warnings=maximum",
 				 "--enable-installed-tests"]},
