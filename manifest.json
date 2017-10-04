@@ -1003,6 +1003,7 @@
 		{"src": "gnome:gnome-online-miners"},
 
 		{"src": "libical:libical",
+                 "branch": "2.0",
 		 "patches": ["libical-cmake-buildapi.patch"]},
 
 		{"src": "gnome:evolution-data-server",
