@@ -1411,7 +1411,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 145,
-		        "all": false,
-		        "component-names": ["grilo", "grilo-plugins", "totem"]}
+	"build-epoch": {"version": 146,
+		        "all": true,
+		        "component-names": []}
 }
