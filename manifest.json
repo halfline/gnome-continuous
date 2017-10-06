@@ -68,7 +68,7 @@
 		 "noarch": true},
 
                 {"src": "git:git://github.com/mesonbuild/meson.git",
-                 "tag": "a629642f1ecaeaef85438156e1184ac300df536a",
+                 "tag": "f5d530ef714bcbe72640a88ee8db9a041d88ce15",
                  "component": "devel",
                  "patches": ["python-meson-buildsys.patch"]},
 
