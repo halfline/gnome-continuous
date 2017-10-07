@@ -928,6 +928,7 @@
          "component": "minimal",
          "patches": ["mozjs52-buildapi.patch"],
          "config-opts": ["--enable-posix-nspr-emulation",
+                         "--disable-jemalloc",
                          "--disable-tests",
                          "--disable-strip",
                          "--with-system-zlib",
