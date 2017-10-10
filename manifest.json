@@ -68,7 +68,6 @@
 		 "noarch": true},
 
                 {"src": "git:git://github.com/mesonbuild/meson.git",
-                 "tag": "f5d530ef714bcbe72640a88ee8db9a041d88ce15",
                  "component": "devel",
                  "patches": ["python-meson-buildsys.patch"]},
 
@@ -95,9 +94,8 @@
 		 "component": "minimal",
 		 "config-opts": ["--disable-manpages"]},
 
-                {"src": "gnome:gobject-introspection",
-                 "tag": "f22ad3e4f09a1ada9b8887235c8cb8822a03e88f",
-                 "component": "minimal",
+        {"src": "gnome:gobject-introspection",
+         "component": "minimal",
 		 "config-opts": ["--disable-tests",
 				 "--with-python=python3"]},
 
@@ -917,7 +915,6 @@
 		{"src": "gnome:zenity"},
 
 		{"src": "gnome:mutter",
-                 "tag": "65bca8e008d5e12696b0a1baa3bf384becb42356",
                  "irc_room": "gnome-shell",
 		 "config-opts": ["--enable-compile-warnings=maximum",
 				 "--enable-installed-tests"]},
@@ -1130,7 +1127,6 @@
 		{"src": "gnome:gnome-power-manager"},
 
 		{"src": "gnome:gnome-shell",
-                 "tag": "d78d754d017c67c08f5759329295e5e75c198c67",
                  "patches": ["gnome-shell-gir-hack.patch"],
                  "irc_room": "gnome-shell",
 		 "config-opts": ["--enable-compile-warnings=maximum",
