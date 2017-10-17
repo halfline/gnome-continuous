@@ -1325,7 +1325,8 @@
 
 		{"src": "gnome:atomix"},
 
-		{"src": "gnome:dconf-editor"},
+		{"src": "gnome:dconf-editor",
+		 "patches": ["dconf-editor-build-api.patch"]},
 
 		{"src": "gnome:five-or-more"},
 
