@@ -910,7 +910,8 @@
 		{"src": "gnome:tracker-miners"},
 
 		{"src": "gnome:dconf",
-		 "config-opts": ["--disable-man", "--disable-editor"]},
+                 "patches": ["dconf-build-api.patch"],
+		 "config-opts": ["--disable-man"]},
 
 		{"src": "gnome:zenity"},
 
