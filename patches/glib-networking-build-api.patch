@@ -13,7 +13,7 @@ new file mode 100755
 index 0000000..25b666c
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,159 @@
+@@ -0,0 +1,163 @@
 +#!/bin/bash
 +# configure script adapter for Meson
 +# Based on build-api: https://github.com/cgwalters/build-api
@@ -74,6 +74,7 @@ index 0000000..25b666c
 +enable_docs='-Denable-gtk-doc=false'
 +enable_man='-Denable-man=false'
 +enable_libproxy='-Dlibproxy_support=true'
++enable_installed_tests='-Dinstalled_tests=false'
 +
 +while (($# > 0)); do
 +    case "${1%%=*}" in
@@ -93,6 +94,8 @@ index 0000000..25b666c
 +	--disable-man) enable_man='-Denable-man=false';;
 +	--enable-libproxy) enable_libproxy='-Dlibproxy_support=true';;
 +	--disable-libproxy) enable_libproxy='-Dlibproxy_support=false';;
++	--enable-installed-tests) enable_installed_tests='-Dinstalled_tests=true';;
++	--disable-installed-tests) enable_installed_tests='-Dinstalled_tests=false';;
 +	*) echo -e "\e[1;33mINFO\e[0m: Ignoring unknown option '$1'";;
 +    esac
 +    shift
@@ -154,7 +157,7 @@ index 0000000..25b666c
 +echo "  mandir:...... ${mandir}"
 +echo "  includedir:.. ${includedir}"
 +echo "  additional:.."
-+echo "    - ${enable_docs} ${enable_man} ${enable_libproxy}"
++echo "    - ${enable_docs} ${enable_man} ${enable_libproxy} ${enable_installed_tests}"
 +
 +exec ${MESON} \
 +	--prefix=${prefix} \
@@ -169,6 +172,7 @@ index 0000000..25b666c
 +	${enable_docs} \
 +	${enable_man} \
 +	${enable_libproxy} \
++	${enable_installed_tests} \
 +	${builddir} \
 +	${srcdir}
 +
