@@ -808,6 +808,7 @@
 
                 {"src": "gnome:glib-networking",
 		 "component": "minimal",
+                 "patches": ["glib-networking-build-api.patch"],
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:libsoup",
