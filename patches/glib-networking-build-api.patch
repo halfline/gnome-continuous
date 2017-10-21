@@ -168,7 +168,7 @@ index 0000000..25b666c
 +	--default-library shared \
 +	${enable_docs} \
 +	${enable_man} \
-+       ${enable_libproxy} \
++	${enable_libproxy} \
 +	${builddir} \
 +	${srcdir}
 +

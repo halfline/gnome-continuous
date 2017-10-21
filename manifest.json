@@ -809,7 +809,7 @@
                 {"src": "gnome:glib-networking",
 		 "component": "minimal",
                  "patches": ["glib-networking-build-api.patch"],
-		 "config-opts": ["--enable-installed-tests --disable-libproxy"]},
+		 "config-opts": ["--enable-installed-tests", "--disable-libproxy"]},
 
 		{"src": "gnome:libsoup",
 		 "component": "minimal",
