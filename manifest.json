@@ -556,14 +556,10 @@
 
                 {"src": "git:git://github.com/jpirko/libndp.git"},
 
-		{"src": "fd:libqmi",
-                 "tag": "88ca109f9ca29fcff9651e2ac8930e6c3600ac64",
-                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=102726"},
+		{"src": "fd:libqmi"},
 
 		{"src": "fd:libmbim/libmbim",
-		 "name": "libmbim",
-                 "tag": "7626a0784b602ea01192a068c745a21bd9095781",
-                 "tag-reason": "https://bugs.freedesktop.org/show_bug.cgi?id=102727"},
+		 "name": "libmbim"},
 
                 {"src": "git:git://github.com/akheron/jansson",
                  "config-opts": ["--disable-documentation", "--enable-shared"],
