@@ -1189,8 +1189,6 @@
 		 "patches": ["libdazzle-meson-build-api.patch"]},
 
 		{"src": "gnome:epiphany",
-                 "tag": "e53f2c0ec6d31c6c0008088a269003e911cb5af1",
-                 "tag-reason": "Build failure; looks for webkit_navigation_action_is_redirect()",
                  "patches": ["epiphany-meson-build-api.patch"]},
 
 		{"src": "gnome:gnome-calendar"},
