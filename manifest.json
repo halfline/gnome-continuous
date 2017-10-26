@@ -884,7 +884,8 @@
                                  "--disable-fatal-warnings"]},
 
 		{"src": "gnome:gnome-online-accounts",
-		 "config-opts": ["--disable-documentation"]},
+		 "config-opts": ["--disable-documentation",
+		                 "--disable-Werror"]},
 
 		{"src": "gnome:gvfs",
 		 "config-opts": ["--disable-gphoto2",
