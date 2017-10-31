@@ -642,7 +642,8 @@
 
 		{"src": "gnome:at-spi2-core"},
 
-		{"src": "gnome:at-spi2-atk"},
+		{"src": "gnome:at-spi2-atk",
+                 "patches": ["at-spi2-atk-build-api.patch"]},
 
 		{"src": "fd-xdg:shared-mime-info",
 		 "config-opts": ["--disable-default-make-check"]},
