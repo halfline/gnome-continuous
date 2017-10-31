@@ -638,7 +638,8 @@
                  "patches": ["pango-build-api.patch"],
 		 "config-opts": ["--enable-installed-tests"]},
 
-		{"src": "gnome:atk"},
+		{"src": "gnome:atk",
+                 "patches": ["atk-build-api.patch"]},
 
 		{"src": "gnome:at-spi2-core"},
 
