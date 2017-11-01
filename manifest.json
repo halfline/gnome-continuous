@@ -1166,7 +1166,7 @@
 
                 {"src": "gnome:gnome-autoar"},
 
-		{"src": "gnome:nautilus",
+		{"src": "gnome-gitlab:GNOME/nautilus.git",
 		 "config-opts": ["--disable-selinux",
 		                 "--disable-gtk-doc"],
 		 "patches": ["nautilus-meson-buildapi.patch"]},
@@ -1214,7 +1214,7 @@
 		{"src": "gnome:gnome-weather",
 		 "config-opts": ["--enable-installed-tests"]},
 
-		{"src": "gnome:polari"},
+		{"src": "gnome-gitlab:GNOME/polari.git"},
 
 		{"src": "gnome:baobab",
                  "patches": ["baobab-build-api.patch"]},
@@ -1401,7 +1401,7 @@
 
                 {"src": "gnome:gnome-music"},
 
-                {"src": "gnome:gnome-todo"}
+                {"src": "gnome-gitlab:GNOME/gnome-todo.git"}
 	],
 
     "installed-tests-components": [],
