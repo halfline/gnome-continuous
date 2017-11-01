@@ -1192,7 +1192,7 @@
 		 "patches": ["libdazzle-meson-build-api.patch"]},
 
 		{"src": "gnome:epiphany",
-                 "tag": "b715f22c9e6b5bb120668eadcac77f40624b920c",
+                 "tag": "4e87ad89bc6e66ad3437d4c8515751d4d5c99764",
                  "tag-reason": "Newer commits require WebKitGtk 2.19.1, which fails to build",
                  "patches": ["epiphany-meson-build-api.patch"]},
 
