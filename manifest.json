@@ -933,7 +933,7 @@
                          "--with-intl-api",
                          "AUTOCONF=autoconf"]},
 
-		{"src": "gnome:gjs",
+		{"src": "gnome-gitlab:GNOME/gjs.git",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "git:git://github.com/ostreedev/ostree",
