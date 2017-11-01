@@ -844,9 +844,7 @@
 
 		{"src": "fd:geoclue"},
       
-                {"src": "git:https://chromium.googlesource.com/webm/libwebp",
-                 "tag": "50d1a848bc56554af8413cfe681f94286a6371b3",
-                 "tag-reason": "Last known tested version for WebKitGtk"},
+                {"src": "git:https://chromium.googlesource.com/webm/libwebp"},
 
 		{"src": "git:https://github.com/hunspell/hunspell.git",
                  "tag": "2730ad3d32d839f439ba7f286e3600cd9294a978",
