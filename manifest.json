@@ -920,18 +920,18 @@
 		 "config-opts": ["--enable-compile-warnings=maximum",
 				 "--enable-installed-tests"]},
 
-        {"src": "git:https://github.com/ptomato/mozjs.git",
-         "branch": "mozjs52",
-         "name": "mozjs52",
-         "component": "minimal",
-         "patches": ["mozjs52-buildapi.patch"],
-         "config-opts": ["--enable-posix-nspr-emulation",
-                         "--disable-jemalloc",
-                         "--disable-tests",
-                         "--disable-strip",
-                         "--with-system-zlib",
-                         "--with-intl-api",
-                         "AUTOCONF=autoconf"]},
+                {"src": "git:https://github.com/ptomato/mozjs.git",
+                 "branch": "mozjs52",
+                 "name": "mozjs52",
+                 "component": "minimal",
+                 "patches": ["mozjs52-buildapi.patch"],
+                 "config-opts": ["--enable-posix-nspr-emulation",
+                                 "--disable-jemalloc",
+                                 "--disable-tests",
+                                 "--disable-strip",
+                                 "--with-system-zlib",
+                                 "--with-intl-api",
+                                 "AUTOCONF=autoconf"]},
 
 		{"src": "gnome-gitlab:GNOME/gjs.git",
 		 "config-opts": ["--enable-installed-tests"]},
@@ -943,6 +943,19 @@
 		                 "--with-dracut",
 		                 "--disable-man",
 				 "--enable-installed-tests"]},
+
+		{"src": "gnome:gcab",
+                 "patches": ["gcab-no-parallel.patch"],
+		 "config-opts": ["--disable-silent-rules", "--disable-static", "--enable-fast-install"]},
+
+		{"src": "git:git://github.com/hughsie/appstream-glib.git",
+		 "config-opts": ["--disable-dep11",
+                                 "--disable-stemmer",
+                                 "--disable-rpm",
+                                 "--disable-man",
+                                 "--disable-gtk-doc"]},
+
+                {"src": "git:https://github.com/hughsie/appdata-tools.git"},
 
                 {"src": "flatpak:flatpak",
                  "config-opts": ["--disable-documentation",
@@ -1072,19 +1085,6 @@
                  "config-opts": ["--disable-python-bindings"]}, 
 
 		{"src": "git:git://github.com/hughsie/colord-gtk.git"},
-
-		{"src": "gnome:gcab",
-                 "patches": ["gcab-no-parallel.patch"],
-		 "config-opts": ["--disable-silent-rules", "--disable-static", "--enable-fast-install"]},
-
-		{"src": "git:git://github.com/hughsie/appstream-glib.git",
-		 "config-opts": ["--disable-dep11",
-                                 "--disable-stemmer",
-                                 "--disable-rpm",
-                                 "--disable-man",
-                                 "--disable-gtk-doc"]},
-
-                {"src": "git:https://github.com/hughsie/appdata-tools.git"},
 
 		{"src": "gnome:cheese"},
 
