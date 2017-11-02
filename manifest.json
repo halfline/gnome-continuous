@@ -1412,7 +1412,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 146,
-		        "all": true,
-		        "component-names": []}
+	"build-epoch": {"version": 147,
+		        "all": false,
+		        "component-names": ["appstream-glib"]}
 }
