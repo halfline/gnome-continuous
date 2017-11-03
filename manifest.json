@@ -890,9 +890,12 @@
 		                 "--disable-Werror"]},
 
 		{"src": "gnome:gvfs",
+		 "patches": ["gvfs-build-api.patch"],
 		 "config-opts": ["--disable-gphoto2",
-				 "--disable-documentation",
-				 "--enable-installed-tests"]},
+				 "--enable-devel-utils",
+				 "--enable-installed-tests",
+				 "--disable-man",
+				 "--enable-programs"]},
 
 		{"src": "gnome:gnome-bluetooth",
                  "patches": ["gnome-bluetooth-build-api.patch"],
