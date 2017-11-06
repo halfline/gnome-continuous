@@ -576,6 +576,8 @@
 		 "config-opts": ["--with-python=python3"]},
 
 		{"src": "fd-NM:NetworkManager",
+                 "tag": "cec215147a1763e3e146b3e0fc1152322e3f0d2b",
+                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=789960",
 		 "config-opts": ["PYTHON=python3",
 		                 "--with-dhclient=yes",
 		                 "--with-session-tracking=systemd",
