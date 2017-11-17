@@ -1,31 +1,29 @@
-From 423002b8ed9c2479f3062e40d449bdee68492eae Mon Sep 17 00:00:00 2001
-From: Emmanuele Bassi <ebassi@gnome.org>
-Date: Mon, 20 Feb 2017 11:33:49 +0000
+From 0cbd6d519c38faa25795bd143a9268db000ea142 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?I=C3=B1igo=20Mart=C3=ADnez?= <inigomartinez@gmail.com>
+Date: Fri, 17 Nov 2017 11:10:04 +0100
 Subject: [PATCH] Add build-api wrapper for Meson/Ninja
 
 Use Meson and Ninja, instead of autotools.
-
-v3:
-  - Enable CCache
-  - Pass CC and CXX flags to meson and ninja
-v2:
-  - Disable CCache
 ---
- configure | 134 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 134 insertions(+)
+ configure | 170 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 170 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 000000000..8af9ec7b4
+index 00000000..dde346b5
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,134 @@
+@@ -0,0 +1,170 @@
 +#!/bin/bash
 +# configure script adapter for Meson
++# Based on build-api: https://github.com/cgwalters/build-api
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
-+# Copyright 2016 Emmanuele Bassi
++# Copyright 2016, 2017 Emmanuele Bassi
++# Copyright 2017 Iñigo Martínez <inigomartinez@gmail.com>
 +# Licensed under the new-BSD license (http://www.opensource.org/licenses/bsd-license.php)
++
++# Build API variables:
 +
 +# Little helper function for reading args from the commandline.
 +# it automatically handles -a b and -a=b variants, and returns 1 if
@@ -36,12 +34,12 @@ index 000000000..8af9ec7b4
 +    # $3 = arg parameter
 +    local rematch='^[^=]*=(.*)$'
 +    if [[ $2 =~ $rematch ]]; then
-+	read "$1" <<< "${BASH_REMATCH[1]}"
++        read "$1" <<< "${BASH_REMATCH[1]}"
 +    else
-+	read "$1" <<< "$3"
-+	# There is no way to shift our callers args, so
-+	# return 1 to indicate they should do it instead.
-+	return 1
++        read "$1" <<< "$3"
++        # There is no way to shift our callers args, so
++        # return 1 to indicate they should do it instead.
++        return 1
 +    fi
 +}
 +
@@ -71,30 +69,59 @@ index 000000000..8af9ec7b4
 +    exit 1
 +}
 +
++checkoption() {
++    # $1 = arg
++    option="${1#*--}"
++    action="${option%%-*}"
++    name="${option#*-}"
++    if [ ${default_options[$name]+_} ]; then
++        case "$action" in
++            enable) meson_options[$name]=true;;
++            disable) meson_options[$name]=false;;
++            *) echo -e "\e[1;33mINFO\e[0m: Ignoring unknown action '$action'";;
++        esac
++    else
++        echo -e "\e[1;33mINFO\e[0m: Ignoring unknown option '$option'"
++    fi
++}
++
++echooption() {
++    # $1 = option
++    if [ ${meson_options[$1]+_} ]; then
++        echo ${meson_options[$1]}
++    elif [ ${default_options[$1]+_} ]; then
++        echo ${default_options[$1]}
++    fi
++}
 +
 +sanitycheck MESON 'meson'
++sanitycheck MESONTEST 'mesontest'
 +sanitycheck NINJA 'ninja' 'ninja-build'
 +
-+enable_docs='-Denable-gtk-doc=false'
-+enable_selinux='-Denable-selinux=true'
++declare -A default_options=(
++    ['deprecation-flags']=false
++    ['session-selector']=false
++    ['systemd']=true
++    ['consolekit']=false
++    ['docbook']=true
++    ['man']=true
++)
++
++declare -A meson_options
 +
 +while (($# > 0)); do
 +    case "${1%%=*}" in
-+	--prefix) read_arg prefix "$@" || shift;;
-+	--bindir) read_arg bindir "$@" || shift;;
-+	--sbindir) read_arg sbindir "$@" || shift;;
-+	--libexecdir) read_arg libexecdir "$@" || shift;;
-+	--datarootdir) read_arg datarootdir "$@" || shift;;
-+	--datadir) read_arg datadir "$@" || shift;;
-+	--sysconfdir) read_arg sysconfdir "$@" || shift;;
-+	--libdir) read_arg libdir "$@" || shift;;
-+	--mandir) read_arg mandir "$@" || shift;;
-+	--includedir) read_arg includedir "$@" || shift;;
-+	--enable-gtk-doc) enable_docs='-Denable-gtk-doc=true';;
-+	--disable-gtk-doc) enable_docs='-Denable-gtk-doc=false';;
-+	--enable-selinux) enable_selinux='-Denable-selinux=true';;
-+	--disable-selinux) enable_selinux='-Denable-selinux=false';;
-+	*) echo "Ignoring unknown option '$1'";;
++        --prefix) read_arg prefix "$@" || shift;;
++        --bindir) read_arg bindir "$@" || shift;;
++        --sbindir) read_arg sbindir "$@" || shift;;
++        --libexecdir) read_arg libexecdir "$@" || shift;;
++        --datarootdir) read_arg datarootdir "$@" || shift;;
++        --datadir) read_arg datadir "$@" || shift;;
++        --sysconfdir) read_arg sysconfdir "$@" || shift;;
++        --libdir) read_arg libdir "$@" || shift;;
++        --mandir) read_arg mandir "$@" || shift;;
++        --includedir) read_arg includedir "$@" || shift;;
++        *) checkoption $1;;
 +    esac
 +    shift
 +done
@@ -114,47 +141,50 @@ index 000000000..8af9ec7b4
 +# The source directory is the location of this file
 +srcdir=$(dirname $0)
 +
++# The build directory is the current location
++builddir=`pwd`
++
++# If we're calling this file from the source directory then
++# we automatically create a build directory and ensure that
++# both Meson and Ninja invocations are relative to that
++# location
++if [[ -f "${builddir}/meson.build" ]]; then
++    mkdir -p _build
++    builddir="${builddir}/_build"
++    NINJA_OPT="-C ${builddir}"
++fi
++
 +# Wrapper Makefile for Ninja
 +cat > Makefile <<END
 +# Generated by configure; do not edit
 +
 +all:
-+	CC=gcc CXX=g++ ${NINJA}
++	CC="\$(CC)" CXX="\$(CXX)" ${NINJA} ${NINJA_OPT}
 +
 +install:
-+	DESTDIR="\$(DESTDIR)" ${NINJA} install
++	DESTDIR="\$(DESTDIR)" ${NINJA} ${NINJA_OPT} install
++
++check:
++	${MESONTEST} ${NINJA_OPT}
 +END
 +
-+echo "Summary:"
-+echo "  meson:....... ${MESON}"
-+echo "  ninja:....... ${NINJA}"
-+echo "  prefix:...... ${prefix}"
-+echo "  bindir:...... ${bindir}"
-+echo "  sbindir:..... ${sbindir}"
-+echo "  libexecdir:.. ${libexecdir}"
-+echo "  datarootdir:. ${datarootdir}"
-+echo "  datadir:..... ${datadir}"
-+echo "  sysconfdir:.. ${sysconfdir}"
-+echo "  libdir:...... ${libdir}"
-+echo "  mandir:...... ${mandir}"
-+echo "  includedir:.. ${includedir}"
++cmd_options=""
++for key in "${!meson_options[@]}"; do
++    cmd_options="$cmd_options -D${key/\-/_}=${meson_options[$key]}"
++done
 +
-+export CC=gcc CXX=g++
 +exec ${MESON} \
-+	--prefix=${prefix} \
-+	--libdir=${libdir} \
-+	--libexecdir=${libexecdir} \
-+	--datadir=${datadir} \
-+	--sysconfdir=${sysconfdir} \
-+	--bindir=${bindir} \
-+	--includedir=${includedir} \
-+	--mandir=${mandir} \
-+	--default-library shared \
-+	${enable_docs} \
-+	${enable_selinux} \
-+	${srcdir}
-+
-+# vim: ai ts=8 noet sts=2 ft=sh
++    --prefix=${prefix} \
++    --libdir=${libdir} \
++    --libexecdir=${libexecdir} \
++    --datadir=${datadir} \
++    --sysconfdir=${sysconfdir} \
++    --bindir=${bindir} \
++    --includedir=${includedir} \
++    --mandir=${mandir} \
++    ${cmd_options} \
++    ${builddir} \
++    ${srcdir}
 -- 
-2.11.1
+2.15.0
 
