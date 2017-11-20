@@ -1167,6 +1167,8 @@
 
                 {"src": "gnome:gnome-autoar"},
 
+		{"src": "gnome:gexiv2"},
+
 		{"src": "gnome-gitlab:GNOME/nautilus.git",
 		 "config-opts": ["--disable-selinux",
 		                 "--disable-gtk-doc"],
@@ -1251,8 +1253,6 @@
                  "name": "exiv2",
                  "checksum": "c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4",
                  "patches": ["exiv2-no-builddir.patch"]},
-
-		{"src": "gnome:gexiv2"},
 
 		{"src": "gnome:gegl",
                  "config-opts": ["--disable-docs", "--with-jasper", "--with-libraw", "--without-lua"]},
