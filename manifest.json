@@ -1288,7 +1288,8 @@
 
 		{"src": "gnome:hotssh"},
 
-		{"src": "gnome:file-roller"},
+		{"src": "gnome:file-roller",
+                 "patches": ["file-roller-build-api.patch"]},
 
 		{"src": "gnome:gnome-desktop-testing",
 		 "component": "testing"},
