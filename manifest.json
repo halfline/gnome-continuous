@@ -1414,7 +1414,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 147,
+	"build-epoch": {"version": 148,
 		        "all": false,
-		        "component-names": ["appstream-glib"]}
+		        "component-names": ["gexiv2"]}
 }
