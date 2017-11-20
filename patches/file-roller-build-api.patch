@@ -1,19 +1,24 @@
-From 463e0edc5193d2e32101aa1cc53ec54cc906ae8f Mon Sep 17 00:00:00 2001
+From 9922f9ce1d6151b273eeeeb133683cb68dad5a26 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Mon, 20 Nov 2017 10:48:34 +0000
 Subject: [PATCH] Add build-api patch for Continuous
 
+v2:
+
+ - Disable magic dependency
+ - Disable nautilus actions
+ - Disable packagekit
 ---
- configure | 144 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 144 insertions(+)
+ configure | 155 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 155 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 00000000..58b44a5c
+index 00000000..c09885ed
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,144 @@
+@@ -0,0 +1,155 @@
 +#!/bin/bash
 +# configure script adapter for Meson
 +# Based on build-api: https://github.com/cgwalters/build-api
@@ -71,6 +76,11 @@ index 00000000..58b44a5c
 +sanitycheck MESONTEST 'mesontest'
 +sanitycheck NINJA 'ninja' 'ninja-build'
 +
++# Defaults for Continuous
++nautilus_actions='-Dnautilus_actions=false'
++packagekit='-Dpackagekit=false'
++magic='-Dmagic=false'
++
 +while (($# > 0)); do
 +    case "${1%%=*}" in
 +	--prefix) read_arg prefix "$@" || shift;;
@@ -83,6 +93,12 @@ index 00000000..58b44a5c
 +	--libdir) read_arg libdir "$@" || shift;;
 +	--mandir) read_arg mandir "$@" || shift;;
 +	--includedir) read_arg includedir "$@" || shift;;
++	--enable-nautilus-actions) nautilus_actions='-Dnautilus_actions=true';;
++	--disable-nautilus-actions) nautilus_actions='-Dnautilus_actions=false';;
++	--enable-packagekit) packagekit='-Dpackagekit=true';;
++	--disable-packagekit) packagekit='-Dpackagekit=false';;
++	--enable-magic) magic='-Dmagic=true';;
++	--disable-magic) magic='-Dmagic=false';;
 +	*) echo -e "\e[1;33mINFO\e[0m: Ignoring unknown option '$1'";;
 +    esac
 +    shift
