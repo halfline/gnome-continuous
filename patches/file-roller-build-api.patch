@@ -1,7 +1,11 @@
-From 9922f9ce1d6151b273eeeeb133683cb68dad5a26 Mon Sep 17 00:00:00 2001
+From 0c1bd5a3b7975e7a63d34b49d91187822d2231c9 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Mon, 20 Nov 2017 10:48:34 +0000
 Subject: [PATCH] Add build-api patch for Continuous
+
+v3:
+
+ - Actually use the options defined in v2
 
 v2:
 
@@ -9,16 +13,16 @@ v2:
  - Disable nautilus actions
  - Disable packagekit
 ---
- configure | 155 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 155 insertions(+)
+ configure | 158 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 158 insertions(+)
  create mode 100755 configure
 
 diff --git a/configure b/configure
 new file mode 100755
-index 00000000..c09885ed
+index 00000000..12a6f5ba
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,155 @@
+@@ -0,0 +1,158 @@
 +#!/bin/bash
 +# configure script adapter for Meson
 +# Based on build-api: https://github.com/cgwalters/build-api
@@ -170,6 +174,9 @@ index 00000000..c09885ed
 +	--includedir=${includedir} \
 +	--mandir=${mandir} \
 +	--default-library shared \
++	${magic} \
++	${packagekit} \
++	${nautilus_actions} \
 +	${builddir} \
 +	${srcdir}
 +
