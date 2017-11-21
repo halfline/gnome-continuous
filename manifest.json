@@ -1237,7 +1237,6 @@
                  "config-opts": [
                      "--pgp-support=false",
                      "--check-compatible-gpg=false",
-                     "--pkcs11-support=false",
                      "--ldap-support=false",
                      "--key-sharing=false"
                  ]},
