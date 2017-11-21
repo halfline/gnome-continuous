@@ -1233,7 +1233,14 @@
 
 		{"src": "gnome:gnome-logs"},
 
-		{"src": "gnome:seahorse"},
+		{"src": "gnome:seahorse",
+                 "config-opts": [
+                     "--pgp-support=false",
+                     "--check-compatible-gpg=false",
+                     "--pkcs11-support=false",
+                     "--ldap-support=false",
+                     "--key-sharing=false"
+                 ]},
 
 		{"src": "gnome:totem",
                  "config-opts": ["--disable-vala"],
