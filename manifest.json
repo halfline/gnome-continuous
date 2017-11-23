@@ -68,10 +68,8 @@
 		 "noarch": true},
 
                 {"src": "git:git://github.com/mesonbuild/meson.git",
-                 "tag": "d5a6ab31bfbcec9838805c598be75abb036aff87",
-                 "tag-reason": "Build failure when invoking meson --internal",
                  "component": "devel",
-                 "patches": ["python-meson-buildsys.patch"]},
+                 "patches": ["python-meson-buildsys.patch", "meson-issue-2672.patch"]},
 
 		{"src": "gnome:glib",
 		 "component": "minimal",
