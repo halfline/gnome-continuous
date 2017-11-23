@@ -69,7 +69,7 @@
 
                 {"src": "git:git://github.com/mesonbuild/meson.git",
                  "component": "devel",
-                 "patches": ["python-meson-buildsys.patch", "meson-issue-2672.patch"]},
+                 "patches": ["python-meson-buildsys.patch"]},
 
 		{"src": "gnome:glib",
 		 "component": "minimal",
