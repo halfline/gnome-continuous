@@ -1418,7 +1418,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 148,
+	"build-epoch": {"version": 149,
 		        "all": false,
-		        "component-names": ["gexiv2"]}
+		        "component-names": ["libinput"]}
 }
