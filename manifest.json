@@ -1132,7 +1132,7 @@
 		 "config-opts": ["--enable-compile-warnings=maximum",
                                  "--disable-man"]},
 
-		{"src": "gnome:gnome-shell-extensions",
+		{"src": "gnome-gitlab:GNOME/gnome-shell-extensions.git",
 		 "config-opts": ["--enable-extensions=classic-mode"]},
 
                 {"src": "git:https://gitlab.com/dogtail/dogtail.git",
