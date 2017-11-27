@@ -955,8 +955,6 @@
                                  "--disable-man",
                                  "--disable-gtk-doc"]},
 
-                {"src": "git:https://github.com/hughsie/appdata-tools.git"},
-
                 {"src": "flatpak:flatpak",
                  "config-opts": ["--disable-documentation",
                                  "--enable-installed-tests"]},
