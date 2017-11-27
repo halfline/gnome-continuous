@@ -1204,7 +1204,7 @@
                  "tag-reason": "Newer commits require WebKitGtk 2.19.1, which fails to build",
                  "patches": ["epiphany-meson-build-api.patch"]},
 
-		{"src": "gnome:gnome-calendar"},
+		{"src": "gnome-gitlab:GNOME/gnome-calendar.git"},
 
         {"src": "tarball:https://ftp.gnu.org/gnu/gmp/gmp-6.0.0a.tar.xz",
          "name": "gmp",
