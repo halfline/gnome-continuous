@@ -855,9 +855,9 @@
 		 "name": "enchant",
 		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"},
 
-		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.18.2.tar.xz",
+		{"src": "tarball:https://www.webkitgtk.org/releases/webkitgtk-2.19.2.tar.xz",
 		 "name": "webkitgtk",
-		 "checksum": "b14cb3f1b5321b1dc50abcc0445a97f8e2f8813562bca7ce4d2f8069f6fec8e7",
+		 "checksum": "439e88894accd4849d218b29a0755d25aa6c79224fc700206c860108d223d4c3",
 		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
 
 		{"src": "gnome:libgee",
