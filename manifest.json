@@ -775,8 +775,6 @@
                 {"src": "git:git://github.com/Distrotech/itstool.git"},
 
 		{"src": "gnome:yelp-xsl",
-                 "tag": "763b67f0ede582e05c93f6502856119df9250ac1",
-                 "tag-reason": "WebKitGTK dependency bump, and WebKitGTK does not build",
 		 "config-opts": ["--disable-doc"]},
 
 		{"src": "gnome:yelp-tools"},
@@ -1316,7 +1314,9 @@
 		{"src": "gnome:nautilus-sendto",
                  "patches": ["nautilus-sendto-build-api.patch"]},
 
-		{"src": "gnome:yelp"},
+		{"src": "gnome:yelp",
+                 "tag": "763b67f0ede582e05c93f6502856119df9250ac1",
+                 "tag-reason": "WebKitGTK dependency bump, and WebKitGTK does not build"},
 		
 		{"src": "gnome:folks",
 		 "config-opts": ["--disable-static", 
