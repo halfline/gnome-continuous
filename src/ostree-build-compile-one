@@ -247,6 +247,7 @@ def main(args):
             env['CC'] = makeargs['CC']
         if 'CXX' in makeargs:
             env['CXX'] = makeargs['CXX']
+        log("CC = '%s', CXX = '%s'" % (env['CC'], env['CXX'],))
 
     user_specified_jobs = False
     for arg in args:
