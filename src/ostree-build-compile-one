@@ -150,7 +150,7 @@ def main(args):
         if os.path.exists(configure_path):
             os.unlink(configure_path)
 
-    force_autotools = metadata.get('force-autotools', False):
+    force_autotools = metadata.get('force-autotools', False)
 
     builddir = '_build'
     use_builddir = True
