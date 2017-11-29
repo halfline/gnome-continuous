@@ -213,25 +213,25 @@ def main(args):
     use_ninja = False
     buildfile_path = None
 
-    for name in ['Makefile', 'makefile', 'GNUmakefile']:
-        buildfile_path = os.path.join(builddir, name)
-        if os.path.exists(buildfile_path):
-            use_make = True
-            break
-
     for name in ['build.ninja']:
         buildfile_path = os.path.join(builddir, name)
         if os.path.exists(buildfile_path):
             use_ninja = True
             break
 
+    for name in ['Makefile', 'makefile', 'GNUmakefile']:
+        buildfile_path = os.path.join(builddir, name)
+        if os.path.exists(buildfile_path):
+            use_make = True
+            break
+
     if buildfile_path is None:
         fatal("No build rules file found")
 
-    if use_make:
-        args = list(makeargs)
-    else:
+    if use_ninja:
         args = list(ninjaargs)
+    else:
+        args = list(makeargs)
 
     user_specified_jobs = False
     for arg in args:
