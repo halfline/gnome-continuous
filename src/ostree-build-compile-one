@@ -150,11 +150,13 @@ def main(args):
         if os.path.exists(configure_path):
             os.unlink(configure_path)
 
+    force_autotools = metadata.get('force-autotools', False):
+
     builddir = '_build'
     use_builddir = True
 
     meson_build = False
-    if os.path.exists('meson.build'):
+    if os.path.exists('meson.build') and not force_autotools:
         meson_build = True
     else:
         autogen_script = None
