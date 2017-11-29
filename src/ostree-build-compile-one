@@ -211,17 +211,20 @@ def main(args):
 
     use_make = False
     use_ninja = False
+
     buildfile_path = None
 
     for name in ['build.ninja']:
-        buildfile_path = os.path.join(builddir, name)
-        if os.path.exists(buildfile_path):
+        file_path = os.path.join(builddir, name)
+        if os.path.exists(file_path):
+            buildfile_path = file_path
             use_ninja = True
             break
 
     for name in ['Makefile', 'makefile', 'GNUmakefile']:
-        buildfile_path = os.path.join(builddir, name)
-        if os.path.exists(buildfile_path):
+        file_path = os.path.join(builddir, name)
+        if os.path.exists(file_path):
+            buildfile_path = file_path
             use_make = True
             break
 
