@@ -93,19 +93,29 @@ def main(args):
     machine=uname[4]
     build_target='%s-%s' % (machine, kernel)
 
-    configargs = ['--build=' + build_target,
-                  '--prefix=' + PREFIX,
-                  '--libdir=' + os.path.join(PREFIX, 'lib'),
-                  '--sysconfdir=/etc',
-                  '--localstatedir=/var',
-                  '--bindir=' + os.path.join(PREFIX, 'bin'),
-                  '--sbindir=' + os.path.join(PREFIX, 'bin'),
-                  '--datadir=' + os.path.join(PREFIX, 'share'),
-                  '--includedir=' + os.path.join(PREFIX, 'include'),
-                  '--libexecdir=' + os.path.join(PREFIX, 'libexec'),
-                  '--mandir=' + os.path.join(PREFIX, 'share', 'man'),
-                  '--infodir=' + os.path.join(PREFIX, 'share', 'info')]
+    default_configargs = [
+        '--prefix=' + PREFIX,
+        '--libdir=' + os.path.join(PREFIX, 'lib'),
+        '--sysconfdir=/etc',
+        '--localstatedir=/var',
+        '--bindir=' + os.path.join(PREFIX, 'bin'),
+        '--sbindir=' + os.path.join(PREFIX, 'bin'),
+        '--datadir=' + os.path.join(PREFIX, 'share'),
+        '--includedir=' + os.path.join(PREFIX, 'include'),
+        '--libexecdir=' + os.path.join(PREFIX, 'libexec'),
+        '--mandir=' + os.path.join(PREFIX, 'share', 'man'),
+        '--infodir=' + os.path.join(PREFIX, 'share', 'info'),
+    ]
+
+    autotools_configargs = [
+        '--build=' + build_target,
+        '--disable-static',
+        '--disable-silent-rules',
+    ]
+    meson_configargs = []
+
     makeargs = ['make']
+    ninjaargs = ['ninja']
 
     ostbuild_resultdir='_ostbuild-results'
     ostbuild_meta_path='_ostbuild-meta.json'
@@ -127,7 +137,7 @@ def main(args):
     metadata = json.load(f)
     f.close()
 
-    configargs.extend(metadata.get('config-opts', []))
+    configargs = metadata.get('config-opts', [])
 
     requires = metadata.get('requires', {})
     pkgconfig_requires = requires.get('pkgconfig', [])
@@ -140,29 +150,33 @@ def main(args):
         if os.path.exists(configure_path):
             os.unlink(configure_path)
 
-    autogen_script = None
-    if not os.path.exists('configure'):
-        log("No 'configure' script found, looking for autogen/bootstrap")
-        for name in ['autogen', 'autogen.sh', 'bootstrap']:
-            if os.path.exists(name):
-                log("Using bootstrap script '%s'" % (name, ))
-                autogen_script = name
-        if autogen_script is None:
-            fatal("No configure or autogen script detected; unknown buildsystem")
-
-    if autogen_script is not None:
-        env = dict(os.environ)
-        env['NOCONFIGURE'] = '1'
-        run_sync(['./' + autogen_script], env=env)
-    else:
-        log("Using existing 'configure' script")
-            
     builddir = '_build'
-
     use_builddir = True
-    doesnot_support_builddir = _has_buildapi_configure_variable('no-builddir')
-    if doesnot_support_builddir:
-        log("Found no-builddir Build API variable; copying source tree to _build")
+
+    meson_build = False
+    if os.path.exists('meson.build'):
+        meson_build = True
+    else:
+        autogen_script = None
+        if not os.path.exists('configure'):
+            log("No 'configure' script found, looking for autogen/bootstrap")
+            for name in ['autogen', 'autogen.sh', 'bootstrap']:
+                if os.path.exists(name):
+                    log("Using bootstrap script '%s'" % (name, ))
+                    autogen_script = name
+            if autogen_script is None:
+                fatal("No configure or autogen script detected; unknown buildsystem")
+
+        if autogen_script is not None:
+            env = dict(os.environ)
+            env['NOCONFIGURE'] = '1'
+            run_sync(['./' + autogen_script], env=env)
+        else:
+            log("Using existing 'configure' script")
+
+        doesnot_support_builddir = _has_buildapi_configure_variable('no-builddir')
+        if doesnot_support_builddir:
+            log("Found no-builddir Build API variable; copying source tree to _build")
         if os.path.isdir('_build'):
             shutil.rmtree('_build')
         shutil.copytree('.', '_build', symlinks=True,
@@ -174,32 +188,57 @@ def main(args):
         if not os.path.isdir(builddir):
             os.mkdir(builddir)
 
-    config_status = os.path.join(builddir, 'config.status')
-    have_config_status = os.path.exists(config_status)
-            
-    if not have_config_status:
-        if use_builddir:
-            args = ['../configure']
-        else:
-            args = ['./configure']
+    if meson_build:
+        args = ['meson']
+        args.extend(meson_configargs)
+        args.extend(default_configargs)
         args.extend(configargs)
-        run_sync(args, cwd=builddir)
+        args.extend(['..'])
+    else:
+        config_status = os.path.join(builddir, 'config.status')
+        have_config_status = os.path.exists(config_status)
+            
+        if not have_config_status:
+            if use_builddir:
+                args = ['../configure']
+            else:
+                args = ['./configure']
+        args.extend(autotools_configargs)
+        args.extend(default_configargs)
+        args.extend(configargs)
 
-    makefile_path = None
+    run_sync(args, cwd=builddir)
+
+    use_make = False
+    use_ninja = False
+    buildfile_path = None
+
     for name in ['Makefile', 'makefile', 'GNUmakefile']:
-        makefile_path = os.path.join(builddir, name)
-        if os.path.exists(makefile_path):
+        buildfile_path = os.path.join(builddir, name)
+        if os.path.exists(buildfile_path):
+            use_make = True
             break
-    if makefile_path is None:
-        fatal("No Makefile found")
 
-    args = list(makeargs)
+    for name in ['build.ninja']:
+        buildfile_path = os.path.join(builddir, name)
+        if os.path.exists(buildfile_path):
+            use_ninja = True
+            break
+
+    if buildfile_path is None:
+        fatal("No build rules file found")
+
+    if use_make:
+        args = list(makeargs)
+    else:
+        args = list(ninjaargs)
+
     user_specified_jobs = False
     for arg in args:
         if arg == '-j':
             user_specified_jobs = True
     
-    if not user_specified_jobs:
+    if not user_specified_jobs and use_make:
         has_notparallel = False
         for line in open(makefile_path):
             if line.startswith('.NOTPARALLEL'):
@@ -212,8 +251,15 @@ def main(args):
 
     run_sync(args, cwd=builddir)
 
-    args = ['make', 'install', 'DESTDIR=' + ostbuild_resultdir]
-    run_sync(args, cwd=builddir)
+    if use_make:
+        args = ['make', 'install', 'DESTDIR=' + ostbuild_resultdir]
+        env = os.environ.copy()
+    else:
+        args = ['ninja', 'install']
+        env = os.environ.copy()
+        env['DESTDIR'] = ostbuild_resultdir
+
+    run_sync(args, cwd=builddir, env=env)
 
     endtime = time.time()
 

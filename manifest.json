@@ -10,7 +10,7 @@
             "branch": "gnomeostree-3.22-krogoth"
           },
 
-  "config-opts": ["--disable-static", "--disable-silent-rules"],
+  "config-opts": [],
 
   "vcsconfig": {"gnome": "git:git://git.gnome.org/",
                 "gnome-gitlab": "git:https://gitlab.gnome.org/",
@@ -83,8 +83,8 @@
 		{"src": "gnome:gnome-common",
 		 "component": "devel"},
 
-        {"src": "gnome:m4-common.git",
-         "component": "devel"},
+                {"src": "gnome:m4-common.git",
+                 "component": "devel"},
 
 		{"src": "savannah:gperf.git",
 		 "tag": "v3.0.4",
@@ -94,8 +94,8 @@
 		 "component": "minimal",
 		 "config-opts": ["--disable-manpages"]},
 
-        {"src": "gnome:gobject-introspection",
-         "component": "minimal",
+                {"src": "gnome:gobject-introspection",
+                 "component": "minimal",
 		 "config-opts": ["--disable-tests",
 				 "--with-python=python3"]},
 
@@ -363,10 +363,9 @@
 
 		{"src": "fd:wayland/libinput",
 		 "name": "libinput",
-                 "config-opts": ["--disable-documentation",
-                                 "--disable-tests",
-                                 "--disable-debug-gui"],
-                 "patches": ["libinput-build-api.patch"]},
+                 "config-opts": ["-Ddocumentation=false",
+                                 "-Dtests=false",
+                                 "-Ddebug-gui=false"]},
 
 		{"src": "fd:xorg/util/makedepend",
 		 "component": "devel"},
@@ -430,8 +429,7 @@
 		 "config-opts": ["--with-xkb-rules-symlink=xorg",
 		                 "--with-xkb-base=/usr/share/X11/xkb"]},
 
-		{"src": "anholt:libepoxy",
-		 "patches": ["libepoxy-meson-buildapi.patch"]},
+		{"src": "anholt:libepoxy"},
 
 		{"src": "fd:xcb/util-keysyms",
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
@@ -447,8 +445,7 @@
 		{"src": "fd:xorg/driver/xf86-input-libinput"},
 
                 {"src": "git:git://github.com/xkbcommon/libxkbcommon",
-                 "config-opts": ["--disable-docs"],
-                 "patches": ["libxkbcommon-meson-buildapi.patch"]},
+                 "config-opts": ["-Denable-gtk-doc=false"]},
 
                 {"src": "git:git://git.xiph.org/celt.git"},
 
@@ -527,21 +524,20 @@
 		 "tag": "lcms2.6"},
 
 		{"src": "gnome:libgxps",
-                 "config-opts": ["--disable-test"],
-                 "patches": ["libgxps-build-api.patch"]},
+                 "config-opts": ["-Denable-test=false"]},
 
-        {"src": "tarball:https://ftp.mozilla.org/pub/mozilla.org/js/mozjs-24.2.0.tar.bz2",
-                "name": "js24",
-                "component": "minimal",
-                "checksum": "e62f3f331ddd90df1e238c09d61a505c516fe9fd8c5c95336611d191d18437d8",
-                "patches": ["js24-buildapi.patch", "js24-virtualenv.patch", "js24-perl-compat.patch"],
-                "config-opts": ["--enable-threadsafe",
-                                "--with-system-nspr",
-                                "--disable-tests",
-                                "--disable-strip",
-                                "--enable-ctypes",
-                                "--enable-system-ffi",
-                                "--disable-intl-api"]},
+                {"src": "tarball:https://ftp.mozilla.org/pub/mozilla.org/js/mozjs-24.2.0.tar.bz2",
+                 "name": "js24",
+                 "component": "minimal",
+                 "checksum": "e62f3f331ddd90df1e238c09d61a505c516fe9fd8c5c95336611d191d18437d8",
+                 "patches": ["js24-buildapi.patch", "js24-virtualenv.patch", "js24-perl-compat.patch"],
+                 "config-opts": ["--enable-threadsafe",
+                                 "--with-system-nspr",
+                                 "--disable-tests",
+                                 "--disable-strip",
+                                 "--enable-ctypes",
+                                 "--enable-system-ffi",
+                                 "--disable-intl-api"]},
 
 		{"src": "fd:polkit",
 		 "config-opts": ["--disable-man-pages",
@@ -635,23 +631,20 @@
 				 "--disable-documentation"]},
 
 		{"src": "gnome:pango",
-                 "patches": ["pango-build-api.patch"],
-		 "config-opts": ["--enable-installed-tests"]},
+		 "config-opts": ["-Denable_docs=false"]},
 
 		{"src": "gnome:atk",
-                 "patches": ["atk-build-api.patch"]},
+                 "config-opts": ["-Denable_docs=false"]},
 
 		{"src": "gnome:at-spi2-core"},
 
-		{"src": "gnome:at-spi2-atk",
-                 "patches": ["at-spi2-atk-build-api.patch"]},
+		{"src": "gnome:at-spi2-atk"},
 
 		{"src": "fd-xdg:shared-mime-info",
 		 "config-opts": ["--disable-default-make-check"]},
 
 		{"src": "gnome:gdk-pixbuf",
-		 "config-opts": ["--disable-gtk-doc"],
-		 "patches": ["gdk-pixbuf-meson-buildapi.patch"]},
+		 "config-opts": ["-Dwith_man=false", "-Denable-gtk-doc=false"]},
 
 		{"src": "gnome:gtk+",
 		 "name": "gtk2",
@@ -672,10 +665,9 @@
 
                 {"src": "gnome:gtk+",
                  "name": "gtk4",
-                 "patches": ["gtk-build-api.patch"],
-                 "config-opts": ["--enable-installed-tests",
-                                 "--enable-wayland-backend",
-                                 "--enable-x11-backend"],
+                 "config-opts": ["-Ddocumentation=false",
+                                 "-Dman-pages=false",
+                                 "-Dintrospection=true"],
                  "irc_room": "gtk+"},
 
 	        {"src": "fd:plymouth",
@@ -716,8 +708,7 @@
 		 "config-opts": ["--disable-gtk-doc"]},
 
 		{"src": "fd-gstreamer:gstreamer",
-                 "config-opts": ["--disable-gtk-doc"],
-		 "patches": ["gstreamer-meson-buildapi.patch"]},
+                 "config-opts": ["-Denable-gtk-doc=false"]},
 
 		{"src": "fd-gstreamer:gst-plugins-base",
 		 "config-opts": ["--with-gtk=3.0",
@@ -806,14 +797,16 @@
 
                 {"src": "gnome:glib-networking",
 		 "component": "minimal",
-                 "patches": ["glib-networking-build-api.patch"],
-		 "config-opts": ["--enable-installed-tests", "--disable-libproxy"]},
+		 "config-opts": [
+                        "-Denable-gtk-doc=false",
+                        "-Denable-man=false",
+                        "-Dlibproxy_support=false",
+                        "-Dinstalled_tests=true"
+                 ]},
 
 		{"src": "gnome:libsoup",
 		 "component": "minimal",
-		 "config-args": [
-		 		"--disable-tls-check",
-		 		"--enable-installed-tests"]},
+		 "config-args": ["--disable-tls-check", "--enable-installed-tests"]},
 
 		{"src": "gnome:gnome-ostree-integration",
                  "component": "minimal"},
@@ -895,8 +888,7 @@
 				 "--enable-installed-tests"]},
 
 		{"src": "gnome:gnome-bluetooth",
-                 "patches": ["gnome-bluetooth-build-api.patch"],
-		 "config-opts": ["--disable-gtk-doc"]},
+		 "config-opts": ["-Dgtk-doc=false"]},
 
 		{"src": "gnome:libmediaart",
                  "patches": ["libmediaart-no-parallel.patch"],
@@ -910,8 +902,10 @@
 		{"src": "gnome:tracker-miners"},
 
 		{"src": "gnome:dconf",
-                 "patches": ["dconf-build-api.patch"],
-		 "config-opts": ["--disable-man"]},
+		 "config-opts": [
+                     "-Denable-gtk-doc=false",
+                     "-Denable-man=false"
+                 ]},
 
 		{"src": "gnome:zenity"},
 
@@ -997,14 +991,13 @@
 
 		{"src": "gnome:gmime"},
 
-		{"src": "gnome:totem-pl-parser",
-		 "patches": ["totem-pl-parser-meson-build-api.patch"]},
+		{"src": "gnome:totem-pl-parser"},
 
                 {"src": "gnome:grilo",
-		 "patches": ["grilo-meson-buildapi.patch"]},
+                 "config-opts": ["-Denable-gtk-doc=false"]},
 
 		{"src": "gnome:grilo-plugins",
-		 "patches": ["grilo-plugins-meson-buildapi.patch"]},
+                 "config-opts": ["-Denable-gtk-doc=false"]},
 
 		{"src": "gnome:libzapojit"},
 
@@ -1064,9 +1057,7 @@
 				 "--disable-upower"]},
 
 		{"src": "gnome:gnome-session",
-		 "patches": ["gnome-session-meson-buildapi.patch"],
-		 "config-opts": ["--disable-docbook",
-				 "--disable-man"]},
+		 "config-opts": ["-Ddocbook=false", "-Dman=false"]},
 
 		{"src": "gnome:gnome-settings-daemon",
 		 "config-opts": ["--disable-packagekit",
@@ -1173,9 +1164,8 @@
 		{"src": "gnome:gexiv2"},
 
 		{"src": "gnome-gitlab:GNOME/nautilus.git",
-		 "config-opts": ["--disable-selinux",
-		                 "--disable-gtk-doc"],
-		 "patches": ["nautilus-meson-buildapi.patch"]},
+		 "config-opts": ["-Denable-selinux=false",
+		                 "-Denable-gtk-doc=false"]},
 
                 {"src": "tarball:http://downloads.sourceforge.net/project/gtkspell/3.0.9/gtkspell3-3.0.9.tar.xz",
 		 "name": "gtkspell3",
@@ -1195,22 +1185,21 @@
                                  "--disable-valgrind"]},
 
 		{"src": "gnome:libdazzle",
-		 "patches": ["libdazzle-meson-build-api.patch"]},
+                 "config-opts": ["-Dgtk-doc=false"]},
 
 		{"src": "gnome:epiphany",
                  "tag": "4e87ad89bc6e66ad3437d4c8515751d4d5c99764",
-                 "tag-reason": "Newer commits require WebKitGtk 2.19.1, which fails to build",
-                 "patches": ["epiphany-meson-build-api.patch"]},
+                 "tag-reason": "Newer commits require WebKitGtk 2.19.1, which fails to build"},
 
 		{"src": "gnome-gitlab:GNOME/gnome-calendar.git"},
 
-        {"src": "tarball:https://ftp.gnu.org/gnu/gmp/gmp-6.0.0a.tar.xz",
-         "name": "gmp",
-         "checksum": "9156d32edac6955bc53b0218f5f3763facb890b73a835d5e1b901dcf8eb8b764"},
+                {"src": "tarball:https://ftp.gnu.org/gnu/gmp/gmp-6.0.0a.tar.xz",
+                 "name": "gmp",
+                 "checksum": "9156d32edac6955bc53b0218f5f3763facb890b73a835d5e1b901dcf8eb8b764"},
 
-        {"src": "tarball:http://www.mpfr.org/mpfr-3.1.2/mpfr-3.1.2.tar.xz",
-         "name": "mpfr",
-         "checksum": "399d0f47ef6608cc01d29ed1b99c7faff36d9994c45f36f41ba250147100453b"},
+                {"src": "tarball:http://www.mpfr.org/mpfr-3.1.2/mpfr-3.1.2.tar.xz",
+                 "name": "mpfr",
+                 "checksum": "399d0f47ef6608cc01d29ed1b99c7faff36d9994c45f36f41ba250147100453b"},
 
                 {"src": "tarball:http://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz",
                  "name": "mpc",
@@ -1224,8 +1213,7 @@
 
 		{"src": "gnome-gitlab:GNOME/polari.git"},
 
-		{"src": "gnome:baobab",
-                 "patches": ["baobab-build-api.patch"]},
+		{"src": "gnome:baobab"},
 
 		{"src": "gnome:gnome-sound-recorder"},
 
@@ -1240,11 +1228,9 @@
                  ]},
 
 		{"src": "gnome:totem",
-                 "config-opts": ["--disable-vala"],
-		 "patches": ["totem-meson-build-api.patch"]},
+                 "config-opts": ["-Denable-vala=no"]},
 
-		{"src": "gnome:gnome-font-viewer",
-		 "patches": ["gnome-font-viewer-meson-build-api.patch"]},
+		{"src": "gnome:gnome-font-viewer"},
 
 		{"src": "gnome:babl"},
 
@@ -1279,7 +1265,7 @@
 
 		{"src": "gnome:evolution",
 		 "irc_room": "evolution",
-		"patches": ["evolution-buildapi.patch"]},
+		 "patches": ["evolution-buildapi.patch"]},
 
 		{"src": "gnome:evolution-ews",
 		 "irc_room": "evolution",
@@ -1293,13 +1279,19 @@
 		{"src": "gnome:hotssh"},
 
 		{"src": "gnome:file-roller",
-                 "patches": ["file-roller-build-api.patch"]},
+                 "config-opts": [
+                     "-Dnautilus_actions=false",
+                     "-Dpackagekit=false",
+                     "-Dmagic=false"
+                 ]},
 
 		{"src": "gnome:gnome-desktop-testing",
 		 "component": "testing"},
 
 		{"src": "gnome:gnome-tweak-tool",
-                 "patches": ["gnome-tweak-tool-build-api.patch"]},
+                 "config-opts": [
+                     "-Denable-man=false"
+                 ]},
 
 		{"src": "gnome:eog",
 		 "config-opts": ["--enable-installed-tests"]},
@@ -1311,8 +1303,7 @@
 
 		{"src": "gnome:gnome-screenshot"},
 
-		{"src": "gnome:nautilus-sendto",
-                 "patches": ["nautilus-sendto-build-api.patch"]},
+		{"src": "gnome:nautilus-sendto"},
 
 		{"src": "gnome:yelp",
                  "tag": "763b67f0ede582e05c93f6502856119df9250ac1",
@@ -1336,8 +1327,7 @@
 
 		{"src": "gnome:atomix"},
 
-		{"src": "gnome:dconf-editor",
-		 "patches": ["dconf-editor-build-api.patch"]},
+		{"src": "gnome:dconf-editor"},
 
 		{"src": "gnome:five-or-more"},
 
@@ -1380,7 +1370,7 @@
 		{"src": "gnome:swell-foop"},
 
 		{"src": "gnome:gnome-chess",
-                 "patches": ["gnome-chess-build-api.patch"]},
+                 "config-opts": ["-Dgtk-doc=false", "-Dtracing=false"]},
 
 		{"src": "gnome:gnome-klotski"},
 
