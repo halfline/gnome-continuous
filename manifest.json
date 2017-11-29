@@ -74,10 +74,7 @@
 		{"src": "gnome:glib",
 		 "component": "minimal",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
-                 "config-opts": ["--disable-modular-tests",
-				 "--enable-installed-tests",
-				 "--with-pcre=internal",
-                                 "--with-python=python3"],
+                 "config-opts": ["-Dwith-pcre=internal"],
                  "irc_room": "gtk+"},
 
 		{"src": "gnome:gnome-common",
