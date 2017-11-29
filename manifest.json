@@ -745,7 +745,8 @@
 		{"src": "gnome:network-manager-applet",
 		 "config-opts": ["-Dmore_asserts=0",
 		                 "-Dselinux=false",
-                                 "-Dteam=false"]},
+                                 "-Dteam=false",
+                                 "-Dgtk_doc=false"]},
 
 		{"src": "fd-pulse:pulseaudio",
 		 "config-opts": ["--disable-openssl"],
