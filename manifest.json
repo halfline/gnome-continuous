@@ -440,7 +440,7 @@
 		{"src": "fd:xorg/driver/xf86-input-libinput"},
 
                 {"src": "git:git://github.com/xkbcommon/libxkbcommon",
-                 "config-opts": ["-Denable-gtk-doc=false"]},
+                 "config-opts": ["-Denable-docs=false"]},
 
                 {"src": "git:git://git.xiph.org/celt.git"},
 
