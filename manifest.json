@@ -427,8 +427,8 @@
 		 "patches": ["xorg-xcb-util-keysyms-autogen.patch"]},
 
 		{"src": "fd:xorg/xserver",
-		 "config-opts": ["--enable-xwayland",
-				 "--enable-glamor"]},
+		 "config-opts": ["-Dxwayland=true",
+				 "-Dglamor=true"]},
 
 		{"src": "fd:xcb/util"},
 
