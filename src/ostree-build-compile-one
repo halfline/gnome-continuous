@@ -245,8 +245,12 @@ def main(args):
         env = os.environ.copy()
         if 'CC' in makeargs:
             env['CC'] = makeargs['CC']
+        else:
+            env['CC'] = os.environ.get('CC', 'gcc')
         if 'CXX' in makeargs:
             env['CXX'] = makeargs['CXX']
+        else:
+            env['CXX'] = os.environ.get('CXX', 'g++')
         log("makeargs = '%s', CC = '%s', CXX = '%s'" % (list(makeargs), env.get('CC', 'unset'), env.get('CXX', 'unset'),))
 
     user_specified_jobs = False
