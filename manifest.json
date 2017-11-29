@@ -611,12 +611,12 @@
                 {"src": "git:git://github.com/hughsie/libgusb.git"},
 		
 		{"src": "git:git://github.com/hughsie/colord.git",
-		 "config-opts": ["--disable-print-profiles",
-				 "--disable-bash-completion",
-				 "--disable-argyllcms-sensor",
-				 "--disable-installed-tests",
-                                 "--disable-man",
-                                 "--disable-gtk-doc"]},
+		 "config-opts": ["-Denable-print-profiles=false",
+				 "-Denable-bash-completion=false",
+				 "-Denable-argyllcms-sensor=false",
+				 "-Denable-installed-tests=false",
+                                 "-Denable-man=false",
+                                 "-Denable-docs=false"]},
 
 		{"src": "ebassi:graphene"},
 
