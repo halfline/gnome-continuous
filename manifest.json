@@ -74,7 +74,7 @@
 		{"src": "gnome:glib",
 		 "component": "minimal",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
-                 "config-opts": ["-Dwith-pcre=internal"],
+                 "config-opts": ["-Dwith-pcre=internal", "-Dwith-docs=false", "-Dwith-man=false"],
                  "irc_room": "gtk+"},
 
 		{"src": "gnome:gnome-common",
