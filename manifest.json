@@ -706,11 +706,7 @@
                  "config-opts": ["-Denable-gtk-doc=false"]},
 
 		{"src": "fd-gstreamer:gst-plugins-base",
-		 "config-opts": ["--with-gtk=3.0",
-                                 "--disable-gtk-doc",
-		                 "--disable-tests",
-				 "--disable-gnome_vfs",
-				 "--disable-fatal-warnings"]},
+		 "config-opts": ["-Ddisable_gtkdoc=true"]},
 
 		{"src": "gnome:cogl",
 		 "config-opts": ["--enable-wayland-egl-platform",
@@ -806,17 +802,9 @@
 		{"src": "gnome:gnome-ostree-integration",
                  "component": "minimal"},
 
-		{"src": "fd-gstreamer:gst-plugins-good",
-		 "config-opts": ["--with-gtk=3.0",
-		                 "--disable-tests",
-				 "--disable-examples",
-				 "--disable-fatal-warnings"]},
+		{"src": "fd-gstreamer:gst-plugins-good"},
 
-		{"src": "fd-gstreamer:gst-plugins-bad",
-		 "config-opts": ["--with-gtk=3.0",
-				 "--disable-tests",
-				 "--disable-examples",
-				 "--disable-fatal-warnings"]},
+		{"src": "fd-gstreamer:gst-plugins-bad"},
 
 		{"src": "git:https://github.com/01org/libva.git"},
 
