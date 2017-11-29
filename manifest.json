@@ -743,10 +743,9 @@
 		{"src": "gnome:mobile-broadband-provider-info"},
 
 		{"src": "gnome:network-manager-applet",
-		 "config-opts": ["--enable-more-warnings=no",
-		                 "--disable-migration",
-		                 "--without-selinux",
-                                 "--without-team"]},
+		 "config-opts": ["-Dmore_asserts=0",
+		                 "-Dselinux=false",
+                                 "-Dteam=false"]},
 
 		{"src": "fd-pulse:pulseaudio",
 		 "config-opts": ["--disable-openssl"],
