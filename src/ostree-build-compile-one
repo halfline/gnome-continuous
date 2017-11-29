@@ -240,7 +240,7 @@ def main(args):
     
     if not user_specified_jobs and use_make:
         has_notparallel = False
-        for line in open(makefile_path):
+        for line in open(buildfile_path):
             if line.startswith('.NOTPARALLEL'):
                 has_notparallel = True
                 log("Found .NOTPARALLEL")
