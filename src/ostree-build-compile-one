@@ -233,10 +233,20 @@ def main(args):
     if buildfile_path is None:
         fatal("No build rules file found")
 
-    if use_ninja:
-        args = list(ninjaargs)
-    else:
+    if use_make:
         args = list(makeargs)
+        env = os.environ.copy()
+    else:
+        # While make supports passing variables using something like
+        # `make CC=foo`, ninja uses environment variables; this means
+        # we need to move make variables into the environment before
+        # calling ninja
+        args = list(ninjaargs)
+        env = os.environ.copy()
+        if 'CC' in makeargs:
+            env['CC'] = makeargs['CC']
+        if 'CXX' in makeargs:
+            env['CXX'] = makeargs['CXX']
 
     user_specified_jobs = False
     for arg in args:
@@ -254,7 +264,7 @@ def main(args):
             log("Didn't find NOTPARALLEL, using parallel make by default")
             args.extend(default_buildapi_jobs)
 
-    run_sync(args, cwd=builddir)
+    run_sync(args, cwd=builddir, env=env)
 
     if use_make:
         args = ['make', 'install', 'DESTDIR=' + ostbuild_resultdir]
