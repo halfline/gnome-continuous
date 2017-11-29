@@ -330,6 +330,8 @@
 
 		{"src": "fd:xorg/lib/libxshmfence"},
 
+                {"src": "fd:xorg/lib/libXdmcp"},
+
 		{"src": "fd-dbus:dbus",
 		 "component": "minimal",
 		 "config-opts": ["--with-dbus-user=dbus",
@@ -428,8 +430,7 @@
 
 		{"src": "fd:xorg/xserver",
 		 "config-opts": ["-Dxwayland=true",
-				 "-Dglamor=true",
-                                 "-Dxdmcp=false"]},
+				 "-Dglamor=true"]},
 
 		{"src": "fd:xcb/util"},
 
