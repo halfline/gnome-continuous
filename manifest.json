@@ -428,7 +428,8 @@
 
 		{"src": "fd:xorg/xserver",
 		 "config-opts": ["-Dxwayland=true",
-				 "-Dglamor=true"]},
+				 "-Dglamor=true",
+                                 "-Dxdmcp=false"]},
 
 		{"src": "fd:xcb/util"},
 
