@@ -700,7 +700,7 @@
                 "tag-reason": "We need to add meta-rust to our yocto image"},
 
 		{"src": "fd-gstreamer:orc",
-		 "config-opts": ["--disable-gtk-doc"]},
+		 "config-opts": ["-Ddisable_gtkdoc=true"]},
 
 		{"src": "fd-gstreamer:gstreamer",
                  "config-opts": ["-Denable-gtk-doc=false"]},
