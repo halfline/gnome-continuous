@@ -867,18 +867,17 @@
 		                 "--disable-Werror"]},
 
 		{"src": "gnome:gvfs",
-		 "config-opts": ["--disable-gphoto2",
-				 "--disable-documentation",
-				 "--enable-installed-tests"]},
+		 "config-opts": ["-Dgphoto2=false",
+				 "-Dman=false",
+				 "-Dinstalled_tests=true"]},
 
 		{"src": "gnome:gnome-bluetooth",
 		 "config-opts": ["-Dgtk-doc=false"]},
 
 		{"src": "gnome:libmediaart",
                  "patches": ["libmediaart-no-parallel.patch"],
-		 "config-opts": ["--enable-vala",
-		                 "--disable-gtk-doc",
-                                 "--enable-installed-tests"]},
+		 "config-opts": ["-Dimage_library=gdk-pixbuf",
+		                 "-Dwith-docs=no"]},
 
 		{"src": "gnome:tracker",
 		 "config-opts": ["--with-unicode-support=libicu"]},
@@ -955,7 +954,9 @@
 				 "--disable-ui",
 				 "--disable-setup"]},
 
-		{"src": "gnome:libgweather"},
+		{"src": "gnome:libgweather",
+                 "config-opts": ["-Dgtk_doc=false",
+                                 "-Dglade_catalog=false"]},
 
 		{"src": "gnome:clutter-gst",
                  "branch": "clutter-gst-3.0"},
@@ -1104,8 +1105,9 @@
 		{"src": "gnome:gnome-shell",
                  "patches": ["gnome-shell-gir-hack.patch"],
                  "irc_room": "gnome-shell",
-		 "config-opts": ["--enable-compile-warnings=maximum",
-                                 "--disable-man"]},
+		 "config-opts": ["-Denable-documentation=false",
+                                 "-Denable-man=false",
+                                 "-Denable-browser-plugin=false"]},
 
 		{"src": "gnome-gitlab:GNOME/gnome-shell-extensions.git",
 		 "config-opts": ["--enable-extensions=classic-mode"]},
@@ -1162,11 +1164,16 @@
 		{"src": "gnome:gedit"},
 
 		{"src": "gnome:gnome-software",
-		 "config-opts": ["--disable-man",
-                                 "--disable-fwupd",
-                                 "--disable-packagekit",
-                                 "--disable-rpm",
-                                 "--disable-valgrind"]},
+		 "config-opts": ["-Denable-man=false",
+                                 "-Denable-fwupd=false",
+                                 "-Denable-packagekit=false",
+                                 "-Denable-rpm=false",
+                                 "-Denable-valgrind=false",
+                                 "-Denable-ubuntuone=false",
+                                 "-Denable-ubuntu-reviews=false",
+                                 "-Denable-snap=false",
+                                 "-Denable-steam=false",
+                                 "-Denable-gtk-doc=false"]},
 
 		{"src": "gnome:libdazzle",
                  "config-opts": ["-Dgtk-doc=false"]},
@@ -1205,10 +1212,10 @@
 
 		{"src": "gnome:seahorse",
                  "config-opts": [
-                     "--pgp-support=false",
-                     "--check-compatible-gpg=false",
-                     "--ldap-support=false",
-                     "--key-sharing=false"
+                     "-Dpgp-support=false",
+                     "-Dcheck-compatible-gpg=false",
+                     "-Dldap-support=false",
+                     "-Dkey-sharing=false"
                  ]},
 
 		{"src": "gnome:totem",
