@@ -868,7 +868,7 @@
 
 		{"src": "gnome:gvfs",
                  "force-autotools": true,
-		 "config-opts": ["--disable-gtk-doc",
+		 "config-opts": ["--disable-documentation",
                                  "--enable-installed-tests",
                                  "--disable-gphoto2"]},
 
