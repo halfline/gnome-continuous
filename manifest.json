@@ -881,13 +881,14 @@
 		                 "-Dwith-docs=no"]},
 
 		{"src": "gnome:tracker",
-		 "config-opts": ["-Dunicode_support=icu",
-                                 "-Ddocs=false"]},
+                 "force-autotools": true,
+		 "config-opts": ["--with-unicode-support=libicu",
+                                 "--disable-gtk-doc"]},
 
 		{"src": "gnome:libgrss"},
 
 		{"src": "gnome:tracker-miners",
-                 "config-opts": ["-Ddocs=false"]},
+                 "force-autotools": true},
 
 		{"src": "gnome:dconf",
 		 "config-opts": [
