@@ -881,7 +881,8 @@
 		                 "-Dwith-docs=no"]},
 
 		{"src": "gnome:tracker",
-		 "config-opts": ["-Dunicode_support=icu"]},
+		 "config-opts": ["-Dunicode_support=icu",
+                                 "-Ddocs=false"]},
 
 		{"src": "gnome:tracker-miners"},
 
