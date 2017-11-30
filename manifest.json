@@ -884,7 +884,10 @@
 		 "config-opts": ["-Dunicode_support=icu",
                                  "-Ddocs=false"]},
 
-		{"src": "gnome:tracker-miners"},
+		{"src": "gnome:libgrss"},
+
+		{"src": "gnome:tracker-miners",
+                 "config-opts": ["-Ddocs=false"]},
 
 		{"src": "gnome:dconf",
 		 "config-opts": [
@@ -1377,8 +1380,6 @@
 
 		{"src": "gnome:gnome-contacts",
 		 "config-opts": ["--with-manpage=false"]},
-
-		{"src": "gnome:libgrss"},
 
 		{"src": "gnome:gnome-characters"},
 
