@@ -868,6 +868,7 @@
 
 		{"src": "gnome:gvfs",
 		 "config-opts": ["-Dgphoto2=false",
+                                 "-Dgcrypt=false",
 				 "-Dman=false",
 				 "-Dinstalled_tests=true"]},
 
