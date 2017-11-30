@@ -1,17 +1,31 @@
-From 2134f0387c3fd24413a7c49b1b26c52e21ec7c46 Mon Sep 17 00:00:00 2001
+From 3afb08668bea2060f1e5d8bae96eea14fc286bcf Mon Sep 17 00:00:00 2001
 From: Philip Chimento <philip@endlessm.com>
 Date: Wed, 15 Feb 2017 14:57:47 -0800
 Subject: [PATCH] build: Add toplevel trampoline configure/Makefile
 
 These just invoke the ones in js/src.
 ---
- configure |    13 +++++++++++++
- 1 file changed, 13 insertions(+), 0 deletions(-)
+ build/moz.configure/init.configure |  2 +-
+ configure                          | 14 ++++++++++++++
+ 2 files changed, 15 insertions(+), 1 deletion(-)
  create mode 100755 configure
 
+diff --git a/build/moz.configure/init.configure b/build/moz.configure/init.configure
+index 2123bebc..4d65bb8e 100644
+--- a/build/moz.configure/init.configure
++++ b/build/moz.configure/init.configure
+@@ -46,7 +46,7 @@ def check_build_environment(help, dist):
+ 
+     # Check for a couple representative files in the source tree
+     conflict_files = [
+-        '*         %s' % f for f in ('Makefile', 'config/autoconf.mk')
++        '*         %s' % f for f in ('js/src/Makefile', 'config/autoconf.mk')
+         if exists(os.path.join(topsrcdir, f))
+     ]
+     if conflict_files:
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..93ef339
+index 00000000..079dc784
 --- /dev/null
 +++ b/configure
 @@ -0,0 +1,14 @@
@@ -30,5 +44,5 @@ index 0000000..93ef339
 +touch $srcdir/js/src/old-configure  # ditto
 +exec $srcdir/js/src/configure "$@"
 -- 
-1.7.1
+2.14.3
 
