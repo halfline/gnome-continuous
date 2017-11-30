@@ -877,6 +877,7 @@
                                  "-Dmtp=false",
                                  "-Dgoogle=false",
                                  "-Dnfs=false",
+                                 "-Dlibusb=false",
                                  "-Ddevel_utils=false",
 				 "-Dinstalled_tests=true"]},
 
