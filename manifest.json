@@ -932,11 +932,12 @@
 		 "config-opts": ["--disable-silent-rules", "--disable-static", "--enable-fast-install"]},
 
 		{"src": "git:git://github.com/hughsie/appstream-glib.git",
-		 "config-opts": ["--disable-dep11",
-                                 "--disable-stemmer",
-                                 "--disable-rpm",
-                                 "--disable-man",
-                                 "--disable-gtk-doc"]},
+		 "config-opts": ["-Denable-dep11=false",
+                                 "-Denable-stemmer=false",
+                                 "-Denable-rpm=false",
+                                 "-Denable-alpm=false",
+                                 "-Denable-man=false",
+                                 "-Denable-gtk-doc=false"]},
 
                 {"src": "flatpak:flatpak",
                  "config-opts": ["--disable-documentation",
