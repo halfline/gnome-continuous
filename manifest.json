@@ -1112,9 +1112,9 @@
 		{"src": "gnome:gnome-shell",
                  "patches": ["gnome-shell-gir-hack.patch"],
                  "irc_room": "gnome-shell",
-		 "config-opts": ["-Denable-documentation=false",
-                                 "-Denable-man=false",
-                                 "-Denable-browser-plugin=false"]},
+		 "config-opts": ["-Dgtk_doc=false",
+                                 "-Dman=false",
+                                 "-Dbrowser_plugin=false"]},
 
 		{"src": "gnome-gitlab:GNOME/gnome-shell-extensions.git",
 		 "config-opts": ["--enable-extensions=classic-mode"]},
