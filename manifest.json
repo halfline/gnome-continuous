@@ -74,7 +74,10 @@
 		{"src": "gnome:glib",
 		 "component": "minimal",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
-                 "config-opts": ["-Dwith-pcre=internal", "-Dwith-docs=no", "-Dwith-man=no"],
+                 "force-autotools": true,
+                 "config-opts": ["--with-pcre=internal",
+                                 "--disable-gtk-doc",
+                                 "-disable-man"],
                  "irc_room": "gtk+"},
 
 		{"src": "gnome:gnome-common",
