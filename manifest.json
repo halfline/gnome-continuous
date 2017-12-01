@@ -1301,13 +1301,15 @@
                      "-Denable-man=false"
                  ]},
 
-		{"src": "gnome:eog",
-		 "config-opts": ["--enable-installed-tests"]},
+		{"src": "gnome:eog"},
+		 "config-opts": ["-Dgtk_doc=false",
+                                 "-Dinstalled_tests=true"]},
 
 		{"src": "gnome:devhelp",
                  "config-opts": ["--disable-Werror"]},
 
-		{"src": "gnome:gnome-dictionary"},
+		{"src": "gnome:gnome-dictionary",
+                 "config-opts": ["-Dbuild_man=false"]},
 
 		{"src": "gnome:gnome-screenshot"},
 
