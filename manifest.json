@@ -1420,7 +1420,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 149,
+	"build-epoch": {"version": 150,
 		        "all": false,
-		        "component-names": ["libinput"]}
+		        "component-names": ["libgit2"]}
 }
