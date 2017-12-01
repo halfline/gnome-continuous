@@ -1301,7 +1301,7 @@
                      "-Denable-man=false"
                  ]},
 
-		{"src": "gnome:eog"},
+		{"src": "gnome:eog",
 		 "config-opts": ["-Dgtk_doc=false",
                                  "-Dinstalled_tests=true"]},
 
