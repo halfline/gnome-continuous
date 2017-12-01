@@ -1328,6 +1328,8 @@
 
                 {"src": "gnome:gnome-maps"},
 
+                {"src": "git:https://github.com/libssh2/libssh2.git"},
+
 		{"src": "libgit2:libgit2",
 		 "branch": "maint/v0.25",
 		 "branch-reason": "libgit2-glib does not track master",
