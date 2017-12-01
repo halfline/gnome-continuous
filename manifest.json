@@ -1389,7 +1389,7 @@
 		{"src": "gnome:tali"},
 
 		{"src": "gnome:gnome-contacts",
-		 "config-opts": ["--with-manpage=false"]},
+		 "config-opts": ["-Dwith-manpage=false"]},
 
 		{"src": "gnome:gnome-characters"},
 
