@@ -1256,6 +1256,7 @@
 		{"src": "gnome:gnome-color-manager"},
 
 		{"src": "gnome:gnome-photos",
+                 "patches": ["gnome-photos-packed.patch"],
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:d-feet",

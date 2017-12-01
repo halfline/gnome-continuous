@@ -1,0 +1,31 @@
+From 93bf0b69266cd602297f0801b08a3d7b59bd88d9 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Fri, 1 Dec 2017 12:59:46 +0000
+Subject: [PATCH] Drop unnecessary packed attribute
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+There is no need to pack a structure with four uniform types, and the
+compiler warns about it if you use -Wpacked — which is the default when
+using AX_COMPILER_FLAGS.
+---
+ src/photos-tracker-change-monitor.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/photos-tracker-change-monitor.c b/src/photos-tracker-change-monitor.c
+index d8da8afb..1977f6ae 100644
+--- a/src/photos-tracker-change-monitor.c
++++ b/src/photos-tracker-change-monitor.c
+@@ -85,7 +85,7 @@ struct _TrackerResourcesEvent
+   gint32 subject;
+   gint32 predicate;
+   gint32 object;
+-} __attribute__ ((packed));
++};
+ 
+ 
+ static void
+-- 
+2.14.3
+
