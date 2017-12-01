@@ -1268,7 +1268,8 @@
                 {"src": "gnome:libgepub"},
 
 		{"src": "gnome:gnome-documents",
-		 "config-opts": ["--disable-documentation"]},
+		 "config-opts": ["-Denable-documentation=false",
+                                 "-Denable-getting-started=false"]},
 
 		{"src": "gnome:evolution",
 		 "irc_room": "evolution",
