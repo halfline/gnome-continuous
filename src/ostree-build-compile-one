@@ -181,9 +181,10 @@ def main(args):
             log("Found no-builddir Build API variable; copying source tree to _build")
             if os.path.isdir('_build'):
                 shutil.rmtree('_build')
-                shutil.copytree('.', '_build', symlinks=True,
-                                ignore=shutil.ignore_patterns('_build'))
-                use_builddir = False
+
+            shutil.copytree('.', '_build', symlinks=True,
+                            ignore=shutil.ignore_patterns('_build'))
+            use_builddir = False
     
     if use_builddir:
         log("Using build directory %r" % (builddir, ))
