@@ -1328,7 +1328,8 @@
 
                 {"src": "gnome:gnome-maps"},
 
-                {"src": "git:https://github.com/libssh2/libssh2.git"},
+                {"src": "git:https://github.com/libssh2/libssh2.git",
+                 "patches": ["libssh2-autogen.patch"]},
 
 		{"src": "libgit2:libgit2",
 		 "branch": "maint/v0.25",
