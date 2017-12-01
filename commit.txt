@@ -1,7 +1,0 @@
-Update the config-opts for gnome-shell-extensions
-
-gnome-shell-extensions has migrated to meson by also removing
-autotools.
-
-This patch replaces the option used by autotools by its equivalent
-in meson.
