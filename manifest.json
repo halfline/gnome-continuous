@@ -1119,7 +1119,7 @@
                                  "-Dbrowser_plugin=false"]},
 
 		{"src": "gnome-gitlab:GNOME/gnome-shell-extensions.git",
-		 "config-opts": ["--enable-extensions=classic-mode"]},
+		 "config-opts": ["-Dextension_set=classic"]},
 
                 {"src": "git:https://gitlab.com/dogtail/dogtail.git",
                  "patches": ["python-dogtail-buildsys.patch"]},
