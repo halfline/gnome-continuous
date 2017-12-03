@@ -1341,6 +1341,9 @@
 
 		{"src": "gnome:dconf-editor"},
 
+                {"src": "git:https://gitlab.gnome.org/aplazas/libmanette.git",
+                 "name": "libmanette"},
+
 		{"src": "gnome:five-or-more"},
 
 		{"src": "gnome:four-in-a-row"},
