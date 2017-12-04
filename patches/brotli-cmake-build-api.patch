@@ -1,4 +1,4 @@
-From 8e6a10b2f03ebc0da81dd5138a4a92d72ecb4317 Mon Sep 17 00:00:00 2001
+From c952f367d68adab48b800a8567d970fa82598761 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Mon, 4 Dec 2017 19:58:16 +0000
 Subject: [PATCH] Conform to the build-api
@@ -7,19 +7,22 @@ Brotli already has a wrapper for CMake and it follows the GNU/Autotools
 standard directories. The problem is that, for some reason clearly
 involving bonghits, they decided to make `configure` not do anything.
 
+v3
+ - ignore more unknown options
+
 v2
  - ignore (and warn) about unknown options instead of erroring out
 ---
- configure       | 323 ++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ configure       | 322 ++++++++++++++++++++++++++++++++++++++++++++++++++++++--
  configure-cmake | 318 -------------------------------------------------------
- 2 files changed, 316 insertions(+), 325 deletions(-)
+ 2 files changed, 315 insertions(+), 325 deletions(-)
  delete mode 100755 configure-cmake
 
 diff --git a/configure b/configure
-index d96129a..f74e7f9 100755
+index d96129a..0462e0b 100755
 --- a/configure
 +++ b/configure
-@@ -1,8 +1,317 @@
+@@ -1,8 +1,316 @@
  #!/usr/bin/env bash
 -echo "Use Autotools, Bazel, CMake or Premake5 to generate projects / build files."
 -echo "  Bazel: http://www.bazel.build/"
@@ -121,7 +124,6 @@ index d96129a..f74e7f9 100755
 +        fi
 +    else
 +        echo "Unknown parameter: ${1}"
-+        exit 1
 +    fi
 +}
 +
