@@ -837,6 +837,16 @@
 		 "name": "enchant",
 		 "checksum": "2fac9e7be7e9424b2c5570d8affe568db39f7572c10ed48d4e13cddf03f7097f"},
 
+                {"src": "git:https://github.com/google/brotli.git",
+                 "tag": "0ad94eed00420bf1154cb16a289aa27efbb30c01",
+                 "tag-reason": "v1.0.2",
+                 "patches": ["brotli-cmake-build-api.patch"]},
+
+                {"src": "git:https://github.com/google/woff2.git",
+                 "tag": "1bccf208bca986e53a647dfe4811322adb06ecf8",
+                 "tag-reason": "v1.0.2",
+                 "patches": ["woff2-cmake-build-api.patch"]},
+
 		{"src": "tarball:https://www.webkitgtk.org/releases/webkitgtk-2.19.2.tar.xz",
 		 "name": "webkitgtk",
 		 "checksum": "439e88894accd4849d218b29a0755d25aa6c79224fc700206c860108d223d4c3",
