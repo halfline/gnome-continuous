@@ -642,7 +642,7 @@
 		 "config-opts": ["--disable-default-make-check"]},
 
 		{"src": "gnome:gdk-pixbuf",
-		 "config-opts": ["-Dwith_man=false", "-Denable-gtk-doc=false"]},
+		 "config-opts": ["-Dman=false", "-Ddocs=false"]},
 
 		{"src": "gnome:gtk+",
 		 "name": "gtk2",
