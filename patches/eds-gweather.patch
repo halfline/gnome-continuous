@@ -1,0 +1,43 @@
+From 4b3a6497aa6a01a2636ff5f8861e07857e80984b Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Thu, 7 Dec 2017 01:18:59 +0100
+Subject: [PATCH] Update weather source for API change
+
+The deprecated argument to gweather_info_new() got dropped.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=791327
+---
+ CMakeLists.txt                                   | 2 +-
+ src/calendar/backends/weather/e-weather-source.c | 3 +--
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e6f396c29..7b78d76f5 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -114,7 +114,7 @@ set(sqlite_minimum_version 3.7.17)
+ 
+ # Optional Packages
+ set(goa_minimum_version 3.8)
+-set(gweather_minimum_version 3.10)
++set(gweather_minimum_version 3.27.2)
+ set(libaccounts_glib_minimum_version 1.4)
+ set(libsignon_glib_minimum_version 1.8)
+ set(json_glib_minimum_version 1.0.4)
+diff --git a/src/calendar/backends/weather/e-weather-source.c b/src/calendar/backends/weather/e-weather-source.c
+index 340aa6e4f..3cee681bf 100644
+--- a/src/calendar/backends/weather/e-weather-source.c
++++ b/src/calendar/backends/weather/e-weather-source.c
+@@ -185,8 +185,7 @@ e_weather_source_parse (EWeatherSource *source,
+ 
+ 	if (source->priv->info == NULL) {
+ 		source->priv->info = gweather_info_new (
+-			source->priv->location,
+-			GWEATHER_FORECAST_LIST);
++			source->priv->location);
+ 		gweather_info_set_enabled_providers (source->priv->info, GWEATHER_PROVIDER_ALL);
+ 		g_signal_connect (
+ 			source->priv->info, "updated",
+-- 
+2.14.3
+

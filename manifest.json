@@ -1021,7 +1021,7 @@
 
 		{"src": "gnome:evolution-data-server",
                  "irc_room": "evolution",
-                 "patches": ["eds-cmake-buildapi.patch"]},
+                 "patches": ["eds-cmake-buildapi.patch", "eds-gweather.patch"]},
 
 		{"src": "fd-xdg:default-icon-theme",
 		 "patches": ["default-icon-theme-autogen.patch",
