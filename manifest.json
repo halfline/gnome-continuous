@@ -1435,7 +1435,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 150,
-		        "all": false,
-		        "component-names": ["libgit2"]}
+	"build-epoch": {"version": 151,
+		        "all": true,
+		        "component-names": []}
 }
