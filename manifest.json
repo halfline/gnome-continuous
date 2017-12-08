@@ -72,6 +72,7 @@
                  "patches": ["python-meson-buildsys.patch"]},
 
 		{"src": "gnome:glib",
+                 "patches": ["glib-object-refcount.patch"],
 		 "component": "minimal",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
                  "force-autotools": true,
