@@ -848,10 +848,10 @@
                  "tag-reason": "v1.0.2",
                  "patches": ["woff2-cmake-build-api.patch"]},
 
-		{"src": "tarball:http://www.webkitgtk.org/releases/webkitgtk-2.18.2.tar.xz",
+		{"src": "tarball:https://www.webkitgtk.org/releases/webkitgtk-2.19.2.tar.xz",
 		 "name": "webkitgtk",
-		 "checksum": "b14cb3f1b5321b1dc50abcc0445a97f8e2f8813562bca7ce4d2f8069f6fec8e7",
-		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
+		 "checksum": "439e88894accd4849d218b29a0755d25aa6c79224fc700206c860108d223d4c3",
+		 "patches": ["webkitgtk-cmake-buildapi.patch", "webkitgtk-avoid-perl-file-copy-recursive.patch"]},
 
 		{"src": "gnome:libgee",
 		 "patches": ["gee-builddir.patch"]},
