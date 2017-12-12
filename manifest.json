@@ -1204,9 +1204,7 @@
 		{"src": "gnome:libdazzle",
                  "config-opts": ["-Dgtk-doc=false"]},
 
-		{"src": "gnome:epiphany",
-                 "tag": "4e87ad89bc6e66ad3437d4c8515751d4d5c99764",
-                 "tag-reason": "Newer commits require WebKitGtk 2.19.1, which fails to build"},
+		{"src": "gnome:epiphany"},
 
 		{"src": "gnome-gitlab:GNOME/gnome-calendar.git"},
 
