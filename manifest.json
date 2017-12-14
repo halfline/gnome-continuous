@@ -576,9 +576,7 @@
 				 "-Ddoc=false",
 				 "-Dmodify_system=true",
                                  "-Dselinux=false",
-                                 "-Dlibaudit=no",
-                                 "-Dintrospection=true",
-                                 "-Dqt=false"]},
+                                 "-Dlibaudit=false"]},
 
 		{"src": "0pointer:libatasmart.git"},
 
