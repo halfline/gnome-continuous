@@ -575,8 +575,7 @@
 				 "-Dcrypto=nss",
 				 "-Ddoc=false",
 				 "-Dmodify_system=true",
-                                 "-Dselinux=false",
-                                 "-Dlibaudit=false"]},
+                                 "-Dselinux=false"]},
 
 		{"src": "0pointer:libatasmart.git"},
 
