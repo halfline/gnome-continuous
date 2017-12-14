@@ -570,11 +570,14 @@
 		 "config-opts": ["--with-python=python3"]},
 
 		{"src": "fd-NM:NetworkManager",
-		 "config-opts": ["-Ddhclient=''",
-		                 "-Dsession_tracking=systemd",
-				 "-Dcrypto=nss",
-				 "-Ddoc=false",
-				 "-Dmodify_system=true"]},
+		 "config-opts": ["PYTHON=python3",
+		                 "--with-dhclient=yes",
+		                 "--with-session-tracking=systemd",
+				 "--with-crypto=nss",
+				 "--disable-doc",
+				 "--disable-gtk-doc",
+				 "--enable-more-warnings=yes",
+				 "--enable-modify-system"]},
 
 		{"src": "0pointer:libatasmart.git"},
 
