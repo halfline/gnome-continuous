@@ -944,8 +944,7 @@
 				 "--enable-installed-tests"]},
 
 		{"src": "gnome:gcab",
-                 "patches": ["gcab-no-parallel.patch"],
-		 "config-opts": ["--disable-silent-rules", "--disable-static", "--enable-fast-install"]},
+		 "config-opts": ["-Ddocs=false"]},
 
 		{"src": "git:git://github.com/hughsie/appstream-glib.git",
 		 "config-opts": ["-Denable-dep11=false",
