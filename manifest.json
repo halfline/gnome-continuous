@@ -574,8 +574,7 @@
 		                 "-Dsession_tracking=systemd",
 				 "-Dcrypto=nss",
 				 "-Ddoc=false",
-				 "-Dmodify_system=true",
-                                 "-Dselinux=false"]},
+				 "-Dmodify_system=true"]},
 
 		{"src": "0pointer:libatasmart.git"},
 
