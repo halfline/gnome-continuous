@@ -570,6 +570,7 @@
 		 "config-opts": ["--with-python=python3"]},
 
 		{"src": "fd-NM:NetworkManager",
+                 "force-autotools": true,
 		 "config-opts": ["PYTHON=python3",
 		                 "--with-dhclient=yes",
 		                 "--with-session-tracking=systemd",
