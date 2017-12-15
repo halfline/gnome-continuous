@@ -503,6 +503,11 @@
                  "config-opts": ["--disable-doc"],
                  "checksum": "6cfb3097a1c8e9550131b17663daf927f42707bc3f84196c1390642e87f3ab8d"},
 
+                {"src": "tarball:https://github.com/uclouvain/openjpeg/archive/v2.3.0.tar.gz",
+                 "name": "openjpeg2",
+                 "checksum": "3dc787c1bb6023ba846c2a0d9b1f6e179f1cd255172bde9eb75b01f1e6c7d71a",
+                 "patches": ["openjpeg2-cmake-buildapi.patch"]},
+
                 {"src": "tarball:http://downloads.ghostscript.com/public/ghostscript-9.10.tar.gz",
                  "name": "ghostscript",
                  "checksum": "913fc974433238ffd4e0549ce11ba2a3360d1d159cf5c3b988d72a77acb74d04"},
