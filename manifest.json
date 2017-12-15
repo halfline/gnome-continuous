@@ -700,8 +700,9 @@
 		{"src": "gnome:libcroco"},
 
 		{"src": "gnome:librsvg",
-                "tag": "2.40.16",
-                "tag-reason": "We need to add meta-rust to our yocto image"},
+                 "tag": "2.40.18",
+                 "tag-reason": "We need to add meta-rust to our yocto image",
+                 "config-opts": ["--enable-vala"]},
 
 		{"src": "fd-gstreamer:orc",
 		 "config-opts": ["-Ddisable_gtkdoc=true"]},
