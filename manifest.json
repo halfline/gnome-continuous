@@ -699,8 +699,8 @@
 
 		{"src": "gnome:libcroco"},
 
-		{"src": "gnome:librsvg",
-                 "tag": "2.40.18",
+		{"src": "gnome-gitlab:GNOME/librsvg.git",
+                 "tag": "366b0d8185464c86e069e100c55fd8bd7718f7e1",
                  "tag-reason": "We need to add meta-rust to our yocto image",
                  "config-opts": ["--enable-vala"]},
 
