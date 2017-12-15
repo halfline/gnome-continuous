@@ -983,7 +983,7 @@
 				 "--disable-ui",
 				 "--disable-setup"]},
 
-		{"src": "gnome:libgweather",
+		{"src": "gnome-gitlab:GNOME/libgweather.git",
                  "config-opts": ["-Dgtk_doc=false",
                                  "-Dglade_catalog=false"]},
 
