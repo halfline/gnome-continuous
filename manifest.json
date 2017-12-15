@@ -1271,8 +1271,7 @@
 
 		{"src": "gnome:gnome-color-manager"},
 
-		{"src": "gnome:gnome-photos",
-                 "patches": ["gnome-photos-packed.patch"],
+		{"src": "gnome-gitlab:GNOME/gnome-photos.git",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:d-feet",
@@ -1281,7 +1280,7 @@
 		{"src": "gnome:evince",
 		 "config-opts": ["--enable-introspection"]},
 
-                {"src": "gnome:libgepub"},
+                {"src": "gnome-gitlab:GNOME/libgepub.git"},
 
 		{"src": "gnome:gnome-documents",
 		 "config-opts": ["-Ddocumentation=false",
@@ -1387,11 +1386,11 @@
 
 		{"src": "gnome:gnome-mines"},
 
-		{"src": "gnome:gnome-multi-writer"},
+		{"src": "gnome-gitlab:GNOME/gnome-multi-writer.git"},
 
 		{"src": "gnome:gthumb"},
 
-		{"src": "gnome:hitori"},
+		{"src": "gnome-gitlab:GNOME/hitori.git"},
 
 		{"src": "gnome:iagno"},
 
@@ -1429,7 +1428,7 @@
                  "checksum": "c577815dd00f1394203fc44eb979724b098f88264a9ef898ee45b8e5e9cf587f",
                  "patches": ["python-requests-buildsys.patch"]},
 
-                {"src": "gnome:gnome-music"},
+                {"src": "gnome-gitlab:GNOME/gnome-music.git"},
 
                 {"src": "gnome-gitlab:GNOME/gnome-todo.git"}
 	],
