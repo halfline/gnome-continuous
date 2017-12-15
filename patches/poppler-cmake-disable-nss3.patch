@@ -1,0 +1,39 @@
+From 1056fe8d39af4e6f06ee3e583357711abdcfd907 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Fri, 15 Dec 2017 16:24:23 +0000
+Subject: [PATCH 1/2] build: Allow disabling NSS3 support
+
+NSS3 is currently broken, but it's not possible to disable it if you
+have the misfortune of having the nss3 headers installed.
+
+Signed-off-by: Emmanuele Bassi <ebassi@gnome.org>
+---
+ CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d8072a93..3f6cba61 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -54,6 +54,7 @@ set(ENABLE_DCTDECODER "libjpeg" CACHE STRING "Use libjpeg for DCT streams. Possi
+ option(ENABLE_LIBCURL "Build libcurl based HTTP support." ON)
+ option(ENABLE_ZLIB "Build with zlib." ON)
+ option(ENABLE_ZLIB_UNCOMPRESS "Use zlib to uncompress flate streams (not totally safe)." OFF)
++option(ENABLE_NSS3 "Build with nss3." ON)
+ option(SPLASH_CMYK "Include support for CMYK rasterization." OFF)
+ option(USE_FIXEDPOINT "Use fixed point arithmetic in the Splash backend" OFF)
+ option(USE_FLOAT "Use single precision arithmetic in the Splash backend" OFF)
+@@ -253,9 +254,8 @@ if(ENABLE_ZLIB)
+   include_directories(${ZLIB_INCLUDE_DIR})
+ endif()
+ 
+-if (NSS3_FOUND)
++if (ENABLE_NSS3 AND NSS3_FOUND)
+   add_definitions(${NSS3_CFLAGS})
+-  set(ENABLE_NSS3 ON)
+ endif()
+ if(JPEG_FOUND)
+   include_directories(${JPEG_INCLUDE_DIR})
+-- 
+2.14.3
+

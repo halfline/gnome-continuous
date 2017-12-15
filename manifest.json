@@ -512,11 +512,12 @@
 		 "config-opts": ["--without-lzo2"],
 		 "patches": ["libarchive-autogen.patch"]},
 
+                {"src": "fd-poppler:poppler-data",
+                 "patches": ["poppler-data-cmake-buildapi.patch"]},
+
                 {"src": "fd-poppler:poppler",
-                 "tag": "a8853b1df0a15570dff6ecc333769257bbf874c3",
-                 "tag-reason": "Build failure caused by missing nspr/prprf.h",
-                 "config-opts": ["--disable-poppler-cpp",
-                                 "--disable-utils"]},
+                 "patches": ["poppler-cmake-disable-nss3.patch",
+                             "poppler-cmake-buildapi.patch"]},
 
 		{"src": "git:git://github.com/mm2/Little-CMS.git",
 		 "tag": "lcms2.6"},
