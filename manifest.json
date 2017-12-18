@@ -584,6 +584,7 @@
                                  "-Dselinux=false",
                                  "-Dmodify_system=true",
                                  "-Dlibaudit=no",
+                                 "-Dlibpsl=false",
                                  "-Dcrypto=nss",
                                  "-Diwd=false",
                                  "-Dofono=false",
