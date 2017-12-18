@@ -956,12 +956,12 @@
 		 "config-opts": ["-Ddocs=false"]},
 
 		{"src": "git:git://github.com/hughsie/appstream-glib.git",
-		 "config-opts": ["-Denable-dep11=false",
-                                 "-Denable-stemmer=false",
-                                 "-Denable-rpm=false",
-                                 "-Denable-alpm=false",
-                                 "-Denable-man=false",
-                                 "-Denable-gtk-doc=false"]},
+		 "config-opts": ["-Ddep11=false",
+                                 "-Dstemmer=false",
+                                 "-Drpm=false",
+                                 "-Dalpm=false",
+                                 "-Dman=false",
+                                 "-Dgtk-doc=false"]},
 
                 {"src": "flatpak:flatpak",
                  "config-opts": ["--disable-documentation",
