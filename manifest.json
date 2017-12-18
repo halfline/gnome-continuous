@@ -576,6 +576,8 @@
 		 "config-opts": ["--with-python=python3"]},
 
 		{"src": "fd-NM:NetworkManager",
+                 "tag": "22ffd53369d89bd8b7f34a20800dee9ca287f7e2",
+                 "tag-reason": "Build failure",
                  "force-autotools": true,
 		 "config-opts": ["PYTHON=python3",
 		                 "--with-dhclient=yes",
