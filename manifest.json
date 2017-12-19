@@ -23,7 +23,7 @@
                 "fd-spice": "git:git://anongit.freedesktop.org/spice/",
                 "fd-xdg": "git:git://anongit.freedesktop.org/git/xdg/",
                 "fd-fprint": "git:git://anongit.freedesktop.org/git/libfprint/",
-                "p11-glue": "git:git://github.com/p11-glue/",
+                "p11-glue": "git:https://github.com/p11-glue/",
                 "fd-poppler": "git:git://anongit.freedesktop.org/poppler/",
                 "fd-gstreamer": "git:git://anongit.freedesktop.org/gstreamer/",
                 "fd-wayland": "git:git://anongit.freedesktop.org/wayland/",
@@ -31,25 +31,22 @@
                 "fd-nice": "git:git://anongit.freedesktop.org/libnice/",
                 "kernel": "git:git://git.kernel.org/pub/scm/linux/kernel/git/",
                 "0pointer": "git:git://git.0pointer.de/",
-                "ibus": "git:git://github.com/ibus/",
+                "ibus": "git:https://github.com/ibus/",
                 "linuxwacom": "git:git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/",
                 "fedora": "git:git://git.fedorahosted.org/",
                 "savannah": "git:git://git.savannah.gnu.org/",
                 "debian": "git:git://anonscm.debian.org/",
 		"netfilter": "git:git://git.netfilter.org/",
                 "lighttpd": "git:git://git.lighttpd.net/",
-                "dnsmasq": "git:git://thekelleys.org.uk/",
                 "ipxe": "git:git://git.ipxe.org/",
                 "socat": "git:git://repo.or.cz/",
-                "anholt": "git:git://github.com/anholt/",
-		"cgwalters": "git:git://github.com/cgwalters/",
-		"alexlarsson": "git:git://github.com/alexlarsson/",
-                "ebassi": "git:git://github.com/ebassi/",
-                "fujita": "git:git://github.com/fujita/",
-                "mikechristie" : "git:git://github.com/mikechristie/",
-                "libical": "git:git://github.com/libical/",
-                "libgit2": "git:git://github.com/libgit2/",
-                "flatpak": "git:git://github.com/flatpak/"},
+                "anholt": "git:https://github.com/anholt/",
+		"cgwalters": "git:http://github.com/cgwalters/",
+                "ebassi": "git:https://github.com/ebassi/",
+                "hughsie": "git:https://github.com/hughsie",
+                "libical": "git:https://github.com/libical/",
+                "libgit2": "git:https://github.com/libgit2/",
+                "flatpak": "git:https://github.com/flatpak/"},
 
   "patches": {"src": "gnome:gnome-continuous",
               "subdir": "patches"},
@@ -67,7 +64,7 @@
 		 "component": "devel",
 		 "noarch": true},
 
-                {"src": "git:git://github.com/mesonbuild/meson.git",
+                {"src": "git:https://github.com/mesonbuild/meson.git",
                  "component": "devel",
                  "patches": ["python-meson-buildsys.patch"]},
 
@@ -108,7 +105,7 @@
                  "patches": ["vala-disable-valadoc.patch"],
 		 "config-opts": ["--disable-valadoc"]},
 
-		{"src": "git:git://github.com/seccomp/libseccomp",
+		{"src": "git:https://github.com/seccomp/libseccomp",
 		 "branch": "release-2.3"},
 
    		{"src": "git:https://github.com/systemd/systemd",
@@ -442,7 +439,7 @@
 
 		{"src": "fd:xorg/driver/xf86-input-libinput"},
 
-                {"src": "git:git://github.com/xkbcommon/libxkbcommon",
+                {"src": "git:https://github.com/xkbcommon/libxkbcommon.git",
                  "config-opts": ["-Denable-docs=false"]},
 
                 {"src": "git:git://git.xiph.org/celt.git"},
@@ -524,7 +521,7 @@
                  "patches": ["poppler-cmake-disable-nss3.patch",
                              "poppler-cmake-buildapi.patch"]},
 
-		{"src": "git:git://github.com/mm2/Little-CMS.git",
+		{"src": "git:https://github.com/mm2/Little-CMS.git",
 		 "tag": "lcms2.6"},
 
 		{"src": "gnome:libgxps",
@@ -554,14 +551,14 @@
 		 "config-opts": ["--disable-cups", "--disable-obex", "--disable-usb", "--disable-tools"],
 		 "patches": ["bluez-autogen.patch"]},
 
-                {"src": "git:git://github.com/jpirko/libndp.git"},
+                {"src": "git:https://github.com/jpirko/libndp.git"},
 
 		{"src": "fd:libqmi"},
 
 		{"src": "fd:libmbim/libmbim",
 		 "name": "libmbim"},
 
-                {"src": "git:git://github.com/akheron/jansson",
+                {"src": "git:https://github.com/akheron/jansson.git",
                  "config-opts": ["--disable-documentation", "--enable-shared"],
                  "patches": ["jansson-cmake-buildapi.patch"]},
 
@@ -630,7 +627,7 @@
                                  "-Denable-man=false",
                                  "-Denable-docs=false"]},
 
-		{"src": "ebassi:graphene"},
+		{"src": "ebassi:graphene.git"},
 
 		{"src": "gnome:gconf",
 		 "config-opts": ["--disable-orbit",
@@ -690,7 +687,7 @@
 
 		{"src": "fd-fprint:fprintd"},
 
-		{"src": "p11-glue:p11-kit",
+		{"src": "p11-glue:p11-kit.git",
                  "component": "minimal"},
 
 		{"src": "gnome:gcr",
@@ -767,7 +764,7 @@
 
 		{"src": "0pointer:libcanberra"},
 
-                {"src": "git:git://github.com/Distrotech/itstool.git"},
+                {"src": "git:https://github.com/Distrotech/itstool.git"},
 
 		{"src": "gnome:yelp-xsl",
 		 "config-opts": ["--disable-doc"]},
@@ -787,7 +784,7 @@
 		{"src": "linuxwacom:xf86-input-wacom",
 		 "patches": ["libwacom-autogen.patch"]},
 
-		{"src": "git:git://github.com/stephenc/tango-icon-naming.git",
+		{"src": "git:https://github.com/stephenc/tango-icon-naming.git",
 		 "patches": ["tango-icon-naming-python.patch"],
 		 "component": "devel"},
 
@@ -944,7 +941,7 @@
 		{"src": "gnome-gitlab:GNOME/gjs.git",
 		 "config-opts": ["--enable-installed-tests"]},
 
-		{"src": "git:git://github.com/ostreedev/ostree",
+		{"src": "git:https://github.com/ostreedev/ostree",
                  "component": "minimal",
 		 "initramfs-depends": true,
 		 "config-opts": ["--with-soup-gnome",
@@ -955,7 +952,7 @@
 		{"src": "gnome:gcab",
 		 "config-opts": ["-Ddocs=false"]},
 
-		{"src": "git:git://github.com/hughsie/appstream-glib.git",
+		{"src": "hughsie:appstream-glib.git",
 		 "config-opts": ["-Ddep11=false",
                                  "-Dstemmer=false",
                                  "-Drpm=false",
@@ -996,7 +993,7 @@
 
 		{"src": "gnome:libpeas"},
 
-		{"src": "cgwalters:liboauth-tarballs-as-git",
+		{"src": "cgwalters:liboauth-tarballs-as-git.git",
 		 "rm-configure": true,
 		 "config-opts": ["--enable-nss"],
 		 "patches": ["liboauth-tarballs-as-git-autogen.patch"]},
@@ -1023,7 +1020,7 @@
 
 		{"src": "gnome:gnome-online-miners"},
 
-		{"src": "libical:libical",
+		{"src": "libical:libical.git",
                  "branch": "2.0",
 		 "patches": ["libical-cmake-buildapi.patch"]},
 
@@ -1090,7 +1087,7 @@
 		 "checksum": "9689627283b43d20ca74ca822404ee486242e3e528fa95bf7016d37ff46e0696",
                  "config-opts": ["--disable-python-bindings"]}, 
 
-		{"src": "git:git://github.com/hughsie/colord-gtk.git"},
+		{"src": "hughsie:colord-gtk.git"},
 
 		{"src": "gnome:cheese"},
 
@@ -1145,10 +1142,10 @@
                 {"src": "git:https://gitlab.com/dogtail/dogtail.git",
                  "patches": ["python-dogtail-buildsys.patch"]},
 
-		{"src": "git:git://github.com/r1chardj0n3s/parse.git",
+		{"src": "git:https://github.com/r1chardj0n3s/parse.git",
 		"patches": ["parse-buildsys.patch"]},
 
-		{"src": "git:git://github.com/vrutkovs/behave.git",
+		{"src": "git:https://github.com/vrutkovs/behave.git",
 		"branch": "html_formatter",
 		"patches": ["behave-buildsys.patch"]},
 
@@ -1348,7 +1345,7 @@
                 {"src": "git:https://github.com/libssh2/libssh2.git",
                  "patches": ["libssh2-autogen.patch"]},
 
-		{"src": "libgit2:libgit2",
+		{"src": "libgit2:libgit2.git",
 		 "branch": "maint/v0.25",
 		 "branch-reason": "libgit2-glib does not track master",
 		 "patches": ["libssh-cmake-buildapi.patch"]},
