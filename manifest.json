@@ -43,7 +43,7 @@
                 "anholt": "git:https://github.com/anholt/",
 		"cgwalters": "git:http://github.com/cgwalters/",
                 "ebassi": "git:https://github.com/ebassi/",
-                "hughsie": "git:https://github.com/hughsie",
+                "hughsie": "git:https://github.com/hughsie/",
                 "libical": "git:https://github.com/libical/",
                 "libgit2": "git:https://github.com/libgit2/",
                 "flatpak": "git:https://github.com/flatpak/"},
