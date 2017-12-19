@@ -961,9 +961,14 @@
                                  "-Dman=false",
                                  "-Dgtk-doc=false"]},
 
-                {"src": "flatpak:flatpak",
+                {"src": "flatpak:flatpak.git",
                  "config-opts": ["--disable-documentation",
                                  "--enable-installed-tests"]},
+
+                {"src": "flatpak:flatpak-builder.git",
+                 "config-opts": ["--disable-p2p",
+                                 "--disable-documentation",
+                                 "--disable-docbook-docs"]},
 
                 {"src": "flatpak:xdg-desktop-portal",
                  "config-opts": ["--disable-docbook-docs"]},
