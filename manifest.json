@@ -617,9 +617,10 @@
 				 "--disable-gtk",
 				 "--disable-gtk3"]},
 
-                {"src": "git:git://github.com/hughsie/libgusb.git"},
+                {"src": "hughsie:libgusb.git",
+                 "config-opts": ["-Ddocs=false"]},
 		
-		{"src": "git:git://github.com/hughsie/colord.git",
+		{"src": "hughsie:colord.git",
 		 "config-opts": ["-Denable-print-profiles=false",
 				 "-Denable-bash-completion=false",
 				 "-Denable-argyllcms-sensor=false",
