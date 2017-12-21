@@ -1446,7 +1446,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 151,
-		        "all": true,
-		        "component-names": []}
+	"build-epoch": {"version": 152,
+		        "all": false,
+		        "component-names": ["gtk2"]}
 }
