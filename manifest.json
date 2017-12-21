@@ -548,6 +548,8 @@
                             "/runtime/usr/lib/polkit-1/polkit-agent-helper-1"]},
 
                 {"src": "git:git://git.kernel.org/pub/scm/bluetooth/bluez.git",
+                 "tag": "9fbde4dfc6abb121534d26f2641688e1624ce225",
+                 "tag-reason": "Build failure: removed uuid.h is still included in monitor/packet.c",
 		 "config-opts": ["--disable-cups", "--disable-obex", "--disable-usb", "--disable-tools"],
 		 "patches": ["bluez-autogen.patch"]},
 
