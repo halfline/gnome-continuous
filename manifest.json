@@ -964,7 +964,8 @@
                                  "-Dgtk-doc=false"]},
 
                 {"src": "flatpak:flatpak.git",
-                 "config-opts": ["--disable-documentation",
+                 "config-opts": ["--disable-p2p",
+                                 "--disable-documentation",
                                  "--enable-installed-tests"]},
 
                 {"src": "flatpak:flatpak-builder.git",
