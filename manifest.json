@@ -1187,8 +1187,8 @@
 		{"src": "gnome:gexiv2"},
 
 		{"src": "gnome-gitlab:GNOME/nautilus.git",
-		 "config-opts": ["-Denable-selinux=false",
-		                 "-Denable-gtk-doc=false"]},
+		 "config-opts": ["-Dselinux=false",
+		                 "-Ddocs=false"]},
 
                 {"src": "tarball:http://downloads.sourceforge.net/project/gtkspell/3.0.9/gtkspell3-3.0.9.tar.xz",
 		 "name": "gtkspell3",
