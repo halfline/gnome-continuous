@@ -170,9 +170,12 @@
 		 "tag": "4b3ea5ca8f2ae7223bb1ad24bea07e659eec5f92",
 		 "patches": ["freetype-autogen.patch"]},
 
+                {"src": "git:https://github.com/Distrotech/itstool.git"},
+
    		{"src": "fd:fontconfig",
                  "patches": ["fontconfig-autogen.patch"],
-		 "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache"]},
+		 "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache",
+                                 "--disable-docs"]},
 
 		{"src": "fd:xorg/util/macros",
 		 "component": "devel"},
@@ -765,8 +768,6 @@
 		 "patches": ["pulseaudio-autogen.patch"]},
 
 		{"src": "0pointer:libcanberra"},
-
-                {"src": "git:https://github.com/Distrotech/itstool.git"},
 
 		{"src": "gnome:yelp-xsl",
 		 "config-opts": ["--disable-doc"]},
