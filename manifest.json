@@ -171,6 +171,7 @@
 		 "patches": ["freetype-autogen.patch"]},
 
    		{"src": "fd:fontconfig",
+                 "patches": ["fontconfig-autogen.patch"],
 		 "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache"]},
 
 		{"src": "fd:xorg/util/macros",
