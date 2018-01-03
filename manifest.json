@@ -167,7 +167,6 @@
 		{"src": "git:https://github.com/behdad/harfbuzz.git"},
 
 		{"src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
-		 "tag": "4b3ea5ca8f2ae7223bb1ad24bea07e659eec5f92",
 		 "patches": ["freetype-autogen.patch"]},
 
                 {"src": "git:https://github.com/Distrotech/itstool.git"},
