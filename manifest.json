@@ -172,7 +172,7 @@
                 {"src": "git:https://github.com/Distrotech/itstool.git"},
 
    		{"src": "fd:fontconfig",
-                 "patches": ["fontconfig-autogen.sh"],
+                 "patches": ["fontconfig-autogen.patch"],
 		 "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache",
                                  "--disable-docs"]},
 
