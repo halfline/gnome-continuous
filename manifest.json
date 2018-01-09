@@ -1363,8 +1363,6 @@
 
 		{"src": "gnome:atomix"},
 
-		{"src": "gnome:dconf-editor"},
-
                 {"src": "git:https://gitlab.gnome.org/aplazas/libmanette.git",
                  "name": "libmanette"},
 
