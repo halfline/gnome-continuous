@@ -1446,7 +1446,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 152,
+	"build-epoch": {"version": 153,
 		        "all": false,
-		        "component-names": ["gtk2"]}
+		        "component-names": ["libva"]}
 }
