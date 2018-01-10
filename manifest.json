@@ -818,7 +818,8 @@
 
 		{"src": "fd-gstreamer:gst-plugins-bad"},
 
-		{"src": "git:https://github.com/01org/libva.git"},
+		{"src": "git:https://github.com/01org/libva.git",
+                 "force-autotools": true},
 
 		{"src": "fd-gstreamer:gstreamer-vaapi"},
 
