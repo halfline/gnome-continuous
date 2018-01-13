@@ -1447,7 +1447,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 153,
+	"build-epoch": {"version": 154,
 		        "all": false,
-		        "component-names": ["libva"]}
+		        "component-names": ["drm"]}
 }
