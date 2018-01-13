@@ -1447,7 +1447,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 154,
+	"build-epoch": {"version": 155,
 		        "all": false,
-		        "component-names": ["drm"]}
+		        "component-names": ["babl"]}
 }
