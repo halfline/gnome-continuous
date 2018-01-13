@@ -32,7 +32,7 @@
                 "kernel": "git:git://git.kernel.org/pub/scm/linux/kernel/git/",
                 "0pointer": "git:git://git.0pointer.de/",
                 "ibus": "git:https://github.com/ibus/",
-                "linuxwacom": "git:git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/",
+                "linuxwacom": "git:https://git.code.sf.net/p/linuxwacom/",
                 "fedora": "git:git://git.fedorahosted.org/",
                 "savannah": "git:git://git.savannah.gnu.org/",
                 "debian": "git:git://anonscm.debian.org/",
@@ -358,7 +358,7 @@
                 {"src": "fd:libevdev",
 		 "config-opts": ["--disable-gcov"]},
 
-		{"src": "linuxwacom:libwacom",
+		{"src": "linuxwacom:libwacom.git",
 		 "patches": ["libwacom-autogen.patch"]},
 
 		{"src": "fd:wayland/libinput",
@@ -784,7 +784,7 @@
 		 		"--disable-desktop-docs",
 		 		"--enable-installed-tests"]},
 
-		{"src": "linuxwacom:xf86-input-wacom",
+		{"src": "linuxwacom:xf86-input-wacom.git",
 		 "patches": ["libwacom-autogen.patch"]},
 
 		{"src": "git:https://github.com/stephenc/tango-icon-naming.git",
