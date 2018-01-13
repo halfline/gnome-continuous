@@ -373,7 +373,8 @@
 		{"src": "fd:xorg/lib/libpciaccess"},
 
 		{"src": "fd-mesa:drm",
-		 "config-opts": ["--disable-valgrind"]},
+		 "config-opts": ["-Dvalgrind=false",
+                                 "-Dman-pages=false"]},
 
 		{"src": "fd-wayland:wayland",
 		 "config-opts": ["--disable-documentation"]},
