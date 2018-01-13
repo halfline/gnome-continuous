@@ -373,6 +373,7 @@
 		{"src": "fd:xorg/lib/libpciaccess"},
 
 		{"src": "fd-mesa:drm",
+                 "force-autotools": true,
 		 "config-opts": ["--disable-valgrind"]},
 
 		{"src": "fd-wayland:wayland",
