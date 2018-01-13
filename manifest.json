@@ -1264,7 +1264,8 @@
 
 		{"src": "gnome:gnome-font-viewer"},
 
-		{"src": "gnome:babl"},
+		{"src": "gnome:babl",
+                 "force-autotools": true},
 
 		{"src": "zipfile:https://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip",
 		 "name": "jasper",
@@ -1277,8 +1278,6 @@
                  "patches": ["libraw-autogen.patch", "libraw-pkgconfig.patch"]},
 
 		{"src": "gnome:gegl",
-                 "tag": "cab443df6b192a1a21390170541941783ae923d1",
-                 "tag-reason": "Undefined reference to babl_process_rows",
                  "config-opts": ["--disable-docs", "--with-jasper", "--with-libraw", "--without-lua"]},
 
 		{"src": "gnome:gnome-color-manager"},
