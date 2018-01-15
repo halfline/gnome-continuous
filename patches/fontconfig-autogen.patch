@@ -1,4 +1,4 @@
-From 1500247ea02394eb4a43a405677850e6b82caf4e Mon Sep 17 00:00:00 2001
+From 7acb4d7d54134d99968e4d8c787aaf02eefce453 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Tue, 9 Jan 2018 11:04:08 +0000
 Subject: [PATCH] Use a minimal autogen.sh
@@ -6,14 +6,14 @@ Subject: [PATCH] Use a minimal autogen.sh
 We only need autoreconf, no need for a bajillion checks that inevitably
 fail.
 ---
- autogen.sh | 125 +------------------------------------------------------------
- 1 file changed, 1 insertion(+), 124 deletions(-)
+ autogen.sh | 126 +------------------------------------------------------------
+ 1 file changed, 1 insertion(+), 125 deletions(-)
 
 diff --git a/autogen.sh b/autogen.sh
-index ab4eab3..94c673d 100755
+index e5537e5..94c673d 100755
 --- a/autogen.sh
 +++ b/autogen.sh
-@@ -1,125 +1,2 @@
+@@ -1,126 +1,2 @@
  #!/bin/sh
 -# fontconfig/autogen.sh
 -#
@@ -56,6 +56,7 @@ index ab4eab3..94c673d 100755
 -PROJECT=Fontconfig
 -TEST_TYPE=-f
 -FILE=fontconfig/fontconfig.h
+-LIBTOOLIZE=${LIBTOOLIZE-libtoolize}
 -AUTOPOINT=${AUTOPOINT-autopoint}
 -AUTORECONF=${AUTORECONF-autoreconf}
 -AUTORECONF_FLAGS="-i"
