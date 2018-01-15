@@ -72,9 +72,10 @@
 		 "component": "minimal",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
                  "force-autotools": true,
-                 "config-opts": ["--with-pcre=internal",
+                 "config-opts": ["--with-python=python3",
+                                 "--with-pcre=internal",
                                  "--disable-gtk-doc",
-                                 "-disable-man"],
+                                 "--disable-man"],
                  "irc_room": "gtk+"},
 
 		{"src": "gnome:gnome-common",
