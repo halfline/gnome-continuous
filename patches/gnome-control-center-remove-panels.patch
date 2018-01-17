@@ -1,15 +1,50 @@
-From ae045c7dc8a188e01436535280f40928cb9a26c4 Mon Sep 17 00:00:00 2001
+From e6bf801fdd929ccc323282ad874d508568fd0c4b Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Wed, 17 Jan 2018 23:34:58 +0000
 Subject: [PATCH] Do not build the Printers panel
 
 Continuous does not provide Samba, which is a required dependency of the
 Printers panel.
----
- panels/meson.build      | 1 -
- shell/cc-panel-loader.c | 2 --
- 2 files changed, 3 deletions(-)
 
+v2:
+  - Drop all the CUPS checks as well
+---
+ meson.build             | 20 --------------------
+ panels/meson.build      |  1 -
+ shell/cc-panel-loader.c |  2 --
+ 3 files changed, 23 deletions(-)
+
+diff --git a/meson.build b/meson.build
+index 550ebf247..b9313f40d 100644
+--- a/meson.build
++++ b/meson.build
+@@ -124,26 +124,6 @@ common_deps = [
+   dependency('gtk+-3.0', version: '>= 3.22.0')
+ ]
+ 
+-# Check for CUPS 1.4 or newer
+-cups_dep = dependency('cups', version : '>= 1.4', required: false)
+-assert(cups_dep.found(), 'CUPS 1.4 or newer not found')
+-
+-# https://bugzilla.gnome.org/show_bug.cgi?id=696766
+-cups_cflags = []
+-if cups_dep.version().version_compare('>= 1.6')
+-  cups_cflags += '-D_PPD_DEPRECATED=""'
+-endif
+-
+-# cups headers
+-check_headers = [
+-  ['HAVE_CUPS_CUPS_H', 'cups/cups.h'],
+-  ['HAVE_CUPS_PPD_H', 'cups/ppd.h']
+-]
+-
+-foreach header: check_headers
+-  assert(cc.has_header(header[1], args: cups_cflags), 'CUPS headers not found: ' + header[1])
+-endforeach
+-
+ # Check for gnome-bluetooth
+ enable_bluetooth = get_option('bluetooth')
+ if enable_bluetooth
 diff --git a/panels/meson.build b/panels/meson.build
 index d02714733..24b084405 100644
 --- a/panels/meson.build
