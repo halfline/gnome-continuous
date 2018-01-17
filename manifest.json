@@ -1449,7 +1449,7 @@
 
     "initramfs-build-epoch": {"version": 0},
     
-	"build-epoch": {"version": 155,
+	"build-epoch": {"version": 156,
 		        "all": false,
-		        "component-names": ["babl"]}
+		        "component-names": ["gstreamer", "gst-plugins-base"]}
 }
