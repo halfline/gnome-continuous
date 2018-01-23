@@ -1,13 +1,10 @@
-From e6bf801fdd929ccc323282ad874d508568fd0c4b Mon Sep 17 00:00:00 2001
+From 23e9d18fe81552cf88652bc91886cf9cbb27c7f1 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
-Date: Wed, 17 Jan 2018 23:34:58 +0000
-Subject: [PATCH] Do not build the Printers panel
+Date: Tue, 23 Jan 2018 09:55:46 +0000
+Subject: [PATCH] Drop Printers panel
 
-Continuous does not provide Samba, which is a required dependency of the
-Printers panel.
-
-v2:
-  - Drop all the CUPS checks as well
+The printers panel has a hard requirement on Samba, which is not
+available on the Yocto base we use for Continuous.
 ---
  meson.build             | 20 --------------------
  panels/meson.build      |  1 -
@@ -15,11 +12,11 @@ v2:
  3 files changed, 23 deletions(-)
 
 diff --git a/meson.build b/meson.build
-index 550ebf247..b9313f40d 100644
+index cd3e9c0db..d271de1ef 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -124,26 +124,6 @@ common_deps = [
-   dependency('gtk+-3.0', version: '>= 3.22.0')
+@@ -125,26 +125,6 @@ common_deps = [
+   dependency('gtk+-3.0', version: '>= 3.22.20')
  ]
  
 -# Check for CUPS 1.4 or newer
@@ -42,11 +39,11 @@ index 550ebf247..b9313f40d 100644
 -  assert(cc.has_header(header[1], args: cups_cflags), 'CUPS headers not found: ' + header[1])
 -endforeach
 -
- # Check for gnome-bluetooth
- enable_bluetooth = get_option('bluetooth')
- if enable_bluetooth
+ # Optional dependency for the user accounts panel
+ enable_cheese = get_option('cheese')
+ if enable_cheese
 diff --git a/panels/meson.build b/panels/meson.build
-index d02714733..24b084405 100644
+index 048980927..3c56f4de2 100644
 --- a/panels/meson.build
 +++ b/panels/meson.build
 @@ -11,7 +11,6 @@ panels = [
