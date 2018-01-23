@@ -1106,7 +1106,7 @@
 		{"src": "gnome:gnome-control-center",
 		 "patches": ["gnome-control-center-remove-panels.patch"],
 		 "patches-reasons": ["https://bugzilla.gnome.org/show_bug.cgi?id=755063"],
-		 "config-opts": ["-Ddocumentation=false", "-Dwacom=false"]},
+		 "config-opts": ["-Ddocumentation=false"]},
 
 		{"src": "gnome:gnome-initial-setup",
 		 "config-opts": ["--disable-welcome-tour"]},
