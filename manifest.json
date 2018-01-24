@@ -794,7 +794,7 @@
 
 		{"src": "fd:sound-theme-freedesktop"},
 
-		{"src": "gnome:gnome-themes-standard"},
+		{"src": "gnome-gitlab:GNOME/gnome-themes-extra.git"},
 
 		{"src": "gnome:adwaita-icon-theme"},
 
