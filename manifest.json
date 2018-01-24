@@ -925,7 +925,8 @@
 
 		{"src": "gnome:zenity"},
 
-		{"src": "gnome:mutter",
+		{"src": "gnome-gitlab:GNOME/mutter.git",
+                 "name": "mutter",
                  "irc_room": "gnome-shell",
 		 "config-opts": ["--enable-compile-warnings=maximum",
 				 "--enable-installed-tests"]},
