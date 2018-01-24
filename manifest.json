@@ -1211,7 +1211,6 @@
 		 "config-opts": ["-Denable-man=false",
                                  "-Denable-fwupd=false",
                                  "-Denable-packagekit=false",
-                                 "-Denable-rpm=false",
                                  "-Denable-valgrind=false",
                                  "-Denable-ubuntuone=false",
                                  "-Denable-ubuntu-reviews=false",
