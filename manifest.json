@@ -977,7 +977,7 @@
                                  "--disable-docbook-docs"]},
 
                 {"src": "flatpak:xdg-desktop-portal",
-                 "config-opts": ["--disable-docbook-docs"]},
+                 "config-opts": ["--disable-docbook-docs", "--disable-pipewire"]},
 
                 {"src": "flatpak:xdg-desktop-portal-gtk"},
 
