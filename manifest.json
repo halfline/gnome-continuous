@@ -976,6 +976,9 @@
                                  "--disable-documentation",
                                  "--disable-docbook-docs"]},
 
+                {"src": "git:https://github.com/PipeWire/pipewire",
+                 "config-opts": ["-Denable_docs=false", "-Denable_man=false"]},
+
                 {"src": "flatpak:xdg-desktop-portal",
                  "config-opts": ["--disable-docbook-docs"]},
 
