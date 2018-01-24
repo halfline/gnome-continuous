@@ -1423,7 +1423,7 @@
 
 		{"src": "gnome:tali"},
 
-		{"src": "gnome:gnome-contacts",
+		{"src": "gnome-gitlab:GNOME/gnome-contacts.git",
 		 "config-opts": ["-Dwith-manpage=false"]},
 
 		{"src": "gnome:gnome-characters"},
