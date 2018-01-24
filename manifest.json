@@ -711,6 +711,7 @@
 		{"src": "gnome:libcroco"},
 
 		{"src": "gnome-gitlab:GNOME/librsvg.git",
+                 "name": "librsvg",
                  "tag": "366b0d8185464c86e069e100c55fd8bd7718f7e1",
                  "tag-reason": "We need to add meta-rust to our yocto image",
                  "config-opts": ["--enable-vala"]},
@@ -945,6 +946,7 @@
                                  "AUTOCONF=autoconf"]},
 
 		{"src": "gnome-gitlab:GNOME/gjs.git",
+                 "name": "gjs",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "git:https://github.com/ostreedev/ostree",
@@ -996,6 +998,7 @@
 				 "--disable-setup"]},
 
 		{"src": "gnome-gitlab:GNOME/libgweather.git",
+                 "name": "libgweather",
                  "config-opts": ["-Dgtk_doc=false",
                                  "-Dglade_catalog=false"]},
 
@@ -1150,6 +1153,7 @@
                                  "-Dbrowser_plugin=false"]},
 
 		{"src": "gnome-gitlab:GNOME/gnome-shell-extensions.git",
+                 "name": "gnome-shell-extensions",
 		 "config-opts": ["-Dextension_set=classic"]},
 
                 {"src": "git:https://gitlab.com/dogtail/dogtail.git",
@@ -1190,6 +1194,7 @@
 		{"src": "gnome:gexiv2"},
 
 		{"src": "gnome-gitlab:GNOME/nautilus.git",
+                 "name": "nautilus",
 		 "config-opts": ["-Dselinux=false",
 		                 "-Ddocs=false"]},
 
@@ -1224,7 +1229,8 @@
 
 		{"src": "gnome:epiphany"},
 
-		{"src": "gnome-gitlab:GNOME/gnome-calendar.git"},
+		{"src": "gnome-gitlab:GNOME/gnome-calendar.git",
+                 "name": "gnome-calendar"},
 
                 {"src": "tarball:https://ftp.gnu.org/gnu/gmp/gmp-6.0.0a.tar.xz",
                  "name": "gmp",
@@ -1244,7 +1250,8 @@
 		{"src": "gnome:gnome-weather",
 		 "config-opts": ["--enable-installed-tests"]},
 
-		{"src": "gnome-gitlab:GNOME/polari.git"},
+		{"src": "gnome-gitlab:GNOME/polari.git",
+                 "name": "polari"},
 
 		{"src": "gnome:baobab"},
 
@@ -1284,6 +1291,7 @@
 		{"src": "gnome:gnome-color-manager"},
 
 		{"src": "gnome-gitlab:GNOME/gnome-photos.git",
+                 "name": "gnome-photos",
 		 "config-opts": ["--enable-installed-tests"]},
 
 		{"src": "gnome:d-feet",
@@ -1292,7 +1300,8 @@
 		{"src": "gnome:evince",
 		 "config-opts": ["--enable-introspection"]},
 
-                {"src": "gnome-gitlab:GNOME/libgepub.git"},
+                {"src": "gnome-gitlab:GNOME/libgepub.git",
+                 "name": "libgepub"},
 
 		{"src": "gnome:gnome-documents",
 		 "config-opts": ["-Ddocumentation=false",
@@ -1396,11 +1405,13 @@
 
 		{"src": "gnome:gnome-mines"},
 
-		{"src": "gnome-gitlab:GNOME/gnome-multi-writer.git"},
+		{"src": "gnome-gitlab:GNOME/gnome-multi-writer.git",
+                 "name": "gnome-multi-writer"},
 
 		{"src": "gnome:gthumb"},
 
-		{"src": "gnome-gitlab:GNOME/hitori.git"},
+		{"src": "gnome-gitlab:GNOME/hitori.git",
+                 "name": "hitori"},
 
 		{"src": "gnome:iagno"},
 
@@ -1438,9 +1449,11 @@
                  "checksum": "c577815dd00f1394203fc44eb979724b098f88264a9ef898ee45b8e5e9cf587f",
                  "patches": ["python-requests-buildsys.patch"]},
 
-                {"src": "gnome-gitlab:GNOME/gnome-music.git"},
+                {"src": "gnome-gitlab:GNOME/gnome-music.git",
+                 "name": "gnome-music"},
 
-                {"src": "gnome-gitlab:GNOME/gnome-todo.git"}
+                {"src": "gnome-gitlab:GNOME/gnome-todo.git",
+                 "name": "gnome-todo"}
 	],
 
     "installed-tests-components": [],
