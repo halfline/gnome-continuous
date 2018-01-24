@@ -1323,7 +1323,7 @@
 		{"src": "gnome:gnome-desktop-testing",
 		 "component": "testing"},
 
-		{"src": "gnome:gnome-tweak-tool",
+		{"src": "gnome-gitlab:GNOME/gnome-tweaks.git",
                  "config-opts": [
                      "-Denable-man=false"
                  ]},
