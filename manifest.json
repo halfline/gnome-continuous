@@ -780,8 +780,6 @@
                  "component": "minimal"},
 
 		{"src": "gnome:gnome-desktop",
-                 "tag": "53128bea164b64951c1073d479f60940c2d90d1c",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=787590",
 		 "config-opts": [
 		 		"--disable-desktop-docs",
 		 		"--enable-installed-tests"]},
