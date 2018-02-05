@@ -1090,10 +1090,7 @@
 		 "config-opts": ["-Ddocbook=false", "-Dman=false"]},
 
 		{"src": "gnome:gnome-settings-daemon",
-		 "config-opts": ["--disable-packagekit",
-		                 "--disable-cups",
-		                 "--enable-systemd",
-				 "--disable-man"]},
+		 "config-opts": ["-Dcups=false"]},
 
 		{"src": "gnome:libgtop"},
 
