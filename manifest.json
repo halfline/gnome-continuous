@@ -974,6 +974,9 @@
 		{"src": "fd-xdg:xdg-user-dirs",
 		 "config-opts": ["--disable-documentation"]},
 
+                {"src": "git:https://github.com/googlei18n/fontmake.git",
+                 "patches": ["python-fontmake-build-api.patch"]},
+
 		{"src": "gnome:cantarell-fonts"},
 
 		{"src": "gnome:gnome-backgrounds"},
