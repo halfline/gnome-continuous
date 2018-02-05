@@ -861,9 +861,9 @@
                  "tag-reason": "v1.0.2",
                  "patches": ["woff2-cmake-build-api.patch"]},
 
-		{"src": "tarball:https://www.webkitgtk.org/releases/webkitgtk-2.19.6.tar.xz",
+		{"src": "tarball:https://www.webkitgtk.org/releases/webkitgtk-2.19.90.tar.xz",
 		 "name": "webkitgtk",
-		 "checksum": "c97c87a0db3814f97812edeadc79c330affa51eb43dadbdc7a764b01db38d82b",
+		 "checksum": "18819bdf6660ce49609ca2bcc46572ae7a1fb657e1296adc4f199869ed43542b",
 		 "patches": ["webkitgtk-cmake-buildapi.patch"]},
 
 		{"src": "gnome:libgee",
