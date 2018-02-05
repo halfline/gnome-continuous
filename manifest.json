@@ -165,7 +165,9 @@
 		 "patches": ["ragel-gcc-4.7.patch"],
 		 "tag": "0b17ee79bf5237ffdc3a2a7480023a7d61063788"},
 
-		{"src": "git:https://github.com/behdad/harfbuzz.git"},
+		{"src": "git:https://github.com/harfbuzz/harfbuzz.git",
+                 "tag": "3615f344ec00059972d8ce75522022b5294764a7",
+                 "tag-reason": "https://github.com/harfbuzz/harfbuzz/issues/753"},
 
 		{"src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
 		 "patches": ["freetype-autogen.patch"]},
