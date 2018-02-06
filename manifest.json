@@ -182,8 +182,89 @@
 		{"src": "fd:xorg/util/macros",
 		 "component": "devel"},
 
-                {"src": "fd:xorg/proto/xorgproto",
-                 "component": "devel"},
+		{"src": "fd:xorg/proto/bigreqsproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/compositeproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/damageproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/dmxproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/dri2proto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/dri3proto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/evieproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/fontsproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/glproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/inputproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/kbproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/presentproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/randrproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/recordproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/renderproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/resourceproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/scrnsaverproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/videoproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xcmiscproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xextproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xf86bigfontproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xf86dgaproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xf86driproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xf86miscproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xf86vidmodeproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xineramaproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/fixesproto",
+		 "component": "devel"},
+
+		{"src": "fd:xorg/proto/xproto",
+		 "component": "devel"},
 
 		{"src": "fd:xorg/lib/libxtrans"},
 
