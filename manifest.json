@@ -388,7 +388,7 @@
 		{"src": "fd:nouveau/xf86-video-nouveau"},
 
 		{"src": "fd:xorg/driver/xf86-video-intel",
-                 "config-opts": ["-Dvalgrind=false"]},
+                 "config-opts": ["-Dvalgrind=false", "-Dtools=false"]},
 
 		{"src": "fd:xorg/driver/xf86-video-vesa"},
 
