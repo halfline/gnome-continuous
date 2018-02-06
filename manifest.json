@@ -977,7 +977,9 @@
                 {"src": "git:https://github.com/googlei18n/fontmake.git",
                  "patches": ["python-fontmake-build-api.patch"]},
 
-		{"src": "gnome:cantarell-fonts"},
+		{"src": "gnome:cantarell-fonts",
+                 "tag": "07b6ea2cbbebfc360aa4668612a376be5e214eaa",
+                 "tag-reason": "Unable to build"},
 
 		{"src": "gnome:gnome-backgrounds"},
 
