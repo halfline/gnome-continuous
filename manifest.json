@@ -92,7 +92,8 @@
 		 "component": "minimal",
 		 "config-opts": ["--disable-manpages"]},
 
-                {"src": "gnome:gobject-introspection",
+                {"src": "gnome-gitlab:GNOME/gobject-introspection.git",
+                 "name": "gobject-introspection",
                  "component": "minimal",
 		 "config-opts": ["--disable-tests",
 				 "--with-python=python3"]},
