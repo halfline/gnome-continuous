@@ -68,7 +68,8 @@
                  "component": "devel",
                  "patches": ["python-meson-buildsys.patch"]},
 
-		{"src": "gnome:glib",
+		{"src": "gnome-gitlab:GNOME/glib.git",
+                 "name": "glib",
 		 "component": "minimal",
                  "requires": {"pkgconfig": ["libffi >= 3.0.10"]},
                  "force-autotools": true,
