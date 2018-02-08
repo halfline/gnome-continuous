@@ -583,7 +583,7 @@
 		{"src": "gnome:gdk-pixbuf",
 		 "config-opts": ["-Dman=false", "-Ddocs=false"]},
 
-		{"src": "gnome:gtk+",
+		{"src": "gnome-gitlab:GNOME/gtk.git",
 		 "name": "gtk2",
 		 "branch": "gtk-2-24",
                  "irc_room": "gtk+"},
@@ -591,7 +591,7 @@
 		{"src": "gnome:gtk-engines",
 		 "branch": "gtk-engines-2-22"},
 
-		{"src": "gnome:gtk+",
+		{"src": "gnome-gitlab:GNOME/gtk.git",
 		 "name": "gtk3",
 		 "branch": "gtk-3-22",
 		 "config-opts": ["--enable-installed-tests",
@@ -600,7 +600,7 @@
                  "irc_room": "gtk+"},
 
 
-                {"src": "gnome:gtk+",
+                {"src": "gnome-gitlab:GNOME/gtk.git",
                  "name": "gtk4",
                  "config-opts": ["-Ddocumentation=false",
                                  "-Dman-pages=false",
