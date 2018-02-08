@@ -1364,7 +1364,8 @@
 		{"src": "gnome-gitlab:GNOME/gnome-contacts.git",
 		 "config-opts": ["-Dwith-manpage=false"]},
 
-		{"src": "gnome:gnome-characters"},
+		{"src": "gnome:gnome-characters",
+                 "force-autotools": true},
 
                 {"src": "tarball:https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz",
                  "name": "dbus-python",
