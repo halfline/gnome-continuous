@@ -1,18 +1,15 @@
-From c9cea3d83c8e571daea8b20127f5225ff850e118 Mon Sep 17 00:00:00 2001
-From: "Owen W. Taylor" <otaylor@fishsoup.net>
-Date: Wed, 5 Oct 2016 10:22:13 -0400
-Subject: [PATCH] build: Add a "configure" script implementing the GNOME Build
- API
+From f46d279ce93d50b68c7554d5cded60508b6e553c Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Fri, 9 Feb 2018 11:31:08 +0000
+Subject: [PATCH] Update build-api wrapper for Jansson
 
-See http://people.gnome.org/~walters/docs/build-api.txt
-
-(Based on a patch for libssh from Colin Walters <walters@verbum.org>)
+Use the default paths for everything, as Jansson has started to rely on
+the CMake options always being relative paths, and those match our
+environment anyway.
 ---
- .gitignore     |  1 -
- CMakeLists.txt | 19 +++++++++---------
- configure      | 63 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- jansson.pc.in  |  2 +-
- 4 files changed, 74 insertions(+), 11 deletions(-)
+ .gitignore |  1 -
+ configure  | 99 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 99 insertions(+), 1 deletion(-)
  create mode 100755 configure
 
 diff --git a/.gitignore b/.gitignore
@@ -27,57 +24,17 @@ index e6533b4..9b6400d 100644
  depcomp
  install-sh
  libtool
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 17974c2..aca54fe 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -595,24 +595,25 @@ endif()
- 
- set(JANSSON_INSTALL_CMAKE_DIR ${DEF_INSTALL_CMAKE_DIR} CACHE PATH "Installation directory for CMake files")
- 
-+# Make sure the paths are absolute.
-+foreach(p LIB BIN INCLUDE CMAKE)
-+    set(var JANSSON_INSTALL_${p}_DIR)
-+    if(NOT IS_ABSOLUTE "${${var}}")
-+        set(${var} "${CMAKE_INSTALL_PREFIX}/${${var}}")
-+    endif()
-+endforeach()
-+
- # Create pkg-conf file.
- # (We use the same files as ./configure does, so we
- #  have to defined the same variables used there).
- set(prefix      ${CMAKE_INSTALL_PREFIX})
- set(exec_prefix ${CMAKE_INSTALL_PREFIX})
--set(libdir      ${CMAKE_INSTALL_PREFIX}/${JANSSON_INSTALL_LIB_DIR})
-+set(libdir      ${JANSSON_INSTALL_LIB_DIR})
-+set(includedir  ${JANSSON_INSTALL_INCLUDE_DIR})
- set(VERSION     ${JANSSON_DISPLAY_VERSION})
- configure_file(${CMAKE_CURRENT_SOURCE_DIR}/jansson.pc.in
-                ${CMAKE_CURRENT_BINARY_DIR}/jansson.pc @ONLY)
- 
--# Make sure the paths are absolute.
--foreach(p LIB BIN INCLUDE CMAKE)
--    set(var JANSSON_INSTALL_${p}_DIR)
--    if(NOT IS_ABSOLUTE "${${var}}")
--        set(${var} "${CMAKE_INSTALL_PREFIX}/${${var}}")
--    endif()
--endforeach()
--
- # Export targets (This is used for other CMake projects to easily find the libraries and include files).
- export(TARGETS jansson
-         FILE "${PROJECT_BINARY_DIR}/JanssonTargets.cmake")
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..f9b5f33
+index 0000000..c5e2581
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,63 @@
+@@ -0,0 +1,99 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
++# Copyright 2017 Emmanuele Bassi <ebassi@gnome.org>
 +# Licensed under the new-BSD license (http://www.opensource.org/licenses/bsd-license.php)
-+
-+prefix=/usr
 +
 +# Little helper function for reading args from the commandline.
 +# it automatically handles -a b and -a=b variants, and returns 1 if
@@ -97,8 +54,30 @@ index 0000000..f9b5f33
 +    fi
 +}
 +
-+disable_documentation=false
-+enable_shared=false
++sanitycheck() {
++    # $1 = arg name
++    # $1 = arg command
++    # $2 = arg alternates
++    local cmd=$( which $2 2>/dev/null )
++    if [ -x "$cmd" ]; then
++        read "$1" <<< "$cmd"
++        return 0
++    fi
++    test -z $3 || {
++        for alt in $3; do
++            cmd=$( which $alt 2>/dev/null )
++            if [ -x "$cmd" ]; then
++                read "$1" <<< "$cmd"
++                return 0
++            fi
++        done
++    }
++    echo -e "\e[1;31mERROR\e[0m: Command '$2' not found"
++    exit 1
++}
++
++sanitycheck CMAKE 'cmake'
++sanitycheck NINJA 'ninja' 'ninja-build'
 +
 +while (($# > 0)); do
 +    case "${1%%=*}" in
@@ -111,43 +90,45 @@ index 0000000..f9b5f33
 +        --sysconfdir) read_arg sysconfdir "$@" || shift;;
 +        --libdir) read_arg libdir "$@" || shift;;
 +        --mandir) read_arg mandir "$@" || shift;;
-+        --disable-documentation)  disable_documentation=true ;;
-+        --enable-shared)  enable_shared=true ;;
-+        *) echo "Ignoring unknown option '$1'";;
++        --includedir) read_arg includedir "$@" || shift;;
++	*) echo "Ignoring unknown option '$1'";;
 +    esac
 +    shift
 +done
 +
-+bindir=${bindir:-$prefix/bin}
-+libdir=${libdir:-$prefix/lib}
-+
 +srcdir=$(dirname $0)
 +
-+opts=
-+$disable_documentation && opts="$opts -DJANSSON_BUILD_DOCS=OFF"
-+$enable_shared && opts="$opts -DJANSSON_BUILD_SHARED_LIBS=ON"
++# Defaults
++test -z ${prefix} && prefix="/usr/local"
++test -z ${bindir} && bindir=${prefix}/bin
++test -z ${sbindir} && sbindir=${prefix}/sbin
++test -z ${libexecdir} && libexecdir=${prefix}/bin
++test -z ${datarootdir} && datarootdir=${prefix}/share
++test -z ${datadir} && datadir=${datarootdir}
++test -z ${sysconfdir} && sysconfdir=${prefix}/etc
++test -z ${libdir} && libdir=${prefix}/lib
++test -z ${mandir} && mandir=${prefix}/share/man
++test -z ${includedir} && includedir=${prefix}/include
 +
-+cmake \
-+     "-DCMAKE_INSTALL_PREFIX:PATH=$prefix" \
-+     "-DJANSSON_INSTALL_LIB_DIR:PATH=$libdir" \
-+     "-DJANSSON_INSTALL_BIN_DIR:PATH=$bindir" \
-+     "-DJANSSON_INSTALL_INCLUDE_DIR:PATH=$prefix/include" \
-+     "-DJANSSON_INSTALL_CMAKE_DIR:PATH=$libdir/cmake" \
-+     $opts \
++cat > Makefile <<END
++# Generated by configure; do not edit
++
++all:
++	${NINJA}
++
++install:
++	DESTDIR="\$(DESTDIR)" ${NINJA} install
++END
++
++bindir=${bindir:-$prefix/bin}
++libdir=${libdir:-$prefix/lib}
++includedir=${includedir:-$prefix/include}
++
++exec ${CMAKE} \
++     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
++     -DJANSSON_BUILD_DOCS=OFF \
++     -GNinja \
 +     ${srcdir}
-diff --git a/jansson.pc.in b/jansson.pc.in
-index d9bf4da..69c9a43 100644
---- a/jansson.pc.in
-+++ b/jansson.pc.in
-@@ -1,7 +1,7 @@
- prefix=@prefix@
- exec_prefix=@exec_prefix@
- libdir=@libdir@
--includedir=${prefix}/include
-+includedir=@includedir@
- 
- Name: Jansson
- Description: Library for encoding, decoding and manipulating JSON data
 -- 
-2.7.4
+2.14.3
 
