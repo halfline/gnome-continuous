@@ -1,15 +1,19 @@
-From f46d279ce93d50b68c7554d5cded60508b6e553c Mon Sep 17 00:00:00 2001
+From 37ed7e9158f604585f702d0cec8092bc1079c5d0 Mon Sep 17 00:00:00 2001
 From: Emmanuele Bassi <ebassi@gnome.org>
 Date: Fri, 9 Feb 2018 11:31:08 +0000
 Subject: [PATCH] Update build-api wrapper for Jansson
 
+v3:
+Build the shared library, not the static one.
+
+v2:
 Use the default paths for everything, as Jansson has started to rely on
 the CMake options always being relative paths, and those match our
 environment anyway.
 ---
- .gitignore |  1 -
- configure  | 99 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 99 insertions(+), 1 deletion(-)
+ .gitignore |   1 -
+ configure  | 100 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 100 insertions(+), 1 deletion(-)
  create mode 100755 configure
 
 diff --git a/.gitignore b/.gitignore
@@ -26,10 +30,10 @@ index e6533b4..9b6400d 100644
  libtool
 diff --git a/configure b/configure
 new file mode 100755
-index 0000000..c5e2581
+index 0000000..594db1d
 --- /dev/null
 +++ b/configure
-@@ -0,0 +1,99 @@
+@@ -0,0 +1,100 @@
 +#!/bin/bash
 +# configure script adapter for cmake
 +# Copyright 2010, 2011, 2013 Colin Walters <walters@verbum.org>
@@ -125,6 +129,7 @@ index 0000000..c5e2581
 +includedir=${includedir:-$prefix/include}
 +
 +exec ${CMAKE} \
++     -DJANSSON_BUILD_SHARED_LIBS=ON \
 +     -DCMAKE_INSTALL_PREFIX:PATH=${prefix} \
 +     -DJANSSON_BUILD_DOCS=OFF \
 +     -GNinja \
