@@ -568,6 +568,9 @@
 		                 "--disable-gtk",
 				 "--disable-documentation"]},
 
+                {"src": "git:https://github.com/fribidi/fribidi.git",
+                 "name": "fribidi"},
+
 		{"src": "gnome:pango",
 		 "config-opts": ["-Denable_docs=false"]},
 
