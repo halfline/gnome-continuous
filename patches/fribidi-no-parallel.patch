@@ -1,0 +1,26 @@
+From 09693f2b85afbb47d49ab6488cdc90169a38d03c Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Fri, 9 Feb 2018 12:22:55 +0000
+Subject: [PATCH] Disable parallel builds
+
+The file generation blows up with too many build threads.
+---
+ Makefile.am | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/Makefile.am b/Makefile.am
+index 5f4eb32..6d55d0b 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -71,5 +71,8 @@ $(gpg_file): $(sha256_file)
+ 
+ release-files: $(tar_file) $(sha256_file) $(gpg_file)
+ 
++# Disable parallel builds because file generation blows up with
++# too many threads
++.NOTPARALLEL:
+ 
+ -include $(top_srcdir)/git.mk
+-- 
+2.14.3
+
