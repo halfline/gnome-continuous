@@ -588,6 +588,14 @@
 		{"src": "gnome:gdk-pixbuf",
 		 "config-opts": ["-Dman=false", "-Ddocs=false"]},
 
+                {"src": "git:https://github.com/sass/libsass.git",
+                 "name": "libsass",
+                 "patches": ["libsass-autogen.patch"]},
+
+                {"src": "git:https://github.com/sass/sassc.git",
+                 "name": "sassc",
+                 "patches": ["sassc-autogen.patch"]},
+
 		{"src": "gnome-gitlab:GNOME/gtk.git",
 		 "name": "gtk2",
 		 "branch": "gtk-2-24",

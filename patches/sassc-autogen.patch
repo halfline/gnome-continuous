@@ -1,0 +1,21 @@
+From 5461b293de618bd89a86aff215165f09cbf6e506 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Sun, 11 Feb 2018 14:34:37 +0000
+Subject: [PATCH] build: Add autogen.sh script
+
+---
+ autogen.sh | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100755 autogen.sh
+
+diff --git a/autogen.sh b/autogen.sh
+new file mode 100755
+index 00000000..c187584a
+--- /dev/null
++++ b/autogen.sh
+@@ -0,0 +1,2 @@
++#!/bin/sh
++exec autoreconf -vfi
+-- 
+2.14.3
+
