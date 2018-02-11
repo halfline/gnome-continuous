@@ -346,6 +346,8 @@
 		{"src": "fd:xorg/app/xhost"},
 
 		{"src": "fd:xkeyboard-config",
+                 "tag": "9a5cecf64ffc427a6a5a7c9a061992c32e5b8a4f",
+                 "tag-reason": "Build failure",
 		 "config-opts": ["--with-xkb-rules-symlink=xorg",
 		                 "--with-xkb-base=/usr/share/X11/xkb"]},
 
