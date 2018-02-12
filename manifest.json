@@ -1378,6 +1378,10 @@
 		{"src": "gnome-gitlab:GNOME/gnome-contacts.git",
 		 "config-opts": ["-Dwith-manpage=false"]},
 
+                {"src": "tarball:http://ftp.gnu.org/gnu/libunistring/libunistring-0.9.8.tar.xz",
+                 "name": "libunistring",
+                 "checksum": "7b9338cf52706facb2e18587dceda2fbc4a2a3519efa1e15a3f2a68193942f80"},
+
 		{"src": "gnome:gnome-characters",
                  "force-autotools": true},
 
