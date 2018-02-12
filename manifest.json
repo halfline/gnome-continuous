@@ -1382,8 +1382,7 @@
                  "name": "libunistring",
                  "checksum": "7b9338cf52706facb2e18587dceda2fbc4a2a3519efa1e15a3f2a68193942f80"},
 
-		{"src": "gnome:gnome-characters",
-                 "force-autotools": true},
+		{"src": "gnome:gnome-characters"},
 
                 {"src": "tarball:https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz",
                  "name": "dbus-python",
