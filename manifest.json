@@ -572,7 +572,8 @@
 
                 {"src": "git:https://github.com/fribidi/fribidi.git",
                  "name": "fribidi",
-                 "patches": ["fribidi-no-parallel.patch"]},
+                 "patches": ["fribidi-no-parallel.patch"],
+                 "config-opts": ["--disable-docs"]},
 
 		{"src": "gnome:pango",
 		 "config-opts": ["-Denable_docs=false"]},
