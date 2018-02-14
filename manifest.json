@@ -133,7 +133,9 @@
    		{"src": "gnome:libgudev",
                  "config-opts": ["--disable-umockdev"]},
 
-                {"src": "git:https://github.com/martinpitt/umockdev.git"},
+                {"src": "git:https://github.com/martinpitt/umockdev.git",
+                 "tag": "bb29be2ba7d6cf2ff8d645fdc483a73c64e5e592",
+                 "tag-reason": "Vala-related build failure"},
 
 		{"src": "git:https://github.com/libusb/libusb.git",
 		 "tag": "v1.0.19"},
