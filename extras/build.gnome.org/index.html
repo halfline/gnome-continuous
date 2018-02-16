@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="bootstrap-theme.min.css" rel="stylesheet">
-  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="https://static.gnome.org/css/deneb.min.css" rel="stylesheet">
   <link href="app.css" rel="stylesheet">
   <script src="angular.min.js"></script>
   <script src="angular-route.min.js"></script>
@@ -12,35 +11,66 @@
   <script src="controllers.js"></script>
   <script src="depgraph.js"></script>
 </head>
-<body>
-  <div class='navbar-header container-fluid navbar navbar-inverse navbar-fixed-top'>
-    <h1><a class="navbar-brand" href="https://wiki.gnome.org/Projects/GnomeContinuous">GNOME-Continuous</a></h1>
-    <h2><a href="/continuous/buildmaster/images/z/current/">Download</a></h2>
-  </div>
-
-  <div class='container-fluid'>
-    <div ng-controller="ContinuousHomeCtrl" id="sidebar" class="nav nav-sidebar row col-sm-3 col-md-2" role="navigation">
-      <div class="list-group">
-        <div ng-repeat="build in builds" class='list-group-item list-group-item-success' ng-class="{
-          'list-group-item-danger': build.failed.indexOf('resolve') > -1,
-          'list-group-item-danger': build.failed.indexOf('build') > -1,
-          'list-group-item-warning': build.failed.indexOf('smoketest') > -1,
-          'list-group-item-warning': build.failed.indexOf('smoketest-classic') > -1}"
-          >
-          <a href="#/build/{{build.name}}">
-            <div>Build {{build['name']}}
-              <span class='badge btn-warning pull-right' ng-if='build.failed.length > 0 && build.inprogress.length == 0'>!</span>
+<body class="gnome-body">
+    <header class="gnome-header">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar-wrapper" data-toggle="collapse" type="button"><span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span></button> <a class="gnome-navbar-brand" href="/"><img alt="GNOME logo" src="https://static.gnome.org/img/gnome-logo.svg"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-wrapper">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="https://wiki.gnome.org/Projects/GnomeContinuous">What is Continuous</a>
+                        </li>
+                        <li>
+                            <a href="/continuous/buildmaster/images/z/current/">Download</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <span ng-repeat="inprogress in build.inprogress">
-              <div class='badge btn-info'>{{ inprogress }}</div>
-            </span>
-          </a>
-        </div>
+        </nav>
+    </header>
+
+    <div class="gnome-content">
+      <div class='container'>
+          <div class='row'>
+            <div ng-controller="ContinuousHomeCtrl" id="sidebar" class="col-sm-3 col-md-2" role="navigation">
+              <div class="list-group">
+                <div ng-repeat="build in builds" class='list-group-item list-group-item-success' ng-class="{
+                  'list-group-item-danger': build.failed.indexOf('resolve') > -1,
+                  'list-group-item-danger': build.failed.indexOf('build') > -1,
+                  'list-group-item-warning': build.failed.indexOf('smoketest') > -1,
+                  'list-group-item-warning': build.failed.indexOf('smoketest-classic') > -1}"
+                  >
+                  <a href="#/build/{{build.name}}">
+                    <div>Build {{build['name']}}
+                      <span class='badge btn-warning pull-right' ng-if='build.failed.length > 0 && build.inprogress.length == 0'>!</span>
+                    </div>
+                    <span ng-repeat="inprogress in build.inprogress">
+                      <div class='badge btn-info'>{{ inprogress }}</div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div ng-view class="content col-sm-9 col-md-10"></div>
+          </div>
       </div>
     </div>
 
-    <div ng-view class="content"></div>
-  </div>
-
+    <div class="footer m-t-0">
+        <div class="container triangles">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>&copy; <a href="https://www.gnome.org"> The GNOME Project</a></p>
+                    <p>Continuous.
+                    Hosted by <a href="https://www.redhat.com/" target="_blank">Red Hat</a>.
+                    Powered by <a href="https://git.gnome.org/browse/gnome-continuous" target="_blank">GNOME Continuous</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
