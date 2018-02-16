@@ -727,8 +727,7 @@
 		{"src": "gnome:gnome-desktop",
 		 "config-opts": [
 		 		"--disable-desktop-docs",
-		 		"--enable-installed-tests",
-				"--disable-Werror"]},
+		 		"--enable-installed-tests"]},
 
 		{"src": "linuxwacom:xf86-input-wacom.git",
 		 "patches": ["libwacom-autogen.patch"]},
