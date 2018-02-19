@@ -35,7 +35,7 @@
     <div class="gnome-content">
       <div class='container'>
           <div class='row'>
-            <div ng-controller="ContinuousHomeCtrl" id="sidebar" class="col-sm-3 col-md-2" role="navigation">
+            <div ng-controller="ContinuousHomeCtrl" id="sidebar" class="col-sm-3 col-md-3" role="navigation">
               <div class="list-group">
                 <div ng-repeat="build in builds" class='list-group-item list-group-item-success' ng-class="{
                   'list-group-item-danger': build.failed.indexOf('resolve') > -1,
@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-            <div ng-view class="content col-sm-9 col-md-10"></div>
+            <div ng-view class="content col-sm-9 col-md-9"></div>
           </div>
       </div>
     </div>
