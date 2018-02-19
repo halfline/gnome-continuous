@@ -575,6 +575,7 @@
                 {"src": "git:https://github.com/fribidi/fribidi.git",
                  "name": "fribidi",
                  "patches": ["fribidi-no-parallel.patch"],
+                 "force-autotools": true,
                  "config-opts": ["--disable-docs"]},
 
 		{"src": "gnome:pango",
