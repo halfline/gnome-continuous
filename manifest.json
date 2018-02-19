@@ -913,7 +913,7 @@
                                  "-Dgtk-doc=false"]},
 
                 {"src": "flatpak:flatpak.git",
-                 "config-opts": ["--enable-p2p",
+                 "config-opts": ["--disable-p2p",
                                  "--disable-documentation",
                                  "--enable-installed-tests"]},
 
