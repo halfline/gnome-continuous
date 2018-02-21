@@ -739,7 +739,8 @@
 
 		{"src": "fd:sound-theme-freedesktop"},
 
-		{"src": "gnome-gitlab:GNOME/gnome-themes-extra.git"},
+		{"src": "gnome-gitlab:GNOME/gnome-themes-extra.git",
+                 "name": "gnome-themes-extra"},
 
 		{"src": "gnome:adwaita-icon-theme"},
 
@@ -1279,6 +1280,7 @@
 		 "component": "testing"},
 
 		{"src": "gnome-gitlab:GNOME/gnome-tweaks.git",
+                 "name": "gnome-tweaks",
                  "config-opts": [
                      "-Denable-man=false"
                  ]},
@@ -1383,6 +1385,7 @@
 		{"src": "gnome:tali"},
 
 		{"src": "gnome-gitlab:GNOME/gnome-contacts.git",
+                 "name": "gnome-contacts",
 		 "config-opts": ["-Dwith-manpage=false"]},
 
                 {"src": "tarball:http://ftp.gnu.org/gnu/libunistring/libunistring-0.9.8.tar.xz",
