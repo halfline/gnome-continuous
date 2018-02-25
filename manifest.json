@@ -1322,7 +1322,7 @@
 
 		{"src": "gnome:libgit2-glib"},
 
-		{"src": "gnome:atomix"},
+		{"src": "gnome-gitlab:GNOME/atomix.git"},
 
 		{"src": "gnome:dconf-editor"},
 
