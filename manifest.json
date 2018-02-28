@@ -1408,7 +1408,10 @@
                  "name": "gnome-music"},
 
                 {"src": "gnome-gitlab:GNOME/gnome-todo.git",
-                 "name": "gnome-todo"}
+                 "name": "gnome-todo"},
+
+                {"src": "gnome-gitlab:GNOME/simple-scan.git",
+                 "name": "simple-scan"}
 	],
 
     "installed-tests-components": [],
