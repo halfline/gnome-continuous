@@ -649,7 +649,7 @@
 		 "config-opts": ["--disable-manpages"]},
 
 		{"src": "gnome:gnome-keyring",
-		 "config-opts": ["--disable-doc"]},
+		 "config-opts": ["--disable-doc", "--disable-ssh-agent"]},
 
 		{"src": "gnome-gitlab:GNOME/json-glib.git",
                  "name": "json-glib"},
