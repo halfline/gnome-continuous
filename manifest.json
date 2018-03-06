@@ -289,6 +289,8 @@
 		 "patches": ["libwacom-autogen.patch"]},
 
 		{"src": "fd:wayland/libinput",
+                 "tag": "a437d9374bc69495f7c64859dc0e1bd470d01baa",
+                 "tag-reason": "Build failure in the following commit",
 		 "name": "libinput",
                  "config-opts": ["-Ddocumentation=false",
                                  "-Dtests=false",
