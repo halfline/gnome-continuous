@@ -323,6 +323,7 @@
                  },
                  "patches": ["mesa-nv50-fix-build.patch",
 			     "mesa-llvm-config-dir.patch"],
+                 "force-autotools": true,
                  "config-opts": [
                      "--host=x86_64-gnomeostree-linux",
                      "--disable-asm",
