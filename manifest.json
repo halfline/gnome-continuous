@@ -284,7 +284,8 @@
                 {"src": "fd:libevdev",
 		 "config-opts": ["--disable-gcov"]},
 
-		{"src": "linuxwacom:libwacom.git",
+		{"src": "git:https://github.com/linuxwacom/libwacom.git",
+                 "name": "libwacom",
 		 "patches": ["libwacom-autogen.patch"]},
 
 		{"src": "fd:wayland/libinput",
