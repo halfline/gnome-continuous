@@ -1152,9 +1152,9 @@
 		 "checksum": "a4f4a4a2789f7499563e26d96b22d8085222ebe278da47d026b2de782b8b4d26",
 		 "config-opts": ["--disable-maintainer-mode"]},
 
-                {"src": "tarball:https://github.com/AbiWord/enchant/releases/download/v2.2.1/enchant-2.2.1.tar.gz",
+                {"src": "tarball:https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz",
                  "name": "enchant2",
-                 "checksum": "97f2e617b34c66a645b9cfebe33700456c31ca2f4677eb827b364c0d9a7f4e5e",
+                 "checksum": "abd8e915675cff54c0d4da5029d95c528362266557c61c7149d53fa069b8076d",
                  "config-opts": ["--with-hunspell"]},
 
 		{"src": "gnome:gspell"},
