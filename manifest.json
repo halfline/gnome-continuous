@@ -95,7 +95,10 @@
 
                 {"src": "gnome-gitlab:GNOME/gobject-introspection.git",
                  "name": "gobject-introspection",
-                 "component": "minimal"},
+                 "component": "minimal",
+                 "force-autotools": true,
+		 "config-opts": ["--disable-tests",
+				 "--with-python=python3"]},
 
 		{"src": "gnome:vala-bootstrap",
 		 "bootstrap": true,
