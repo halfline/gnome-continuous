@@ -1294,9 +1294,6 @@
 		{"src": "gnome:devhelp",
                  "config-opts": ["--disable-Werror"]},
 
-		{"src": "gnome:gnome-dictionary",
-                 "config-opts": ["-Dbuild_man=false"]},
-
 		{"src": "gnome:gnome-screenshot"},
 
 		{"src": "gnome:nautilus-sendto"},
@@ -1324,67 +1321,7 @@
 
 		{"src": "gnome:libgit2-glib"},
 
-		{"src": "gnome-gitlab:GNOME/atomix.git"},
-
 		{"src": "gnome:dconf-editor"},
-
-                {"src": "git:https://gitlab.gnome.org/aplazas/libmanette.git",
-                 "name": "libmanette"},
-
-		{"src": "gnome:five-or-more"},
-
-		{"src": "gnome:four-in-a-row"},
-
-		{"src": "gnome:frogr"},
-
-		{"src": "gnome:libgnome-games-support",
-		 "config-opts": ["--disable-gtk-doc"]
-		},
-
-		{"src": "gnome:gnome-2048"},
-
-		{"src": "tarball:http://qqwing.com/qqwing-1.3.4.tar.gz",
-		 "rm-configure": true,
-		 "name": "qqwing",
-		 "checksum": "1753736c31feea0085f5cfac33143743204f8a7e66b81ccd17e249ecafba802f",
-                 "patches": ["qqwing-autogen.patch"]},
-
-		{"src": "gnome:gnome-sudoku"},
-
-		{"src": "gnome:gnome-taquin"},
-
-		{"src": "gnome:gnome-mahjongg"},
-
-		{"src": "gnome:gnome-mines"},
-
-		{"src": "gnome-gitlab:GNOME/gnome-multi-writer.git",
-                 "name": "gnome-multi-writer"},
-
-		{"src": "gnome:gthumb"},
-
-		{"src": "gnome-gitlab:GNOME/hitori.git",
-                 "name": "hitori"},
-
-		{"src": "gnome:iagno"},
-
-		{"src": "gnome:lightsoff"},
-
-		{"src": "gnome:quadrapassel"},
-
-		{"src": "gnome:swell-foop"},
-
-		{"src": "gnome:gnome-chess",
-                 "config-opts": ["-Dgtk-doc=false", "-Dtracing=false"]},
-
-		{"src": "gnome:gnome-klotski"},
-
-		{"src": "gnome:gnome-nibbles"},
-
-		{"src": "gnome:gnome-robots"},
-
-		{"src": "gnome:gnome-tetravex"},
-
-		{"src": "gnome:tali"},
 
 		{"src": "gnome-gitlab:GNOME/gnome-contacts.git",
                  "name": "gnome-contacts",
