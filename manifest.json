@@ -1290,8 +1290,7 @@
 		 "config-opts": ["-Dgtk_doc=false",
                                  "-Dinstalled_tests=true"]},
 
-		{"src": "gnome:devhelp",
-                 "config-opts": ["--disable-Werror"]},
+		{"src": "gnome:devhelp"},
 
 		{"src": "gnome:gnome-screenshot"},
 
