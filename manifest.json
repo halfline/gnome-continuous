@@ -583,8 +583,6 @@
 		 "config-opts": ["-Denable_docs=false"]},
 
 		{"src": "gnome:atk",
-                 "tag": "93b60f4ff4882c167b650f6af79a20163d6d210c",
-                 "tag-reason": "https://bugzilla.gnome.org/show_bug.cgi?id=794252",
                  "config-opts": ["-Denable_docs=false"]},
 
 		{"src": "gnome:at-spi2-core"},
