@@ -624,7 +624,8 @@
                  "name": "gtk4",
                  "config-opts": ["-Ddocumentation=false",
                                  "-Dman-pages=false",
-                                 "-Dintrospection=true"],
+                                 "-Dintrospection=true",
+                                 "-Dprintbackends=file,lpr"],
                  "irc_room": "gtk+"},
 
 	        {"src": "fd:plymouth",
