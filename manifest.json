@@ -625,7 +625,7 @@
                  "config-opts": ["-Ddocumentation=false",
                                  "-Dman-pages=false",
                                  "-Dintrospection=true",
-                                 "-Dprintbackends=file,lpr"],
+                                 "-Dprint-backends=file,lpr"],
                  "irc_room": "gtk+"},
 
 	        {"src": "fd:plymouth",
