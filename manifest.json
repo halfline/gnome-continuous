@@ -664,14 +664,6 @@
 		{"src": "fd-gstreamer:gst-plugins-base",
 		 "config-opts": ["-Ddisable_gtkdoc=true"]},
 
-                {"src": "gnome-gitlab:GNOME/gtk.git",
-                 "name": "gtk4",
-                 "config-opts": ["-Ddocumentation=false",
-                                 "-Dman-pages=false",
-                                 "-Dintrospection=true",
-                                 "-Dprint-backends=file,lpr"],
-                 "irc_room": "gtk+"},
-
 		{"src": "gnome:cogl",
 		 "config-opts": ["--enable-wayland-egl-platform",
 				 "--enable-wayland-egl-server",
@@ -766,6 +758,14 @@
 		{"src": "fd-gstreamer:gst-plugins-good"},
 
 		{"src": "fd-gstreamer:gst-plugins-bad"},
+
+                {"src": "gnome-gitlab:GNOME/gtk.git",
+                 "name": "gtk4",
+                 "config-opts": ["-Ddocumentation=false",
+                                 "-Dman-pages=false",
+                                 "-Dintrospection=true",
+                                 "-Dprint-backends=file,lpr"],
+                 "irc_room": "gtk+"},
 
 		{"src": "git:https://github.com/01org/libva.git",
                  "force-autotools": true},
