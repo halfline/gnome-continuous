@@ -619,15 +619,6 @@
                                  "--enable-x11-backend"],
                  "irc_room": "gtk+"},
 
-
-                {"src": "gnome-gitlab:GNOME/gtk.git",
-                 "name": "gtk4",
-                 "config-opts": ["-Ddocumentation=false",
-                                 "-Dman-pages=false",
-                                 "-Dintrospection=true",
-                                 "-Dprint-backends=file,lpr"],
-                 "irc_room": "gtk+"},
-
 	        {"src": "fd:plymouth",
 		 "initramfs-depends": true,
 		 "config-opts": ["--enable-pango",
@@ -672,6 +663,14 @@
 
 		{"src": "fd-gstreamer:gst-plugins-base",
 		 "config-opts": ["-Ddisable_gtkdoc=true"]},
+
+                {"src": "gnome-gitlab:GNOME/gtk.git",
+                 "name": "gtk4",
+                 "config-opts": ["-Ddocumentation=false",
+                                 "-Dman-pages=false",
+                                 "-Dintrospection=true",
+                                 "-Dprint-backends=file,lpr"],
+                 "irc_room": "gtk+"},
 
 		{"src": "gnome:cogl",
 		 "config-opts": ["--enable-wayland-egl-platform",
