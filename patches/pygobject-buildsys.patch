@@ -1,0 +1,36 @@
+From 43075341a4a4edc797e511e3819eea246fd545fa Mon Sep 17 00:00:00 2001
+From: Christoph Reiter <reiter.christoph@gmail.com>
+Date: Sat, 24 Mar 2018 10:26:46 +0100
+Subject: [PATCH] Implement the Build API for GNOME Continuous.
+
+---
+ Makefile  | 5 +++++
+ configure | 4 ++++
+ 2 files changed, 9 insertions(+)
+ create mode 100644 Makefile
+ create mode 100755 configure
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 00000000..bd614163
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,5 @@
++all:
++	python3 setup.py build
++
++install:
++	python3 setup.py install --root=$(DESTDIR) --prefix /usr
+diff --git a/configure b/configure
+new file mode 100755
+index 00000000..1c8e45fa
+--- /dev/null
++++ b/configure
+@@ -0,0 +1,4 @@
++#!/bin/bash
++# http://people.gnome.org/~walters/docs/build-api.txt
++#buildapi-variable-no-builddir
++exec python3 setup.py build
+-- 
+2.16.3
+
