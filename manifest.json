@@ -509,9 +509,8 @@
 		{"src": "git:https://github.com/pygobject/pycairo.git",
 		 "patches": ["pycairo-buildsys.patch"]},
 
-		{"src": "gnome-gitlab:GNOME/pygobject.git",
-		 "name": "pygobject",
-		 "patches": ["pygobject-buildsys.patch"]},
+		{"src": "gnome:pygobject",
+		 "config-opts": ["--with-python=python3"]},
 
 		{"src": "fd-NM:NetworkManager",
                  "tag": "22ffd53369d89bd8b7f34a20800dee9ca287f7e2",
