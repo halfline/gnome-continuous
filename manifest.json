@@ -562,12 +562,12 @@
                  "config-opts": ["-Ddocs=false"]},
 		
 		{"src": "hughsie:colord.git",
-		 "config-opts": ["-Denable-print-profiles=false",
-				 "-Denable-bash-completion=false",
-				 "-Denable-argyllcms-sensor=false",
-				 "-Denable-installed-tests=false",
-                                 "-Denable-man=false",
-                                 "-Denable-docs=false"]},
+		 "config-opts": ["-Dprint_profiles=false",
+				 "-Dbash_completion=false",
+				 "-Dargyllcms_sensor=false",
+				 "-Dinstalled_tests=false",
+                                 "-Dman=false",
+                                 "-Ddocs=false"]},
 
 		{"src": "ebassi:graphene.git"},
 
