@@ -1326,7 +1326,7 @@
 
 		{"src": "gnome-gitlab:GNOME/gnome-contacts.git",
                  "name": "gnome-contacts",
-		 "config-opts": ["-Dwith-manpage=false"]},
+		 "config-opts": ["-Dmanpage=false"]},
 
                 {"src": "tarball:http://ftp.gnu.org/gnu/libunistring/libunistring-0.9.8.tar.xz",
                  "name": "libunistring",
